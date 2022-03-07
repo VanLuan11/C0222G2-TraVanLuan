@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <input type="number" id=" number1">
+    <input type="number" id=" number2">
+    <br>
+    <button type="button" onclick=" addition()">addtition(+)</button>
+    <button type="button" onclick=" subtraction()">Subtraction(-)</button>
+    <button type="button" onclick=" multiplication()">Multiplication(X)</button>
+    <button type="button" onclick=" divison()">aDivison(/)</button>
+    <p id="tatol "> Kết quả</p>
+</form>
+<script>
+    function addition() {
+        let number1 = document.getElementById(" number1").value;
+        let number2 = document.getElementById(" number2").value;
+        number1 = parseInt( number1);
+        number2 = parseInt( number2);
+        let sum = number1 + number2;
+      document.getElementById('tatol ').innerText=sum;
+    }
+</script>
+<script>
+    function subtraction() {
+        let number1 = document.getElementById(" number1").value;
+        let number2 = document.getElementById(" number2").value;
+        number1 = parseInt( number1);
+        number2 = parseInt( number2);
+        let sum = number1 - number2;
+        document.getElementById('tatol ').innerText=sum;
+    }
+</script>
+<script>
+    function multiplication() {
+        let number1 = document.getElementById(" number1").value;
+        let number2 = document.getElementById(" number2").value;
+        number1 = parseInt( number1);
+        number2 = parseInt( number2);
+        let sum = number1 * number2;
+        document.getElementById('tatol ').innerText=sum;
+    }
+</script>
+<script>
+    function divison() {
+        let number1 = document.getElementById(" number1").value;
+        let number2 = document.getElementById(" number2").value;
+        number1 = parseInt( number1);
+        number2 = parseInt( number2);
+        let sum = number1 / number2;
+        document.getElementById('tatol ').innerText=sum;
+    }
+</script>
+
+</body>
+</html>

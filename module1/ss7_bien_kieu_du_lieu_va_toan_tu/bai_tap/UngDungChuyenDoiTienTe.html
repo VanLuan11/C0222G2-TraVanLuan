@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form>
+    <p> Amount</p>
+    <input type="number" id="tien">
+    <span> From Curency</span>
+    <select>
+        <option name="a"> VietNam</option>
+        <option name="b"> USD</option>
+    </select>
+    <select>
+        <option> USD</option>
+        <option> VietNam</option>
+    </select>
+    <button type="button" onclick="convent()">conven </button>
+    <br>
+    <p id="result"> </p>
+</form>
+<script>
+    function convent() {
+        let a = document.getElementById("tien").value;
+        let b = 23000 * a
+        document.getElementById("result").innerText = b;
+    }
+</script>
+</body>
+</html>

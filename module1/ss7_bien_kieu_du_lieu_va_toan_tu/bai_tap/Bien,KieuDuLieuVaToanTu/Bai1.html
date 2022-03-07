@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let inputVatLy;
+    let inputHoaHoc;
+    let inputSinhHoc;
+    inputVatLy = prompt("Nhập điểm Lý");
+    inputHoaHoc = prompt("Nhập điểm Hóa");
+    inputSinhHoc = prompt("Nhập điểm Sinh");
+    let vatLy = parseInt(inputVatLy);
+    let hoahoc = parseInt(inputHoaHoc);
+    let sinhhoc = parseInt(inputSinhHoc);
+    let area = (vatLy+hoahoc+sinhhoc)/3;
+    let tong = vatLy+hoahoc+sinhhoc
+    document.write("Điểm trung bình 3 môn: " + area);
+    document.write("Tổng 3 môn: " + tong)
+
+</script>
+
+
+</body>
+</html>
