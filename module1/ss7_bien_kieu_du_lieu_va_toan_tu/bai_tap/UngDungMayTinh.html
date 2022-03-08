@@ -5,16 +5,14 @@
     <title>Title</title>
 </head>
 <body>
-<form>
     <input type="number" id=" number1">
     <input type="number" id=" number2">
     <br>
-    <button type="button" onclick=" addition()">addtition(+)</button>
-    <button type="button" onclick=" subtraction()">Subtraction(-)</button>
-    <button type="button" onclick=" multiplication()">Multiplication(X)</button>
-    <button type="button" onclick=" divison()">aDivison(/)</button>
+    <button type="button" onclick=" addition('+')">cộng</button>
+    <button type="button" onclick=" subtraction('-')">trừ</button>
+    <button type="button" onclick=" multiplication('*')">nhân</button>
+    <button type="button" onclick=" divison('%')">chia</button>
     <p id="tatol "> Kết quả</p>
-</form>
 <script>
     function addition() {
         let number1 = document.getElementById(" number1").value;

@@ -7,11 +7,11 @@
 <body>
 <form>
     <p> Amount</p>
-    <input type="number" id="tien">
+    <input type="number" id="money" placeholder="Nhap tien">
     <span> From Curency</span>
     <select>
-        <option name="a"> VietNam</option>
-        <option name="b"> USD</option>
+        <option id="vnd"> VietNam</option>
+        <option id=" usd"> USD</option>
     </select>
     <select>
         <option> USD</option>
@@ -22,10 +22,13 @@
     <p id="result"> </p>
 </form>
 <script>
+    // lấy được thông tin xuống xử lý
+    // tên hàm (function) đặt theo quy tắc camelCase + bắt đầu bằng động từ
     function convent() {
-        let a = document.getElementById("tien").value;
-        let b = 23000 * a
-        document.getElementById("result").innerText = b;
+        // quy tắt đặt tên biến camlCase
+        let vnd = document.getElementById("money").value;
+        let usd = (23000 * vnd);
+        document.getElementById("result").innerText = usd;
     }
 </script>
 </body>
