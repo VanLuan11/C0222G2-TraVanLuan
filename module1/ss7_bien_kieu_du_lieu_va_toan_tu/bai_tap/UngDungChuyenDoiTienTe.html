@@ -14,21 +14,25 @@
         <option id=" usd"> USD</option>
     </select>
     <select>
-        <option> USD</option>
-        <option> VietNam</option>
+        <option id="usd"> USD</option>
+        <option id="vnd"> VietNam</option>
     </select>
     <button type="button" onclick="convent()">conven </button>
     <br>
     <p id="result"> </p>
 </form>
 <script>
-    // lấy được thông tin xuống xử lý
-    // tên hàm (function) đặt theo quy tắc camelCase + bắt đầu bằng động từ
     function convent() {
-        // quy tắt đặt tên biến camlCase
         let vnd = document.getElementById("money").value;
-        let usd = (23000 * vnd);
-        document.getElementById("result").innerText = usd;
+        let usd = document.getElementById("money").value;
+        let my = vnd/23000;
+        let viet = 23000*usd;
+        if (vnd){
+            alert(viet);
+        }
+        if (usd){
+            alert(my);
+        }
     }
 </script>
 </body>

@@ -8,49 +8,49 @@
     <input type="number" id=" number1">
     <input type="number" id=" number2">
     <br>
-    <button type="button" onclick=" addition('+')">cộng</button>
-    <button type="button" onclick=" subtraction('-')">trừ</button>
-    <button type="button" onclick=" multiplication('*')">nhân</button>
-    <button type="button" onclick=" divison('%')">chia</button>
-    <p id="tatol "> Kết quả</p>
+    <button type="button" onclick=" cong('+')">cộng</button>
+    <button type="button" onclick=" tru('-')">trừ</button>
+    <button type="button" onclick=" nhan('*')">nhân</button>
+    <button type="button" onclick=" chia('%')">chia</button>
+    <p id=" result "> </p>
 <script>
-    function addition() {
+    function cong() {
         let number1 = document.getElementById(" number1").value;
         let number2 = document.getElementById(" number2").value;
         number1 = parseInt( number1);
         number2 = parseInt( number2);
         let sum = number1 + number2;
-      document.getElementById('tatol ').innerText=sum;
+      document.getElementById(' result ').innerText=sum;
     }
 </script>
 <script>
-    function subtraction() {
+    function tru() {
         let number1 = document.getElementById(" number1").value;
         let number2 = document.getElementById(" number2").value;
         number1 = parseInt( number1);
         number2 = parseInt( number2);
         let sum = number1 - number2;
-        document.getElementById('tatol ').innerText=sum;
+        document.getElementById(' result ').innerText=sum;
     }
 </script>
 <script>
-    function multiplication() {
+    function  nhan() {
         let number1 = document.getElementById(" number1").value;
         let number2 = document.getElementById(" number2").value;
         number1 = parseInt( number1);
         number2 = parseInt( number2);
         let sum = number1 * number2;
-        document.getElementById('tatol ').innerText=sum;
+        document.getElementById(' result ').innerText=sum;
     }
 </script>
 <script>
-    function divison() {
+    function chia() {
         let number1 = document.getElementById(" number1").value;
         let number2 = document.getElementById(" number2").value;
         number1 = parseInt( number1);
         number2 = parseInt( number2);
         let sum = number1 / number2;
-        document.getElementById('tatol ').innerText=sum;
+        document.getElementById(' result ').innerText=sum;
     }
 </script>
 

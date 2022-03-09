@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    a = parseInt(prompt("Nhập điểm bài kiểm tra"));
+    b = parseInt(prompt("Nhập điểm bài thi giữ kì"));
+    c = parseInt(prompt("Nhập điểm bài thi cuối kỳ"));
+    let sum =(a+b+c)/3
+    if (sum > 8.0){
+        alert("Học sinh giỏi");
+    }else if (sum >= 7.0){
+        alert("Học sinh khá");
+    }else if (sum >= 6.0) {
+        alert("Học sinh trung bình");
+    }else {
+        alert("Học sinh yếu")
+    }
+</script>
+
+</body>
+</html>

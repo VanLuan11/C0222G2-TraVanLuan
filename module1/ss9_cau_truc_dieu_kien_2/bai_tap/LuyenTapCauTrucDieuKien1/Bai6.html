@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // 5% nếu tổng doanh số nhỏ hơn hoặc bằng 100 triệu.
+    // 10% nếu tổng doanh số nhỏ hơn hoặc bằng 300 triệu.
+    // 20 % nếu tổng doanh số là lớn hơn 300 triệu.
+    a = parseInt(prompt(" nhập tổng doanh thu"));
+    if (a <=100){
+        b = a*5/100;
+        alert("Hoa hồng nhận đc: " + b)
+    }else if (a <=300){
+        b = a*10/100;
+        alert("Hoa hồng nhận đc: " + b)
+    }else if (a >300) {
+        b = a* 20/100;
+        alert("Hoa hồng nhận đc: " + b)
+    }
+
+
+
+</script>
+
+</body>
+</html>

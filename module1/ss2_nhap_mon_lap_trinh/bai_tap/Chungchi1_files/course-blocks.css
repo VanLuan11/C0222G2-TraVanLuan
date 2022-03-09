@@ -1,0 +1,246 @@
+/* HEADERS */
+.twolineheader h2 {
+  font-family: "Gotham 4r", sans-serif;
+  font-weight: normal;
+  color: #7665a0;
+  font-size: 24px;
+  margin-bottom: 0px;
+  line-height: 30px; }
+.twolineheader h1 {
+  margin-top: 0px;
+  line-height: 30px;
+  font-size: 30px;
+  font-family: "Gotham 5r", sans-serif;
+  font-weight: normal; }
+
+.coursesheader h1 + h2 {
+  margin-top: 10px; }
+.coursesheader h2 {
+  margin-bottom: 5px; }
+
+#landingpage h3 img.logo,
+.course_progress h3 img.logo {
+  height: 40px; }
+
+/**
+ * New style of row for tutorials that uses display:flex instead of float:left so
+ * that all boxes will be the same height, but can grow when international text is
+ * too long.
+ */
+.tutorial-row {
+  display: flex;
+  flex-flow: row wrap; }
+
+.tutorial-block, .tutorial-block-wide {
+  flex: 0 0 auto;
+  border: solid 1px #bbb;
+  border-radius: 5px;
+  margin: 20px 20px 0 0;
+  overflow: hidden; }
+
+.tutorial-block {
+  min-height: 300px; }
+
+.tutorial-block-wide {
+  min-height: 140px; }
+
+/**
+ * This overrides styles in the courseblock-tall class below. When all uses have
+ * migrated to use tutorial-row and tutorial-block, then these styles can be removed
+ * here and from .courseblock-tall below.
+ */
+.tutorial-block .courseblock-tall {
+  float: none;
+  height: 100%;
+  border: 0;
+  margin: 0; }
+
+/* COURSEBLOCKS */
+.courseblock-span1 {
+  width: 60px; }
+
+.courseblock-span2 {
+  width: 140px; }
+
+.courseblock-span3 {
+  width: 220px; }
+
+.courseblock-span4 {
+  width: 300px; }
+
+.courseblock-span5 {
+  width: 380px; }
+
+.courseblock-span6 {
+  width: 460px; }
+
+.courseblock-span7 {
+  width: 540px; }
+
+.courseblock-span8 {
+  width: 620px; }
+
+.courseblock-span9 {
+  width: 700px; }
+
+.courseblock-span10 {
+  width: 780px; }
+
+.courseblock-span11 {
+  width: 860px; }
+
+.courseblock-span12 {
+  width: 940px; }
+
+.courseblock-tall {
+  background-color: white;
+  height: 300px;
+  border: solid 1px #bbb;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  box-sizing: border-box;
+  margin-top: 30px; }
+  .courseblock-tall:hover {
+    border-color: #4d575f; }
+    .courseblock-tall:hover h3, .courseblock-tall:hover .smalltext {
+      color: #4d575f; }
+  .courseblock-tall .course-container {
+    padding: 8px 16px 16px 16px; }
+  .courseblock-tall .heading {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    overflow: hidden; }
+  .courseblock-tall a:hover, .courseblock-tall a:link, .courseblock-tall a:active, .courseblock-tall a:visited {
+    text-decoration: none; }
+  .courseblock-tall h3 {
+    color: #5b6770;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-family: "Gotham 5r", sans-serif;
+    display: block;
+    font-size: 24px;
+    line-height: 30px;
+    width: 186px;
+    margin: 0; }
+  .courseblock-tall .text {
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "Gotham 4r", sans-serif;
+    font-weight: normal;
+    color: #5b6770; }
+  .courseblock-tall .smalltext {
+    font-size: 13px;
+    padding-top: 12px; }
+  .courseblock-tall .teacher-guide {
+    font-size: 13px;
+    position: absolute;
+    bottom: 16px;
+    right: 16px; }
+    .courseblock-tall .teacher-guide:hover {
+      text-decoration: underline; }
+
+.courseblock-wide-small {
+  margin: 0px;
+  border: none;
+  float: none;
+  background-color: white;
+  overflow: hidden;
+  box-sizing: border-box;
+  height: 100%; }
+  .courseblock-wide-small .heading {
+    width: 280px;
+    margin: 0;
+    padding: 8px 0 16px 16px; }
+  .courseblock-wide-small a {
+    text-decoration: none; }
+  .courseblock-wide-small img {
+    box-sizing: content-box; }
+  .courseblock-wide-small .imgspan {
+    margin-left: 0;
+    float: right;
+    text-align: right; }
+    html[dir=rtl] .courseblock-wide-small .imgspan {
+      float: left;
+      text-align: left; }
+  .courseblock-wide-small h3 {
+    margin: 0 0 0 0;
+    color: #5b6770;
+    overflow: hidden;
+    font-size: 24px;
+    line-height: 28px;
+    font-family: "Gotham 5r", sans-serif;
+    float: none;
+    width: 94%; }
+  .courseblock-wide-small h4 {
+    margin: 0 0 0 0;
+    font-size: 14px;
+    line-height: 17px;
+    font-family: "Gotham 4r", sans-serif;
+    font-weight: normal;
+    color: #5b6770; }
+  .courseblock-wide-small .smalltext {
+    margin: 12px 0 0 0;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: "Gotham 4r", sans-serif;
+    font-weight: normal;
+    color: #5b6770; }
+
+.courseblock-wide-large {
+  background-color: white;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+  float: left;
+  border: solid 1px #bbb;
+  border-radius: 5px; }
+  .courseblock-wide-large a:hover {
+    text-decoration: none; }
+  .courseblock-wide-large img {
+    box-sizing: content-box; }
+  .courseblock-wide-large .imgspan {
+    margin-top: 20px;
+    float: right; }
+  .courseblock-wide-large h3 {
+    margin: 10px 0 0 10px;
+    color: #5b6770;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 24px;
+    font-family: "Gotham 5r", sans-serif; }
+  .courseblock-wide-large h4 {
+    margin: 10px 0 0 10px;
+    color: #5b6770;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;
+    font-family: "Gotham 5r", sans-serif; }
+  .courseblock-wide-large .smalltext {
+    margin: 10px 0 0 10px;
+    padding-right: 5px;
+    font-size: 13px;
+    line-height: 17px;
+    font-family: "Gotham 4r", sans-serif;
+    font-weight: normal;
+    color: #5b6770; }
+    html[dir=rtl] .courseblock-wide-large .smalltext {
+      margin: 10px 10px 0 0; }
+
+.courseblock-tall + .courseblock-tall {
+  margin-left: 30px; }
+
+.courseblock-wide-small + .courseblock-wide-small {
+  margin-left: 20px; }
+
+.courseblock-wide-large + .courseblock-wide-large {
+  margin-left: 20px; }
+
+.courseblock-noaction {
+  border-bottom: solid 1px #c6cacd; }
+
+/*# sourceMappingURL=course-blocks.css.map */

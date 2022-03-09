@@ -1,0 +1,17 @@
+(function(){
+  window['optimizely'] = window['optimizely'] || [];
+  window['optimizely'].push(['activateGeoDelayedExperiments', {
+    'location':{
+      'city': "HANOI",
+      'continent': "AS",
+      'country': "VN",
+      'region': "HN",
+      'dma': ""
+    },
+    'ip':"183.80.214.240"
+  }]);
+})
+//
+()
+
+;
