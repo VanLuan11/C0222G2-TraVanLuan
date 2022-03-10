@@ -5,35 +5,35 @@
     <title>Title</title>
 </head>
 <body>
-<form>
     <p> Amount</p>
     <input type="number" id="money" placeholder="Nhap tien">
-    <span> From Curency</span>
-    <select>
-        <option id="vnd"> VietNam</option>
-        <option id=" usd"> USD</option>
+    <select id="from">
+        <option value="vnd"> VietNam</option>
+        <option value=" usd"> USD</option>
     </select>
-    <select>
-        <option id="usd"> USD</option>
-        <option id="vnd"> VietNam</option>
+    <select id="to">
+        <option value="vnd"> VietNam</option>
+        <option value="usd"> USD</option>
     </select>
     <button type="button" onclick="convent()">conven </button>
     <br>
-    <p id="result"> </p>
-</form>
-<script>
-    function convent() {
-        let vnd = document.getElementById("money").value;
-        let usd = document.getElementById("money").value;
-        let my = vnd/23000;
-        let viet = 23000*usd;
-        if (vnd){
-            alert(viet);
+    <p id="ketQua"> </p>
+    <script>
+        function convent() {
+            let money = document.getElementById("money").value;
+            let from = document.getElementById("from").value;
+            let to = document.getElementById("to").value;
+            let result=0;
+            if (from ==="usd"&&to==="vnd"){
+                result = money*23000;
+            }else if(from ==="vnd"&&to==="usd"){
+                result = money/23000;
+            }else {
+                result = money;
+            }
+            document.getElementById("ketQua").innerText=result;
+
         }
-        if (usd){
-            alert(my);
-        }
-    }
-</script>
+    </script>
 </body>
 </html>
