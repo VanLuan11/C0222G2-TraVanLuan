@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p id="demo"></p>
+<script>
+        let so_nguyen_to = "";
+        let count =0;
+        let number = 0;
+        for (let i=0;;i++){
+            if (i<=1){
+                number =0
+            } else if( i == 2 || i == 3){
+                count++
+                so_nguyen_to+= i+" "
+            }else if(i%2==0){
+                number = 0
+            }else if(i>=4){
+                for (let j=3;j<(i-1);j++){
+                     if(i%j == 0){
+                         number = 0
+                         break
+                     }else{
+                         number++
+                     }
+                }
+
+                if(number>0){
+                    so_nguyen_to += i+ " "
+                    count ++
+                    if(count == 20){
+                        break
+                    }
+                }
+
+            }
+        }
+
+        document.write("20 Số nguyên tố gồm: "+so_nguyen_to)
+</script>
+
+</body>
+</html>

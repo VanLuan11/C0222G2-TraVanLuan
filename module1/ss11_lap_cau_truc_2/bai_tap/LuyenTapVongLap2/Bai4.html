@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let height = 10;
+    let width = 40;
+    for (let i = 0; i < height; i++){
+        for ( let j = 0 ; j < width ; j++){
+            if ( i === 0 || i === height - 1 || j === 0 || j === width - 1){
+                document.write("*");
+            } else {
+                // In khoảng trắng
+                document.write("&nbsp&nbsp");
+            }
+        }
+        document.write("<br>")
+    }
+</script>
+
+</body>
+</html>
