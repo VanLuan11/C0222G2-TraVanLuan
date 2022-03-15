@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let a = [4,1,6,7,2,8,5,3,9]
+    let max = a[0];
+    let sum = 0;
+    let dem = 0;
+    let avg;
+    for ( let i = 0; i < a.length; i ++){
+        if ( a[i] > max ) {
+            max = a[i];
+            sum = sum +a[i]
+            dem ++
+            avg = sum/dem;
+        }
+    }console.log("số lớn nhất: " + max + " trung bình: " + avg )
+
+</script>
+</body>
+</html>

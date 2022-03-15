@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = ["g","n","o","u",3,2,1,"o","d",3,2,1]
+    let first = 0;
+    let last = arr .length -1;
+    while (first < last) {
+        let b = arr[first];
+        arr[first] = arr[last];
+        arr[last] = b;
+        first++;
+        last--;
+    }
+    console.log(arr);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="tim" placeholder="tìm số"/>
+<input type="button" onclick="timSo()" value="tìm"/>
+<script>
+    let arr = [1,2,3,4,5,6,7,8,9,10]
+    function timSo() {
+        let so = parseInt(document.getElementById("tim").value);
+        let index = arr.indexOf(so);
+        if ( index !==-1){
+            alert("V is in the array");
+        }else {
+            alert("V is not in the array")
+        }
+
+    }
+</script>
+
+</body>
+</html>

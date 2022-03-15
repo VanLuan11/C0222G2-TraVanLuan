@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="so" placeholder="Nhập số"/>
+<input type="button" onclick="kiemSo()" value="tìm"/>
+<script>
+    let arr = [1,2,3,4,5,6,7,8,9,10]
+    let flag = true
+    function kiemSo() {
+        let so = parseInt(document.getElementById("so").value);
+        let index = arr.indexOf(so);
+        for ( let i=0; i < arr.length; i++){
+            if (index !==-1){
+                flag=false;
+            }
+        }
+        if(flag===false){
+            arr.splice(index,1);
+            arr.push(0);
+        }
+        console.log(arr);
+
+    }
+</script>
+
+</body>
+</html>

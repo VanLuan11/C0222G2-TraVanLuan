@@ -3,6 +3,10 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module1/ss4_git_va_html/bai_tap/SuDungGit" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/module1/ss4_git_va_html/bai_tap/SuDungGit/GitProject" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module1/ss4_git_va_html/thuc_hanh/CloneDuAnGit/wf-hello" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module1/ss4_git_va_html/thuc_hanh/TaoDuAnMoTrenGitHub" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/module1/ss4_git_va_html/thuc_hanh/TaoDuAnMoTrenGitHub/my-new-project" vcs="Git" />
   </component>
 </project>

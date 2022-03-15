@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2 style="color: #d43f3a">Từ Điển Anh - Việt</h2>
+<form>
+    <input type="text"  id="tu" placeholder="Nhập từ cần tìm"/>
+    <input type = "button" onclick="traTu()" value = "Tìm"/>
+</form>
+</body>
+<script>
+    let arr1 = ["hello", "bye", "good", "wife", "book"];
+    let arr2 = ["chào", "tạm biệt", "tốt", "vợ", "sách"];
+    function traTu() {
+        let tu =document.getElementById("tu").value;
+        let index= arr1.indexOf(tu);
+        if ( index !== -1){
+            alert("nghĩa của từ là:" + arr2[index])
+        }else {
+            alert(" không tìm thấy: ");
+        }
+
+
+    }
+
+
+
+
+</script>
+</html>

@@ -6,17 +6,17 @@
 </head>
 <body>
 <script>
-    let phamvi = Number(prompt("Trò chơi đoán số từ 0 - "))
-    let nhapso = Number(prompt("Nhập vào số muốn đoán"))
+    let phamVi = Number(prompt("Trò chơi đoán số từ 0 - "))
+    let nhapSo = Number(prompt("Nhập vào số muốn đoán"))
     let soRamdom
-    if(phamvi){
-        soRamdom = Math.floor(Math.random()*phamvi)
-        if(soRamdom == nhapso){
+    if(phamVi){
+        soRamdom = Math.floor(Math.random()*phamVi)
+        if(soRamdom == nhapSo){
             alert("Bạn đã đoán đung")
         }else{
-            while (soRamdom != nhapso){
+            while (soRamdom != nhapSo){
                 alert("Bạn đoán sai số đúng là "+soRamdom)
-                nhapso = Number(prompt("Nhập vào số muốn đoán"))
+                nhapSo = Number(prompt("Nhập vào số muốn đoán"))
             }
             alert("Bạn đoán đúng")
         }

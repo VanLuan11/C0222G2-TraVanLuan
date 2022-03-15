@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr = "cung ly 123 nao"
+    let dem=0;
+    let flag = true;
+    for (let i=0; i < arr.length; i++) {
+        if(arr[i] !==' '){
+            if(flag){
+                dem++;
+                flag = false;
+            }
+        }
+        else{
+            flag = true;
+        }
+    }
+    console.log(dem)
+
+</script>
+
+</body>
+</html>
