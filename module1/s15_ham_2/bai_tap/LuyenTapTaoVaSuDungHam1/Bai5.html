@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let saoTim = prompt("nhap ten ngoi sao");
+
+    let ngoiSao =["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+
+    let chomSao =["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function timNgoiSao(saoTim) {
+        let flag =true
+        for (let i = 0; i < ngoiSao.length ; i++) {
+            if (saoTim === ngoiSao[i]) {
+               flag =  false;
+               break;
+            }
+        }
+        if (flag === false){
+            for (let i = 0; i < ngoiSao.length ; i++) {
+                if ( saoTim === ngoiSao[i]){
+                    return chomSao[i];
+                }
+            }
+        }else {
+            return "khong toi tai"
+        }
+    }
+    console.log(timNgoiSao(saoTim));
+</script>
+</body>
+</html>

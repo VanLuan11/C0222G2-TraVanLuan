@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+   let soNguyen=0;
+   function soNguyenTo(soNguyen) {
+       if (soNguyen < 2){
+           return false;
+       }else {
+           for (let i = 2; i < soNguyen -1 ; i++) {
+               if (soNguyen%i === 0){
+                return false;
+               }
+           }
+       } return true;
+
+   }
+   while (soNguyen <1000){
+       if ( soNguyenTo(soNguyen)){
+           document.write(soNguyen );
+       } soNguyen++;
+   }
+
+
+
+</script>
+</body>
+</html>

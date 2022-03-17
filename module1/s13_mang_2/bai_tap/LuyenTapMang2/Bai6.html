@@ -6,8 +6,12 @@
 </head>
 <body>
 <script>
-    let a = prompt("nhap a");
-
+    let a = [1,2,3,"-"];
+    for (let i = 0; i < a.length ; i++) {
+       if( a[i] === "-"){
+           a[i]="_"
+       }
+    } console.log(a);
 </script>
 </body>
 </html>
