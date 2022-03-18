@@ -6,6 +6,22 @@
 </head>
 <body>
 <script>
+    class doiNhietDo {
+        constructor(c) {
+            this.c = c
+        }
+        getDoF(){
+            return this.c *1.8+32;
+        }
+        getDoK(){
+            return this.c +273.15;
+        }
+    }
+    let nhietDo = new doiNhietDo(prompt("nhap nhieu do"));
+    let  DoF = nhietDo.getDoF();
+    let DoK = nhietDo.getDoK();
+    alert("Độ F: " + DoF + " Độ K: " + DoK);
+
 
 </script>
 
