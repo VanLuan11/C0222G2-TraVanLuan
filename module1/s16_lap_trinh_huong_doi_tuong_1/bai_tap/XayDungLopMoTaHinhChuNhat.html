@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class chuNhat{
+        constructor(chieuDai , chieuRong) {
+            this.chieuDai = chieuDai;
+            this.chieuRong = chieuRong;
+        }
+        getDienTich(){
+            return this.chieuDai * this.chieuRong;
+        }
+        getChuVi(){
+            return  2* (this.chieuDai + this.chieuRong)
+        }
+    }
+    let nhat = new chuNhat(2,4);
+    let S = nhat.getDienTich();
+    let C= nhat.getChuVi();
+    console.log( "dien tich: " + S + " chu vi: " + C  )
+
+
+</script>
+
+</body>
+</html>
