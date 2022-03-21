@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Apple {
+        constructor() {
+            this.weight = 10;
+        }
+        decrease() {
+            if (this.weight > 0) {
+                this.weight--;
+            }
+        }
+        getWeight() {
+            return this.weight;
+        }
+        isEmpty() {
+            if (this.weight>0) {
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+    }
+
+    class Human {
+        constructor(name, gender, weight) {
+            this.name =name;
+            this.gender = gender;
+            this.weight = weight;
+        }
+        getName() {
+            return this.name;
+        }
+        setName(name) {
+            this.name = name;
+        }
+        getWeight() {
+            return this.weight;
+        }
+        setWeight(weight) {
+            this.weight = weight;
+        }
+        isMale() {
+            return this.gender;
+        }
+        setGender(gender) {
+            this.gender = gender;
+            if (gender) {
+                document.write("I am a Man");
+                document.write("<br>");
+            }
+            else {
+                document.write("I am a Woman");
+                document.write("<br>");
+            }
+        }
+        checkApple(apple) {
+            if (apple.getWeight()>0) {
+                return true;
+            }
+            else {
+                return false;
+            }
+        }
+        eat(apple) {
+            apple.decrease();
+            this.weight = this.getWeight()+1;
+        }
+        say(message) {
+            document.write(message);
+            document.write("<br>");
+        }
+    }
+
+    let adam = new Human();
+    let eva = new Human();
+    let demoApple = new Apple();
+
+    eva.setGender(false);
+    eva.setName("Eva");
+    eva.say("My Name is: " +eva.getName());
+    eva.setWeight(46);
+    eva.say("My weight is: " +eva.getWeight());
+
+    adam.setGender(true);
+    adam.setName("Adam");
+    adam.say("My Name is: " +adam.getName());
+    adam.setWeight(70);
+    adam.say("My weight is: " +adam.getWeight());
+
+    eva.say("We ate an apple together")
+    while (demoApple.getWeight()>0) {
+        adam.eat(demoApple);
+
+        document.write("Adam's weight: " +adam.getWeight());
+        document.write("<br>");
+
+        if (demoApple.getWeight()>0) {
+            eva.eat(demoApple);
+            document.write("Adam's weight: "+eva.getWeight());
+            document.write("<br>");
+        }
+        document.write("Is the apple still edible?: "+adam.checkApple(demoApple));
+        document.write("<br>");
+
+    }
+
+</script>
+
+</body>
+</html>

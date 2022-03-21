@@ -5,8 +5,10 @@
     <title>Title</title>
 </head>
 <body>
+<canvas id="myCanvas"  style="border:1px solid #000000;">
+    Your browser does not support the HTML5 canvas tag.</canvas>
 <script>
-    class chuNhat{
+    class ChuNhat{
         constructor(chieuDai , chieuRong) {
             this.chieuDai = chieuDai;
             this.chieuRong = chieuRong;
@@ -18,7 +20,7 @@
             return  2* (this.chieuDai + this.chieuRong)
         }
     }
-    let nhat = new chuNhat(2,4);
+    let nhat = new ChuNhat(2,4);
     let S = nhat.getDienTich();
     let C= nhat.getChuVi();
     console.log( "dien tich: " + S + " chu vi: " + C  )

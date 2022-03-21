@@ -21,7 +21,7 @@
         getYear(){
             return this.year;
         }
-        setDay(day){
+        setDay(){
             this.day = day;
         }
         setMonth(){
@@ -36,12 +36,12 @@
     let month = date.getMonth();
     let year = date.getYear();
     alert(day + "/" + month + "/" + year);
-    date.setDay(18);
+    date.setDay(21);
     date.setMonth(3);
     date.setYear(2022);
-    day = date.getDay();
-    month = date.getMonth();
-    year= date.getYear();
+    day = date.getDay(21);
+    month = date.getMonth(3);
+    year= date.getYear(2022);
     alert(day + "/" + month + "/" + year);
 
 

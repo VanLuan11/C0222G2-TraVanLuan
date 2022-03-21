@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class bongDen{
+        constructor() {
+            this.trangThai = false; // dèn đang tắt;
+        }
+        denSang (){
+            return this.trangThai = true; // đèn đang sáng;
+        }
+        denTat(){
+            return this.trangThai = false;// đèn đang tắt;
+        }
+        kTraDen(){
+            if(this.trangThai){
+               alert("đén sáng quá tắt đi");
+            }else{
+                alert("tối quá bật đèn lên");
+            }
+        }
+    }
+    class congTac {
+        constructor() {
+            this.trangThai = false
+            this.bongDen = null;
+        }
+        ketNoiBongDen(bongDen){
+            this.bongDen = bongDen;
+        }
+        batCongTac(){
+            this.trangThai = true
+            this.bongDen.denSang() ;
+        }
+        tatCongTac() {
+            this.trangThai = false;
+            this.bongDen.denTat();
+        }
+
+    }
+    let bongDen1 = new bongDen();
+    bongDen1.kTraDen();
+
+    let congTac1 = new congTac();
+    congTac1.ketNoiBongDen(bongDen1);
+    congTac1.batCongTac(bongDen1);
+    bongDen1.kTraDen(bongDen1);
+
+    congTac1.tatCongTac(bongDen1);
+    bongDen1.kTraDen(bongDen1);
+</script>
+
+</body>
+</html>
