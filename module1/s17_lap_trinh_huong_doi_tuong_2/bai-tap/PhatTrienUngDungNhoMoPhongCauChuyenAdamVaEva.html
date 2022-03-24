@@ -10,108 +10,100 @@
         constructor() {
             this.weight = 10;
         }
-        decrease() {
-            if (this.weight > 0) {
-                this.weight--;
-            }
-        }
-        getWeight() {
+
+        getWeightApple() {
             return this.weight;
         }
-        isEmpty() {
-            if (this.weight>0) {
-                return false;
-            }
-            else {
-                return true;
-            }
+
+        setWeightApple(weight) {
+            this.weight = weight;
         }
     }
 
     class Human {
-        constructor(name, gender, weight) {
-            this.name =name;
-            this.gender = gender;
-            this.weight = weight;
+        constructor() {
+            this.name = "";
+            this.gender = "";
+            this.weight = null;
+            this.apple = null;
         }
+
         getName() {
             return this.name;
         }
+
         setName(name) {
             this.name = name;
         }
+
+        getGender() {
+            return this.gender;
+        }
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
         getWeight() {
             return this.weight;
         }
+
         setWeight(weight) {
             this.weight = weight;
         }
-        isMale() {
-            return this.gender;
+
+        getAplle() {
+            return this.apple;
         }
-        setGender(gender) {
-            this.gender = gender;
-            if (gender) {
-                document.write("I am a Man");
-                document.write("<br>");
-            }
-            else {
-                document.write("I am a Woman");
-                document.write("<br>");
-            }
+
+        setApple(apple) {
+            this.apple = apple;
         }
-        checkApple(apple) {
-            if (apple.getWeight()>0) {
-                return true;
-            }
-            else {
-                return false;
-            }
+
+        getMessage(message) {
+            return message;
         }
-        eat(apple) {
-            apple.decrease();
-            this.weight = this.getWeight()+1;
-        }
-        say(message) {
-            document.write(message);
-            document.write("<br>");
+
+        anTao() {
+            if (this.apple.getWeightApple() > 0) {
+                //khi ăn táo tắng 1 đv;
+                this.setWeight(Number(this.getWeight()) + 1);
+                //khi người ăn táo giảm 1đv;
+                this.apple.setWeightApple(this.apple.getWeightApple() - 1);
+                console.log(this.getName() + " ăn táo," + "\n" + " táo còn lại: " + this.apple.getWeightApple() + "kg");
+            } else {
+                console.log(this.getName() + "đă ăn hết táo" + "\n" + this.apple.getWeightApple());
+            }
         }
     }
 
-    let adam = new Human();
-    let eva = new Human();
-    let demoApple = new Apple();
+    //khởi tạo object
+    let apple = new Apple();
+    let human1 = new Human();
+    let human2 = new Human();
 
-    eva.setGender(false);
-    eva.setName("Eva");
-    eva.say("My Name is: " +eva.getName());
-    eva.setWeight(46);
-    eva.say("My weight is: " +eva.getWeight());
 
-    adam.setGender(true);
-    adam.setName("Adam");
-    adam.say("My Name is: " +adam.getName());
-    adam.setWeight(70);
-    adam.say("My weight is: " +adam.getWeight());
+    human1.setName("Eva");
+    human1.setGender("Nữ");
+    human1.setWeight("45");
+    human1.setApple(apple);
 
-    eva.say("We ate an apple together")
-    while (demoApple.getWeight()>0) {
-        adam.eat(demoApple);
-
-        document.write("Adam's weight: " +adam.getWeight());
-        document.write("<br>");
-
-        if (demoApple.getWeight()>0) {
-            eva.eat(demoApple);
-            document.write("Adam's weight: "+eva.getWeight());
-            document.write("<br>");
-        }
-        document.write("Is the apple still edible?: "+adam.checkApple(demoApple));
-        document.write("<br>");
-
+    human2.setName("Adam");
+    human2.setGender("Nam");
+    human2.setWeight("50");
+    human2.setApple(apple);
+    for (let i = 1; i <=5 ; i++) {
+        console.log(human1.getMessage("give an apple"));
+        human1.anTao();
+        console.log(  "Cân nặng: " + human1.getWeight())
+        console.log(human2.getMessage("my turn"));
+        human2.anTao();
+        console.log( "Cân nặng: " + human2.getWeight())
     }
+
+
+
 
 </script>
-
 </body>
 </html>

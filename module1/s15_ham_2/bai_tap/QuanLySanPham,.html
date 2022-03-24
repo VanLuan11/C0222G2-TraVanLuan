@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="nhap" placeholder="Nhập tên sản phẩm">
+<input type="button" value="Thêm mới" onclick="themMoiSP()"><br>
+<span>Số lượng sản phẩm: </span><span id="soLuong"></span>
+<p id="ketQua"></p>
+<script>
+
+    let danhSachSP = ["nokia", "sam sung", "iphone"];
+    display(danhSachSP);
+
+    function themMoiSP() {
+        let newProduct = document.getElementById("nhap").value;
+        if (newProduct != "") {
+            danhSachSP.push(newProduct);
+        } else {
+            alert("Bạn cần phải nhập tên sản phẩm");
+        }
+        display(danhSachSP);
+        document.getElementById("nhap").value = "";
+    }
+
+    function display(danhSach) {
+        let tabeString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '         <th>STT</th>\n' +
+            '         <th>Edit</th>\n' +
+            '         <th>Name</th>\n' +
+            '         <th>Delete</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            tabeString += ' <tr>\n' +
+                '       <td>' + (1 + i) + '</td>\n' +
+                '       <td>' + danhSach[i] + '</td>\n' +
+                '       <td> <input type="button" onclick="sua(' + i + ')" value="Sửa"></td>\n' +
+                '       <td> <input type="button" onclick="xoa(' + i + ')" value="Xóa"></td>\n' +
+                '    </tr>'
+        }
+        tabeString += '</table>';
+        document.getElementById("ketQua").innerHTML = tabeString;
+        document.getElementById("soLuong").innerText = danhSach.length;
+    }
+
+    function sua(id) {
+        let newProduct = prompt("Nhập tên sản phẩm cần sửa");
+        danhSachSP[id] = newProduct;
+        display(danhSachSP);
+    }
+
+    function xoa(id) {
+        let conf = confirm("Bạn có muốn xóa sản phẩm : " + danhSachSP[id] + " không ?");
+        if (conf) {
+            danhSachSP.splice(id, 1);
+        } else {
+            alert("bạn đã không xóa")
+        }
+        display(danhSachSP);
+    }
+</script>
+</body>
+</html>

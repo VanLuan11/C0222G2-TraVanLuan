@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Viết một chương trình nhập một số từ bàn phím và in ra màn hình bằng chữ. -->
+<!--        Ví dụ 1234, kết quả in ra màn hình là một hai ba bốn.-->
+<script>// Chưa đúng
+let num = prompt("nhap so");
+let b = " ";
+for (let i = 0; i <num.length ; i++) {
+    switch (num[i]) {
+        case "1":
+            b+= " một ";
+            break;
+        case "2":
+            b+= " hai ";
+            break;
+        case "3":
+            b+= " ba ";
+            break;
+        case "4":
+            b+= " bốn ";
+            break;
+    }
+
+}console.log(b)
+
+</script>
+
+</body>
+</html>

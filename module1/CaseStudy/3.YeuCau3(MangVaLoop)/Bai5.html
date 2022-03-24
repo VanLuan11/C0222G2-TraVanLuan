@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Giả sử menu của chúng ta có các loại thức uống như sau:-->
+<!--Cafe-->
+<!--Cam vắt-->
+<!--Nước ép cà rốt-->
+<!--Nước ép cà chua-->
+<!--Nước lọc-->
+<!--Nước dừa-->
+<!--Viết một chương trình gọi thức uống đơn giản.-->
+<!--Gợi ý: Trước tiên in ra màn hinh danh sách các loại thức uống cho người dùng chọn lựa-->
+<!--Đánh dấu theo thứ tự 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món)-->
+<!--Khi người dùng lựa chọn 1 trong số các thức uống, chương trình sẽ hiện đơn giá của thức uống đó và cho phép người dùng nhập số lượng. Cuối cùng hiển thị tổng số tiền người dùng cần phải trả.-->
+</body>
+<script>
+    let n;
+    let giaTien = 0;
+    let soLuong = 0;
+    while (n !== 7) {
+        n = Number(prompt("Menu đồ uống: \n 1.Cafe. Giá tiền: 15000 \n 2.Cam vắt. Giá tiền: 20000 \n 3.Nước ép cà rốt. Giá tiền: 14000 \n 4,Nước ép cà chua. Giá tiền: 13000 \n 5,Nước lọc. Giá tiền: 5000 \n 6,Nước dừa. Giá tiền: 25000 \n 7,Kết thúc gọi món"))
+        switch (n) {
+            case 1:
+                giaTien = 15000;
+                soLuong = Number(prompt(" nhập số lượng"));
+                alert("Bạn gọi: Cafe," + " Số Lượng: " + soLuong + " Tổng: " + (giaTien * soLuong) + "VNĐ")
+                break;
+            case 2:
+                giaTien = 20000;
+                soLuong = Number(prompt(" nhập số lượng"));
+                alert("Bạn gọi: Cam vắt," + " Số Lượng: " + soLuong + " Tổng: " + (giaTien * soLuong) + "VNĐ")
+                break;
+            case 3:
+                giaTien = 14000;
+                soLuong = Number(prompt(" nhập số lượng"));
+                alert("Bạn gọi: Nước ép cà rốt," + " Số Lượng: " + soLuong + " Tổng: " + (giaTien * soLuong) + "VNĐ")
+                break;
+            case 4:
+                giaTien = 13000;
+                soLuong = Number(prompt(" nhập số lượng"));
+                alert("Bạn gọi: Nước ép cà chua," + " Số Lượng: " + soLuong + " Tổng: " + (giaTien * soLuong) + "VNĐ")
+                break;
+            case 5:
+                giaTien = 5000;
+                soLuong = Number(prompt(" nhập số lượng"));
+                alert("Bạn gọi: Nước lọc," + " Số Lượng: " + soLuong + " Tổng: " + (giaTien * soLuong) + "VNĐ")
+                break;
+            case 6:
+                giaTien = 25000;
+                soLuong = Number(prompt(" nhập số lượng"));
+                alert("Bạn gọi: Nước dừa," + " Số Lượng: " + soLuong + " Tổng: " + (giaTien * soLuong) + "VNĐ")
+                break;
+             default:
+                 alert("Không có số mà bạn yêu cầu");
+                 break;
+        }
+    }
+</script>
+</html>

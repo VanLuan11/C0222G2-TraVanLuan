@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--Cho 2 mảng A và B chứa số nguyên. -->
+<!--Tìm ra một mảng đã được sắp xếp chứa các phần tử xuất hiện trong mảng B nhưng lại không xuất hiện A-->
+<script>
+    let a = [7, 2, 5, 3, 5, 3];
+    let b = [7, 2, 5, 1, 4, 6, 3, 5, 3]
+
+    for (let i = 0; i < b.length; i++) {
+        for (let j = 0; j < a.length; j++) {
+            if (b[i] === a[j]) {
+                b.splice(i, 1);
+            }
+        }
+    }
+    console.log(b)
+
+</script>
+</body>
+</html>

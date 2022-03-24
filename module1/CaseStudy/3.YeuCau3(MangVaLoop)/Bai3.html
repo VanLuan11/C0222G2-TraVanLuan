@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Cho một danh sách các phân số, hãy tìm chỉ số của phân số lớn nhất (đếm từ 0)
+    let tuSo = [5, 2, 5]
+    let mauSo = [6, 3, 4]
+    let max = tuSo[0] / mauSo[0]
+    let index = 0
+    for (let i = 0; i < tuSo.length; i++) {
+        if (tuSo[i] / mauSo[i] > max) {
+            max = tuSo[i] / mauSo[i];
+            index = i;
+        }
+    }
+    console.log(" phân số lớn nhất: " + tuSo[index] + "/" + mauSo[index] + " chỉ số: " + index)
+</script>
+</body>
+</html>

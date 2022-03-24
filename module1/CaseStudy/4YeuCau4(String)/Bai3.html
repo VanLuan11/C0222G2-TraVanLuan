@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.
+    let a = "aabcc";
+    let b = "adca a";
+    a = a.split("");
+    b = b.split("");
+    let arr = [];
+    let count = 0;
+    for (let i = 0; i < a.length; i++) {
+        for (let j = 0; j < b.length; j++) {
+            if (a[i] == b[j]) {
+                arr.push(a[i]);
+                b.splice(j, 1);
+                count ++
+                break;
+            }
+        }
+    }
+    console.log("Có " + count + " kí tự chung, "  + " Các kí tự chung: " + arr)
+</script>
+</html>

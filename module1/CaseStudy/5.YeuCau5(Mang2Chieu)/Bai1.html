@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    // Viết hàm tính tổng các số chẵn trong ma trận có kích thước m*n. Với m, n là các số nhập từ bàn phím.
+    let m = prompt("nhap m");
+    let n = prompt("nhap n");
+    let tong = 0;
+    for (let i = 0; i <= m * n; i++) {
+        if (i % 2 === 0) {
+            tong += i
+        }
+    }
+    console.log(tong)
+</script>
+
+</body>
+</html>
