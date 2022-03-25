@@ -13,12 +13,14 @@
 </body>
 <script>
     let a = " tRuong  TaN   HAI ";
-    a.toLocaleLowerCase();
-    let arr = new Array(a)
-    for (let i = 0; i < arr.length ; i++) {
-        arr.slice(" ");
-        alert(arr)
 
+    function xauKyTu(a) {
+        let aNew = a.toLocaleLowerCase(a);
+        let arr = new Array(aNew.length)
+        for (let i = 0; i < arr.length; i++) {
+            arr[i] = aNew.charAt(i);
+            alert(arr)
+        }
     }
 </script>
 </html>
