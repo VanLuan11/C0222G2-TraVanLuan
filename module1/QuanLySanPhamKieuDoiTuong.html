@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="hang" placeholder="nhập hãng">
+<input type="text" id="cpu" placeholder="nhập CPU">
+<input type="text" id="ram" placeholder="nhập RAM">
+<input type="text" id="gia" placeholder="nhập Giá ">
+<input type="button" onclick="themMoi()" value="Thêm Mới">
+<p id="ketQua"></p>
+<script>
+    class LapTop {
+        constructor(hang, cpu, ram, gia) {
+            this.hang = hang;
+            this.cpu = cpu;
+            this.ram = ram;
+            this.gia = gia;
+        }
+
+        getHang() {
+            return this.hang;
+        }
+
+        setHang(hang) {
+            this.hang = hang;
+        }
+
+        getCPU() {
+            return this.cpu;
+        }
+
+        setCPU(cpu) {
+            this.cpu = cpu;
+        }
+
+        getRAM() {
+            return this.ram;
+        }
+
+        setRAM(ram) {
+            this.ram = ram;
+        }
+
+        getGia() {
+            return this.gia;
+        }
+
+        setGia(gia) {
+            this.gia = gia;
+        }
+    }
+
+    let lapTop1 = new LapTop("acer", "i5", "8GB", "15tr");
+    let lapTop2 = new LapTop("asus", "i7", "16GB", "20tr");
+    let lapTop3 = new LapTop("lenovo", "i9", "32GB", "25tr");
+    let danhSachLapTop = [lapTop1, lapTop2, lapTop3];
+    hienThiDanhSach(danhSachLapTop);
+
+    function hienThiDanhSach(danhSach) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Hãng</th>\n' +
+            '        <th>CPU</th>\n' +
+            '        <th>RAM</th>\n' +
+            '        <th>Giá Tiền</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            tableString += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i].getHang() + '</td>\n' +
+                '        <td>' + danhSach[i].getCPU() + '</td>\n' +
+                '        <td>' + danhSach[i].getRAM() + '</td>\n' +
+                '        <td>' + danhSach[i].getGia() + '</td>\n' +
+                '        <td><input type="button" value="Edit" onclick="sua(' + i + ')"></td>\n' +
+                '        <td><input type="button" value="Xóa" onclick="xoa(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("ketQua").innerHTML = tableString;
+    }
+
+    function themMoi() {
+        let hang = document.getElementById("hang").value;
+        let cpu = document.getElementById("cpu").value;
+        let ram = document.getElementById("ram").value;
+        let gia = document.getElementById("gia").value;
+        let lapTop = new LapTop(hang, cpu, ram, gia);
+        danhSachLapTop.push(lapTop);
+        hienThiDanhSach(danhSachLapTop);
+        document.getElementById("hang").value = "";
+        document.getElementById("cpu").value = "";
+        document.getElementById("ram").value = "";
+        document.getElementById("gia").value = "";
+    }
+
+    function xoa(index) {
+        let conf = confirm(" bạn có muốn xóa hãng không ? " + danhSachLapTop[index].getHang())
+        if (conf) {
+            danhSachLapTop.splice(index, 1);
+        } else {
+            alert("Bạn đã ko xóa hãng này");
+
+        }
+        hienThiDanhSach(danhSachLapTop);
+    }
+    function sua(index) {
+        let newHang = prompt(" nhập lại hãng: ");
+        let newcpu = prompt(" nhập lại cpu: ");
+        let newram = prompt(" nhập lại ram: ");
+        let newgia = prompt(" nhập lại giá: ");
+        danhSachLapTop[index].setHang(newHang);
+        danhSachLapTop[index].setCPU(newcpu);
+        danhSachLapTop[index].setRAM(newram);
+        danhSachLapTop[index].setGia(newgia);
+        hienThiDanhSach(danhSachLapTop);
+    }
+</script>
+</body>
+</html>

@@ -12,15 +12,89 @@
 
 </body>
 <script>
-    let a = " tRuong  TaN   HAI ";
+    // Cách này ko tái sử dụng lại Hàm;
 
-    function xauKyTu(a) {
-        let aNew = a.toLocaleLowerCase(a);
-        let arr = new Array(aNew.length)
-        for (let i = 0; i < arr.length; i++) {
-            arr[i] = aNew.charAt(i);
-            alert(arr)
+    // let chuyenTu = ("tRuong    TaN   HAI ");
+    // let a = [];
+    //
+    // function chuyenHoaKyTu(chuyenTu) {
+    //     chuyenTu = chuyenTu.toLowerCase();
+    //     a = chuyenTu.split("")
+    //
+    //     for (let i = 1; i < a.length; i++) {
+    //         if (a[i] == " " && a[i + 1] == " ") {
+    //             a.splice(i, 1);
+    //             a[i + 1] = a[i + 1].toUpperCase();
+    //             a[0] = a[0].toUpperCase();
+    //             i--;
+    //         }
+    //     }
+    //     return a.join("")
+    // }
+    //
+    // function dem(chuyenTu) {
+    //     array = chuyenTu.split(" ");
+    //     let max = array[0].length;
+    //     let maxNew = array[0];
+    //     for (let i = 0; i < array.length; i++) {
+    //         if (array[i].length > max) {
+    //             max = array[i].length;
+    //             maxNew = array[i];
+    //         }
+    //     }
+    //     return maxNew;
+    // }
+    //
+    // function main(chuyenTu) {
+    //     return "Trước chuẩn hóa: " + chuyenTu + " ==>" + " Sau chuẩn hóa: " + chuyenHoaKyTu(chuyenTu) + "\n" + " Từ dài nhất: " + dem(chuyenHoaKyTu(chuyenTu))
+    // }
+    //
+    // alert(main(chuyenTu))
+
+
+    // Cách này tái sử dụng làm Hàm;
+    let str = prompt("nhap")
+
+    function chuyenHoaKyTu(str) {
+        let b = [];
+        let a = [];
+        str = str.toLowerCase()
+        a = str.split(" ")
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] != "") {
+                b.push(a[i]);
+            }
         }
+
+        for (let i = 0; i < b.length; i++) {
+            b[i] = b[i][0].toUpperCase() + b[i].substring(1);
+            // b[i][0].toUpperCase();
+        }
+
+        return b.join(" "); //chuyển mảng thành chuỗi;thay đổi khoảng cách giữa các chữ
     }
+
+    function timChuoiLonNhat(str) {
+        let arr = chuyenHoaKyTu(str).split(" ");
+        let max = arr[0].length;
+        let maxStr = arr[0];
+
+        for (let i = 1; i < arr.length; i++) {
+            if (arr[i].length > max) {
+                max = arr[i].length;
+                maxStr = arr[i];
+            }
+        }
+
+        return maxStr;
+    }``
+
+    function main() {
+        console.log(str + " => " + chuyenHoaKyTu(str));
+        console.log("Max: " + timChuoiLonNhat(str));
+    }
+
+    main();
+
 </script>
 </html>

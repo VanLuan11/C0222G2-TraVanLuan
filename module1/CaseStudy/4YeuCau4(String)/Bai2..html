@@ -7,18 +7,27 @@
 <body>
 <script>
     // Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
-    let a = "" +
-        "cadct";
-    a = a.split("");
-    let dem = 0;
-    for (let i = 1; i < a.length; i++) {
-        if (a[i] == a[i]) {
-            a.splice(i, 1);
-            dem =a.length;
+    let a = prompt("nhap ");
+    let arr = a.split("");
 
+    function demKyTuKhac() {
+        let dem = 0;
+        for (let i = 0; i < arr.length; i++) {
+            for (let j = i + 1; j < arr.length; j++) {
+                if (arr[i] == arr[j]) {
+                    arr[i] = " "
+                    break;
+                }
+            }
         }
+        for (let i = 0; i < a.length; i++) {
+            if (arr[i] != " ") {
+                dem++;
+            }
+        }
+        return dem;
     }
-    alert("Số ký tự khác: " + dem + " Các ký tự khác: " + a)
+    alert(demKyTuKhac(a))
 </script>
 </body>
 </html>

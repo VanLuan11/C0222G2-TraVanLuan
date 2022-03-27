@@ -8,8 +8,8 @@
 </body>
 <script>
     // Cho hai xâu kí tự, tìm số lượng kí tự chung giữa chúng.
-    let a = "aabcc";
-    let b = "adca a";
+    let a = "aabccdd";
+    let b = "adcaad";
     a = a.split("");
     b = b.split("");
     let arr = [];
@@ -19,11 +19,12 @@
             if (a[i] == b[j]) {
                 arr.push(a[i]);
                 b.splice(j, 1);
-                count ++
+                count++
                 break;
             }
         }
     }
-    console.log("Có " + count + " kí tự chung, "  + " Các kí tự chung: " + arr)
+    console.log("Có " + count + " kí tự chung, " + " Các kí tự chung: " + arr);
+
 </script>
 </html>
