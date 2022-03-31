@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    // bài 1:
+    // 1: Nhập từ bàn phím mảng số nguyên gồm n phần tử (n<=50). Hiển thị ra màn hình
+    // danh sách các phần tử của mảng, hiện thị giá trị trung bình của các phần tử chia hết
+    // cho 5 ở vị trí chia hết cho 3 ( phần tử có index chia hết cho 3)
+
+    let size = (prompt("nhập số lượng phần tử")); // size la chieu dai
+    let arr = [];
+    while (arr > 50) { // xét xem độ dài có lớn hơn 50 ko;
+        arr = parseInt(prompt("nhập  số lượng phần tử"));
+    }
+    for (let i = 0; i < size; i++) {
+        arr.push(parseInt(prompt("nhập sô nguyên")));
+    }
+    alert(arr);
+    let sum = 0;
+    let count = 0;
+    let result = 0;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] % 5 === 0 && i % 3 ===ư 0) {
+            result += arr[i];
+            count++;
+            sum = result / count;
+        }
+    }
+    alert("gia tri trung binh " + count);
+</script>
+</html>

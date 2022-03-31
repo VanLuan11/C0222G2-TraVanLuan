@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let size = (prompt("nhập số lượng phần tử")); // size la chieu dai
+    let arr = [];
+    let arr2 = [];
+    while (arr > 50) { // xét xem độ dài có lớn hơn 50 ko;
+        arr = parseInt(prompt("nhập lại số lượng phần tử"));
+    }
+    for (let i = 0; i < size; i++) {
+        arr.push(parseInt(prompt("nhập sô nguyên")));
+    }
+    alert(arr);
+
+    for (let i = 0; i < arr.length ; i++) {
+        if(soNguyenTo(arr[i])){
+            arr2.push(arr[i]);
+        }
+    }
+    alert(arr2)
+
+    // kiểm tra số nguyên tố
+    function soNguyenTo(arr) {
+        let flag = true; // là số nguyên tố
+        if (arr < 2) {
+            flag = false;
+        } else if (arr === 2) {
+            flag = true;
+        } else if (arr % 2 === 0) {
+            flag = false;
+        } else if (arr === 3) {
+            flag = true;
+        } else if (arr % 3 === 0) {
+            flag = false;
+        }
+        for (let i = 3; i < arr; i++) {
+            if (i % arr === arr) {
+                flag = true;
+            }
+        }
+        if (flag === true) {
+            console.log(arr + " Là sô nguyên tố");
+            return flag; // return trả giá trị về để tính
+        } else {
+            console.log(arr + " Không là số nguyên tố");
+            return flag;
+        }
+
+    }
+</script>
+</html>

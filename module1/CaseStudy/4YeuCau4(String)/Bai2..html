@@ -8,14 +8,15 @@
 <script>
     // Cho xâu kí tự. Hãy đếm số lượng kí tự khác nhau trong xâu đó
     let a = prompt("nhap ");
-    let arr = a.split("");
+    demKyTuKhac(a);
 
-    function demKyTuKhac() {
+    function demKyTuKhac(a) {
         let dem = 0;
+        let arr = a.split("");
         for (let i = 0; i < arr.length; i++) {
             for (let j = i + 1; j < arr.length; j++) {
                 if (arr[i] == arr[j]) {
-                    arr[i] = " "
+                    arr[i] = " ";
                     break;
                 }
             }
@@ -27,6 +28,7 @@
         }
         return dem;
     }
+
     alert(demKyTuKhac(a))
 </script>
 </body>

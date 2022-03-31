@@ -5,6 +5,134 @@
     <title>Title</title>
 </head>
 <body>
+<div>
+    <p id = "result"></p>
+</div>
+<script>
+    class Lottery {
+        constructor(number1, number2, number3, number4, number5, number6, grade = "") {
+            this.number1 = number1;
+            this.number2 = number2;
+            this.number3 = number3;
+            this.number4 = number4;
+            this.number5 = number5;
+            this.number6 = number6;
+            this.grade = grade;
+        }
 
+        getNumber1() {
+            return this.number1;
+        }
+
+        setNumber1(number1) {
+            this.number1 = number1;
+        }
+
+        getNumber2() {
+            return this.number2;
+        }
+
+        setNumber2(number2) {
+            this.number2 = number2;
+        }
+
+        getNumber3() {
+            return this.number3;
+        }
+
+        setNumber3(number3) {
+            this.number3 = number3;
+        }
+
+        getNumber4() {
+            return this.number4;
+        }
+
+        setNumber4(number4) {
+            this.number4 = number4;
+        }
+
+        getNumber5() {
+            return this.number5;
+        }
+
+        setNumber5(number5) {
+            this.number5 = number5;
+        }
+
+        getNumber6() {
+            return this.number6;
+        }
+
+        setNumber6(number6) {
+            this.number6 = number6;
+        }
+
+        getGrade() {
+            return this.grade;
+        }
+
+        setGrade(grade) {
+            this.grade = grade;
+        }
+
+        getNumber() {
+            return (this.number1, this.number2, this.number3 , this.number4, this.number5, this.number6)
+        }
+
+        getRamdomNumber() {
+            this.setNumber1(Math.floor(Math.random() * 99));
+            this.setNumber2(Math.floor(Math.random() * 99));
+            this.setNumber3(Math.floor(Math.random() * 99));
+            this.setNumber4(Math.floor(Math.random() * 99));
+            this.setNumber5(Math.floor(Math.random() * 99));
+            this.setNumber6(Math.floor(Math.random() * 99));
+        }
+
+        getInfo() {
+            return "Vé số " + this.getNumber().join(" ") + this.grade;
+        }
+    }
+
+    let arrXoSo = [];
+
+    function menu() {
+        let  choose;
+        if (arrXoSo < 4) {
+            let choose = parseInt(prompt(
+                " bạn có 2 lựa chọn \n " +
+                "1. Bạn muốn tự mua số. \n " +
+                "2. Bạn muốn hệ thống tự mua số"));
+        }
+        if(choose ===2){
+            ramdomNumber()
+        }
+    }
+
+    function drawXoSo(arr) {
+        let xoSo;
+        let str = "";
+        for (let i = 0; i < arr.length; i++) {
+            str += "<input value = '" + arr[i].getNumber1() + "' >" +
+                "<input value = '" + arr[i].getNumber2() + "' >" +
+                "<input value = '" + arr[i].getNumber3() + "' >" +
+                "<input value = '" + arr[i].getNumber4() + "' >" +
+                "<input value = '" + arr[i].getNumber5() + "' >" +
+                "<input value = '" + arr[i].getNumber6() + "' >" + "<br>"
+
+
+        }
+        document.getElementById("result").innerHTML = str;
+    }
+    function ramdomNumber() {
+       let xoSo = new XoSo();
+        xoSo.getRamdomNumber();
+        arrXoSo.push(xoSo);
+        drawXoSo(arrXoSo);
+
+    }
+    menu();
+
+</script>
 </body>
 </html>

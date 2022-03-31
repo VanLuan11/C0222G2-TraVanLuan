@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="maMay" placeholder="nhập Mã máy">
+<input type="text" id="tenMay" placeholder="nhập Tên máy">
+<input type="text" id="tenHangSanXuat" placeholder="nhập Tên hãng sản xuất">
+<input type="text" id="giaBan" placeholder="nhập Giá bán ">
+<input type="button" onclick="themMoi()" value="Thêm Mới">
+<p id="ketQua"></p>
+<input type="button" onclick="xapXep()" value="Sắp xếp theo giá">
+<script>
+    // Câu 4: Tạo một lớp Máy tính có:
+    //     - Thuộc tính:
+    //     + Mã máy (string)
+    // + Tên máy(string)
+    // + Tên Hãng sản xuất (string)
+    // + Giá bán (number).
+    // - Các phương thức getter và setter cho các thuộc tính
+    // - Phương thức toString() : phương thức lấy các thông tin của đối tượng.
+    // -Yêu cầu: Viết chương trình quản lý Máy tính với các chức năng sau;
+    // + Thêm mới 1 máy tính
+    // + Hiển thị được danh sách máytinhs
+
+
+    class MayTinh {
+        constructor(maMay, tenMay, tenHangSanXuat, giaBan) {
+            this.maMay = maMay;
+            this.tenMay = tenMay;
+            this.tenHangSanXuat = tenHangSanXuat;
+            this.giaBan = giaBan;
+        }
+
+        getMaMay() {
+            return this.maMay;
+        }
+
+        setMaMay(maMay) {
+            this.maMay = maMay;
+        }
+
+        getTenMay() {
+            return this.tenMay;
+        }
+
+        setTenMay(tenMay) {
+            this.tenMay = tenMay;
+        }
+
+        getTenHangSanXuat() {
+            return this.tenHangSanXuat;
+        }
+
+        setTenHangSanXuat(tenHangSanXuat) {
+            this.tenHangSanXuat = tenHangSanXuat;
+        }
+
+        getGiaBan() {
+            return this.giaBan;
+        }
+
+        setGiaBan(giaBan) {
+            this.giaBan = giaBan;
+        }
+
+        toString() {
+            return 'Mã Máy: '+ this.maMay+'\n'+
+            'Tên máy: '+ this.tenMay+'\n'+
+            'Tên hãng sản xuất: '+ this.tenHangSanXuat+'\n'+
+            'Giá bán: '+ this.giaBan+'\n'
+        }
+
+    }
+
+    let mayTinh1 = new MayTinh("TDG", "Asus intro 5", "Asus", 15);
+    let mayTinh2 = new MayTinh("NHA", "Acer intro 5", "Acer", 20)
+    console.log(mayTinh1.toString());
+    console.log(mayTinh2.toString());
+    let danhSachMayTinh = [mayTinh1, mayTinh2];
+    hienThiDanhSach(danhSachMayTinh);
+
+    function hienThiDanhSach(danhSach) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã máy</th>\n' +
+            '        <th>Tên máy</th>\n' +
+            '        <th>Tên hãng sản xuất</th>\n' +
+            '        <th>Giá Bán</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            tableString += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i].getMaMay() + '</td>\n' +
+                '        <td>' + danhSach[i].getTenMay() + '</td>\n' +
+                '        <td>' + danhSach[i].getTenHangSanXuat() + '</td>\n' +
+                '        <td>' + danhSach[i].getGiaBan() + '</td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("ketQua").innerHTML = tableString;
+    }
+
+    function themMoi() {
+        let maMay = document.getElementById("maMay").value;
+        let tenMay = document.getElementById("tenMay").value;
+        let tenHangSanXuat = document.getElementById("tenHangSanXuat").value;
+        let giaBan = document.getElementById("giaBan").value;
+        let mayTinh = new MayTinh(maMay, tenMay, tenHangSanXuat, giaBan);
+        if (maMay != "" && tenMay != "" && tenHangSanXuat != "" && giaBan != "") {
+            danhSachMayTinh.push(mayTinh)
+
+        } else {
+            alert("Bạn không được để trống")
+        }
+        hienThiDanhSach(danhSachMayTinh);
+        document.getElementById("maMay").value = ""; //nếu để " " sẽ bị lỗi thêm khoảng trắng
+        document.getElementById("tenMay").value = "";
+        document.getElementById("tenHangSanXuat").value = "";
+        document.getElementById("giaBan").value = "";
+    }
+
+    function xapXep() {
+        let temp;
+        for (let i = 0; i < danhSachMayTinh.length - 1; i++) {
+            for (let j = i + 1; j < danhSachMayTinh.length; j++) {
+                if (danhSachMayTinh[i].getGiaBan() > danhSachMayTinh[j].getGiaBan()) {
+                    temp = danhSachMayTinh[i];
+                    danhSachMayTinh[i] = danhSachMayTinh[j];
+                    danhSachMayTinh[j] = temp;
+                }
+            }
+        }
+        hienThiDanhSach(danhSachMayTinh);
+    }
+</script>
+</body>
+</html>

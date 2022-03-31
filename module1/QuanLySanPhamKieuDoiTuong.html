@@ -91,17 +91,17 @@
         let ram = document.getElementById("ram").value;
         let gia = document.getElementById("gia").value;
         let lapTop = new LapTop(hang, cpu, ram, gia);
-        if (hang != "") {
-            danhSachLapTop.push(hang)
+        if (hang != "" && cpu != ""  && ram != "" && gia != "") {
+            danhSachLapTop.push(lapTop)
 
         } else {
             alert("Bạn không được để trống")
         }
-        danhSachLapTop.push(lapTop);
         hienThiDanhSach(danhSachLapTop);
-        document.getElementById("hang").value = "";
+        document.getElementById("hang").value = ""; //nếu để " " sẽ bị lỗi thêm khoảng trắng
         document.getElementById("cpu").value = "";
         document.getElementById("ram").value = "";
+        document.getElementById("gia").value = "";
     }
 
     function xoa(index) {

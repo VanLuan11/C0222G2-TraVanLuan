@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+</body>
+<script>
+    let a = [parseInt(prompt("nhap tu 1 "))];
+    let b = [parseInt(prompt("nhap mau 1"))];
+    let c = [parseInt(prompt("nhap tu 2 "))];
+    let d = [parseInt(prompt("nhap mau 2"))];
+
+    function phanSo(a, b, c, d) {
+        let flag = true;
+        for (let i = 0; i < a.length; i++) {
+            if (a[i] * d[i] === c[i] * b[i] ) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
+
+    alert(phanSo(a, b, c, d));
+</script>
+</html>

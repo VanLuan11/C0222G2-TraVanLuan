@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="maSo" placeholder="nhập Mã số">
+<input type="text" id="loaiTietKiem" placeholder="nhập Loại tiết kiệm">
+<input type="text" id="hoTen" placeholder="nhập Họ tên khách hàng">
+<input type="text" id="chungMinh" placeholder="nhập Chứng minh nhân dân">
+<input type="date" id="ngayMo" placeholder="nhập Ngày mở ">
+<input type="text" id="soTien" placeholder="nhập Số tiền mở ">
+<input type="button" onclick="themMoi()" value="Thêm Mới">
+<p id="ketQua"></p>
+<script>
+    class SoTietKiem {
+        constructor(maSo, loaiTietKiem, hoTen, chungMinh, ngayMo, soTien) {
+            this.maSo = maSo;
+            this.loaiTietKiem = loaiTietKiem;
+            this.hoTen = hoTen;
+            this.chungMinh = chungMinh;
+            this.ngayMo = ngayMo;
+            this.soTien = soTien;
+
+        }
+
+        getMaSo() {
+            return this.maSo;
+        }
+
+        setMaSo(maSo) {
+            this.maSo = maSo;
+        }
+
+        getLoaiTietKiem() {
+            return this.loaiTietKiem;
+        }
+
+        setLoaiTietKiem(loaiTietKiem) {
+            this.loaiTietKiem = loaiTietKiem;
+        }
+
+        getHoTen() {
+            return this.hoTen;
+        }
+
+        setHoTen(hoTen) {
+            this.hoTen = hoTen;
+        }
+
+        getChungMinh() {
+            return this.chungMinh;
+        }
+
+        setChungMinh(chungMinh) {
+            this.chungMinh = chungMinh;
+        }
+
+        getNgayMo() {
+            return this.ngayMo;
+        }
+
+        setNgayMo(ngayMo) {
+            this.ngayMo = ngayMo;
+        }
+
+        getSoTien() {
+            return this.soTien;
+        }
+
+        setSoTien(soTien) {
+            this.soTien = soTien;
+        }
+    }
+
+    let tietKiem1 = new SoTietKiem("QWERTY", "năm đầu", "Trần Văn Hoàn", 20221234, "2022 / 06 / 31 ", 100000);
+    let tietKiem2 = new SoTietKiem("ASDFGH", "năm 2", "Lệ Thị Hoa", 20225678, "2023 / 03 / 22", 200000);
+    let danhSachTietKiem = [tietKiem1, tietKiem2];
+    hienThiDanhSach(danhSachTietKiem);
+
+    function hienThiDanhSach(danhSach) {
+        let tableString = '<table border="1">\n' +
+            '    <tr>\n' +
+            '        <th>STT</th>\n' +
+            '        <th>Mã sổ</th>\n' +
+            '        <th>Loại tiết kiệm</th>\n' +
+            '        <th>Họ tên khách hàng</th>\n' +
+            '        <th>Chứng minh nhân dân</th>\n' +
+            '        <th>Ngày mở</th>\n' +
+            '        <th>Số tiền</th>\n' +
+            '        <th>Sửa</th>\n' +
+            '        <th>Xóa</th>\n' +
+            '    </tr>';
+        for (let i = 0; i < danhSach.length; i++) {
+            tableString += ' <tr>\n' +
+                '        <td>' + (i + 1) + '</td>\n' +
+                '        <td>' + danhSach[i].getMaSo() + '</td>\n' +
+                '        <td>' + danhSach[i].getLoaiTietKiem() + '</td>\n' +
+                '        <td>' + danhSach[i].getHoTen() + '</td>\n' +
+                '        <td>' + danhSach[i].getChungMinh() + '</td>\n' +
+                '        <td>' + danhSach[i].getNgayMo() + '</td>\n' +
+                '        <td>' + danhSach[i].getSoTien() + '</td>\n' +
+                '        <td><input type="button" value="Edit" onclick="sua(' + i + ')"></td>\n' +
+                '        <td><input type="button" value="Xóa" onclick="xoa(' + i + ')"></td>\n' +
+                '    </tr>';
+        }
+        tableString += '</table>';
+        document.getElementById("ketQua").innerHTML = tableString;
+    }
+
+    function themMoi() {
+        let maSo = document.getElementById("maSo").value;
+        let loaiTietKiem = document.getElementById("loaiTietKiem").value;
+        let hoTen = document.getElementById("hoTen").value;
+        let chungMinh = document.getElementById("chungMinh").value;
+        let ngayMo = document.getElementById("ngayMo").value;
+        let soTien = document.getElementById("soTien").value;
+        let tienKiem = new SoTietKiem(maSo, loaiTietKiem, hoTen, chungMinh, ngayMo, soTien);
+        if (maSo !== "" && loaiTietKiem !== "" && hoTen !== "" && chungMinh !== "" || ngayMo !== "" || soTien !== "") {
+            danhSachTietKiem.push(tienKiem);
+
+        } else {
+            alert("Bạn không được để trống thôi tin");
+        }
+        hienThiDanhSach(danhSachTietKiem);
+        document.getElementById("maSo").value = "";
+        document.getElementById("loaiTietKiem").value = "";
+        document.getElementById("hoTen").value = "";
+        document.getElementById("chungMinh").value = "";
+        document.getElementById("ngayMo").value = "";
+        document.getElementById("soTien").value = "";
+    }
+
+    function xoa(index) {
+        let conf = confirm(" bạn có muốn xóa Mã số không ? " + danhSachTietKiem[index].getMaSo());
+        if (conf) {
+            danhSachTietKiem.splice(index, 1);
+        } else {
+            alert("Bạn đã ko xóa Mã số này");
+
+        }
+        hienThiDanhSach(danhSachTietKiem);
+    }
+
+</script>
+</body>
+</html>
