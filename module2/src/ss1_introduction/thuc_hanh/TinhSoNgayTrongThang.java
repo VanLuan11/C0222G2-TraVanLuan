@@ -9,6 +9,7 @@ public class TinhSoNgayTrongThang {
         System.out.print("Which month that you count days?");
         int month = sc.nextInt();
         String daysInMonth;
+
         switch (month) {
             case 2:
                 daysInMonth = "28 or 29 ";

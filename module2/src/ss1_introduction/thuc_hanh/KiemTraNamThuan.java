@@ -1,6 +1,7 @@
 package ss1_introduction.thuc_hanh;
 
-import jdk.nashorn.internal.parser.Scanner;
+
+import java.util.Scanner;
 
 public class KiemTraNamThuan {
     public static void main(String[] args) {
@@ -11,10 +12,23 @@ public class KiemTraNamThuan {
         year = scanner.nextInt();
         boolean isLeapYear = false;
 
-        boolean isDivisidleBy4=year%4==0;
+        boolean isDivisidleBy4 = year % 4 == 0;
         if (isDivisidleBy4) {
-            boolean isDI
-        }
+            boolean isDivisibleBy100 = year % 100 == 0;
+            if (isDivisibleBy100) {
+                boolean isDivisibleBy400 = year % 100 == 0;
+                if (isDivisibleBy400) {
+                    isLeapYear = true;
+                }
+            } else {
+                isLeapYear = true;
+            }
 
+        }
+        if (isLeapYear) {
+            System.out.printf("%d is a leap year", year);
+        } else {
+            System.out.printf("%d is NOT a leap year", year);
+        }
     }
 }
