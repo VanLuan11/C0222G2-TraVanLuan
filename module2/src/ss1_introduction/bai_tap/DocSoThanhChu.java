@@ -6,13 +6,13 @@ public class DocSoThanhChu {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("nhập 1 chữ số");
+        System.out.print("nhập 1 chữ số: ");
         int motSo = scanner.nextInt();
         String chuSo;
 
         switch (motSo) {
             case 0:
-                chuSo = " ";
+                chuSo = " không";
                 break;
             case 1:
                 chuSo = " mot";
@@ -28,7 +28,7 @@ public class DocSoThanhChu {
                 break;
             case 5:
                 chuSo = " nam";
-                break;                        
+                break;
             case 6:
                 chuSo = " sau";
                 break;
@@ -44,6 +44,6 @@ public class DocSoThanhChu {
             default:
                 chuSo = "không có";
         }
-            System.out.print("Số: " + motSo + " Chữ: " + chuSo);
+        System.out.print("Số: " + motSo + " Chữ số là: " + chuSo);
     }
 }
