@@ -14,18 +14,15 @@ public class Show20FirstPrefix { //hiển thị 20 số nguyên tố đàu tiên
             boolean flag = true;
             if (soNguyenTo < 2) {
                 flag = false;
-            } else if (soNguyenTo > 2) {
-                if (soNguyenTo % 2 == 0) {
-                    flag = false;
-                }
-            }
-            for (int i = 3; i < soNguyenTo; i += 2) {
-                if (soNguyenTo % i == 0) {
-                    flag = false;
+            } else {
+                for (int i = 2; i < soNguyenTo - 1; i++) {
+                    if (soNguyenTo % i == 0) {
+                        flag = false;
+                    }
                 }
             }
             if (flag == true) {
-                System.out.print( soNguyenTo + "," );
+                System.out.print(soNguyenTo + ",");
                 count++;
             }
             soNguyenTo++;

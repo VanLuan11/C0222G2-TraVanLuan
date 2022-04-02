@@ -14,22 +14,19 @@ public class ShowsSmallPrefixesLessThan100 {
             boolean flag = true;
             if (soNguyenTo < 2) {
                 flag = false;
-            } else if (soNguyenTo > 2) {
-                if (soNguyenTo % 2 == 0) {
-                    flag = false;
+            } else {
+                for (int i = 2; i < soNguyenTo - 1; i++) {
+                    if (soNguyenTo % i == 0) {
+                        flag = false;
+                    }
                 }
             }
-            for (int i = 3; i < soNguyenTo; i += 2) {
-                if (soNguyenTo % i == 0) {
-                    flag = false;
-                }
-            }
-            if(soNguyenTo < 100){
+            if (soNguyenTo < 100) {
                 if (flag == true) {
-                System.out.print( soNguyenTo + "," );
-                count++;
-            }
-            soNguyenTo++;
+                    System.out.print(soNguyenTo + ",");
+                    count++;
+                }
+                soNguyenTo++;
             }
         }
     }

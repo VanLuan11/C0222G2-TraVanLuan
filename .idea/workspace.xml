@@ -5,13 +5,7 @@
       <change afterPath="$PROJECT_DIR$/module1/QuanLySanPhamKieuDoiTuong.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module1/khungOOP.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module1/ss4_git_va_html/bai_tap/SuDungGit/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/bai_tap/DisplayType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/bai_tap/Show20FirstPrefix.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/bai_tap/ShowsSmallPrefixesLessThan100.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/thuc_hanh/CalculateLoanInterest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/thuc_hanh/FindTheGreatestCommonDivisor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/thuc_hanh/MenuDesignForApps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/CaseStudy/1.YeuCau1(VeHinh)/Bai1,2,3,4.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CaseStudy/1.YeuCau1(VeHinh)/Bai1,2,3,4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/CaseStudy/2.YeuCau2(IfVaSwitchCase)/Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CaseStudy/2.YeuCau2(IfVaSwitchCase)/Bai2.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/CaseStudy/3.YeuCau3(MangVaLoop)/Bai1.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CaseStudy/3.YeuCau3(MangVaLoop)/Bai1.html" afterDir="false" />
@@ -23,29 +17,11 @@
       <change beforePath="$PROJECT_DIR$/module1/CaseStudy/5.YeuCau5(Mang2Chieu)/Bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CaseStudy/5.YeuCau5(Mang2Chieu)/Bai3.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/CaseStudy/YeuCau6.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CaseStudy/YeuCau6.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/CaseStudy/YeuCau7.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CaseStudy/YeuCau7.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module1/s15_ham_2/bai_tap/HamKiemTraSoNguyenTo.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/s15_ham_2/bai_tap/HamKiemTraSoNguyenTo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/ss11_lap_cau_truc_2/bai_tap/HienThiCacSoNguyenToDauTien.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/ss11_lap_cau_truc_2/bai_tap/HienThiCacSoNguyenToDauTien.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/ss11_lap_cau_truc_2/bai_tap/LuyenTapVongLap1/Bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/ss11_lap_cau_truc_2/bai_tap/LuyenTapVongLap1/Bai3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/bai_tap/ChuyenDoiTienTe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/bai_tap/DocSoThanhChu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/bai_tap/HienThiLoiChao.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/thuc_hanh/CanNangCoThe.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/thuc_hanh/GiaiPhuongTrinhBacNhat.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/thuc_hanh/KhaiBaoSuDungBien.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/thuc_hanh/KiemTraNamThuan.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/thuc_hanh/SuDungToanTu.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss1_introduction/thuc_hanh/TinhSoNgayTrongThang.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss2_vong_lap_trong_java/thuc_hanh/KiemTraSoNguyenTo.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/bai_tap/ChuyenDoiTienTe.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/bai_tap/ConvertTheForeignCurrency.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/bai_tap/DocSoThanhChu.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/bai_tap/ReadNumbersIntoWords.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/bai_tap/HienThiLoiChao.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/bai_tap/ExpressGreetings.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/CanNangCoThe.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/BodyWeight.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/GiaiPhuongTrinhBacNhat.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/SolveFirstOrderEquation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/KhaiBaoSuDungBien.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/DeclareUsingVariables.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/KiemTraNamThuan.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/CheckLeapYears.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/SuDungToanTu.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/UseOperators.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/SystemTime.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/SystemTime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/TinhSoNgayTrongThang.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss1_introduction/thuc_hanh/CalculateTheNumberOfDaysInTheMonth.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/thuc_hanh/KiemTraSoNguyenTo.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/thuc_hanh/CheckIntegerElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss2_vong_lap_trong_java/bai_tap/Show20FirstPrefix.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/bai_tap/Show20FirstPrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/bai_tap/Show20FirstPrefix.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +56,8 @@
       <workItem from="1648711881471" duration="133000" />
       <workItem from="1648712026037" duration="215000" />
       <workItem from="1648873901813" duration="329000" />
+      <workItem from="1648912927653" duration="1287000" />
+      <workItem from="1648914312096" duration="438000" />
     </task>
     <servers />
   </component>
