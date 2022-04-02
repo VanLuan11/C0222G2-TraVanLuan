@@ -2,7 +2,7 @@ package ss1_introduction.thuc_hanh;
 
 import java.util.Scanner;
 
-public class CanNangCoThe {
+public class BodyWeight {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double weight,height,bmi;

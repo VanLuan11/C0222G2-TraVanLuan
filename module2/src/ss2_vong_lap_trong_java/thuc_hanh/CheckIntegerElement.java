@@ -2,7 +2,7 @@ package ss2_vong_lap_trong_java.thuc_hanh;
 
 import java.util.Scanner;
 
-public class KiemTraSoNguyenTo {
+public class CheckIntegerElement {
     public static void main(String[] args) {
 
 

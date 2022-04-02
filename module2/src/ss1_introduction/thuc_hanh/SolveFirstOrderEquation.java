@@ -2,7 +2,7 @@ package ss1_introduction.thuc_hanh;
 
 import java.util.Scanner;
 
-public class GiaiPhuongTrinhBacNhat {
+public class SolveFirstOrderEquation {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         double a,b,c;

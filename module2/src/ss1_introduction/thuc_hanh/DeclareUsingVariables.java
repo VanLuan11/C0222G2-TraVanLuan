@@ -1,6 +1,6 @@
 package ss1_introduction.thuc_hanh;
 
-public class KhaiBaoSuDungBien {
+public class DeclareUsingVariables {
     public static void main(String[] args) {
         int i =10;
         float f =20.5f;

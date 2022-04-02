@@ -2,7 +2,7 @@ package ss1_introduction.bai_tap;
 
 import java.util.Scanner;
 
-public class DocSoThanhChu {
+public class ReadNumbersIntoWords {// chuyển số thành chữ
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

@@ -2,7 +2,7 @@ package ss1_introduction.thuc_hanh;
 
 import java.util.Scanner;
 
-public class TinhSoNgayTrongThang {
+public class CalculateTheNumberOfDaysInTheMonth {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 

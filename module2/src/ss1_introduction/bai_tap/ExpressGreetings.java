@@ -2,7 +2,7 @@ package ss1_introduction.bai_tap;
 
 import java.util.Scanner;
 
-public class HienThiLoiChao {
+public class ExpressGreetings { // hiển thị lời chào
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println(" nhập tên bạn: ");

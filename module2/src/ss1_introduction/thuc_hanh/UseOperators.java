@@ -2,7 +2,7 @@ package ss1_introduction.thuc_hanh;
 
 import java.util.Scanner;
 
-public class SuDungToanTu {
+public class UseOperators {
     public static void main(String[] args) {
         float width;
         float height;
