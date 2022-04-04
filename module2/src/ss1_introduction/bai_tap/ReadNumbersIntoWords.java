@@ -6,7 +6,7 @@ public class ReadNumbersIntoWords {// chuyển số thành chữ
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.print("nhập 1 chữ số: ");
+        System.out.print("enter a digit: ");
         int motSo = scanner.nextInt();
         String chuSo;
 

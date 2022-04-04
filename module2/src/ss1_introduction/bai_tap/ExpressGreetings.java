@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class ExpressGreetings { // hiển thị lời chào
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        System.out.println(" nhập tên bạn: ");
+        System.out.println(" Enter name: ");
 
         String name = scanner.nextLine();
         System.out.println("Hello: " + name + " ngáo đá");
