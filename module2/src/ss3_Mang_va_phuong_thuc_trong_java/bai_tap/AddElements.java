@@ -6,16 +6,19 @@ public class AddElements { // them phan tu
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter length: ");
-        int size = scanner.nextInt();
-        int[] arr = new int[size];
-        for (int i = 0; i < size; i++) {
-            arr[i] = (int) (Math.random() * 99);
-        }
+
+//        int size = scanner.nextInt();
+//        int[] arr = new int[size];
+//        for (int i = 0; i < size; i++) {
+//            arr[i] = (int) (Math.random() * 99);
+//        }
+
+        int[] arr = {1,2,3,4,5,6};
         for (int i = 0; i < arr.length; i++) {
             System.out.print(arr[i] + ",");
         }
-        System.out.print("Enter x: ");
-        int x = scanner.nextInt();
+        System.out.print("Enter x: "); // chỉ là hiển thị thông báo
+        int x = scanner.nextInt();// nhập
         System.out.print("Enter index: ");
         int index = scanner.nextInt();
 

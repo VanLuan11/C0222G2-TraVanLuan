@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class DiagonalLineMain {
     public static void main(String[] args) {// tính đường chéo chính
         Scanner scanner = new Scanner(System.in);
-        
+
 //        // nhập dòng và cột
 //        System.out.print("Enter Row: ");
 //        int r = scanner.nextInt();
 //        System.out.print("Enter Col: ");
 //        int c = scanner.nextInt();
 
-        // cho dòng với cột sẵn
+        // cho dòng với cột cho sẵn
         int[][] arr = new int[4][4];
 
         //tạo và đưa các pt vào mảng
