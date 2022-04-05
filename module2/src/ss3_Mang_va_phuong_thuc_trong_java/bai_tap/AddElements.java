@@ -19,16 +19,16 @@ public class AddElements { // them phan tu
         System.out.print("Enter index: ");
         int index = scanner.nextInt();
 
-        if (index <= -1 || index >= arr.length - 1 ){
+        if (index <= -1 || index >= arr.length - 1) {
             System.out.print(" cannot add");
-        }else{
-            for (int i = arr.length -1 ; i > index ; i--) {
-                arr[i] = arr[i-1];
+        } else {
+            for (int i = arr.length - 1; i > index; i--) {
+                arr[i] = arr[i - 1];
             }
             arr[index] = x;
             System.out.print("New array: ");
-            for ( int a : arr){
-                System.out.print(a+ ",");
+            for (int a : arr) {
+                System.out.print(a + ",");
             }
         }
     }

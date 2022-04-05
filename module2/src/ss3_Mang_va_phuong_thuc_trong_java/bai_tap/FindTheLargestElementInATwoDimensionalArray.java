@@ -12,24 +12,27 @@ public class FindTheLargestElementInATwoDimensionalArray { // tim pt lon nhat tr
 
         int[][] array = new int[r][c];
         for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length ; j++) {
-                array[i][j] = (int)(Math.random()*99);
+            for (int j = 0; j < array[i].length; j++) {
+                array[i][j] = (int) (Math.random() * 99);
             }
         }
-        for (int i = 0; i < array.length; i++) {
-            for (int j = 0; j < array[i].length ; j++) {
-                System.out.print(array[i][j] + ",");
-            }
-        }
-
-        int max =array[0][0];
         for (int i = 0; i < array.length; i++) {
             for (int j = 0; j < array[i].length; j++) {
-                if(array[i][j] > max){
+                System.out.print(array[i][j] + "\t");
+            }
+            System.out.println();
+        }
+
+
+        int max = array[0][0];
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] > max) {
                     max = array[i][j];
                 }
             }
-        } System.out.print("Munber max: " + max );
+        }
+        System.out.print("Munber max: " + max);
     }
 }
 

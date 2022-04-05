@@ -3,7 +3,7 @@ package ss3_Mang_va_phuong_thuc_trong_java.bai_tap;
 import java.util.Scanner;
 
 public class SumOfNumbersInColumn {
-    public static void main(String[] args) {
+    public static void main(String[] args) {// tính tổng cột
         Scanner scanner = new Scanner(System.in);
         System.out.print("Enter row: ");
         int r = scanner.nextInt();
@@ -13,7 +13,7 @@ public class SumOfNumbersInColumn {
         int[][] arr = new int[r][c];
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr[i].length; j++) {
-                System.out.print("Element Row" + i + ":" + "\n" + "Col" + j + ":");
+                System.out.print("Enter element Row " + i + " Col " + j + ": ");
                 arr[i][j] = scanner.nextInt();
             }
         }
@@ -21,17 +21,21 @@ public class SumOfNumbersInColumn {
             for (int j = 0; j < arr[i].length; j++) {
                 System.out.print(arr[i][j] + "\t");
             }
-            System.out.print("");
+            System.out.println();
         }
-        System.out.println("Enter col: ");
+
+        System.out.print("Enter Row: ");
         int index = scanner.nextInt();
-        int sum = 0;
+
+        System.out.print("Enter Col: ");
+        int index2 = scanner.nextInt();
+        int sumRow = 0;
+        int sumCol = 0;
         for (int i = 0; i < arr.length; i++) {
-            for (int j = 0; j < arr[i].length ; j++) {
-                sum += arr[index][j];
-                index=i;
-            }
+            sumRow += arr[i][index]; // tinh dong
+            sumCol += arr[index2][i];// tinh cot
         }
-        System.out.print("vi tri cong: " + index + "tong: " + sum);
+
+        System.out.print("Total Row: " + index + " Total Row: " + sumRow + "\n" + "Total Row: " + index2 + " Total Col: " + sumCol);
     }
 }

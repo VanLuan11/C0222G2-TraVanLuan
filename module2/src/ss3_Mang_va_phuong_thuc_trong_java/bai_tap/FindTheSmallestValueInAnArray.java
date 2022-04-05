@@ -7,13 +7,13 @@ public class FindTheSmallestValueInAnArray { // tìm số nhỏ nhất
         Scanner scanner = new Scanner(System.in);
         int size;
         int[] array;
-        System.out.print("enter the number of elements: ");
+        System.out.print("enter array length: ");
         size = scanner.nextInt();
 
         array = new int[size];
         int i = 0;
         while (i < array.length) {
-            System.out.print("Enter elements " + ( i + 1) + ":");
+            System.out.print("Enter elements " + (i + 1) + ":");
             array[i] = scanner.nextInt();
             i++;
         }
