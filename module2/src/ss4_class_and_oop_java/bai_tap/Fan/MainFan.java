@@ -1,6 +1,6 @@
-package ss4_class_and_oop_java.bai_tap;
+package ss4_class_and_oop_java.bai_tap.Fan;
 
-import java.util.Scanner;
+import ss4_class_and_oop_java.bai_tap.Fan.Fan;
 
 public class MainFan {
     public static void main(String[] args) {

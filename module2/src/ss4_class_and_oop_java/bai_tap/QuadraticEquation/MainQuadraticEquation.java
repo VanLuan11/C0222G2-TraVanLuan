@@ -1,4 +1,6 @@
-package ss4_class_and_oop_java.bai_tap;
+package ss4_class_and_oop_java.bai_tap.QuadraticEquation;
+
+import ss4_class_and_oop_java.bai_tap.QuadraticEquation.QuadraticEquation;
 
 import java.util.Scanner;
 
