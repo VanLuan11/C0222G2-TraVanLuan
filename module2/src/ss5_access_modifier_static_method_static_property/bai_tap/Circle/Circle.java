@@ -18,6 +18,6 @@ public class Circle {
     }
 
     public double getArea() {
-        return radius* radius * 3.14;
+        return radius * radius * Math.PI;
     }
 }
