@@ -5,6 +5,17 @@
       <change afterPath="$PROJECT_DIR$/module1/QuanLySanPhamKieuDoiTuong.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module1/khungOOP.html" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/module1/ss4_git_va_html/bai_tap/SuDungGit/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/QuanLySinhVien/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/QuanLySinhVien/Student.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/QuanLySinhVien/StudentManager.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/ss7_abstract_class_interface/thuc_hanh/AnimalAndInterfaceEdible/Animal/Animal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/ss7_abstract_class_interface/thuc_hanh/AnimalAndInterfaceEdible/Animal/Chicken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/ss7_abstract_class_interface/thuc_hanh/AnimalAndInterfaceEdible/Animal/Tiger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/ss7_abstract_class_interface/thuc_hanh/AnimalAndInterfaceEdible/Edible/AbstractAndInterfaceTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/ss7_abstract_class_interface/thuc_hanh/AnimalAndInterfaceEdible/Edible/Apple.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/ss7_abstract_class_interface/thuc_hanh/AnimalAndInterfaceEdible/Edible/Edible.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/ss7_abstract_class_interface/thuc_hanh/AnimalAndInterfaceEdible/Edible/Fruit.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/module2/src/ss7_abstract_class_interface/thuc_hanh/AnimalAndInterfaceEdible/Edible/Orange.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/CaseStudy/1.YeuCau1(VeHinh)/Bai1,2,3,4.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CaseStudy/1.YeuCau1(VeHinh)/Bai1,2,3,4.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/CaseStudy/2.YeuCau2(IfVaSwitchCase)/Bai2.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/CaseStudy/2.YeuCau2(IfVaSwitchCase)/Bai2.html" afterDir="false" />
@@ -20,8 +31,20 @@
       <change beforePath="$PROJECT_DIR$/module1/s15_ham_2/bai_tap/HamKiemTraSoNguyenTo.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/s15_ham_2/bai_tap/HamKiemTraSoNguyenTo.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/ss11_lap_cau_truc_2/bai_tap/HienThiCacSoNguyenToDauTien.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/ss11_lap_cau_truc_2/bai_tap/HienThiCacSoNguyenToDauTien.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/module1/ss11_lap_cau_truc_2/bai_tap/LuyenTapVongLap1/Bai3.html" beforeDir="false" afterPath="$PROJECT_DIR$/module1/ss11_lap_cau_truc_2/bai_tap/LuyenTapVongLap1/Bai3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss2_vong_lap_trong_java/bai_tap/Show20FirstPrefix.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/bai_tap/Show20FirstPrefix.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss2_vong_lap_trong_java/bai_tap/Show20FirstPrefix.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassCircleAndClassCylinder/Circle.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassCircleAndClassCylinder/Circle.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassCircleAndClassCylinder/Cylinder.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassCircleAndClassCylinder/Cylinder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassPoint2DAndClassPoint3D/Point2D.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassPoint2DAndClassPoint3D/Point2D.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassPoint2DAndClassPoint3D/Point3D.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassPoint2DAndClassPoint3D/Point3D.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassPointAndMoveablePoint/MovablePoint.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassPointAndMoveablePoint/MovablePoint.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassPointAndMoveablePoint/Point.class" beforeDir="false" afterPath="$PROJECT_DIR$/module2/out/production/module2/ss6_inheritance/bai_tap/ClassPointAndMoveablePoint/Point.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/out/production/module2/test.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassCircleAndClassCylinder/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassCircleAndClassCylinder/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassCircleAndClassCylinder/Cylinder.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassCircleAndClassCylinder/Cylinder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassPoint2DAndClassPoint3D/Point2D.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassPoint2DAndClassPoint3D/Point2D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassPoint2DAndClassPoint3D/Point3D.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassPoint2DAndClassPoint3D/Point3D.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassPointAndMoveablePoint/MovablePoint.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassPointAndMoveablePoint/MovablePoint.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassPointAndMoveablePoint/Point.java" beforeDir="false" afterPath="$PROJECT_DIR$/module2/src/ss6_inheritance/bai_tap/ClassPointAndMoveablePoint/Point.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/module2/src/test.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,6 +81,7 @@
       <workItem from="1648873901813" duration="329000" />
       <workItem from="1648912927653" duration="1287000" />
       <workItem from="1648914312096" duration="438000" />
+      <workItem from="1649685587560" duration="887000" />
     </task>
     <servers />
   </component>

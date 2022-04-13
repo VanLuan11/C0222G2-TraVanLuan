@@ -1,8 +1,8 @@
 package ss6_inheritance.bai_tap.ClassPointAndMoveablePoint;
 
 public class Point {
-    public float x = 0.0f;
-    public float y = 0.0f;
+    private float x = 0.0f;
+    private float y = 0.0f;
 
     public Point() {
 
