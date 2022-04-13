@@ -29,9 +29,9 @@ public class Rectangle extends Shape {
     public String toString() {
         return "Rectangle{" +
                 "width=" + width +
-                ", length=" + length +
-                "RectangularArea=" + getRectangularArea()+
-                "Perimeter=" + getPerimeter() +
+                " length=" + length +
+                " RectangularArea=" + getRectangularArea()+
+                " Perimeter=" + getPerimeter() +
                 '}';
     }
     @Override

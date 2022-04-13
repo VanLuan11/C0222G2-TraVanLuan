@@ -22,7 +22,7 @@ public class Shape {
     @Override
     public String toString() {
         return "Shape{" +
-                "color='" + color + '\'' +
+                " color='" + color + '\'' +
                 '}';
     }
 }

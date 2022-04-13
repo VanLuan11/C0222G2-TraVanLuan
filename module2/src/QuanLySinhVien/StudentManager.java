@@ -7,13 +7,13 @@ public class StudentManager {
     Scanner scanner = new Scanner(System.in);
 
     public void add() {
-        System.out.println("nhập id: ");
+        System.out.print("nhập id: ");
         int id = Integer.parseInt(scanner.nextLine());
-        System.out.println("nhập tên: ");
+        System.out.print("nhập tên: ");
         String name = scanner.nextLine();
-        System.out.println("nhập địa chỉ: ");
+        System.out.print("nhập địa chỉ: ");
         String address = scanner.nextLine();
-        System.out.println("nhập điểm:");
+        System.out.print("nhập điểm:");
         int point = Integer.parseInt(scanner.nextLine());
         Student student = new Student(id, name, address, point);
         for (int i = 0; i < this.student.length; i++) {
@@ -29,14 +29,14 @@ public class StudentManager {
             if (this.student[i] != null) {
                 System.out.println((i + 1) + "." + this.student[i].toString());
             } else {
-                break;
+                continue;
             }
         }
     }
 
-    public void edit() {
+    public void Update() {
         boolean flag = false;
-        System.out.print("Nhập id bạn muốn chỉnh sửa: ");
+        System.out.print("Nhập id cần đổi: ");
         int id = Integer.parseInt((new Scanner(System.in).nextLine()));
         for (int i = 0; i < student.length; i++) {
             if (student[i] != null && student[i].getId() == id) {
@@ -46,18 +46,16 @@ public class StudentManager {
             }
         }
         if (!flag) {
-            System.out.println("Id " + id + " không tìm thấy!");
+            System.out.println("ID " + id + " not found!");
         }
     }
 
     public void delete() {
-        System.out.println("nhập id cần xóa: ");
+        System.out.print("nhập id cần xóa: ");
         int id = Integer.parseInt((new Scanner(System.in).nextLine()));
-
         for (int i = 0; i < student.length - 1; i++) {
             if (student[i] != null && student[i].getId() == id) {
-                student[i] = student[i + 1];
-                student[i + 1] = student[i];
+                student[i] = null;
             }
         }
     }
@@ -87,9 +85,7 @@ public class StudentManager {
                 }
             }
             for (int i = 0; i < os.length; i++) {
-                if (os[i] != null) {
-                    System.out.println(os[i].output());
-                }
+                if (os[i] != null) System.out.println(os[i].output());
             }
         } else {
             System.out.println(nameSearch + " không tìm thấy");
@@ -97,7 +93,6 @@ public class StudentManager {
     }
     public static void changeSchoolNameForAllStudent(){
         System.out.print("nhập trường cần thay đổi: ");
-//        String nameschool =
         Student.school = "Bk";
 
     }

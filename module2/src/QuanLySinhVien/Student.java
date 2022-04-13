@@ -1,5 +1,7 @@
 package QuanLySinhVien;
 
+import java.util.Scanner;
+
 public class Student {
     private int id;
     private String name;
@@ -59,21 +61,30 @@ public class Student {
     }
 
     public void input() {
+        super.toString();
+        System.out.print("Nhập id muốn đổi: ");
+        this.id = Integer.parseInt((new Scanner(System.in).nextLine()));
+        System.out.print("Nhập tên muốn đổi: ");
+        this.name = (new Scanner(System.in).nextLine());
+        System.out.print("Nhập địa chỉ muốn đổi: ");
+        this.address = (new Scanner(System.in).nextLine());
+        System.out.print("nhập điểm muốn đổi: ");
+        this.point = Integer.parseInt((new Scanner(System.in).nextLine()));
     }
 
-    public boolean output() {
-        return false;
+    public String output() {
+        return this.toString();
     }
 
     @Override
     public String toString() {
-        return "Student{" +
+        return "Student: " +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", point=" + point +
-                ", school='" + school + '\'' +
-                '}';
+                ", school='" + school + '\''
+                ;
     }
 
 

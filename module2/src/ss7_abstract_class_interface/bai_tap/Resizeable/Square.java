@@ -29,9 +29,9 @@ public class Square extends Shape{
     @Override
     public String toString() {
         return "Square{" +
-                "width=" + width +
-                "SquareArea=" + getSquareArea()+
-                "SquarePerimeter=" + getSquarePerimeter() +
+                " width=" + width +
+                " SquareArea=" + getSquareArea()+
+                " SquarePerimeter=" + getSquarePerimeter() +
                 '}';
     }
 }
