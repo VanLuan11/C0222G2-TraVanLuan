@@ -115,8 +115,5 @@ public class ArrayList<E> {
             elements[i] = null;
 
         }
-
     }
-
-
 }
