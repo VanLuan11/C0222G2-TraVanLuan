@@ -1,4 +1,4 @@
-package vehicleluan.model;
+package homework.model;
 
 import java.util.Scanner;
 

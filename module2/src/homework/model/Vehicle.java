@@ -1,7 +1,7 @@
-package vehicleluan.model;
+package homework.model;
 
-import ss10_dsa_list.bai_tap.array_list.ArrayList;
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public abstract class Vehicle {
@@ -53,27 +53,27 @@ public abstract class Vehicle {
     public void setOwner(String owner) {
         this.owner = owner;
     }
-    public void input(){
+
+    public void input() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter sea of control: ");
         this.licensePlates = scanner.nextLine();
         this.manufacturer = this.choiceManufacturer();
         System.out.println("Enter year of manufacture: ");
-        this.yearOfManufacture=Integer.parseInt(scanner.nextLine());
+        this.yearOfManufacture = Integer.parseInt(scanner.nextLine());
         System.out.println("Enter owner: ");
         this.owner = scanner.nextLine();
     }
+
     public Manufacturer choiceManufacturer() {
         Scanner sc = new Scanner(System.in);
-        ArrayList<Manufacturer> manufacturerList = new ArrayList<>();
+        List<Manufacturer> manufacturerList = new ArrayList<>();
         manufacturerList.add(new Manufacturer(1, "TOYOTA", "Japan"));
-        manufacturerList.add(new Manufacturer(2, "CHEVROLET", "USA"));
         manufacturerList.add(new Manufacturer(3, "FUSO", "Japan"));
-        manufacturerList.add(new Manufacturer(4, "DAEWOO", "Korea"));
         manufacturerList.add(new Manufacturer(5, "PIAGGIO", "Italy"));
-        manufacturerList.add(new Manufacturer(6, "Harley Davidson", "USA"));
 
-        System.out.println("---------- CHOICE MANUFACTURER ----------");
+
+        System.out.println("CHOICE MANUFACTURER ");
         int choice;
         do {
             for (int i = 0; i < manufacturerList.size(); i++) {
@@ -84,7 +84,7 @@ public abstract class Vehicle {
             if (choice > 0 && choice < manufacturerList.size()) {
                 return manufacturerList.get(choice - 1);
             } else {
-                System.out.println("---------- CHOICE AGAIN! ----------");
+                System.out.println("CHOICE AGAIN");
             }
         } while (true);
     }

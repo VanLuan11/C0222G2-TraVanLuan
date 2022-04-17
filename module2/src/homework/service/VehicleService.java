@@ -1,4 +1,4 @@
-package vehicleluan.service;
+package homework.service;
 
 public interface VehicleService {
     void display();

@@ -1,4 +1,4 @@
-package vehicleluan.model;
+package homework.model;
 
 public class Manufacturer {
     private int id;
