@@ -21,6 +21,5 @@ public class CharacterCount {
         for (Map.Entry<Character,Integer> entry : treeMap.entrySet()) {
             System.out.println(entry.getKey() + ": " + entry.getValue());
         }
-
     }
 }
