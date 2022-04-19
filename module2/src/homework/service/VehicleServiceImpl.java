@@ -7,9 +7,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class VehicleServiceImpl implements VehicleService {
-    List<Vehicle> vehicle1 = new ArrayList<>();
+   static List<Vehicle> vehicle1 = new ArrayList<>();
+   static Scanner sc = new Scanner(System.in);
 
-    {
+    static {
         //thêm hãng xe
         Manufacturer toyota = new Manufacturer(1, "TOYOTA", "Japan");
         Manufacturer fuso = new Manufacturer(3, "FUSO", "Japan");

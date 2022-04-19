@@ -44,8 +44,10 @@ public class ProductControl {
                 case 0 :
                     System.out.println("Bạn đã chọn đóng Menu");
                     flag = false;
+                    break;
                 default :
                     System.out.println("Chọn lại");
+                    break;
             }
 
         }while (flag);

@@ -6,10 +6,7 @@ import java.util.*;
 
 public class ProductManager implements IProduct {
     static Scanner scanner = new Scanner(System.in);
-
     static List<Product> productList = new ArrayList<>();
-
-
     static {
 
         Product product1 = new Product("sữa", 1, 1500);
@@ -22,7 +19,6 @@ public class ProductManager implements IProduct {
         productList.add(product3);
         productList.add(product4);
     }
-
 
     @Override
     public void add() {
@@ -38,22 +34,22 @@ public class ProductManager implements IProduct {
 
     @Override
     public void update() {
-        System.out.println("-----------Thay đổi sản phẩm-----------");
-        System.out.print("Nhập tên sản phẩm: ");
-        String tenSanPham2 = scanner.nextLine();
-
-        boolean flag = false;
-        System.out.print("Nhập id cần đổi: ");
-        int id = Integer.parseInt((new Scanner(System.in).nextLine()));
+        System.out.println("---------Thay đổi---------");
+        System.out.print("nhap id muon sua: ");
+        int id = Integer.parseInt(scanner.nextLine());
         for (int i = 0; i < productList.size(); i++) {
-            if (tenSanPham2 != null && productList.get(i).getId() == id) {
-                flag = true;
+            if (productList.get(i).getId()== id) {
+
+                System.out.println("sửa id: ");
+                productList.get(i).setId(Integer.parseInt(scanner.nextLine()));
+                System.out.println("sửa tên: ");
+                productList.get(i).setName(scanner.nextLine());
+                System.out.println("sửa giá: ");
+                productList.get(i).setMoney(Integer.parseInt(scanner.nextLine()));
                 break;
             }
         }
-        if (!flag) {
-            System.out.println("ID " + id + " not found!");
-        }
+        display();
     }
 
     @Override
@@ -82,11 +78,9 @@ public class ProductManager implements IProduct {
     @Override
     public void searchName() {
         boolean flag = false;
-
         System.out.println("-----------Tìm sản phẩm -----------");
         System.out.print("Nhập tên sản phẩm bạn muốn tìm: ");
         String tenHang = scanner.nextLine();
-
         for (int i = 0; i < productList.size(); i++) {
             if (productList.get(i).getName().contains(tenHang)) {
                 flag = true;
@@ -101,6 +95,7 @@ public class ProductManager implements IProduct {
                 }
             }
         } else {
+            System.out.println("-----------Không tìm thấy----------");
             System.out.println("Loại sản phẩm " + tenHang + " không tìm thấy");
         }
     }

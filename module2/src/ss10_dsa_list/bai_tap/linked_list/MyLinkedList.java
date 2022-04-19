@@ -67,73 +67,7 @@ public class MyLinkedList<E>{
         }
         return (E) x.data;
     }
-
-    // xóa pt ở vị trí đầu
-    public E removeFirst(){
-        if(numNodes == 0){
-            return null;
-        }
-        else{
-            Node temp = head;
-            head = head.next;
-            numNodes--;
-            if(head == null){
-                tail = null;
-            }
-            return (E) temp.data;
-        }
-    }
-
-    // xóa pt ở cuối
-    public E removeLast(){
-        if(numNodes == 0){
-            return null;
-        }
-        else if(numNodes == 1){
-            Node temp = head;
-            head = tail = null;
-            numNodes = 0;
-            return (E) temp.data;
-        }
-        else{
-            Node current = head;
-            for(int i =0; i< numNodes -2; i++){
-                current = current.next;
-            }
-            Node temp = tail;
-            tail = current;
-            tail.next = null;
-            numNodes--;
-            return (E) temp.data;
-        }
-    }
-
-    // xóa ở vị trí index
-    public E remove(int index){
-        if(index < 0 || index >= numNodes){
-            return null;
-        }
-        else if(index == 0){
-            return removeFirst();
-        }
-        else if(index == numNodes -1){
-            return removeLast();
-        }
-        else{
-            Node previous = head;
-
-            for(int i=1; i< index; i++){
-                previous = previous.next;
-            }
-
-            Node current = previous.next;
-            previous.next = current.next;
-            numNodes--;
-            return (E) current.data;
-
-        }
-    }
-
+    
     public boolean remove(Object o){
         if(o == null){
             for(Node i= head; i != null; i=i.next){
