@@ -67,7 +67,7 @@ public class MyLinkedList<E>{
         }
         return (E) x.data;
     }
-    
+
     public boolean remove(Object o){
         if(o == null){
             for(Node i= head; i != null; i=i.next){
