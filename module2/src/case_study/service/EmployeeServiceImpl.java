@@ -4,9 +4,10 @@ import case_study.model.Employee;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
-public class EmployeeServiceImpl implements IService {
+public class EmployeeServiceImpl implements IEmployeeService {
     static Scanner scanner = new Scanner(System.in);
     static List<Employee> employeeList = new ArrayList<>();
 
@@ -73,7 +74,7 @@ public class EmployeeServiceImpl implements IService {
         System.out.print("Nhập tên nhân viên bạn cần sửa: ");
         String ten = scanner.nextLine();
         for (int i = 0; i < employeeList.size(); i++) {
-            if (employeeList.get(i).getName() == ten) {
+            if (employeeList.get(i).getName().equals(ten)) {
                 System.out.print("Nhập tên nhân viên: ");
                 employeeList.get(i).setName(scanner.nextLine());
 
