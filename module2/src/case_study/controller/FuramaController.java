@@ -1,6 +1,7 @@
 package case_study.controller;
 
 import case_study.model.Facility;
+import case_study.service.BookingServiceImpl;
 import case_study.service.CustomerServiceImpl;
 import case_study.service.EmployeeServiceImpl;
 import case_study.service.FacilityServiceImpl;
@@ -12,20 +13,21 @@ import java.util.Scanner;
 
 public class FuramaController {
     static Scanner scanner = new Scanner(System.in);
+
     public void displayMainMenu() {
         boolean flag = true;
         int choice;
         do {
             System.out.println("----Hệ thống quản lý khu nghỉ dưỡng Furama tại thành phố Đà Nẵng----");
-                System.out.println("1.\tEmployee Management\n" +
-                        "2.\tCustomer Management\n" +
-                        "3.\tFacility Management \n" +
-                        "4.\tBooking Management\n" +
-                        "5.\tPromotion Management\n" +
-                        "6.\tExit\n");
-                System.out.print("Mời quý khách chọng chức năng: ");
-                choice = Integer.parseInt(scanner.nextLine());
-                switch (choice) {
+            System.out.println("1.\tEmployee Management\n" +
+                    "2.\tCustomer Management\n" +
+                    "3.\tFacility Management \n" +
+                    "4.\tBooking Management\n" +
+                    "5.\tPromotion Management\n" +
+                    "6.\tExit\n");
+            System.out.print("Mời quý khách chọng chức năng: ");
+            choice = Integer.parseInt(scanner.nextLine());
+            switch (choice) {
                 case 1:
                     displayEmployeeManagement();
                     break;
@@ -42,7 +44,7 @@ public class FuramaController {
                     displayPromotionManagement();
                     break;
                 case 6:
-                    flag=false;
+                    flag = false;
                     break;
 
                 default:
@@ -64,7 +66,7 @@ public class FuramaController {
                     "4\tReturn main menu\n");
             System.out.print("Mời quý khách chọng chức năng: ");
             choice = Integer.parseInt(scanner.nextLine());
-            switch (choice){
+            switch (choice) {
                 case 1:
                     employeeService.display();
                     break;
@@ -75,14 +77,15 @@ public class FuramaController {
                     employeeService.edit();
                     break;
                 case 4:
-                    flag=false;
+                    flag = false;
                     break;
                 default:
                     System.out.println("");
             }
-        }while(flag);
+        } while (flag);
     }
-    public void displayCustomerManagement () {
+
+    public void displayCustomerManagement() {
         CustomerServiceImpl customerService = new CustomerServiceImpl();
         boolean flag = true;
         int choice;
@@ -94,7 +97,7 @@ public class FuramaController {
                     "4.\tReturn main menu\n");
             System.out.print("Mời quý khách chọng chức năng: ");
             choice = Integer.parseInt(scanner.nextLine());
-            switch (choice){
+            switch (choice) {
                 case 1:
                     customerService.display();
                     break;
@@ -105,13 +108,14 @@ public class FuramaController {
                     customerService.edit();
                     break;
                 case 4:
-                    flag=false;
+                    flag = false;
                     break;
                 default:
                     System.out.println("");
             }
-        }while(flag);
+        } while (flag);
     }
+
     public void displayFacilityManagement() {
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
         boolean flag = true;
@@ -124,7 +128,7 @@ public class FuramaController {
                     "4\tReturn main menu\n");
             System.out.println("Mời quý khách chọng chức năng");
             choice = Integer.parseInt(scanner.nextLine());
-            switch (choice){
+            switch (choice) {
                 case 1:
                     facilityService.display();
                     break;
@@ -134,13 +138,14 @@ public class FuramaController {
                 case 3:
                     break;
                 case 4:
-                    flag=false;
+                    flag = false;
                     break;
                 default:
                     System.out.println("");
             }
-        }while(flag);
+        } while (flag);
     }
+
     public void displayAddNewFacility() {
         FacilityServiceImpl facilityService = new FacilityServiceImpl();
         boolean flag = true;
@@ -153,7 +158,7 @@ public class FuramaController {
                     "4.\tBack to menu\n");
             System.out.print("Mời quý khách chọng chức năng");
             choice = Integer.parseInt(scanner.nextLine());
-            switch (choice){
+            switch (choice) {
                 case 1:
                     facilityService.addVilla();
                     break;
@@ -164,14 +169,16 @@ public class FuramaController {
                     facilityService.addRoom();
                     break;
                 case 4:
-                    flag=false;
+                    flag = false;
                     break;
                 default:
                     System.out.println("");
             }
-        }while(flag);
+        } while (flag);
     }
+
     public void displayBookingManagement() {
+        BookingServiceImpl bookingService = new BookingServiceImpl();
         boolean flag = true;
         int choice;
         do {
@@ -184,8 +191,9 @@ public class FuramaController {
                     "6.\tReturn main menu\n");
             System.out.println("Mời quý khách chọng chức năng");
             choice = Integer.parseInt(scanner.nextLine());
-            switch (choice){
+            switch (choice) {
                 case 1:
+                    bookingService.display();
                     break;
                 case 2:
                     break;
@@ -196,13 +204,14 @@ public class FuramaController {
                 case 5:
                     break;
                 case 6:
-                    flag=false;
+                    flag = false;
                     break;
                 default:
                     System.out.println("");
             }
-        }while(flag);
+        } while (flag);
     }
+
     public void displayPromotionManagement() {
         boolean flag = true;
         int choice;
@@ -213,17 +222,17 @@ public class FuramaController {
                     "3.\tReturn main menu\n");
             System.out.println("Mời quý khách chọng chức năng");
             choice = Integer.parseInt(scanner.nextLine());
-            switch (choice){
+            switch (choice) {
                 case 1:
                     break;
                 case 2:
                     break;
                 case 3:
-                    flag=false;
+                    flag = false;
                     break;
                 default:
                     System.out.println("");
             }
-        }while(flag);
+        } while (flag);
     }
 }

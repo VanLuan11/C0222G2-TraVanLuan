@@ -24,7 +24,6 @@ public class FacilityServiceImpl implements IFacilityService {
         facilityMap.put(new House(3,"House3",900,1500,12,"12 tháng","vip",3),0);
 
         // id,Tên dịch vụ, Diện tích sử dụng, Chi phí thuê, Số lượng người tối đa, Kiểu thuê (bao gồm thuê theo năm, tháng, ngày, giờ),Dịch vụ miễn phí đi kèm.
-
         facilityMap.put(new Room(1,"House1",200,100,2,"1 tuần","free room service"),0);
         facilityMap.put(new Room(2,"House2",400,200,4,"2 tuần","free food"),0);
         facilityMap.put(new Room(3,"House3",600,300,6,"3 tuần","free cheap service"),0);
