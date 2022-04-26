@@ -126,7 +126,7 @@ public class FuramaController {
                     "2\tAdd new facility\n" +
                     "3\tDisplay list facility maintenance\n" +
                     "4\tReturn main menu\n");
-            System.out.println("Mời quý khách chọng chức năng");
+            System.out.print("Mời quý khách chọng chức năng: ");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -156,7 +156,7 @@ public class FuramaController {
                     "2.\tAdd New House\n" +
                     "3.\tAdd New Room\n" +
                     "4.\tBack to menu\n");
-            System.out.print("Mời quý khách chọng chức năng");
+            System.out.print("Mời quý khách chọng chức năng: ");
             choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:

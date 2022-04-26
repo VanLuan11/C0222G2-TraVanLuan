@@ -4,21 +4,18 @@ import case_study.model.Customer;
 import case_study.model.Employee;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Scanner;
 
-public class CustomerServiceImpl implements IService{
+public class CustomerServiceImpl implements IService {
     static Scanner scanner = new Scanner(System.in);
-    static List<Customer> customerList = new ArrayList<>();
+    static List<Customer> customerList = new LinkedList<>();
+
     static {
-        Customer customerList1 = new Customer("luận", "1/4/4124", "nam", 872383, "093406069", "uaasfa@gmail.com", 1,"Diamond","Đà Nẵng");
-        Customer customerList2 = new Customer("hoàng", "1/4/4124", "nam", 872383, "093406069", "uaasfa@gmail.com", 2,"Platinium","Huế");
-        Customer customerList3 = new Customer("linh", "16/1/2001", "nữ", 872383, "093406069", "uaasfa@gmail.com", 3,"Diamond","Bắc Giang");
-
-
-        customerList.add(customerList1);
-        customerList.add(customerList2);
-        customerList.add(customerList3);
+        customerList.add(new Customer("luận", "1/4/4124", "nam", 872383, "093406069", "uaasfa@gmail.com", 1, "Diamond", "Đà Nẵng"));
+        customerList.add(new Customer("hoàng", "1/4/4124", "nam", 872383, "093406069", "uaasfa@gmail.com", 2, "Platinium", "Huế"));
+        customerList.add(new Customer("linh", "16/1/2001", "nữ", 872383, "093406069", "uaasfa@gmail.com", 3, "Diamond", "Bắc Giang"));
     }
 
 
@@ -61,7 +58,7 @@ public class CustomerServiceImpl implements IService{
 
         System.out.print("Nhập địa chỉ khách hàng: ");
         String diaChi = scanner.nextLine();
-        Customer customer = new Customer(ten, ngaySinh, gioiTinh, cCCD, soDienThoai, email, id,loaiKhach ,diaChi);
+        Customer customer = new Customer(ten, ngaySinh, gioiTinh, cCCD, soDienThoai, email, id, loaiKhach, diaChi);
         customerList.add(customer);
 
     }

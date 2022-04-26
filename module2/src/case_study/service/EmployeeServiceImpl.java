@@ -12,13 +12,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
     static List<Employee> employeeList = new ArrayList<>();
 
     static {
-        Employee employee1 = new Employee("luan", "1/4/4124", "nam", 872383, "093406069", "uaasfa@gmail.com", 1, "cao dang", "quay ly", 10000);
-        Employee employee2 = new Employee("hoan", "5/5/4134", "nam", 452383, "093422289", "usdfsa@gmail.com", 2, "dai hoc", "nhan vien", 20000);
-        Employee employee3 = new Employee("tai", "4/4/4124", "nam", 877383, "093484289", "uaasdfya@gmail.com", 3, "dai hoc", "giam doc", 30000);
-
-        employeeList.add(employee1);
-        employeeList.add(employee2);
-        employeeList.add(employee3);
+        employeeList.add(new Employee("luan", "1/4/4124", "nam", 872383, "093406069", "uaasfa@gmail.com", 1, "cao dang", "quay ly", 10000));
+        employeeList.add(new Employee("hoan", "5/5/4134", "nam", 452383, "093422289", "usdfsa@gmail.com", 2, "dai hoc", "nhan vien", 20000));
+        employeeList.add(new Employee("tai", "4/4/4124", "nam", 877383, "093484289", "uaasdfya@gmail.com", 3, "dai hoc", "giam doc", 30000));
     }
 
     @Override
@@ -106,6 +102,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
                 employeeList.get(i).setWage(Integer.parseInt(scanner.nextLine()));
 
             }
-        }display();
+        }
+        display();
     }
 }
