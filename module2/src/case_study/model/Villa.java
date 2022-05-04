@@ -1,6 +1,7 @@
 package case_study.model;
 
 public class Villa extends Facility{
+    private static final String COMMA = ",";
     private String standardRoom;
     private Integer poolArea;
     private  Integer numberOfFloors;
@@ -48,9 +49,12 @@ public class Villa extends Facility{
 
     @Override
     public String toString() {
-        return "Villa" + super.toString() +
-                "standardRoom=" + standardRoom +
-                ", poolArea=" + poolArea +
-                ", numberOfFloors=" + numberOfFloors;
+        return "Villa: " + super.toString() +
+                "standardRoom: " + standardRoom +
+                ", poolArea: " + poolArea +
+                ", numberOfFloors: " + numberOfFloors;
+    }
+    public String convertLine(){
+        return super.convertLine() + COMMA + this.standardRoom + COMMA + this.poolArea + COMMA + this.numberOfFloors;
     }
 }

@@ -1,6 +1,7 @@
 package case_study.model;
 
 public class Room extends Facility{
+    private static final String COMMA = ",";
     private String freeServiceincluded;
 //    Dịch vụ miễn phí đi kèm.
 
@@ -27,7 +28,10 @@ public class Room extends Facility{
 
     @Override
     public String toString() {
-        return "Room" + super.toString() +
-                "freeServiceincluded=" + freeServiceincluded ;
+        return "Room: " + super.toString() +
+                "freeServiceincluded: " + freeServiceincluded ;
+    }
+    public String convertLine(){
+        return super.convertLine() + COMMA + this.freeServiceincluded;
     }
 }

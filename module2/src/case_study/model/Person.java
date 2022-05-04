@@ -1,11 +1,15 @@
 package case_study.model;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public abstract class Person {
     // Họ tên, Ngày sinh, Giới tính, Số CCCD, Số điện thoại, Email;
+    private  static final String COMMA = ",";
+    private final static String PATTERN = "dd-MM-yyyy";
+    private static SimpleDateFormat dateFormat = new SimpleDateFormat(PATTERN);
     private String name;
-    private String date;
+    private Date dayOfBirth;
     private String gender;
     private Integer idCard;
     private String phone;
@@ -14,9 +18,9 @@ public abstract class Person {
     public Person() {
     }
 
-    public Person(String name, String date, String gender, Integer idCard, String phone, String email) {
+    public Person(String name, Date date, String gender, Integer idCard, String phone, String email) {
         this.name = name;
-        this.date = date;
+        this.dayOfBirth = date;
         this.gender = gender;
         this.idCard = idCard;
         this.phone = phone;
@@ -31,12 +35,12 @@ public abstract class Person {
         this.name = name;
     }
 
-    public String getDate() {
-        return date;
+    public Date getDate() {
+        return dayOfBirth;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setDate(Date date) {
+        this.dayOfBirth = date;
     }
 
     public String getGender() {
@@ -73,12 +77,16 @@ public abstract class Person {
 
     @Override
     public String toString() {
-        return "Person" +
-                "name=" + name +
-                ", date=" + date +
-                ", gender=" + gender +
-                ", idCard=" + idCard +
-                ", phone=" + phone +
-                ", email=" + email;
+        return "Person: " +
+                "name: " + name +
+                ", date: " + dateFormat.format(dayOfBirth) +
+                ", gender: " + gender +
+                ", idCard: " + idCard +
+                ", phone: " + phone +
+                ", email: " + email;
+    }
+
+    public String convertLine(){
+        return this.name + COMMA + dateFormat.format(this.dayOfBirth) + COMMA + this.gender + COMMA + this.idCard + COMMA + this.phone + COMMA +this.email;
     }
 }

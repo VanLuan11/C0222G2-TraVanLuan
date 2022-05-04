@@ -1,12 +1,13 @@
 package case_study.model;
 
+import java.util.Date;
+
 public class Employee extends Person {
-    // mã nhân viên
+    private static final String COMMA = ",";
     private Integer idEmployee;
     private String level;
     private String location;
     private Integer wage;
-    // mã nhân viên, trình độ, vị trí, lương
 
     public Employee() {
     }
@@ -18,8 +19,8 @@ public class Employee extends Person {
         this.wage = wage;
     }
 
-    public Employee(String name, String date, String gender, Integer idCard, String phone, String email, Integer idEmployee, String level, String location, Integer wage) {
-        super(name, date, gender, idCard, phone, email);
+    public Employee(String name, Date dayOfBirth, String gender, Integer idCard, String phone, String email, Integer idEmployee, String level, String location, Integer wage) {
+        super(name, dayOfBirth, gender, idCard, phone, email);
         this.idEmployee = idEmployee;
         this.level = level;
         this.location = location;
@@ -61,10 +62,14 @@ public class Employee extends Person {
     @Override
     public String toString() {
         return "Employee" + super.toString() +
-                "idEmployee=" + idEmployee +
-                ", level=" + level +
-                ", location=" + location +
-                ", wage=" + wage +
-                '}';
+                "idEmployee: " + idEmployee +
+                ", level: " + level +
+                ", location: " + location +
+                ", wage: " + wage;
+    }
+
+    @Override
+    public String convertLine() {
+        return super.convertLine() + COMMA + this.idEmployee + COMMA + this.level + COMMA + this.location + COMMA + this.wage;
     }
 }

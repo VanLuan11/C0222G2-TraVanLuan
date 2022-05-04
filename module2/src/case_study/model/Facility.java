@@ -1,13 +1,13 @@
 package case_study.model;
 
 public abstract class Facility {
+    private static final String COMMA = ",";
     private String codeService;
     private String nameService;
     private Integer area;
     private Integer rentalCosts;
     private Integer maximumPerson;
     private String rentalType;
-//   id,Tên dịch vụ, Diện tích sử dụng, Chi phí thuê, Số lượng người tối đa, Kiểu thuê (bao gồm thuê theo năm, tháng, ngày, giờ.)
 
     public Facility() {
     }
@@ -71,12 +71,15 @@ public abstract class Facility {
 
     @Override
     public String toString() {
-        return "Facility" +
-                "id=" + codeService +
-                ", nameService=" + nameService +
-                ", area=" + area +
-                ", rentalCosts=" + rentalCosts +
-                ", maximumPerson=" + maximumPerson +
-                ", rentalType=" + rentalType ;
+        return "Facility: " +
+                " codeService: " + codeService +
+                ", nameService: " + nameService +
+                ", area: " + area +
+                ", rentalCosts: " + rentalCosts +
+                ", maximumPerson: " + maximumPerson +
+                ", rentalType: " + rentalType ;
+    }
+    public String convertLine(){
+        return this.codeService + COMMA + this.nameService + COMMA + this.area + COMMA + this.rentalType + COMMA + this.maximumPerson + COMMA + this.rentalCosts;
     }
 }

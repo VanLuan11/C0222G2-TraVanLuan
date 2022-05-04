@@ -3,14 +3,13 @@ package case_study.model;
 import java.util.Date;
 
 public class Booking {
+    private static String COMMA = ",";
     private String codeBooking;
     private Date startDay;
     private Date endDay;
     private String idCustomer;
     private String nameService;
     private String typeOfService;
-//    mã booking, ngày bắt đầu, ngày kết thúc, mã khách hàng, tên dịch vụ, loại dịch vụ
-
 
     public Booking() {
     }
@@ -81,5 +80,9 @@ public class Booking {
                 ", idCustomer=" + idCustomer +
                 ", nameService=" + nameService +
                 ", typeOfService=" + typeOfService;
+    }
+
+    public String convertLine() {
+        return this.codeBooking + COMMA + this.startDay + COMMA + this.endDay + COMMA +this.idCustomer+COMMA +this.nameService+COMMA +this.typeOfService;
     }
 }

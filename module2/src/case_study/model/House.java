@@ -1,6 +1,7 @@
 package case_study.model;
 
 public class House extends Facility{
+    private static final String COMMA = ",";
     private String standardRoom;
     private Integer numberOfFloors;
 //    Tiêu chuẩn phòng, Số tầng.
@@ -37,8 +38,11 @@ public class House extends Facility{
 
     @Override
     public String toString() {
-        return "House" + super.toString() +
-                "standardRoom=" + standardRoom  +
-                ", numberOfFloors=" + numberOfFloors ;
+        return "House: " + super.toString() +
+                "standardRoom: " + standardRoom  +
+                ", numberOfFloors: " + numberOfFloors ;
+    }
+    public String convertLine(){
+        return super.convertLine() + COMMA + this.standardRoom + COMMA + this.numberOfFloors;
     }
 }

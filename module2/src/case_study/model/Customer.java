@@ -1,11 +1,13 @@
 package case_study.model;
 
-public class Customer extends Person{
-    // đối tượng khách hàng
+import java.util.Date;
+
+public class Customer extends Person {
+    private static final String COMMA = ",";
     private Integer idCustomer;
     private String typeOfGuest;
     private String address;
-// mã khách hàng, loại khách, địa chỉ
+
     public Customer() {
     }
 
@@ -15,7 +17,7 @@ public class Customer extends Person{
         this.address = address;
     }
 
-    public Customer(String name, String date, String gender, Integer idCard, String phone, String email, Integer idCustomer, String typeOfGuest, String address) {
+    public Customer(String name, Date date, String gender, Integer idCard, String phone, String email, Integer idCustomer, String typeOfGuest, String address) {
         super(name, date, gender, idCard, phone, email);
         this.idCustomer = idCustomer;
         this.typeOfGuest = typeOfGuest;
@@ -48,9 +50,14 @@ public class Customer extends Person{
 
     @Override
     public String toString() {
-        return "Customer" + super.toString()+
-                "idCustomer=" + idCustomer +
-                ", typeOfGuest=" + typeOfGuest +
-                ", address=" + address;
+        return "Customer" + super.toString() +
+                "idCustomer: " + idCustomer +
+                ", typeOfGuest: " + typeOfGuest +
+                ", address: " + address;
+    }
+
+    @Override
+    public String convertLine() {
+        return super.convertLine() + COMMA + this.idCustomer + COMMA + this.typeOfGuest + COMMA + this.address;
     }
 }
