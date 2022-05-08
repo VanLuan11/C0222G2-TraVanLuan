@@ -18,7 +18,7 @@ public class ReadAndWrite {
     private static SimpleDateFormat dateFormat = new SimpleDateFormat(PATTERN);
 
     // Write
-    private static void writeFile(String pathFile, List<String> list) {
+    private static void  writeFile(String pathFile, List<String> list) {
         try {
             FileWriter fileWriter = new FileWriter(pathFile);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
@@ -110,7 +110,7 @@ public class ReadAndWrite {
                     e.printStackTrace();
                 }
 
-                employees.add(new Employee(lines[0],date, lines[2], Integer.parseInt(lines[3]), lines[4], lines[5], Integer.parseInt(lines[6]), lines[7], lines[8], Integer.parseInt(lines[9])));
+                employees.add(new Employee(lines[0],date, lines[2], Integer.parseInt(lines[3]), Integer.parseInt(lines[4]), lines[5], Integer.parseInt(lines[6]), lines[7], lines[8], Integer.parseInt(lines[9])));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -137,7 +137,7 @@ public class ReadAndWrite {
                     e.printStackTrace();
                 }
 
-                customers.add(new Customer(lines[0], date, lines[2], Integer.parseInt(lines[3]), lines[4], lines[5], Integer.parseInt(lines[6]), lines[7], lines[8]));
+                customers.add(new Customer(lines[0], date, lines[2], Integer.parseInt(lines[3]), Integer.parseInt(lines[4]), lines[5], Integer.parseInt(lines[6]), lines[7], lines[8]));
             }
         } catch (IOException e) {
             e.printStackTrace();
@@ -159,6 +159,8 @@ public class ReadAndWrite {
 
                 villas.add(new Villa(lines[0], lines[1], Integer.parseInt(lines[2]), Integer.parseInt(lines[3]), Integer.parseInt(lines[4]), lines[5], lines[6], Integer.parseInt(lines[7]), Integer.parseInt(lines[8])));
             }
+            fileReader.close();
+            bufferedReader.close();
         } catch (IOException e) {
             e.printStackTrace();
         }

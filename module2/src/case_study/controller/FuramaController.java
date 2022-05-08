@@ -8,7 +8,7 @@ import case_study.service.FacilityServiceImpl;
 
 public class FuramaController {
 
-    static int choice = 0;
+    Integer choice = 0;
     static EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
     static CustomerServiceImpl customerService = new CustomerServiceImpl();
     static FacilityServiceImpl facilityService = new FacilityServiceImpl();

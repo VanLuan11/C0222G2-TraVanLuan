@@ -1,5 +1,8 @@
 package case_study.model;
 
+import java.io.Serializable;
+import java.util.Objects;
+
 public abstract class Facility {
     private static final String COMMA = ",";
     private String codeService;
@@ -80,6 +83,19 @@ public abstract class Facility {
                 ", rentalType: " + rentalType ;
     }
     public String convertLine(){
-        return this.codeService + COMMA + this.nameService + COMMA + this.area + COMMA + this.rentalType + COMMA + this.maximumPerson + COMMA + this.rentalCosts;
+        return this.codeService + COMMA + this.nameService + COMMA + this.area + COMMA + this.rentalCosts + COMMA + this.maximumPerson + COMMA + this.rentalType;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Facility facility = (Facility) o;
+        return Objects.equals(nameService, facility.nameService);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameService);
     }
 }

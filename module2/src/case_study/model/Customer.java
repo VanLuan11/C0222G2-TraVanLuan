@@ -17,7 +17,7 @@ public class Customer extends Person {
         this.address = address;
     }
 
-    public Customer(String name, Date date, String gender, Integer idCard, String phone, String email, Integer idCustomer, String typeOfGuest, String address) {
+    public Customer(String name, Date date, String gender, Integer idCard, Integer phone, String email, Integer idCustomer, String typeOfGuest, String address) {
         super(name, date, gender, idCard, phone, email);
         this.idCustomer = idCustomer;
         this.typeOfGuest = typeOfGuest;
@@ -51,7 +51,7 @@ public class Customer extends Person {
     @Override
     public String toString() {
         return "Customer" + super.toString() +
-                "idCustomer: " + idCustomer +
+                ", idCustomer: " + idCustomer +
                 ", typeOfGuest: " + typeOfGuest +
                 ", address: " + address;
     }

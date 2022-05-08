@@ -12,13 +12,13 @@ public abstract class Person {
     private Date dayOfBirth;
     private String gender;
     private Integer idCard;
-    private String phone;
+    private Integer phone;
     private String email;
 
     public Person() {
     }
 
-    public Person(String name, Date date, String gender, Integer idCard, String phone, String email) {
+    public Person(String name, Date date, String gender, Integer idCard, Integer phone, String email) {
         this.name = name;
         this.dayOfBirth = date;
         this.gender = gender;
@@ -59,11 +59,11 @@ public abstract class Person {
         this.idCard = idCard;
     }
 
-    public String getPhone() {
+    public Integer getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(Integer phone) {
         this.phone = phone;
     }
 
