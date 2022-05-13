@@ -12,7 +12,6 @@ public class FuramaController {
     static EmployeeServiceImpl employeeService = new EmployeeServiceImpl();
     static CustomerServiceImpl customerService = new CustomerServiceImpl();
     static FacilityServiceImpl facilityService = new FacilityServiceImpl();
-    static BookingServiceImpl bookingService = new BookingServiceImpl();
 
     public void displayMainMenu() {
         boolean flag = true;
@@ -25,7 +24,7 @@ public class FuramaController {
                     "5.\tPromotion Management\n" +
                     "6.\tExit\n");
             System.out.print("Mời quý khách chọng chức năng: ");
-            choice = CheckException.getChoice(choice);
+            choice = CheckException.getCheckInteger(choice);
             switch (choice) {
                 case 1:
                     displayEmployeeManagement();
@@ -62,7 +61,7 @@ public class FuramaController {
                     "3\tEdit employee\n" +
                     "4\tReturn main menu\n");
             System.out.print("Mời quý khách chọng chức năng: ");
-            choice = CheckException.getChoice(choice);
+            choice = CheckException.getCheckInteger(choice);
             switch (choice) {
                 case 1:
                     employeeService.display();
@@ -91,7 +90,7 @@ public class FuramaController {
                     "3.\tEdit customer\n" +
                     "4.\tReturn main menu\n");
             System.out.print("Mời quý khách chọng chức năng: ");
-            choice = CheckException.getChoice(choice);
+            choice = CheckException.getCheckInteger(choice);
             switch (choice) {
                 case 1:
                     customerService.display();
@@ -120,7 +119,7 @@ public class FuramaController {
                     "3\tDisplay list facility maintenance\n" +
                     "4\tReturn main menu\n");
             System.out.print("Mời quý khách chọng chức năng: ");
-            choice = CheckException.getChoice(choice);
+            choice = CheckException.getCheckInteger(choice);
             switch (choice) {
                 case 1:
                     facilityService.display();
@@ -149,7 +148,7 @@ public class FuramaController {
                     "3.\tAdd New Room\n" +
                     "4.\tBack to menu\n");
             System.out.print("Mời quý khách chọng chức năng: ");
-            choice = CheckException.getChoice(choice);
+            choice = CheckException.getCheckInteger(choice);
             switch (choice) {
                 case 1:
                     facilityService.addVilla();
@@ -181,7 +180,7 @@ public class FuramaController {
                     "5.\tEdit contracts\n" +
                     "6.\tReturn main menu\n");
             System.out.println("Mời quý khách chọng chức năng");
-            choice = CheckException.getChoice(choice);
+            choice = CheckException.getCheckInteger(choice);
             switch (choice) {
                 case 1:
                     bookingService.display();
@@ -211,7 +210,7 @@ public class FuramaController {
                     "2.\tDisplay list customers get voucher\n" +
                     "3.\tReturn main menu\n");
             System.out.println("Mời quý khách chọng chức năng");
-            choice = CheckException.getChoice(choice);
+            choice = CheckException.getCheckInteger(choice);
             switch (choice) {
                 case 1:
                     break;

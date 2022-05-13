@@ -17,6 +17,5 @@ public class CharacterCount {// đếm số lần ký tự
             }
         }
         System.out.print("Total char count: " + count);
-
     }
 }

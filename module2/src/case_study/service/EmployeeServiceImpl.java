@@ -90,7 +90,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
         System.out.print("Nhập lương của nhân viên: ");
         Integer luong = 0;
-        CheckException.getChoice(luong);
+        CheckException.getCheckInteger(luong);
         Employee employee = new Employee(ten, date, gioiTinh, cCCD, soDienThoai, email, id, trinhDo, viTri, luong);
         employeeList.add(employee);
         ReadAndWrite.writeEmployee(FILE_EMPLOYEE, employeeList);
@@ -123,7 +123,6 @@ public class EmployeeServiceImpl implements IEmployeeService {
                         date = dateFormat.parse(dateStr);
                     } catch (ParseException e) {
                         System.err.println(e.getMessage());
-                        ;
                     }
                     employeeList.get(i).setDate(date);
                     System.out.print("Nhập giới tính mới: ");
