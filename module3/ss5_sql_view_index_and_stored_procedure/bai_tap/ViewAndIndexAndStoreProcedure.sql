@@ -1,6 +1,6 @@
-drop database if exists demo;
-create database if not exists demo;
-use demo;
+drop database if exists van_dung;
+create database if not exists van_dung;
+use van_dung;
 
 create table product(
 id int auto_increment,
