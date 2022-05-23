@@ -12,23 +12,23 @@ product_description text,
 product_status bit(1) default 0,
 primary key(id)
 );
-INSERT INTO `demo`.`product` (`product_code`, `product_name`, `product_price`, `product_amount`, `product_description`) 
-VALUES ( '4', 'Tam', '100', '2', 'ujghu'),
-( '444', 'Hoa', '200', '3', 'mnmn,'),
-( '23', 'Phuong', '234', '4', 'erter'),
-( '56', 'Tai', '2345', '5', 'fghfgh'),
-( '52', 'Tri', '645', '7', 'cvbnbv'),
-( '123', 'Diep', '678', '2', 'qwer'),
-( '34', 'Hung', '562547', '5', 'asdf');
+INSERT INTO `van_dung`.`product` (`product_code`, `product_name`, `product_price`, `product_amount`, `product_description`) 
+VALUES ( '1', 'Tam', '100', '1', 'asdf'),
+( '2', 'Hoa', '200', '2', 'asdf'),
+( '3', 'Phuong', '300', '3', 'asdf'),
+( '4', 'Tai', '400', '4', 'asdf'),
+( '5', 'Tri', '500', '5', 'asdf'),
+( '6', 'Diep', '600', '6', 'asdf'),
+( '7', 'Hung', '700', '7', 'asdf');
 
 explain select * from product
 where product_code = 23;
 
 CREATE UNIQUE INDEX uniue_index
-ON `demo`.`product` (`product_code`);
+ON `van_dung`.`product` (`product_code`);
 
 CREATE INDEX composite_index
-ON `demo`.`product` (`product_name`, `product_price`);
+ON `van_dung`.`product` (`product_name`, `product_price`);
 
 explain select * from product
 where product_code = 23;
@@ -57,12 +57,12 @@ call get_all_product();
 delimiter //
 create procedure add_new_product(`p_code` int, `p_name` varchar(255), `p_price` double, `p_amount` int, `p_description` text)
   begin
-    INSERT INTO `demo`.`product` (`product_code`, `product_name`, `product_price`, `product_amount`, `product_description`)
+    INSERT INTO `van_dung`.`product` (`product_code`, `product_name`, `product_price`, `product_amount`, `product_description`)
     VALUES (`p_code`, `p_name`, `p_price`, `p_amount`, `p_description`);
   end //
 delimiter ;
 
-call add_new_product( '9', 'Doi', '789', '9', 'hello');
+call add_new_product( '8', 'Doi', '800', '8', 'hello');
 
 delimiter //
 create procedure edit_product_by_id(p_id int, p_name varchar(255))

@@ -1,7 +1,6 @@
 package exam.controller;
 
 import exam.common.exception.Exception;
-import exam.model.DienThoaiXachTay;
 import exam.service.DienThoaiChinhHangServiceImpl;
 import exam.service.DienThoaiXachTayServiceImpl;
 
