@@ -1,0 +1,142 @@
+
+body {
+    margin: 0;
+    background-color: black;
+    color: white;
+}
+
+.head {
+    height: 80px;
+    width: 100%;
+
+}
+
+.head-left {
+    height: 80px;
+    width: 20%;
+    float: left;
+
+}
+
+.head-mid {
+    height: 80px;
+    width: 60%;
+    float: left;
+
+}
+
+.head-right {
+    height: 80px;
+    width: 20%;
+    float: left;
+
+}
+
+.main-left {
+    height: 500px;
+    width: 20%;
+    float: left;
+
+}
+
+.main-mid {
+    height: auto;
+    width: 60%;
+    float: left;
+}
+
+.main-right {
+    height: 500px;
+    width: 20%;
+    float: left;
+
+}
+
+.logo-fb {
+    width: 70px;
+}
+
+.tim-kiem {
+    height: 30px;
+    border-radius: 15px;
+    background: #555050;
+    position: relative;
+    bottom: 25px;
+}
+
+.icon {
+    width: 40px;
+    padding: 0px 70px;
+}
+
+.icon-1 {
+    width: 50px;
+}
+
+.anh-dai-dien {
+    padding: 10px;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.icon-main-left {
+    display: flex;
+    align-items: center;
+}
+
+.icon-main-bottom {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.loi-moi-ket-ban-box {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+
+}
+
+.button {
+    border-radius: 10px;
+    background: #6db4f1;
+}
+
+.ket-ban {
+    padding: 10px;
+}
+
+.ban-be {
+    display: flex;
+    align-items: center;
+}
+.tin{
+    padding: 10px;
+}
+.anh-tin{
+    height: 200px;
+    width: 20%;
+    border-radius: 20px;
+}
+.anh{
+    height: 400px;
+    width: 100%;
+    border-radius: 10px;
+}
+.ten{
+    display: flex;
+    align-items: center;
+}
+.font-size{
+    font-size: 20px;
+}
+.binh-luan{
+    border-radius: 10px;
+    height: 40px;
+    width: 100%;
+    background: #555050;
+}
+
+

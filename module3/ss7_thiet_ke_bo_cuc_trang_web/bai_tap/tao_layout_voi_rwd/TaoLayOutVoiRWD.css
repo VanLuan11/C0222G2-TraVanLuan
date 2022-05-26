@@ -1,0 +1,224 @@
+.col-1 {
+    width: 8.33%
+}
+.col-2 {
+    width: 16.66%
+}
+.col-3 {
+    width: 25%;
+}
+.col-4 {
+    width: 33.3%
+}
+.col-5 {
+    width: 41.66%
+}
+.col-6 {
+    width: 50%
+}
+.col-7 {
+    width: 58.33%
+}
+.col-8 {
+    width: 66.66%;
+}
+.col-9 {
+    width: 75%;
+}
+.col-10 {
+    width: 83.33%;
+}
+.col-11 {
+    width: 91.66%;
+}
+.col-12 {
+    width: 100%;
+}
+.row {
+    display: block;
+}
+[class*=col-] {
+    float: left;
+    padding-right: 50px;
+}
+* {
+    box-sizing: border-box;
+}
+@media screen and (max-width: 800px) {
+    .col-sm-1 {
+        width: 8.33%
+    }
+    .col-sm-2 {
+        width: 16.66%
+    }
+    .col-sm-3 {
+        width: 25%;
+    }
+    .col-sm-4 {
+        width: 33.3%
+    }
+    .col-sm-5 {
+        width: 41.66%
+    }
+    .col-sm-6 {
+        width: 50%
+    }
+    .col-sm-7 {
+        width: 58.33%
+    }
+    .col-sm-8 {
+        width: 66.66%;
+    }
+    .col-sm-9 {
+        width: 75%;
+    }
+    .col-sm-10 {
+        width: 83.33%;
+    }
+    .col-sm-11 {
+        width: 91.66%;
+    }
+    .col-sm-12 {
+        width: 100%;
+    }
+
+}
+@media screen and (max-width: 600px) {
+    .col-xs-1 {
+        width: 8.33%
+    }
+
+    .col-xs-2 {
+        width: 16.66%
+    }
+
+    .col-xs-3 {
+        width: 25%;
+    }
+
+    .col-xs-4 {
+        width: 33.3%
+    }
+
+    .col-xs-5 {
+        width: 41.66%
+    }
+
+    .col-xs-6 {
+        width: 50%
+    }
+
+    .col-xs-7 {
+        width: 58.33%
+    }
+
+    .col-xs-8 {
+        width: 66.66%;
+    }
+
+    .col-xs-9 {
+        width: 75%;
+    }
+
+    .col-xs-10 {
+        width: 83.33%;
+
+    }
+    .col-xs-11 {
+        width: 91.66%;
+    }
+    .col-xs-12 {
+        width: 100%;
+    }
+}
+body{
+    background: black;
+    padding: 0;
+}
+.head{
+    height: 80px;
+    width: 100%;
+    background: #524b4b;
+}
+.main{
+    height: 575px;
+    width: 100%;
+    background: whitesmoke;
+}
+.main-left{
+    height: 575px;
+    width: 20%;
+    float: left;
+    background: whitesmoke;
+}
+.main-mid{
+    height: 575px;
+    width: 60%;
+    float: left;
+    background: #e7e3e1;
+}
+.main-rigth{
+    height: 575px;
+    width: 20%;
+    float: left;
+    background: black;
+}
+.footer{
+    height: 80px;
+    width: 100%;
+    background: #524b4b;
+}
+#menu{
+    align-items: center;
+    display: flex;
+    height: 80px;
+    top: 30px;
+    padding:0;
+    margin:0;
+    border: 1px solid ;
+}
+#menu ul, #menu li{
+    padding:0;
+    margin:0;
+}
+#menu li{
+    position: relative;
+    float: left;
+    list-style: none;
+    margin: 0;
+    padding:0;
+}
+#menu li a{
+    width:100px;
+    height: 30px;
+    display: block;
+    text-decoration:none;
+    text-align: center;
+    line-height: 30px;
+    color: white;
+}
+#menu ul ul li a{
+    width: 200px;
+    text-align: left;
+    padding-left: 10px;
+}
+#menu ul ul{
+    position: absolute;
+    top: 30px;
+    left: 15px;
+    visibility: hidden;
+}
+#menu ul li:hover ul{
+    background: #524b4b;
+    visibility: visible;
+}
+.main-right-box{
+    align-items: center;
+    display: flex;
+    padding: 40px;
+    border: 1px solid black;
+}
+.text{
+    font-family: "Bell MT";
+    font-size: 25px;
+}
