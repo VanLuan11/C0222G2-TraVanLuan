@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="e576269d-435f-42dd-87db-48f343de59e3" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../module2/module2.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module2/student.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/module3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/module3.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss1_co_so_du_lieu/bai_tap/xay_dung_class.spl.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss1_co_so_du_lieu/bai_tap/xay_dung_teacher.spl.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss1_co_so_du_lieu/thuc_hanh/tao_bang_tren_mySQL_workbrench.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_CSDL/bai_tap/QuanLyBanHang.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_CSDL/bai_tap/QuanLyVatTu.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_CSDL/thuc_hanh/QuanLyDiemThi.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_CSDL/thuc_hanh/QuanLySinhVien.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss2_thiet_ke_va_tao_CSDL/thuc_hanh/Quản lý đơn đặt hàng.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_thao_tac_voi_csdl/bai_tap/UseQuanLyBanHang.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss3_thao_tac_voi_csdl/bai_tap/UseQuanLySinhVien.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss4_cac_ham_thong_dung_trong_sql/bai_tap/LuyenTapCacHam.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss5_sql_view_index_and_stored_procedure/bai_tap/ViewAndIndexAndStoreProcedure.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss6_css_cascading_style_stylesheet/bai_tap/DingDangVanBan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss6_css_cascading_style_stylesheet/bai_tap/NhunCSSVaoTrangHtml.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss6_css_cascading_style_stylesheet/bai_tap/TaoTrangDocTruyenNgan.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss6_css_cascading_style_stylesheet/thuc_hanh/SuDungCss.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/facebook/Facebook.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/facebook/Facebook.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/hoat_hinh/WedHoatHinh.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/hoat_hinh/WedHoatJHinh.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/hoat_hinh/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout/TaoLayout.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout/TaoLayout.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_rwd/TaoLayOutVoiRWD.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/tao_layout_voi_rwd/TaoLayOutVoiRWD.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/thuc_hanh/SuDungBoxModel.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/thuc_hanh/TaoMenuDoc.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/thuc_hanh/TaoMenuDoc.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/thuc_hanh/TaoMenuNgang.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ss7_thiet_ke_bo_cuc_trang_web/thuc_hanh/TaoMenuNgang.html" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="29jWhRRr5im4Y5WgRKUfTHNDCY1" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e576269d-435f-42dd-87db-48f343de59e3" name="Default Changelist" comment="" />
+      <created>1653627093601</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653627093601</updated>
+      <workItem from="1653627097030" duration="33000" />
+      <workItem from="1653627920486" duration="206000" />
+      <workItem from="1653639689803" duration="53000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1653627573669">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1653627573669" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1653627125247">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1653627125247" />
+    <state x="360" y="23" key="new project wizard" timestamp="1653639740207">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="360" y="23" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1653639740207" />
+  </component>
+</project>
