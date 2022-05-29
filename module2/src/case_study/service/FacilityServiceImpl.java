@@ -42,7 +42,6 @@ public class FacilityServiceImpl implements IFacilityService {
 
     @Override
     public void addFacilitylist(Facility facility) {
-
         if (facilityMap.isEmpty()) {
             facilityMap.put(facility, 1);
         } else {
