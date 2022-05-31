@@ -2,168 +2,152 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e576269d-435f-42dd-87db-48f343de59e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/src/main/java/DictionaryServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/src/main/java/CurrencyConverterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/6.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/build/libs/discount_calculator-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/discount_calculator/src/main/webapp/result.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/build/classes/java/main/ConverterServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/build/libs/java-web-currency-converter-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/src/main/java/ConverterServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/java-web-currency-converter/src/main/webapp/index.jsp" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap_ung_dung_khach_hang/src/main/java/config/CharsetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap_ung_dung_khach_hang/src/main/java/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap_ung_dung_khach_hang/src/main/webapp/WED-INT/wed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap_ung_dung_khach_hang/src/main/webapp/add.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap_ung_dung_khach_hang/src/main/webapp/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap_ung_dung_khach_hang/src/main/webapp/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap_ung_dung_khach_hang/src/main/webapp/search.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap_ung_dung_khach_hang/src/main/webapp/view.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/java/Service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/java/Service/CustomerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/java/config/CharsetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/java/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/webapp/WED-INT/wed.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/webapp/customer/delete.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/webapp/customer/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/webapp/customer/error-404.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/webapp/customer/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/ung_dung_quan_ly_khach_hang/src/main/webapp/customer/view.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/build/classes/java/main/config/CharsetFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/build/classes/java/main/controller/ControllerCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/build/classes/java/main/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/build/libs/hienthidanhsach-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/src/main/java/config/CharsetFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/src/main/java/controller/ControllerCustomer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/src/main/java/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/src/main/webapp/WED-INF/wed.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/hienthidanhsach/src/main/webapp/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/config/CharsetFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/config/CharsetFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/ControllerCustomer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WED-INF/wed.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/result.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/checksums/md5-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/checksums/sha1-checksums.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/build/classes/java/main/ServerTimeServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/build/libs/server_time-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/src/main/java/ServerTimeServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server_time/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/build/classes/java/main/TranslationServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/build/libs/simple_dictionary-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/src/main/java/TranslationServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_dictionary/src/main/webapp/index.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/checksums/checksums.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.gradle/vcs-1/gc.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/build.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/build/classes/java/main/LoginServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/build/libs/simple_login-1.0-SNAPSHOT.war" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/build/tmp/war/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/gradlew" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/gradlew.bat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/settings.gradle" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/src/main/java/LoginServlet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/simple_login/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/build/classes/java/main/DictionaryServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/build/libs/simple-dictionary-jsp-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/src/main/java/DictionaryServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/simple-dictionary-jsp/src/main/webapp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/hienthidanhsach/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/hienthidanhsach/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/hienthidanhsach/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/hienthidanhsach/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/hienthidanhsach/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/hienthidanhsach/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/6.1.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/build/libs/tinhtoan-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/build/libs/tinhtoan-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/src/main/java/controller/CalculateServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/ss10_JSP_va_JSTL/bai_tap/tinhtoan/src/main/java/controller/CalculateServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/fileChanges/last-build.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/fileContent/fileContent.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/6.1.1/javaCompile/taskHistory.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/checksums/checksums.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.gradle/vcs-1/gc.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.idea/compiler.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/build/classes/java/main/CurrencyConverterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/build/libs/urrency-converter-jsp-1.0-SNAPSHOT.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/build/tmp/war/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/src/main/java/CurrencyConverterServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ji-servlet/urrency-converter-jsp/src/main/webapp/index.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,6 +185,7 @@
       <workItem from="1653639689803" duration="53000" />
       <workItem from="1653883912873" duration="3000" />
       <workItem from="1653884303027" duration="6000" />
+      <workItem from="1653972380205" duration="10000" />
     </task>
     <servers />
   </component>

@@ -11,7 +11,7 @@ public class CalculateServlet extends javax.servlet.http.HttpServlet {
         float secondOperand = Integer.parseInt(request.getParameter("second-operand"));
         char operator = request.getParameter("operator").charAt(0);
         PrintWriter writer = response.getWriter();
-        writer.println("<html>");
+        writer.println("<html>"); 
         writer.println("<h1>Result:</h1>");
         try{
             float result = Calculator.calculate(firstOperand, secondOperand, operator);
