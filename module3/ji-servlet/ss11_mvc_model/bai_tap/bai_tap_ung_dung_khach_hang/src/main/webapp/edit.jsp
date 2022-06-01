@@ -36,7 +36,7 @@
         </tr>
         <tr>
             <td>Nhà sản xuất:</td>
-            <td><input type="text" name="sanXuat" id="sanXuat" value="${sanXuat}"></td>
+            <td><input type="text" name="sanXuat" value="${sanXuat}"></td>
         </tr>
         <tr>
             <td><input type="submit" value="Update product"></td>

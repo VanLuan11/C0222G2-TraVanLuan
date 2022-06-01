@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 @WebServlet(name = "ControllerProductServlet", urlPatterns = "/product")
@@ -17,7 +18,7 @@ public class ControllerProductServlet extends HttpServlet {
     private static IProductService iProductService = new ProductServiceImpl();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+        List<Product> products = iProductService.getAll();
         String action = request.getParameter("action");
         if (action == null) {
             action = "";
@@ -30,7 +31,7 @@ public class ControllerProductServlet extends HttpServlet {
                 String moTa = request.getParameter("moTa");
                 String sanXuat = request.getParameter("sanXuat");
                 Product product = new Product(id, name, gia, moTa, sanXuat);
-                this.iProductService.save(product);
+                iProductService.save(product);
                 response.sendRedirect("/product");
                 break;
             case "edit":
@@ -41,6 +42,21 @@ public class ControllerProductServlet extends HttpServlet {
                 String sanXuatEdit = request.getParameter("sanXuat");
                 iProductService.edit(idEdit, nameEdit, giaEdit, moTaEdit, sanXuatEdit);
                 response.sendRedirect("/product");
+                break;
+            case"search":
+                List<Product> searchList = new ArrayList<>();
+                String  searchProduct = request.getParameter("searchValue");
+                for (Product p : products) {
+                    if(p.getName().contains(searchProduct)){
+                        searchList.add(p);
+                    }
+                }
+                request.setAttribute("listProduct", searchList);
+                request.getRequestDispatcher("list.jsp").forward(request,response);
+                break;
+            default:
+                request.setAttribute("listProduct", products);
+                request.getRequestDispatcher("list.jsp").forward(request, response);
                 break;
         }
     }
@@ -71,8 +87,9 @@ public class ControllerProductServlet extends HttpServlet {
             case "detele":
                 int idDelete = Integer.parseInt(request.getParameter("id"));
                 iProductService.delete(idDelete);
-                response.sendRedirect("/list.jsp");
+                response.sendRedirect("/product");
                 break;
+
             default:
                 request.setAttribute("listProduct", products);
                 request.getRequestDispatcher("list.jsp").forward(request, response);

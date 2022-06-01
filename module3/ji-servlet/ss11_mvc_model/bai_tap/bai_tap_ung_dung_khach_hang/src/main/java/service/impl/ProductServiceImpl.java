@@ -39,6 +39,7 @@ public class ProductServiceImpl implements IProductService {
         for (Product p: products) {
             if(p.getId()==id){
                 iProductRepository.delete(p);
+                break;
             }
         }
     }
