@@ -9,11 +9,10 @@ import java.util.List;
 
 public class UserServiceImpl implements IUserService {
     private IUserRepository iUserRepository = new UserRepositoryImpl();
-    List<User> users = this.iUserRepository.getAll();
 
     @Override
     public List<User> getAll() {
-        return users;
+        return this.iUserRepository.getAll();
     }
 
     @Override
@@ -23,21 +22,21 @@ public class UserServiceImpl implements IUserService {
 
     @Override
     public void editUser(int id, String name, String email, String country) {
-
+        iUserRepository.updateUser(id,name,email,country);
     }
 
     @Override
     public void delete(int id) {
-
+        iUserRepository.deleteUser(id);
     }
 
     @Override
-    public void search(String name) {
-
+    public List<User> searchConutry(String search) {
+        return iUserRepository.searchConutry(search);
     }
 
     @Override
-    public void sort(String name) {
-
+    public List<User> sortName() {
+        return iUserRepository.sortName();
     }
 }

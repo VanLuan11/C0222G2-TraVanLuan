@@ -16,16 +16,13 @@
 </a>
 <form action="/user?action=create" method="post">
     <tr>
-        <td>Id</td>
-        <input type="text" name="id">
-        <br>
         <td>Tên:</td>
         <input type="text" name="name">
         <br>
-        <td>Email: </td>
+        <td>Email:</td>
         <input type="text" name="email">
         <br>
-        <td>Country: </td>
+        <td>Country:</td>
         <input type="text" name="country">
         <button type="submit">Create</button>
     </tr>

@@ -1,4 +1,3 @@
-
 <%--
   Created by IntelliJ IDEA.
   User: OS
@@ -14,6 +13,14 @@
 </head>
 <body>
 <a href="/user?action=create">Create user</a>
+<a href="/user?action=sort">Sort</a>
+
+<form action="/user" method="get">
+    <input name="action" value="search" type="hidden">
+    <input type="text" name="searchCountry" value="${txtSearch}">
+    <button type="submit">Search</button>
+</form>
+
 <table border="1">
     <tr>
         <th>Id</th>
@@ -29,10 +36,13 @@
             <td>${temp.name}</td>
             <td>${temp.email}</td>
             <td>${temp.country}</td>
-            <td><a href="#">edit</a></td>
-            <td><a href="#">delete</a></td>
+            <td><a href="/user?action=update&idEdit=${temp.id}">edit</a></td>
+            <td><a href="/user?action=delete&idDelete=${temp.id}">delete</a></td>
         </tr>
     </c:forEach>
 </table>
 </body>
+<script src="bootstrap/bootstrap.bundle.min.js"></script>
+<link rel="stylesheet" href="bootstrap/popper.min.js">
+<link rel="stylesheet" href="bootstrap/bootstrap.min.js">
 </html>
