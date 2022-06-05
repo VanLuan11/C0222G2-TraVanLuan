@@ -2,15 +2,17 @@
 <%--
   Created by IntelliJ IDEA.
   User: OS
-  Date: 6/1/2022
-  Time: 2:02 PM
+  Date: 6/2/2022
+  Time: 5:13 PM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
-<head>
+  <head>
     <title>$Title$</title>
-</head>
-<body><c:redirect url="/user"></c:redirect>
+  </head>
+  <body>
+  <c:redirect url="/customer">
+  </c:redirect>
   </body>
 </html>
