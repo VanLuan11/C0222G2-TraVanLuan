@@ -1,6 +1,6 @@
 package model.service.impl;
 
-import model.model.Customer;
+import model.model.customer.Customer;
 import model.repsitory.ICustomerRepsitory;
 import model.repsitory.impl.CustomerRepsitoryImpl;
 import model.service.ICustomerService;

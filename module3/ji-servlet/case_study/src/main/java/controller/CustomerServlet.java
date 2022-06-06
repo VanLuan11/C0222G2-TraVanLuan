@@ -1,6 +1,6 @@
 package controller;
 
-import model.model.Customer;
+import model.model.customer.Customer;
 import model.service.ICustomerService;
 import model.service.impl.CustomerServiceImpl;
 

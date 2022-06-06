@@ -1,8 +1,7 @@
 package model.repsitory.impl;
 
 import connection.DataBase;
-import model.model.Customer;
-import model.model.RentType;
+import model.model.customer.Customer;
 import model.repsitory.ICustomerRepsitory;
 
 import java.sql.*;

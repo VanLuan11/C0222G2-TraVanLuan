@@ -1,4 +1,4 @@
-package model.model;
+package model.model.customer;
 
 public class Customer {
     private int customerId;

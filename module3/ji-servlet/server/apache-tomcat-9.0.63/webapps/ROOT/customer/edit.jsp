@@ -57,7 +57,7 @@
             <input type="text" name="address" value="${address}"  class="form-control mt-3">
             <label>status: </label>
             <input type="text" name="status" value="${status}"   class="form-control mt-3">
-            <button type="submit">Create</button>
+            <button type="submit">Edit</button>
 
         </form>
     </div>

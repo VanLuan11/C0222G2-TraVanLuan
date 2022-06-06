@@ -1,6 +1,6 @@
 package model.service;
 
-import model.model.Customer;
+import model.model.customer.Customer;
 
 import java.util.List;
 
@@ -12,7 +12,6 @@ public interface ICustomerService {
     void detele(int id);
 
     void Edit(Customer customer);
-
 
     List<Customer> sreachCustomerName(String searchName);
 

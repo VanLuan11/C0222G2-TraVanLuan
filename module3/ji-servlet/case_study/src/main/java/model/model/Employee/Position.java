@@ -1,4 +1,4 @@
-package model.model;
+package model.model.Employee;
 
 public class Position {
     private int positionId;

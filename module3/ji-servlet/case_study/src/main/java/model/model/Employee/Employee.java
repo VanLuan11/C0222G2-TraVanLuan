@@ -1,4 +1,4 @@
-package model.model;
+package model.model.Employee;
 
 public class Employee {
     private int employeeId;
@@ -8,7 +8,7 @@ public class Employee {
     private double employeeSalary;
     private String employeePhone;
     private String employeeEmail;
-    private String employeeAdderss;
+    private String employeeAddress;
     private int positionId;
     private int educationDegreeId;
     private int divisionId;
@@ -18,7 +18,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(int employeeId, String employeeName, String employeebirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAdderss, int positionId, int educationDegreeId, int divisionId, String userName, int status) {
+    public Employee(int employeeId, String employeeName, String employeebirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId, String userName, int status) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeebirthday = employeebirthday;
@@ -26,13 +26,43 @@ public class Employee {
         this.employeeSalary = employeeSalary;
         this.employeePhone = employeePhone;
         this.employeeEmail = employeeEmail;
-        this.employeeAdderss = employeeAdderss;
+        this.employeeAddress = employeeAddress;
         this.positionId = positionId;
         this.educationDegreeId = educationDegreeId;
         this.divisionId = divisionId;
         this.userName = userName;
         this.status = status;
     }
+
+    public Employee(int employeeId, String employeeName, String employeebirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId, String userName) {
+        this.employeeId = employeeId;
+        this.employeeName = employeeName;
+        this.employeebirthday = employeebirthday;
+        this.employeeIdCard = employeeIdCard;
+        this.employeeSalary = employeeSalary;
+        this.employeePhone = employeePhone;
+        this.employeeEmail = employeeEmail;
+        this.employeeAddress = employeeAddress;
+        this.positionId = positionId;
+        this.educationDegreeId = educationDegreeId;
+        this.divisionId = divisionId;
+        this.userName = userName;
+    }
+
+    public Employee(String employeeName, String employeebirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId, String userName) {
+        this.employeeName = employeeName;
+        this.employeebirthday = employeebirthday;
+        this.employeeIdCard = employeeIdCard;
+        this.employeeSalary = employeeSalary;
+        this.employeePhone = employeePhone;
+        this.employeeEmail = employeeEmail;
+        this.employeeAddress = employeeAddress;
+        this.positionId = positionId;
+        this.educationDegreeId = educationDegreeId;
+        this.divisionId = divisionId;
+        this.userName = userName;
+    }
+
 
     public int getEmployeeId() {
         return employeeId;
@@ -91,11 +121,11 @@ public class Employee {
     }
 
     public String getEmployeeAdderss() {
-        return employeeAdderss;
+        return employeeAddress;
     }
 
     public void setEmployeeAdderss(String employeeAdderss) {
-        this.employeeAdderss = employeeAdderss;
+        this.employeeAddress = employeeAddress;
     }
 
     public int getPositionId() {

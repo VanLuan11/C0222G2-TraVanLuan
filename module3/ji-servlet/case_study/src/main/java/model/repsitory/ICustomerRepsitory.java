@@ -1,6 +1,6 @@
 package model.repsitory;
 
-import model.model.Customer;
+import model.model.customer.Customer;
 
 import java.util.List;
 
@@ -10,7 +10,6 @@ public interface ICustomerRepsitory {
     void create(Customer customer);
 
     void detele(int id);
-
 
     List<Customer> sreachCustomerName(String searchName);
 

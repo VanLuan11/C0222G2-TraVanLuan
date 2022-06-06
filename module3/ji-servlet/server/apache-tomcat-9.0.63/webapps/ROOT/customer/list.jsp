@@ -54,15 +54,6 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/customer?action=create">Create Customer</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Contract</a>
-                </li>
             </ul>
             <form class="d-flex " method="get" action="/customer?action=search">
                 <input name="action" value="search" type="hidden">
@@ -82,8 +73,8 @@
                 <th>Type_id</th>
                 <th>Name</th>
                 <th>Birthday</th>
-                <th>gender</th>
-                <th>id_card</th>
+                <th>Gender</th>
+                <th>Id Card</th>
                 <th>Phone</th>
                 <th>Email</th>
                 <th>Address</th>
