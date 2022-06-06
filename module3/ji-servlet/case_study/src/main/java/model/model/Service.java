@@ -6,8 +6,8 @@ public class Service {
     private int serviceArea;
     private double serviceCost;
     private int serviceMaxPeople;
-    private RentType rentType;
-    private Service service;
+    private int rentTypeId;
+    private int serviceTypeId;
     private String standardRoom;
     private String descriptionOtherConvenience;
     private double poolArea;
@@ -17,14 +17,14 @@ public class Service {
     public Service() {
     }
 
-    public Service(int serviceId, String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople, RentType rentType, Service service, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, int status) {
+    public Service(int serviceId, String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople, int rentTypeId, int serviceTypeId, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, int status) {
         this.serviceId = serviceId;
         this.serviceName = serviceName;
         this.serviceArea = serviceArea;
         this.serviceCost = serviceCost;
         this.serviceMaxPeople = serviceMaxPeople;
-        this.rentType = rentType;
-        this.service = service;
+        this.rentTypeId = rentTypeId;
+        this.serviceTypeId = serviceTypeId;
         this.standardRoom = standardRoom;
         this.descriptionOtherConvenience = descriptionOtherConvenience;
         this.poolArea = poolArea;
@@ -72,20 +72,20 @@ public class Service {
         this.serviceMaxPeople = serviceMaxPeople;
     }
 
-    public RentType getRentType() {
-        return rentType;
+    public int getRentTypeId() {
+        return rentTypeId;
     }
 
-    public void setRentType(RentType rentType) {
-        this.rentType = rentType;
+    public void setRentTypeId(int rentTypeId) {
+        this.rentTypeId = rentTypeId;
     }
 
-    public Service getService() {
-        return service;
+    public int getServiceTypeId() {
+        return serviceTypeId;
     }
 
-    public void setService(Service service) {
-        this.service = service;
+    public void setServiceTypeId(int serviceTypeId) {
+        this.serviceTypeId = serviceTypeId;
     }
 
     public String getStandardRoom() {

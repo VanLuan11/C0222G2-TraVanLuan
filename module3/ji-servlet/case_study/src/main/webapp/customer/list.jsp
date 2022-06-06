@@ -1,9 +1,8 @@
-
 <%--
   Created by IntelliJ IDEA.
   User: OS
-  Date: 6/2/2022
-  Time: 5:18 PM
+  Date: 6/6/2022
+  Time: 10:02 AM
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
@@ -36,8 +35,7 @@
 </head>
 <body>
 <div class="container-fluid p-5 bg-pink text-black text-center">
-    <h1>Ứng Dụng Quản Lý Khu Nghỉ Dưỡng Furama</h1>
-    <p>Được thành lập bởi công ty PhươngMaster</p>
+    <h1>Customer</h1>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-pink2">
     <div class="container-fluid">
@@ -51,13 +49,13 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/customer">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/customer?action=create">Create Customer</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Customer</a>
+                    <a class="nav-link active" aria-current="page" href=""></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Service</a>
@@ -66,58 +64,62 @@
                     <a class="nav-link active" aria-current="page" href="#">Contract</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <form class="d-flex " method="get" action="/customer?action=search">
+                <input name="action" value="search" type="hidden">
+                <input name="search" value="${txtSearch}" class="form-control me-2" type="search" placeholder="Search"
+                       aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
         </div>
     </div>
 </nav>
-<div class="row ">
-    <div class="col-12 bg-info text-center">
+<div>
+    <div class="col-12 text-center">
         <table id="tableStudent" class="table table-striped table-bordered" style="width: 100%">
             <thead>
             <tr>
-                <th>Id </th>
-                <th>Type_id </th>
-                <th>Name </th>
-                <th>Birthday </th>
-                <th>gender </th>
-                <th>id_card </th>
-                <th>Phone </th>
-                <th>Email </th>
-                <th>Address </th>
+                <th>Id</th>
+                <th>Type_id</th>
+                <th>Name</th>
+                <th>Birthday</th>
+                <th>gender</th>
+                <th>id_card</th>
+                <th>Phone</th>
+                <th>Email</th>
+                <th>Address</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
             </thead>
-           <tbody>
-           <c:forEach var="temp" items="${listCustomer}">
-               <tr>
-                   <td>${temp.customerId}</td>
-                   <td>${temp.customerTypeId}</td>
-                   <td>${temp.name}</td>
-                   <td>${temp.birthday}</td>
-                   <td>
-                       <c:if test="${temp.gender == 0}">FeMale</c:if>
-                       <c:if test="${temp.gender == 1}">Male</c:if>
-                       <c:if test="${temp.gender == null}">Other</c:if>
-                   </td>
-                   <td>${temp.idCard}</td>
-                   <td>${temp.phone}</td>
-                   <td>${temp.email}</td>
-                   <td>${temp.address}</td>
-                   <td><a href="">Edit</a></td>
-                   <td><a href="">Delete</a></td>
-               </tr>
-           </c:forEach>
-           </tbody>
-
+            <tbody>
+            <c:forEach var="temp" items="${listCustomer}">
+                <tr>
+                    <td>${temp.customerId}</td>
+                    <td>
+                        <c:if test="${temp.customerTypeId==1}">Diamond</c:if>
+                        <c:if test="${temp.customerTypeId==2}">Platinium</c:if>
+                        <c:if test="${temp.customerTypeId==3}">Gold</c:if>
+                        <c:if test="${temp.customerTypeId==4}">Silver</c:if>
+                        <c:if test="${temp.customerTypeId==5}">Member</c:if>
+                    </td>
+                    <td>${temp.name}</td>
+                    <td>${temp.birthday}</td>
+                    <td>
+                        <c:if test="${temp.gender==0}">Nam</c:if>
+                        <c:if test="${temp.gender==1}">Nữ</c:if>
+                        <c:if test="${temp.gender==2}">Khác</c:if>
+                    </td>
+                    <td>${temp.idCard}</td>
+                    <td>${temp.phone}</td>
+                    <td>${temp.email}</td>
+                    <td>${temp.address}</td>
+                    <td><a href="/customer?action=edit&idEdit=${temp.customerId}">Edit</a></td>
+                    <td><a href="/customer?action=delete&idDelete=${temp.customerId}">Delete</a></td>
+                </tr>
+            </c:forEach>
+            </tbody>
         </table>
     </div>
-</div>
-<div class="container-fluid bg-pink text-black text-center bg-secondary">
-    <h6>Công Ty PhươngMaster 6/3/2022</h6>
 </div>
 </body>
 <link rel="stylesheet" href="bootstrap/popper.min.js">
@@ -130,32 +132,9 @@
         $('#tableStudent').dataTable({
             "dom": 'Irtip',
             "lengthChange": false,
-            "pageLength": 1
+            "pageLength": 5
         });
     });
 </script>
 </html>
 
-<%--<!-- Button trigger modal -->--%>
-<%--<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">--%>
-<%--    Launch demo modal--%>
-<%--</button>--%>
-
-<%--<!-- Modal -->--%>
-<%--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">--%>
-<%--    <div class="modal-dialog">--%>
-<%--        <div class="modal-content">--%>
-<%--            <div class="modal-header">--%>
-<%--                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>--%>
-<%--                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>--%>
-<%--            </div>--%>
-<%--            <div class="modal-body">--%>
-<%--                ...--%>
-<%--            </div>--%>
-<%--            <div class="modal-footer">--%>
-<%--                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>--%>
-<%--                <button type="button" class="btn btn-primary">Save changes</button>--%>
-<%--            </div>--%>
-<%--        </div>--%>
-<%--    </div>--%>
-<%--</div>--%>

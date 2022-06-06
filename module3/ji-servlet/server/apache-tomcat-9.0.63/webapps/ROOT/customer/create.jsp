@@ -15,12 +15,19 @@
     <p>Back Home</p>
 </a>
 
+
 <div class="container mt-3">
     <h2>Create Customer</h2>
-    <form action="/customer?action=create">
+    <form action="/customer?action=create" method="post">
         <div class="mb-3 mt-3">
             <label>Customer Type Id: </label>
-            <input class="form-control" name="customerTypeId">
+            <select name="customerTypeId">
+                <option value="1">Diamond</option>
+                <option value="2">Platinium</option>
+                <option value="3">Gold</option>
+                <option value="4">Silver</option>
+                <option value="5">Member</option>
+            </select>
         </div>
         <div class="mb-3">
             <label>Name:</label>
@@ -32,7 +39,11 @@
         </div>
         <div class="mb-3">
             <label>Gender:</label>
-            <input class="form-control" name="gender">
+            <select name="gender">
+                <option value="1">Nam</option>
+                <option value="0">Nữ</option>
+                <option value="2">Khác</option>
+            </select>
         </div>
         <div class="mb-3">
             <label>Id Card:</label>
@@ -40,7 +51,7 @@
         </div>
         <div class="mb-3">
             <label>Phone:</label>
-            <input class="form-control" name="phone">
+                <input class="form-control" name="phone">
         </div>
         <div class="mb-3">
             <label>Email:</label>

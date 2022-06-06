@@ -8,4 +8,11 @@ public interface ICustomerRepsitory {
     List<Customer> getAll();
 
     void create(Customer customer);
+
+    void detele(int id);
+
+
+    List<Customer> sreachCustomerName(String searchName);
+
+    void Edit(Customer customer);
 }

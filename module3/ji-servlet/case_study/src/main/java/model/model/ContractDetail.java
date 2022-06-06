@@ -2,18 +2,18 @@ package model.model;
 
 public class ContractDetail {
     private int contractDetailId;
-    private Contract contract;
-    private AttachService attachService;
+    private int contractId;
+    private int attachServiceId;
     private int quantity;
     private int status;
 
     public ContractDetail() {
     }
 
-    public ContractDetail(int contractDetailId, Contract contract, AttachService attachService, int quantity, int status) {
+    public ContractDetail(int contractDetailId, int contractId, int attachServiceId, int quantity, int status) {
         this.contractDetailId = contractDetailId;
-        this.contract = contract;
-        this.attachService = attachService;
+        this.contractId = contractId;
+        this.attachServiceId = attachServiceId;
         this.quantity = quantity;
         this.status = status;
     }
@@ -26,20 +26,20 @@ public class ContractDetail {
         this.contractDetailId = contractDetailId;
     }
 
-    public Contract getContract() {
-        return contract;
+    public int getContractId() {
+        return contractId;
     }
 
-    public void setContract(Contract contract) {
-        this.contract = contract;
+    public void setContractId(int contractId) {
+        this.contractId = contractId;
     }
 
-    public AttachService getAttachService() {
-        return attachService;
+    public int getAttachServiceId() {
+        return attachServiceId;
     }
 
-    public void setAttachService(AttachService attachService) {
-        this.attachService = attachService;
+    public void setAttachServiceId(int attachServiceId) {
+        this.attachServiceId = attachServiceId;
     }
 
     public int getQuantity() {

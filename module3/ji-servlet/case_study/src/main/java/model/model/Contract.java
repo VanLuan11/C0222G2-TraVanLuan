@@ -6,23 +6,23 @@ public class Contract {
     private String contractEndDate;
     private double contractDeposit;
     private double contractTotalMoney;
-    private Employee employee;
-    private Customer customer;
-    private Service service;
+    private int employeeId;
+    private int customerId;
+    private int serviceId;
     private int status;
 
     public Contract() {
     }
 
-    public Contract(int contract, String contractStartDate, String contractEndDate, double contractDeposit, double contractTotalMoney, Employee employee, Customer customer, Service service, int status) {
+    public Contract(int contract, String contractStartDate, String contractEndDate, double contractDeposit, double contractTotalMoney, int employeeId, int customerId, int serviceId, int status) {
         this.contract = contract;
         this.contractStartDate = contractStartDate;
         this.contractEndDate = contractEndDate;
         this.contractDeposit = contractDeposit;
         this.contractTotalMoney = contractTotalMoney;
-        this.employee = employee;
-        this.customer = customer;
-        this.service = service;
+        this.employeeId = employeeId;
+        this.customerId = customerId;
+        this.serviceId = serviceId;
         this.status = status;
     }
 
@@ -66,28 +66,28 @@ public class Contract {
         this.contractTotalMoney = contractTotalMoney;
     }
 
-    public Employee getEmployee() {
-        return employee;
+    public int getEmployeeId() {
+        return employeeId;
     }
 
-    public void setEmployee(Employee employee) {
-        this.employee = employee;
+    public void setEmployeeId(int employeeId) {
+        this.employeeId = employeeId;
     }
 
-    public Customer getCustomer() {
-        return customer;
+    public int getCustomerId() {
+        return customerId;
     }
 
-    public void setCustomer(Customer customer) {
-        this.customer = customer;
+    public void setCustomerId(int customerId) {
+        this.customerId = customerId;
     }
 
-    public Service getService() {
-        return service;
+    public int getServiceId() {
+        return serviceId;
     }
 
-    public void setService(Service service) {
-        this.service = service;
+    public void setServiceId(int serviceId) {
+        this.serviceId = serviceId;
     }
 
     public int getStatus() {

@@ -1,33 +1,33 @@
 package model.model;
 
 public class UserRole {
-    private Role role;
-    private User user;
+    private int roleId;
+    private String userName;
     private int status;
 
     public UserRole() {
     }
 
-    public UserRole(Role role, User user, int status) {
-        this.role = role;
-        this.user = user;
+    public UserRole(int roleId, String userName, int status) {
+        this.roleId = roleId;
+        this.userName = userName;
         this.status = status;
     }
 
-    public Role getRole() {
-        return role;
+    public int getRoleId() {
+        return roleId;
     }
 
-    public void setRole(Role role) {
-        this.role = role;
+    public void setRoleId(int roleId) {
+        this.roleId = roleId;
     }
 
-    public User getUser() {
-        return user;
+    public String getUserName() {
+        return userName;
     }
 
-    public void setUser(User user) {
-        this.user = user;
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
 
     public int getStatus() {
