@@ -36,7 +36,7 @@
 </head>
 <body>
 <div class="container-fluid p-5 bg-pink text-black text-center">
-    <h1>List Employee</h1>
+    <h1>List Service</h1>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-pink2">
     <div class="container-fluid">
@@ -53,13 +53,13 @@
                     <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/employee">Employee</a>
+                    <a class="nav-link active" aria-current="page" href="/service">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/employee?action=create">Create Employee</a>
+                    <a class="nav-link active" aria-current="page" href="/service?action=create">Create Service</a>
                 </li>
             </ul>
-            <form class="d-flex " method="get" action="/employee?action=search">
+            <form class="d-flex " method="get" action="/service?action=search">
                 <input name="action" value="search" type="hidden">
                 <input name="search" value="${txtSearch}" class="form-control me-2" type="search" placeholder="Search"
                        aria-label="Search">
@@ -75,73 +75,60 @@
             <tr>
                 <th>Id</th>
                 <th>Name</th>
-                <th>Birthday</th>
-                <th>Id Card</th>
-                <th>Salary (VNĐ)</th>
-                <th>Phone</th>
-                <th>Email</th>
-                <th>Adderss</th>
-                <th>Position Id</th>
-                <th>Education Degree Id</th>
-                <th>Division Id</th>
+                <th>Area</th>
+                <th>Cost</th>
+                <th>Max People</th>
+                <th>Rent TypeId</th>
+                <th>TypeId</th>
+                <th>Standard Room</th>
+                <th>Description Other Convenience</th>
+                <th>PoolArea Id</th>
+                <th>Number Of Floors</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
             </thead>
             <tbody>
-            <c:forEach var="temp" items="${listEmployee}">
+            <c:forEach var="temp" items="${listService}">
                 <tr>
-                    <td>${temp.employeeId}</td>
-                    <td>${temp.employeeName}</td>
-                    <td>${temp.employeeBirthday}</td>
-                    <td>${temp.employeeIdCard}</td>
-                    <td><fmt:formatNumber currencyCode="currency" value="${temp.employeeSalary}"/></td>
-                    <td>${temp.employeePhone}</td>
-                    <td>${temp.employeeEmail}</td>
-                    <td>${temp.employeeAddress}</td>
-                    <td>
-                        <c:if test="${temp.positionId==1}">Quản lý</c:if>
-                        <c:if test="${temp.positionId==2}">Nhân viên</c:if>
-                    </td>
-                    <td>
-                        <c:if test="${temp.educationDegreeId==1}">Trung Cấp</c:if>
-                        <c:if test="${temp.educationDegreeId==2}">Cao Đẳng</c:if>
-                        <c:if test="${temp.educationDegreeId==3}">Đại Học</c:if>
-                        <c:if test="${temp.educationDegreeId==4}">Sau Đại Học</c:if>
-                    </td>
-                    <td>
-                        <c:if test="${temp.divisionId==1}">Sale-Marketing</c:if>
-                        <c:if test="${temp.divisionId==2}">Hành chính</c:if>
-                        <c:if test="${temp.divisionId==3}">Phục vụ</c:if>
-                        <c:if test="${temp.divisionId==4}">Quản lý</c:if>
-                    </td>
-                    <td><a class="btn btn-danger" href="/employee?action=edit&idEdit=${temp.employeeId}">Edit</a></td>
+                    <td>${temp.serviceId}</td>
+                    <td>${temp.serviceName}</td>
+                    <td>${temp.serviceArea}</td>
+                    <td><fmt:formatNumber currencyCode="currency" value="${temp.serviceCost}"/></td>
+                    <td>${temp.serviceMaxPeople}</td>
+                    <td>${temp.rentTypeId}</td>
+                    <td>${temp.serviceTypeId}</td>
+                    <td>${temp.standardRoom}</td>
+                    <td>${temp.descriptionOtherConvenience}</td>
+                    <td><fmt:formatNumber currencyCode="currency" value="${temp.poolArea}"/></td>
+                    <td>${temp.numberOfFloors}</td>
+                    <td><a class="btn btn-danger" href="/service?action=edit&idEdit=${temp.serviceId}">Edit</a></td>
                     <td>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                data-bs-target="#exampleModal${temp.employeeId}">
+                                data-bs-target="#exampleModal${temp.serviceId}">
                             Delete
                         </button>
 
-                        <div class="modal fade" id="exampleModal${temp.employeeId}" tabindex="-1"
+                        <div class="modal fade" id="exampleModal${temp.serviceId}" tabindex="-1"
                              aria-labelledby="exampleModalLabel"
                              aria-hidden="true">
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLabel">Xoá Employee</h5>
+                                        <h5 class="modal-title" id="exampleModalLabel">Xoá Service</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        <p>Bạn có muốn xoá Id: ${temp.employeeId} và
-                                            Tên: ${temp.employeeName} không?</p>
+                                        <p>Bạn có muốn xoá Id: ${temp.serviceId} và
+                                            Tên dịch vụ: ${temp.serviceName} không?</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No
                                         </button>
                                         <button type="button" class="btn btn-secondary "><a
                                                 style=" text-decoration: none ;color: white"
-                                                href="/employee?action=delete&idDelete=${temp.employeeId}">Yes</a>
+                                                href="/service?action=delete&idDelete=${temp.serviceId}">Yes</a>
                                         </button>
                                     </div>
                                 </div>

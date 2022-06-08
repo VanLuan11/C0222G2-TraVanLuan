@@ -1,5 +1,6 @@
 package controller;
 
+import model.model.service.Service;
 import model.service.IService;
 import model.service.impl.ServiceImpl;
 
@@ -20,6 +21,20 @@ public class ServiceServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
+                String serviceName = request.getParameter("service_name");
+                int serviceArea = Integer.parseInt(request.getParameter("service_area"));
+                double serviceCost = Double.parseDouble(request.getParameter("service_cost"));
+                int serviceMaxPeople = Integer.parseInt(request.getParameter("service_max_people"));
+                int rentTypeId = Integer.parseInt(request.getParameter("rent_type_id"));
+                int serviceTypeId = Integer.parseInt(request.getParameter("service_type_id"));
+                String standardRoom =  request.getParameter("standard_room");
+                String descriptionOC =  request.getParameter("description_other_convenience");
+                double poolArea = Double.parseDouble(request.getParameter("pool_area"));
+                int numberOfFloors = Integer.parseInt(request.getParameter("number_of_floors"));
+                Service service = new Service(serviceName,serviceArea,serviceCost,serviceMaxPeople,rentTypeId,serviceTypeId,standardRoom,descriptionOC,poolArea,numberOfFloors);
+                iService.create(service);
+                response.sendRedirect("/service");
+                break;
         }
     }
 
@@ -30,10 +45,18 @@ public class ServiceServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
+                showCreate(request, response);
                 break;
             default:
                 request.setAttribute("listService",iService.getALlService());
-                response.sendRedirect("/service/list.jsp");
+                request.getRequestDispatcher("/service/list.jsp").forward(request,response);
+                break;
         }
+    }
+
+    private void showCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("listServiceType",iService.getAllServiceType());
+        request.setAttribute("listRentType",iService.getAllRentType());
+        request.getRequestDispatcher("/service/list.jsp").forward(request,response);
     }
 }

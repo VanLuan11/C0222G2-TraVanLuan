@@ -54,7 +54,7 @@
                     <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/employee">Employee</a>
+                    <a class="nav-link active" aria-current="page" href="/service">Service</a>
                 </li>
             </ul>
         </div>
@@ -65,32 +65,32 @@
         <form method="post">
             <div class="form-outline mb-4">
                 <label>Name: </label>
-                <input type="text" name="employeeName" value="${employeeName}" class="form-control ">
+                <input type="text" name="serviceName" value="${serviceName}" class="form-control ">
             </div>
             <div class="form-outline mb-4">
                 <label>Birthday: </label>
-                <input type="date" name="employeeBirthday" value="${employeeBirthday}" class="form-control ">
+                <input type="date" name="serviceArea" value="${serviceArea}" class="form-control ">
             </div>
             <div class="form-outline mb-4">
 
                 <label>Id Card: </label>
-                <input type="text" name="employeeIdCard" value="${employeeIdCard}" class="form-control ">
+                <input type="text" name="serviceCost" value="${serviceCost}" class="form-control ">
             </div>
             <div class="form-outline mb-4">
                 <label>Salary: </label>
-                <input type="text" name="employeeSalary" value="${employeeSalary}" class="form-control">
+                <input type="text" name="serviceMaxPeople" value="${serviceMaxPeople}" class="form-control">
             </div>
             <div class="form-outline mb-4">
                 <label>Phone: </label>
-                <input type="text" name="employeePhone" value="${employeePhone}" class="form-control ">
+                <input type="text" name="rentTypeId" value="${rentTypeId}" class="form-control ">
             </div>
             <div class="form-outline mb-4">
                 <label>Email: </label>
-                <input type="text" name="employeeEmail" value="${employeeEmail}" class="form-control ">
+                <input type="text" name="serviceTypeId" value="${serviceTypeId}" class="form-control ">
             </div>
             <div class="form-outline mb-4">
                 <label>Address: </label>
-                <input type="text" name="employeeAddress" value="${employeeAddress}" class="form-control">
+                <input type="text" name="standardRoom" value="${standardRoom}" class="form-control">
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="form1Example10">Employee Position</label>

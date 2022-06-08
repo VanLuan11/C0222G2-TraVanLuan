@@ -155,4 +155,22 @@ public class Service {
     public void setStatus(int status) {
         this.status = status;
     }
+
+    @Override
+    public String toString() {
+        return "Service{" +
+                "serviceId=" + serviceId +
+                ", serviceName='" + serviceName + '\'' +
+                ", serviceArea=" + serviceArea +
+                ", serviceCost=" + serviceCost +
+                ", serviceMaxPeople=" + serviceMaxPeople +
+                ", rentTypeId=" + rentTypeId +
+                ", serviceTypeId=" + serviceTypeId +
+                ", standardRoom='" + standardRoom + '\'' +
+                ", descriptionOtherConvenience='" + descriptionOtherConvenience + '\'' +
+                ", poolArea=" + poolArea +
+                ", numberOfFloors=" + numberOfFloors +
+                ", status=" + status +
+                '}';
+    }
 }
