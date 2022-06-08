@@ -35,7 +35,7 @@
 </head>
 <body>
 <div class="container-fluid p-5 bg-pink text-black text-center">
-    <h1>Customer</h1>
+    <h1>List Customer</h1>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-pink2">
     <div class="container-fluid">
@@ -50,6 +50,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/customer">Customer</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/customer?action=create">Create Customer</a>
@@ -104,8 +107,40 @@
                     <td>${temp.phone}</td>
                     <td>${temp.email}</td>
                     <td>${temp.address}</td>
-                    <td><a href="/customer?action=edit&idEdit=${temp.customerId}">Edit</a></td>
-                    <td><a href="/customer?action=delete&idDelete=${temp.customerId}">Delete</a></td>
+                    <td><a class="btn btn-danger" href="/customer?action=edit&idEdit=${temp.customerId}">Edit</a></td>
+                    <td>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal${temp.customerId}">
+                            Delete
+                        </button>
+
+                        <div class="modal fade" id="exampleModal${temp.customerId}" tabindex="-1"
+                             aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Xoá Employee</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Bạn có muốn xoá Id: ${temp.customerId} và
+                                            Tên: ${temp.name} không?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No
+                                        </button>
+                                        <button type="button" class="btn btn-secondary "><a
+                                                style=" text-decoration: none ;color: white"
+                                                href="/employee?action=delete&idDelete=${temp.customerId}">Yes</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+<%--                        <a class="btn btn-danger" href="/customer?action=delete&idDelete=${temp.customerId}">Delete</a>--%>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>

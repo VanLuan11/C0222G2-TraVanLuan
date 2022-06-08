@@ -57,10 +57,10 @@
                     <a class="nav-link active" aria-current="page" href="/employee">Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">asdas</a>
+                    <a class="nav-link active" aria-current="page" href="/service">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">asda</a>
+                    <a class="nav-link active" aria-current="page" href="/contract">Contract</a>
                 </li>
             </ul>
             <form class="d-flex">

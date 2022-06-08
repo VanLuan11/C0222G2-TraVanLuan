@@ -91,6 +91,7 @@ public class CustomerServlet extends HttpServlet {
         int idEdit = Integer.parseInt(request.getParameter("idEdit"));
         for (Customer c : iCustomerService.getAll()) {
             if (c.getCustomerId() == idEdit) {
+                request.setAttribute("customerId",c.getCustomerId());
                 request.setAttribute("customerTypeId", c.getCustomerTypeId());
                 request.setAttribute("name", c.getName());
                 request.setAttribute("birthday", c.getBirthday());

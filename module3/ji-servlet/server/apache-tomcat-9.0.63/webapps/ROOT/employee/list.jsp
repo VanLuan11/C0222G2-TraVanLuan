@@ -7,6 +7,7 @@
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <html>
 <head>
     <title>Title</title>
@@ -35,7 +36,7 @@
 </head>
 <body>
 <div class="container-fluid p-5 bg-pink text-black text-center">
-    <h1>Customer</h1>
+    <h1>List Employee</h1>
 </div>
 <nav class="navbar navbar-expand-lg navbar-light bg-pink2">
     <div class="container-fluid">
@@ -52,16 +53,10 @@
                     <a class="nav-link active" aria-current="page" href="/home">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/employee?action=create">Create Customer</a>
+                    <a class="nav-link active" aria-current="page" href="/employee">Employee</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href=""></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Contract</a>
+                    <a class="nav-link active" aria-current="page" href="/employee?action=create">Create Employee</a>
                 </li>
             </ul>
             <form class="d-flex " method="get" action="/employee?action=search">
@@ -82,14 +77,13 @@
                 <th>Name</th>
                 <th>Birthday</th>
                 <th>Id Card</th>
-                <th>Salary</th>
+                <th>Salary (VNĐ)</th>
                 <th>Phone</th>
                 <th>Email</th>
                 <th>Adderss</th>
                 <th>Position Id</th>
                 <th>Education Degree Id</th>
                 <th>Division Id</th>
-                <th>User Name</th>
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
@@ -99,12 +93,12 @@
                 <tr>
                     <td>${temp.employeeId}</td>
                     <td>${temp.employeeName}</td>
-                    <td>${temp.employeebirthday}</td>
+                    <td>${temp.employeeBirthday}</td>
                     <td>${temp.employeeIdCard}</td>
-                    <td>${temp.employeeSalary}</td>
+                    <td><fmt:formatNumber currencyCode="currency" value="${temp.employeeSalary}"/></td>
                     <td>${temp.employeePhone}</td>
                     <td>${temp.employeeEmail}</td>
-                    <td>${temp.employeeAdderss}</td>
+                    <td>${temp.employeeAddress}</td>
                     <td>
                         <c:if test="${temp.positionId==1}">Quản lý</c:if>
                         <c:if test="${temp.positionId==2}">Nhân viên</c:if>
@@ -121,9 +115,39 @@
                         <c:if test="${temp.divisionId==3}">Phục vụ</c:if>
                         <c:if test="${temp.divisionId==4}">Quản lý</c:if>
                     </td>
-                    <td>${temp.userName}</td>
-                    <td><a href="/employee?action=edit&idEdit=${temp.employeeId}">Edit</a></td>
-                    <td><a href="/employee?action=delete&idDelete=${temp.employeeId}">Delete</a></td>
+                    <td><a class="btn btn-danger" href="/employee?action=edit&idEdit=${temp.employeeId}">Edit</a></td>
+                    <td>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal${temp.employeeId}">
+                            Delete
+                        </button>
+
+                        <div class="modal fade" id="exampleModal${temp.employeeId}" tabindex="-1"
+                             aria-labelledby="exampleModalLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">Xoá Employee</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Bạn có muốn xoá Id: ${temp.employeeId} và
+                                            Tên: ${temp.employeeName} không?</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No
+                                        </button>
+                                        <button type="button" class="btn btn-secondary "><a
+                                                style=" text-decoration: none ;color: white"
+                                                href="/employee?action=delete&idDelete=${temp.employeeId}">Yes</a>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </td>
                 </tr>
             </c:forEach>
             </tbody>
@@ -141,7 +165,7 @@
         $('#tableStudent').dataTable({
             "dom": 'Irtip',
             "lengthChange": false,
-            "pageLength": 5
+            "pageLength": 4
         });
     });
 </script>

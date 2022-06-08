@@ -1,8 +1,8 @@
 package controller;
 
-import model.model.customer.Customer;
-import model.service.ICustomerService;
-import model.service.impl.CustomerServiceImpl;
+import model.model.employee.Employee;
+import model.service.IEmployeeService;
+import model.service.impl.EmployeeServiceImpl;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -13,7 +13,7 @@ import java.io.IOException;
 
 @WebServlet(name = "EmployeeServlet", urlPatterns = "/employee")
 public class EmployeeServlet extends HttpServlet {
-    private static ICustomerService iCustomerService = new CustomerServiceImpl();
+    private static IEmployeeService iEmployeeService = new EmployeeServiceImpl();
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -25,38 +25,46 @@ public class EmployeeServlet extends HttpServlet {
                 getCreate(request, response);
                 break;
             case "edit":
-                getEdit2(request, response);
+                getEdit(request, response);
                 break;
 
         }
     }
 
     private void getCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int customerTypeId = Integer.parseInt(request.getParameter("customerTypeId"));
-        String name = request.getParameter("name");
-        String birthday = request.getParameter("birthday");
-        int gender = Integer.parseInt(request.getParameter("gender"));
-        String idCard = request.getParameter("idCard");
-        String phone = request.getParameter("phone");
-        String email = request.getParameter("email");
-        String address = request.getParameter("address");
-        Customer customer = new Customer(customerTypeId, name, birthday, gender, idCard, phone, email, address);
-        iCustomerService.create(customer);
+        String employeeName = request.getParameter("employeeName");
+        String employeebirthday = request.getParameter("employeebirthday");
+        String employeeIdCard = request.getParameter("employeeIdCard");
+        double employeeSalary = Double.parseDouble(request.getParameter("employeeSalary"));
+        String employeePhone = request.getParameter("employeePhone");
+        String employeeEmail = request.getParameter("employeeEmail");
+        String employeeAddress = request.getParameter("employeeAddress");
+        int positionId = Integer.parseInt(request.getParameter("positionId"));
+        int educationDegreeId = Integer.parseInt(request.getParameter("educationDegreeId"));
+        int divisionId = Integer.parseInt(request.getParameter("divisionId"));
+        String userName = request.getParameter("userName");
+        Employee employee = new Employee(employeeName, employeebirthday, employeeIdCard, employeeSalary, employeePhone, employeeEmail,
+                employeeAddress, positionId, educationDegreeId, divisionId, userName);
+        iEmployeeService.create(employee);
         response.sendRedirect("/employee");
     }
 
-    private void getEdit2(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int customerId = Integer.parseInt(request.getParameter("idEdit"));
-        int customerTypeId = Integer.parseInt(request.getParameter("customerTypeId"));
-        String name = request.getParameter("name");
-        String birthday = request.getParameter("birthday");
-        int gender = Integer.parseInt(request.getParameter("gender"));
-        String idCard = request.getParameter("idCard");
-        String phone = request.getParameter("phone");
-        String email = request.getParameter("email");
-        String address = request.getParameter("address");
-        Customer customer = new Customer(customerId, customerTypeId, name, birthday, gender, idCard, phone, email, address);
-        iCustomerService.Edit(customer);
+    private void getEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("idEdit"));
+        String employeeName = request.getParameter("employeeName");
+        String employeebirthday = request.getParameter("employeeBirthday");
+        String employeeIdCard = request.getParameter("employeeIdCard");
+        double employeeSalary = Double.parseDouble(request.getParameter("employeeSalary"));
+        String employeePhone = request.getParameter("employeePhone");
+        String employeeEmail = request.getParameter("employeeEmail");
+        String employeeAddress = request.getParameter("employeeAddress");
+        int positionId = Integer.parseInt(request.getParameter("positionId"));
+        int educationDegreeId = Integer.parseInt(request.getParameter("educationDegreeId"));
+        int divisionId = Integer.parseInt(request.getParameter("divisionId"));
+        String userName = request.getParameter("userName");
+        Employee employee = new Employee(id, employeeName, employeebirthday, employeeIdCard, employeeSalary, employeePhone, employeeEmail,
+                employeeAddress, positionId, educationDegreeId, divisionId, userName);
+        iEmployeeService.Edit(employee);
         response.sendRedirect("/employee");
 
     }
@@ -69,53 +77,67 @@ public class EmployeeServlet extends HttpServlet {
         }
         switch (action) {
             case "create":
-                request.getRequestDispatcher("employee/create.jsp").forward(request, response);
+                showCreate(request, response);
                 break;
             case "edit":
-                getEdit(request, response);
+                showEdit(request, response);
                 break;
             case "delete":
-                getDelete(request, response);
+                showDelete(request, response);
                 break;
             case "search":
-                getSearch(request, response);
+                showSearch(request, response);
                 break;
             default:
-                request.setAttribute("listEmployee", iCustomerService.getAll());
+                request.setAttribute("listEmployee", iEmployeeService.getAll());
                 request.getRequestDispatcher("employee/list.jsp").forward(request, response);
                 break;
         }
     }
 
-    private void getEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int idEdit = Integer.parseInt(request.getParameter("idEdit"));
-        for (Customer c : iCustomerService.getAll()) {
-            if (c.getCustomerId() == idEdit) {
-                request.setAttribute("customerTypeId", c.getCustomerTypeId());
-                request.setAttribute("name", c.getName());
-                request.setAttribute("birthday", c.getBirthday());
-                request.setAttribute("gender", c.getGender());
-                request.setAttribute("idCard", c.getIdCard());
-                request.setAttribute("phone", c.getPhone());
-                request.setAttribute("email", c.getEmail());
-                request.setAttribute("address", c.getAddress());
-                break;
-            }
-        }
+    private void showCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("listPosition", iEmployeeService.getAllPosition());
+        request.setAttribute("listED", iEmployeeService.getAllEducationDegree());
+        request.setAttribute("listDivision", iEmployeeService.getAllDivision());
+        request.setAttribute("listUser", iEmployeeService.getAllUser());
+        request.getRequestDispatcher("employee/create.jsp").forward(request, response);
+
+    }
+
+
+
+    private void showEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int id = Integer.parseInt(request.getParameter("idEdit"));
+        Employee employee = iEmployeeService.getEmployeeEdit(id);
+        request.setAttribute("employeeName", employee.getEmployeeName());
+        request.setAttribute("employeeBirthday", employee.getEmployeeBirthday());
+        request.setAttribute("employeeIdCard", employee.getEmployeeId());
+        request.setAttribute("employeeSalary", employee.getEmployeeSalary());
+        request.setAttribute("employeePhone", employee.getEmployeePhone());
+        request.setAttribute("employeeEmail", employee.getEmployeeEmail());
+        request.setAttribute("employeeAddress", employee.getEmployeeAddress());
+        request.setAttribute("positionId1", employee.getPositionId());
+        request.setAttribute("educationDegreeId1", employee.getEducationDegreeId());
+        request.setAttribute("divisionId1", employee.getDivisionId());
+        request.setAttribute("status", employee.getStatus());
+        request.setAttribute("listPosition", iEmployeeService.getAllPosition());
+        request.setAttribute("listED", iEmployeeService.getAllEducationDegree());
+        request.setAttribute("listDivision", iEmployeeService.getAllDivision());
+        request.setAttribute("listUser", iEmployeeService.getAllUser());
         request.getRequestDispatcher("employee/edit.jsp").forward(request, response);
     }
 
-    private void getDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void showDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         int idDelete = Integer.parseInt(request.getParameter("idDelete"));
-        iCustomerService.detele(idDelete);
+        iEmployeeService.detele(idDelete);
         response.sendRedirect("/employee");
     }
 
-    private void getSearch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    private void showSearch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String searchName = request.getParameter("search");
         request.setAttribute("txtSearch",searchName);
-        request.setAttribute("listEmployee",iCustomerService.sreachCustomerName(searchName));
-        request.getRequestDispatcher("employee/list.jsp").forward(request,response);
+        request.setAttribute("listEmployee",iEmployeeService.sreachEmployeeName(searchName));
+        request.getRequestDispatcher("/employee/list.jsp").forward(request,response);
     }
 }

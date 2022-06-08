@@ -1,18 +1,31 @@
 package model.repsitory;
 
-import model.model.Employee.Employee;
-import model.model.customer.Customer;
+import model.model.employee.Division;
+import model.model.employee.EducationDegree;
+import model.model.employee.Employee;
+import model.model.employee.Position;
+import model.model.employee.User;
 
 import java.util.List;
 
-public interface  IEmployeeRepsitory {
+public interface IEmployeeRepsitory {
     List<Employee> getAll();
 
     void create(Employee employee);
 
     void detele(int id);
 
-    List<Customer> sreachCustomerName(String searchName);
+    List<Employee> sreachEmployeeName(String searchName);
 
     void Edit(Employee employee);
+
+    Employee getEmployeeEdit(int id);
+
+    List<Position> getAllPosition();
+
+    List<EducationDegree> getAllEducationDegree();
+
+    List<Division> getAllDivision();
+
+    List<User> getAllUser();
 }
