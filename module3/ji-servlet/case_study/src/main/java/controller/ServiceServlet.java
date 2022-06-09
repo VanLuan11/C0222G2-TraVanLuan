@@ -48,15 +48,21 @@ public class ServiceServlet extends HttpServlet {
                 showCreate(request, response);
                 break;
             default:
-                request.setAttribute("listService",iService.getALlService());
-                request.getRequestDispatcher("/service/list.jsp").forward(request,response);
+                showService(request, response);
                 break;
         }
     }
 
-    private void showCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.setAttribute("listServiceType",iService.getAllServiceType());
-        request.setAttribute("listRentType",iService.getAllRentType());
+    private void showService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("listService",iService.getALlService());
+        request.setAttribute("serviceType",iService.getAllServiceType());
+        request.setAttribute("rentType",iService.getAllRentType());
         request.getRequestDispatcher("/service/list.jsp").forward(request,response);
+    }
+
+    private void showCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("serviceType",iService.getAllServiceType());
+        request.setAttribute("rentType",iService.getAllRentType());
+        request.getRequestDispatcher("/service/create.jsp").forward(request,response);
     }
 }

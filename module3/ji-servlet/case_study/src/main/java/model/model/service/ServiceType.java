@@ -1,33 +1,33 @@
 package model.model.service;
 
 public class ServiceType {
-    private int ServiceTypeId;
-    private String ServiceTypeName;
+    private int serviceTypeId;
+    private String serviceTypeName;
     private int status;
 
     public ServiceType() {
     }
 
     public ServiceType(int serviceTypeId, String serviceTypeName, int status) {
-        ServiceTypeId = serviceTypeId;
-        ServiceTypeName = serviceTypeName;
+        this.serviceTypeId = serviceTypeId;
+        this.serviceTypeName = serviceTypeName;
         this.status = status;
     }
 
     public int getServiceTypeId() {
-        return ServiceTypeId;
+        return serviceTypeId;
     }
 
     public void setServiceTypeId(int serviceTypeId) {
-        ServiceTypeId = serviceTypeId;
+        this.serviceTypeId = serviceTypeId;
     }
 
     public String getServiceTypeName() {
-        return ServiceTypeName;
+        return serviceTypeName;
     }
 
     public void setServiceTypeName(String serviceTypeName) {
-        ServiceTypeName = serviceTypeName;
+        this.serviceTypeName = serviceTypeName;
     }
 
     public int getStatus() {

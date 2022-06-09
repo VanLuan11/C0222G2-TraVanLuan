@@ -25,7 +25,6 @@ public class ServiceImpl implements IService {
     public List<RentType> getAllRentType() {
         return iServiceRepsitory.getAllRentType();
     }
-
     @Override
     public void create(Service service) {
         iServiceRepsitory.create(service);

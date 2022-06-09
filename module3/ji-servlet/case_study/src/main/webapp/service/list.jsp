@@ -78,8 +78,8 @@
                 <th>Area</th>
                 <th>Cost</th>
                 <th>Max People</th>
-                <th>Rent TypeId</th>
-                <th>TypeId</th>
+                <th>Rent Type</th>
+                <th>Type</th>
                 <th>Standard Room</th>
                 <th>Description Other Convenience</th>
                 <th>PoolArea Id</th>
@@ -96,7 +96,11 @@
                     <td>${temp.serviceArea}</td>
                     <td><fmt:formatNumber currencyCode="currency" value="${temp.serviceCost}"/></td>
                     <td>${temp.serviceMaxPeople}</td>
-                    <td>${temp.rentTypeId}</td>
+                    <td>${temp.rentTypeId}
+
+
+
+                    </td>
                     <td>${temp.serviceTypeId}</td>
                     <td>${temp.standardRoom}</td>
                     <td>${temp.descriptionOtherConvenience}</td>

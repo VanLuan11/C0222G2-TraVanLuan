@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <%--
   Created by IntelliJ IDEA.
   User: OS
@@ -66,31 +67,39 @@
             <div class="form-outline mb-4">
                 <label>Name: </label>
                 <input type="text" name="employeeName" value="${employeeName}" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeName}</div>
             </div>
             <div class="form-outline mb-4">
                 <label>Birthday: </label>
                 <input type="date" name="employeeBirthday" value="${employeeBirthday}" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeBirthday}</div>
             </div>
             <div class="form-outline mb-4">
 
                 <label>Id Card: </label>
                 <input type="text" name="employeeIdCard" value="${employeeIdCard}" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errIdCard}</div>
             </div>
             <div class="form-outline mb-4">
                 <label>Salary: </label>
                 <input type="text" name="employeeSalary" value="${employeeSalary}" class="form-control">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeSalary}</div>
             </div>
             <div class="form-outline mb-4">
                 <label>Phone: </label>
                 <input type="text" name="employeePhone" value="${employeePhone}" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeePhone}</div>
             </div>
             <div class="form-outline mb-4">
                 <label>Email: </label>
                 <input type="text" name="employeeEmail" value="${employeeEmail}" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errEmpoyeeEmail}</div>
             </div>
             <div class="form-outline mb-4">
                 <label>Address: </label>
                 <input type="text" name="employeeAddress" value="${employeeAddress}" class="form-control">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeAddress}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="form1Example10">Employee Position</label>
@@ -106,6 +115,8 @@
                         </c:choose>
                     </c:forEach>
                 </select>
+                <div class="text-black text-center bg-warning">${errMap.errPositionId}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="form1Example11">Employee Education Degree</label>
@@ -122,6 +133,8 @@
                         </c:choose>
                     </c:forEach>
                 </select>
+                <div class="text-black text-center bg-warning">${errMap.errEducationDegreeId}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="form1Example12">Employee Division</label>
@@ -137,6 +150,7 @@
                         </c:choose>
                     </c:forEach>
                 </select>
+                <div class="text-black text-center bg-warning">${errMap.errDivisionId}</div>
             </div>
             <button type="submit" class="btn btn-danger">Edit</button>
         </form>

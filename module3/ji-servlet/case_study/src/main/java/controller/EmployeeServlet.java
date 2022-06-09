@@ -10,6 +10,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Map;
 
 @WebServlet(name = "EmployeeServlet", urlPatterns = "/employee")
 public class EmployeeServlet extends HttpServlet {
@@ -35,13 +36,13 @@ public class EmployeeServlet extends HttpServlet {
         String employeeName = request.getParameter("employeeName");
         String employeebirthday = request.getParameter("employeebirthday");
         String employeeIdCard = request.getParameter("employeeIdCard");
-        double employeeSalary = Double.parseDouble(request.getParameter("employeeSalary"));
+        Double employeeSalary = Double.parseDouble(request.getParameter("employeeSalary"));
         String employeePhone = request.getParameter("employeePhone");
         String employeeEmail = request.getParameter("employeeEmail");
         String employeeAddress = request.getParameter("employeeAddress");
-        int positionId = Integer.parseInt(request.getParameter("positionId"));
-        int educationDegreeId = Integer.parseInt(request.getParameter("educationDegreeId"));
-        int divisionId = Integer.parseInt(request.getParameter("divisionId"));
+        Integer positionId = Integer.parseInt(request.getParameter("positionId"));
+        Integer educationDegreeId = Integer.parseInt(request.getParameter("educationDegreeId"));
+        Integer divisionId = Integer.parseInt(request.getParameter("divisionId"));
         String userName = request.getParameter("userName");
         Employee employee = new Employee(employeeName, employeebirthday, employeeIdCard, employeeSalary, employeePhone, employeeEmail,
                 employeeAddress, positionId, educationDegreeId, divisionId, userName);
@@ -50,25 +51,79 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     private void getEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("idEdit"));
+        Integer id = Integer.parseInt(request.getParameter("idEdit"));
         String employeeName = request.getParameter("employeeName");
         String employeebirthday = request.getParameter("employeeBirthday");
         String employeeIdCard = request.getParameter("employeeIdCard");
-        double employeeSalary = Double.parseDouble(request.getParameter("employeeSalary"));
+        double employeeSalary= 0;
+        String errEmployeeSalary= null;
+        try {
+            employeeSalary = Double.parseDouble(request.getParameter("employeeSalary"));
+        }catch(NumberFormatException e){
+            errEmployeeSalary = "Đù ghê đi làm không lương luôn";
+        }
+
         String employeePhone = request.getParameter("employeePhone");
         String employeeEmail = request.getParameter("employeeEmail");
         String employeeAddress = request.getParameter("employeeAddress");
-        int positionId = Integer.parseInt(request.getParameter("positionId"));
-        int educationDegreeId = Integer.parseInt(request.getParameter("educationDegreeId"));
-        int divisionId = Integer.parseInt(request.getParameter("divisionId"));
+        Integer positionId = 0;
+        String errPositionId = null;
+        try {
+            positionId = Integer.parseInt(request.getParameter("positionId"));
+        } catch (NumberFormatException e) {
+            errPositionId = "Làm người ai lại đi f12";
+        }
+        Integer educationDegreeId = 0;
+        String errEducationDegreeId = null;
+        try {
+            educationDegreeId = Integer.parseInt(request.getParameter("educationDegreeId"));
+        } catch (NumberFormatException e) {
+            errEducationDegreeId = "Làm người ai lại đi f12";
+        }
+        Integer divisionId =0;
+        String errDivisionId = null;
+        try {
+            divisionId = Integer.parseInt(request.getParameter("divisionId"));
+        } catch (NumberFormatException e) {
+            errDivisionId = "Làm người ai lại đi f12";
+        }
         String userName = request.getParameter("userName");
         Employee employee = new Employee(id, employeeName, employeebirthday, employeeIdCard, employeeSalary, employeePhone, employeeEmail,
                 employeeAddress, positionId, educationDegreeId, divisionId, userName);
-        iEmployeeService.Edit(employee);
-        response.sendRedirect("/employee");
-
+        Map<String, String>  errMap = iEmployeeService.Edit(employee);
+        if (errEmployeeSalary != null) {
+            errMap.put("errEmployeeSalary", errEmployeeSalary);
+        }
+        if (errPositionId != null) {
+            errMap.put("errPositionId", errPositionId);
+        }
+        if (errEducationDegreeId != null) {
+            errMap.put("errEducationDegreeId", errEducationDegreeId);
+        }
+        if (errDivisionId != null) {
+            errMap.put("errDivisionId", errDivisionId);
+        }
+        if (errMap.isEmpty()) {
+            response.sendRedirect("/customer");
+        } else {
+            request.setAttribute("employeeName", employee.getEmployeeName());
+            request.setAttribute("employeeBirthday", employee.getEmployeeBirthday());
+            request.setAttribute("employeeIdCard", employee.getEmployeeId());
+            request.setAttribute("employeeSalary", employee.getEmployeeSalary());
+            request.setAttribute("employeePhone", employee.getEmployeePhone());
+            request.setAttribute("employeeEmail", employee.getEmployeeEmail());
+            request.setAttribute("employeeAddress", employee.getEmployeeAddress());
+            request.setAttribute("positionId", employee.getPositionId());
+            request.setAttribute("educationDegreeId", employee.getEducationDegreeId());
+            request.setAttribute("divisionId", employee.getDivisionId());
+            request.setAttribute("listPosition", iEmployeeService.getAllPosition());
+            request.setAttribute("listED", iEmployeeService.getAllEducationDegree());
+            request.setAttribute("listDivision", iEmployeeService.getAllDivision());
+            request.setAttribute("listUser", iEmployeeService.getAllUser());
+            request.setAttribute("errMap", errMap);
+            request.getRequestDispatcher("employee/edit.jsp").forward(request,response);
+        }
     }
-
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
@@ -100,14 +155,13 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("listED", iEmployeeService.getAllEducationDegree());
         request.setAttribute("listDivision", iEmployeeService.getAllDivision());
         request.setAttribute("listUser", iEmployeeService.getAllUser());
-        request.getRequestDispatcher("employee/create.jsp").forward(request, response);
+        request.getRequestDispatcher("/employee/create.jsp").forward(request, response);
 
     }
 
 
-
     private void showEdit(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("idEdit"));
+        Integer id = Integer.parseInt(request.getParameter("idEdit"));
         Employee employee = iEmployeeService.getEmployeeEdit(id);
         request.setAttribute("employeeName", employee.getEmployeeName());
         request.setAttribute("employeeBirthday", employee.getEmployeeBirthday());
@@ -128,7 +182,7 @@ public class EmployeeServlet extends HttpServlet {
     }
 
     private void showDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        int idDelete = Integer.parseInt(request.getParameter("idDelete"));
+        Integer idDelete = Integer.parseInt(request.getParameter("idDelete"));
         iEmployeeService.detele(idDelete);
         response.sendRedirect("/employee");
     }
@@ -136,8 +190,8 @@ public class EmployeeServlet extends HttpServlet {
     private void showSearch(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String searchName = request.getParameter("search");
-        request.setAttribute("txtSearch",searchName);
-        request.setAttribute("listEmployee",iEmployeeService.sreachEmployeeName(searchName));
-        request.getRequestDispatcher("/employee/list.jsp").forward(request,response);
+        request.setAttribute("txtSearch", searchName);
+        request.setAttribute("listEmployee", iEmployeeService.sreachEmployeeName(searchName));
+        request.getRequestDispatcher("/employee/list.jsp").forward(request, response);
     }
 }

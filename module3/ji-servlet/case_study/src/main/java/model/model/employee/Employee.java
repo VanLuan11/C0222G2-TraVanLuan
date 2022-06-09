@@ -1,24 +1,24 @@
 package model.model.employee;
 
 public class Employee {
-    private int employeeId;
+    private Integer employeeId;
     private String employeeName;
     private String employeeBirthday;
     private String employeeIdCard;
-    private double employeeSalary;
+    private Double employeeSalary;
     private String employeePhone;
     private String employeeEmail;
     private String employeeAddress;
-    private int positionId;
-    private int educationDegreeId;
-    private int divisionId;
+    private Integer positionId;
+    private Integer educationDegreeId;
+    private Integer divisionId;
     private String userName;
-    private int status;
+    private Integer status;
 
     public Employee() {
     }
 
-    public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId, String userName, int status) {
+    public Employee(Integer employeeId, String employeeName, String employeeBirthday, String employeeIdCard, Double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, Integer positionId, Integer educationDegreeId, Integer divisionId, String userName, Integer status) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
@@ -34,7 +34,7 @@ public class Employee {
         this.status = status;
     }
 
-    public Employee(int employeeId, String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId, String userName) {
+    public Employee(Integer employeeId, String employeeName, String employeeBirthday, String employeeIdCard, Double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, Integer positionId, Integer educationDegreeId, Integer divisionId, String userName) {
         this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
@@ -49,7 +49,7 @@ public class Employee {
         this.userName = userName;
     }
 
-    public Employee(String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId, String userName) {
+    public Employee(String employeeName, String employeeBirthday, String employeeIdCard, Double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, Integer positionId, Integer educationDegreeId, Integer divisionId, String userName) {
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
         this.employeeIdCard = employeeIdCard;
@@ -63,7 +63,8 @@ public class Employee {
         this.userName = userName;
     }
 
-    public Employee(String employeeName, String employeeBirthday, String employeeIdCard, double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, int positionId, int educationDegreeId, int divisionId) {
+    public Employee(Integer employeeId, String employeeName, String employeeBirthday, String employeeIdCard, Double employeeSalary, String employeePhone, String employeeEmail, String employeeAddress, Integer positionId, Integer educationDegreeId, Integer divisionId) {
+        this.employeeId = employeeId;
         this.employeeName = employeeName;
         this.employeeBirthday = employeeBirthday;
         this.employeeIdCard = employeeIdCard;
@@ -76,6 +77,7 @@ public class Employee {
         this.divisionId = divisionId;
     }
 
+
     public String getEmployeeAddress() {
         return employeeAddress;
     }
@@ -84,11 +86,11 @@ public class Employee {
         this.employeeAddress = employeeAddress;
     }
 
-    public int getEmployeeId() {
+    public Integer getEmployeeId() {
         return employeeId;
     }
 
-    public void setEmployeeId(int employeeId) {
+    public void setEmployeeId(Integer employeeId) {
         this.employeeId = employeeId;
     }
 
@@ -116,11 +118,11 @@ public class Employee {
         this.employeeIdCard = employeeIdCard;
     }
 
-    public double getEmployeeSalary() {
+    public Double getEmployeeSalary() {
         return employeeSalary;
     }
 
-    public void setEmployeeSalary(double employeeSalary) {
+    public void setEmployeeSalary(Double employeeSalary) {
         this.employeeSalary = employeeSalary;
     }
 
@@ -140,27 +142,27 @@ public class Employee {
         this.employeeEmail = employeeEmail;
     }
 
-    public int getPositionId() {
+    public Integer getPositionId() {
         return positionId;
     }
 
-    public void setPositionId(int positionId) {
+    public void setPositionId(Integer positionId) {
         this.positionId = positionId;
     }
 
-    public int getEducationDegreeId() {
+    public Integer getEducationDegreeId() {
         return educationDegreeId;
     }
 
-    public void setEducationDegreeId(int educationDegreeId) {
+    public void setEducationDegreeId(Integer educationDegreeId) {
         this.educationDegreeId = educationDegreeId;
     }
 
-    public int getDivisionId() {
+    public Integer getDivisionId() {
         return divisionId;
     }
 
-    public void setDivisionId(int divisionId) {
+    public void setDivisionId(Integer divisionId) {
         this.divisionId = divisionId;
     }
 
@@ -172,11 +174,11 @@ public class Employee {
         this.userName = userName;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 

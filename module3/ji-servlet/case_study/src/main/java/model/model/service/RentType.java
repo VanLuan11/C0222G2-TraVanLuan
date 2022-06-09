@@ -1,43 +1,43 @@
 package model.model.service;
 
 public class RentType {
-    private int RentTypeId;
-    private String RentTypeName;
-    private double RentTypeCost;
+    private int rentTypeId;
+    private String rentTypeName;
+    private double rentTypeCost;
     private int status;
 
     public RentType() {
     }
 
     public RentType(int rentTypeId, String rentTypeName, double rentTypeCost, int status) {
-        RentTypeId = rentTypeId;
-        RentTypeName = rentTypeName;
-        RentTypeCost = rentTypeCost;
+        this.rentTypeId = rentTypeId;
+        this.rentTypeName = rentTypeName;
+        this.rentTypeCost = rentTypeCost;
         this.status = status;
     }
 
     public int getRentTypeId() {
-        return RentTypeId;
+        return rentTypeId;
     }
 
     public void setRentTypeId(int rentTypeId) {
-        RentTypeId = rentTypeId;
+        this.rentTypeId = rentTypeId;
     }
 
     public String getRentTypeName() {
-        return RentTypeName;
+        return rentTypeName;
     }
 
     public void setRentTypeName(String rentTypeName) {
-        RentTypeName = rentTypeName;
+        this.rentTypeName = rentTypeName;
     }
 
     public double getRentTypeCost() {
-        return RentTypeCost;
+        return rentTypeCost;
     }
 
     public void setRentTypeCost(double rentTypeCost) {
-        RentTypeCost = rentTypeCost;
+        this.rentTypeCost = rentTypeCost;
     }
 
     public int getStatus() {

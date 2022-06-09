@@ -5,7 +5,7 @@ import model.model.service.RentType;
 import model.model.service.Service;
 import model.model.service.ServiceType;
 import model.repsitory.IServiceRepsitory;
-import sun.java2d.pipe.hw.AccelTypedVolatileImage;
+
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;

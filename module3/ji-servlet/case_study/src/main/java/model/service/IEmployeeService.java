@@ -8,6 +8,7 @@ import model.model.employee.User;
 
 
 import java.util.List;
+import java.util.Map;
 
 public interface IEmployeeService {
     List<Employee> getAll();
@@ -16,7 +17,7 @@ public interface IEmployeeService {
 
     void detele(int id);
 
-    void Edit(Employee employee);
+    Map<String , String> Edit(Employee employee);
 
     List<Employee> sreachEmployeeName(String searchName);
 
