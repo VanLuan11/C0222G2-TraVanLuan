@@ -261,5 +261,5 @@ values (5,2,4),
 (2,6,2),
 (2,3,2);
 
-select * from service where service_name like ? and standard_room like ? and `status`= 0;
+select * from service where service_name like '%Villa Beach Fron%' and standard_room like '%%' and `status`= 0;
 

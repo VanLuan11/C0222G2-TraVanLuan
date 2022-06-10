@@ -67,30 +67,43 @@
             <div class="form-outline mb-4">
                 <label>Name: </label>
                 <input type="text" name="employeeName" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeName}</div>
             </div>
             <div class="form-outline mb-4">
                 <label>Birthday: </label>
                 <input type="date" name="employeebirthday" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeBirthday}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label>Id Card: </label>
                 <input type="text" name="employeeIdCard" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errIdCard}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label>Salary: </label>
                 <input type="text" name="employeeSalary" class="form-control">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeSalary}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label>Phone: </label>
                 <input type="text" name="employeePhone" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeePhone}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label>Email: </label>
                 <input type="text" name="employeeEmail" class="form-control ">
+                <div class="text-black text-center bg-warning">${errMap.errEmpoyeeEmail}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label>Address: </label>
                 <input type="text" name="employeeAddress" class="form-control">
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeAddress}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="form1Example10">Employee Position</label>
@@ -99,6 +112,8 @@
                         <option value="${i.positionId}">${i.positionName}</option>
                     </c:forEach>
                 </select>
+                <div class="text-black text-center bg-warning">${errMap.errPositionId}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="form1Example11">Employee Education Degree</label>
@@ -108,6 +123,8 @@
                         <option value="${i.educationDegreeId}">${i.educationDegreeName}</option>
                     </c:forEach>
                 </select>
+                <div class="text-black text-center bg-warning">${errMap.errEmployeeName}</div>
+
             </div>
             <div class="form-outline mb-4">
                 <label class="form-label" for="form1Example12">Employee Division</label>
@@ -116,6 +133,8 @@
                         <option value="${i.divisionId}">${i.divisionName}</option>
                     </c:forEach>
                 </select>
+                <div class="text-black text-center bg-warning">${errMap.errDivisionId}</div>
+
             </div>
             <button type="submit" class="btn btn-danger">Create</button>
         </form>

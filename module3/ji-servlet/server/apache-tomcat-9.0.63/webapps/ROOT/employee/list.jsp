@@ -61,7 +61,9 @@
             </ul>
             <form class="d-flex " method="get" action="/employee?action=search">
                 <input name="action" value="search" type="hidden">
-                <input name="search" value="${txtSearch}" class="form-control me-2" type="search" placeholder="Search"
+                <input name="searchName" value="${txtSearchName}" class="form-control me-2" type="search" placeholder="Search"
+                       aria-label="Search">
+                <input name="searchAddress" value="${txtSearchAddress}" class="form-control me-2" type="search" placeholder="Search"
                        aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Search</button>
             </form>

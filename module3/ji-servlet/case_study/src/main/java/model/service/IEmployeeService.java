@@ -13,13 +13,13 @@ import java.util.Map;
 public interface IEmployeeService {
     List<Employee> getAll();
 
-    void create(Employee employee);
+    Map<String, String> create(Employee employee);
 
     void detele(int id);
 
     Map<String , String> Edit(Employee employee);
 
-    List<Employee> sreachEmployeeName(String searchName);
+    List<Employee> sreachEmployee(String searchName, String searchAddress);
 
     Employee getEmployeeEdit(int id);
 

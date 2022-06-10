@@ -19,13 +19,13 @@ public class EmployeeRepositoryImpl implements IEmployeeRepsitory {
     private static final String CREATE_EMPLOYEE = "insert into employee (employee_name, employee_birthday, employee_id_card, employee_salary, employee_phone, employee_email, employee_address, position_id, education_degree_id, division_id,user_name) values (?,?,?,?,?,?,?,?,?,?,?);";
     private static final String UPDATE_EMPLPOYEE = "update employee set employee_name = ?,employee_birthday = ?,employee_id_card= ?,employee_salary=?,employee_phone= ?,employee_email= ?,employee_address=?,position_id= ?,education_degree_id=?,division_id=?,user_name=? where employee_id =?;";
     private static final String DELETE_EMPLPOYEE = "update employee set `status`=1 where employee_id = ?;";
-    private static final String SEARCHNAME_EMPLPOYEE = "select * from employee where employee_name like ? and `status` =0;";
+//    private static final String SEARCHNAME_EMPLPOYEE = "select * from employee where employee_name like ? and `status` =0;";
     private static final String SELECT_ALL_POSITION = " select * from position where status = 0;";
     private static final String SELECT_ALL_EDUCATION = " select * from education_degree where status = 0;  ";
     private static final String SELECT_ALL_DIVISION = " select * from division where status = 0;  ";
     private static final String SELECT_ALL_USER = " select * from user; ";
     private static final String SELECT_EMPLOYEE = " select * from employee where employee_id = ? ;";
-//    private static final String FIND_BY_NAME_POSITION_id = "select * from employee where employee_name like ? and position_id like ? and `status` = 0;";
+    private static final String FIND_BY_NAME_POSITION_ID = "select * from employee where employee_name like ? and employee_address like ? and `status` = 0;";
 
     @Override
     public List<Employee> getAll() {
@@ -108,12 +108,13 @@ public class EmployeeRepositoryImpl implements IEmployeeRepsitory {
     }
 
     @Override
-    public List<Employee> sreachEmployeeName(String searchName) {
+    public List<Employee> sreachEmployee(String searchName, String searchAddress) {
         List<Employee> employeeList = new ArrayList<>();
         Connection connection = this.dataBase.getConnectionJavaToDB();
         try {
-            PreparedStatement preparedStatement = connection.prepareStatement(SEARCHNAME_EMPLPOYEE);
+            PreparedStatement preparedStatement = connection.prepareStatement(FIND_BY_NAME_POSITION_ID);
             preparedStatement.setString(1, "%" + searchName + "%");
+            preparedStatement.setString(2, "%" + searchAddress + "%");
             ResultSet resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 int id = resultSet.getInt("employee_id");

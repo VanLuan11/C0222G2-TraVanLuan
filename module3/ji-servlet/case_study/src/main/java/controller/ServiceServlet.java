@@ -55,8 +55,8 @@ public class ServiceServlet extends HttpServlet {
 
     private void showService(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("listService",iService.getALlService());
-        request.setAttribute("serviceType",iService.getAllServiceType());
-        request.setAttribute("rentType",iService.getAllRentType());
+        request.setAttribute("listServiceType",iService.getAllServiceType());
+        request.setAttribute("listRentType",iService.getAllRentType());
         request.getRequestDispatcher("/service/list.jsp").forward(request,response);
     }
 

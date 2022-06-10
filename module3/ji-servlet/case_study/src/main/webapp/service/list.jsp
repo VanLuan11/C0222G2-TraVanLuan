@@ -96,11 +96,16 @@
                     <td>${temp.serviceArea}</td>
                     <td><fmt:formatNumber currencyCode="currency" value="${temp.serviceCost}"/></td>
                     <td>${temp.serviceMaxPeople}</td>
-                    <td>${temp.rentTypeId}
-
-
-
-                    </td>
+                    <c:forEach items="${listRentType}" var="l">
+                        <c:if test="${l.rentTypeId == temp.rentTypeId}">
+                            <td>${l.rentTypeName}</td>
+                        </c:if>
+                    </c:forEach>
+                    <c:forEach items="${listServiceType}" var="l">
+                        <c:if test="${l.serviceTypeId == temp.serviceTypeId}">
+                            <td>${l.serviceTypeName}</td>
+                        </c:if>
+                    </c:forEach>
                     <td>${temp.serviceTypeId}</td>
                     <td>${temp.standardRoom}</td>
                     <td>${temp.descriptionOtherConvenience}</td>

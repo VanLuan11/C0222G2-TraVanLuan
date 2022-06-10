@@ -15,7 +15,7 @@ public interface IEmployeeRepsitory {
 
     void detele(int id);
 
-    List<Employee> sreachEmployeeName(String searchName);
+    List<Employee> sreachEmployee(String searchName, String searchAddress);
 
     void Edit(Employee employee);
 

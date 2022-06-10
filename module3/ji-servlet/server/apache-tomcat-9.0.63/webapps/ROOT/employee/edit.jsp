@@ -77,7 +77,7 @@
             <div class="form-outline mb-4">
 
                 <label>Id Card: </label>
-                <input type="text" name="employeeIdCard1" value="${employeeIdCard}" class="form-control ">
+                <input type="text" name="employeeIdCard" value="${employeeIdCard}" class="form-control ">
                 <div class="text-black text-center bg-warning">${errMap.errIdCard}</div>
             </div>
             <div class="form-outline mb-4">
