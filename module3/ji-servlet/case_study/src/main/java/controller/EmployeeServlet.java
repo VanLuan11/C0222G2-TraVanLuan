@@ -104,7 +104,7 @@ public class EmployeeServlet extends HttpServlet {
             request.setAttribute("listDivision", iEmployeeService.getAllDivision());
             request.setAttribute("listUser", iEmployeeService.getAllUser());
             request.setAttribute("errMap", errMap);
-            request.getRequestDispatcher("/employee/edit.jsp").forward(request,response);
+            request.getRequestDispatcher("/employee/create.jsp").forward(request,response);
         }
     }
 
@@ -113,6 +113,7 @@ public class EmployeeServlet extends HttpServlet {
         String employeeName = request.getParameter("employeeName");
         String employeebirthday = request.getParameter("employeeBirthday");
         String employeeIdCard = request.getParameter("employeeIdCard");
+
         double employeeSalary= 0;
         String errEmployeeSalary= null;
         try {
@@ -120,6 +121,7 @@ public class EmployeeServlet extends HttpServlet {
         }catch(NumberFormatException e){
             errEmployeeSalary = "Đù ghê đi làm không lương luôn";
         }
+
 
         String employeePhone = request.getParameter("employeePhone");
         String employeeEmail = request.getParameter("employeeEmail");
@@ -162,7 +164,8 @@ public class EmployeeServlet extends HttpServlet {
             errMap.put("errDivisionId", errDivisionId);
         }
         if (errMap.isEmpty()) {
-            response.sendRedirect("/customer");
+
+            response.sendRedirect("/employee");
         } else {
             request.setAttribute("employeeName", employee.getEmployeeName());
             request.setAttribute("employeeBirthday", employee.getEmployeeBirthday());
@@ -179,7 +182,7 @@ public class EmployeeServlet extends HttpServlet {
             request.setAttribute("listDivision", iEmployeeService.getAllDivision());
             request.setAttribute("listUser", iEmployeeService.getAllUser());
             request.setAttribute("errMap", errMap);
-            request.getRequestDispatcher("employee/edit.jsp").forward(request,response);
+            request.getRequestDispatcher("/employee/edit.jsp").forward(request,response);
         }
     }
 
@@ -202,10 +205,17 @@ public class EmployeeServlet extends HttpServlet {
                 showSearch(request, response);
                 break;
             default:
-                request.setAttribute("listEmployee", iEmployeeService.getAll());
-                request.getRequestDispatcher("employee/list.jsp").forward(request, response);
+                showEmployee(request, response);
                 break;
         }
+    }
+
+    private void showEmployee(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.setAttribute("listPosition", iEmployeeService.getAllPosition());
+        request.setAttribute("listED", iEmployeeService.getAllEducationDegree());
+        request.setAttribute("listDivision", iEmployeeService.getAllDivision());
+        request.setAttribute("listEmployee", iEmployeeService.getAll());
+        request.getRequestDispatcher("employee/list.jsp").forward(request, response);
     }
 
     private void showCreate(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -236,7 +246,7 @@ public class EmployeeServlet extends HttpServlet {
         request.setAttribute("listED", iEmployeeService.getAllEducationDegree());
         request.setAttribute("listDivision", iEmployeeService.getAllDivision());
         request.setAttribute("listUser", iEmployeeService.getAllUser());
-        request.getRequestDispatcher("employee/edit.jsp").forward(request, response);
+        request.getRequestDispatcher("/employee/edit.jsp").forward(request, response);
     }
 
     private void showDelete(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -251,6 +261,9 @@ public class EmployeeServlet extends HttpServlet {
         String searchAddress = request.getParameter("searchAddress");
         request.setAttribute("txtSearchName", searchName);
         request.setAttribute("txtSearchAddress",searchAddress);
+        request.setAttribute("listPosition", iEmployeeService.getAllPosition());
+        request.setAttribute("listED", iEmployeeService.getAllEducationDegree());
+        request.setAttribute("listDivision", iEmployeeService.getAllDivision());
         request.setAttribute("listEmployee", iEmployeeService.sreachEmployee(searchName,searchAddress));
         request.getRequestDispatcher("/employee/list.jsp").forward(request, response);
     }

@@ -2,41 +2,185 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="872833c4-046e-4796-8509-712cab850eb1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../bai_hoc/ss7_thiet_ke_bo_cuc_trang_web/bai_tap/facebook/.idea/facebook.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/connection/DataBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/controller/CustomerServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/model/Customer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/repsitory/ICustomerRepsitory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/repsitory/impl/CustomerRepsitoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/service/ICustomerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/bootstrap/normalize.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/customer/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/.idea/gradle.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/common/CheckRegex.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/config/CharsetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/connection/DataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/controller/MatBangServlet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/model/model/LoaiMatBang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/model/model/MatBang.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/model/model/TrangThai.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/model/repository/IMatBangRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/model/repository/Impl/MatBangRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/model/service/IMatBangService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/java/model/service/Impl/MatBangServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap413/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/edit.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/index.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/list.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/bootstrap/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/bootstrap/normalize.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/bootstrap/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/images/sort_asc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/images/sort_both.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/images/sort_desc.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss1_tong_quan_spring_mvc/thuc_hanh/spring-greeting/src/main/java/controller/GreetingController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/build/classes/java/main/common/CheckRegex.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/build/classes/java/main/common/CheckRegex.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/build/classes/java/main/controller/EmployeeServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/build/classes/java/main/controller/EmployeeServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/build/classes/java/main/model/service/impl/EmployeeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/build/classes/java/main/model/service/impl/EmployeeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/build/libs/case_study-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/build/libs/case_study-1.0-SNAPSHOT.war" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/common/CheckRegex.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/common/CheckRegex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/controller/EmployeeServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/controller/EmployeeServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/service/ICustomerService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/service/impl/EmployeeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/java/model/service/impl/EmployeeServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/bootstrap/bootstrap.bundle.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap/bootstrap.bundle.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/bootstrap/bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap/bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/bootstrap/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap/bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/bootstrap/normalize.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap/normalize.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/bootstrap/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/bootstrap/popper.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.bootstrap.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.bootstrap.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.bootstrap.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.bootstrap.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.bootstrap4.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.bootstrap4.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.bootstrap4.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.bootstrap4.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.foundation.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.foundation.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.foundation.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.jqueryui.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.jqueryui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.jqueryui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.jqueryui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.semanticui.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.semanticui.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/dataTables.semanticui.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/dataTables.semanticui.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/jquery.dataTables.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/css/jquery.dataTables.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/css/jquery.dataTables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/style/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/images/sort_asc.png" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/images/sort_asc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/images/sort_asc_disabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/images/sort_asc_disabled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/images/sort_both.png" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/images/sort_both.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/images/sort_desc.png" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/images/sort_desc.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/images/sort_desc_disabled.png" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/images/sort_desc_disabled.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.bootstrap.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.bootstrap4.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.bootstrap4.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.bootstrap4.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.bootstrap4.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.foundation.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.foundation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.foundation.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.foundation.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.jqueryui.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.jqueryui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.jqueryui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.jqueryui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.semanticui.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.semanticui.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/dataTables.semanticui.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/dataTables.semanticui.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/jquery.dataTables.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/jquery.dataTables.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/datatables/js/jquery.dataTables.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/datatables/js/jquery.dataTables.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/employee/edit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/employee/edit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/employee/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/employee/list.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/case_study/src/main/webapp/jquery/jquery-3.5.1.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ExamModule3/src/main/webapp/jquery/jquery-3.5.1.min.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/common/CheckRegex.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/common/CheckRegex.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/connection/DataBase.class" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/connection/DataBase.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/UserServlet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/repository/IUserRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/repository/impl/UserRepositoryImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/service/IUserService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/service/impl/UserServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/create.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/edit.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/list.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/ss12_jdbc_&amp;_crud/cap_nhat_ung_dung_quan_ly_user/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ss12_jdbc_&amp;_crud/cap_nhat_ung_dung_quan_ly_user/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/ss12_jdbc_&amp;_crud/cap_nhat_ung_dung_quan_ly_user/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ss12_jdbc_&amp;_crud/cap_nhat_ung_dung_quan_ly_user/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/ss12_jdbc_&amp;_crud/cap_nhat_ung_dung_quan_ly_user/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ss12_jdbc_&amp;_crud/cap_nhat_ung_dung_quan_ly_user/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../ji-servlet/ss12_jdbc_&amp;_crud/cap_nhat_ung_dung_quan_ly_user/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/ss12_jdbc_&amp;_crud/cap_nhat_ung_dung_quan_ly_user/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/ContractServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/EmployeeServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/FuramaServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/ServiceServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/Employee/Division.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/Employee/EducationDegree.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/Employee/Employee.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/Employee/Position.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/Employee/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/Employee/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/Employee/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/contract/AttachService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/contract/Contract.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/contract/ContractDetail.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/customer/Customer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/customer/CustomerType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/service/RentType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/service/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/service/ServiceType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/ICustomerRepsitory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/IEmployeeRepsitory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/IServiceRepsitory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/impl/CustomerRepsitoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/impl/EmployeeRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/impl/ServiceRepsitoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/ICustomerService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/IEmployeeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/IService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/impl/CustomerServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/impl/EmployeeServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/impl/ServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/customer/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/customer/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/customer/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/datatables/css/dataTables.foundation.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/datatables/css/dataTables.foundation.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/datatables/css/jquery.dataTables.min.css" beforeDir="false" afterPath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/datatables/css/jquery.dataTables.min.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/employee/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/employee/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/employee/list.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/home.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/service/create.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/service/edit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/service/list.jsp" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +214,7 @@
       <option name="presentableId" value="Default" />
       <updated>1654434414117</updated>
       <workItem from="1654434415276" duration="9000" />
+      <workItem from="1655261428061" duration="3000" />
     </task>
     <servers />
   </component>

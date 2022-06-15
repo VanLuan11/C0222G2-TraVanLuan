@@ -102,7 +102,6 @@
 
             </div>
             <div class="form-outline mb-4">
-                <label class="form-label" for="form1Example10">Employee Position</label>
                 <select class="form-select" aria-label="Default select example" id="form1Example10" name="positionId">
                     <c:forEach items="${listPosition}" var="i">
                         <c:choose>

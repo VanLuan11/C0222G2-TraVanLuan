@@ -12,6 +12,10 @@ import model.service.IEmployeeService;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.Period;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeParseException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -19,8 +23,6 @@ import java.util.Map;
 
 public class EmployeeServiceImpl implements IEmployeeService {
     private static IEmployeeRepsitory iEmployeeRepsitory = new EmployeeRepositoryImpl();
-    private SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
-
     @Override
     public List<Employee> getAll() {
         return iEmployeeRepsitory.getAll();
@@ -31,17 +33,26 @@ public class EmployeeServiceImpl implements IEmployeeService {
         Map<String, String> errMap =  new HashMap<>();
         List<Employee> employeeList = new ArrayList<>();
         boolean flag = false;
+        String pattern = "yyyy-MM-dd";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
+        LocalDate birthday ;
+        int age = 0;
+            try {
+            birthday = LocalDate.parse(employee.getEmployeeBirthday(), formatter);
+            LocalDate now = LocalDate.now();
+            age = Period.between(birthday, now).getYears();
+
+        } catch (DateTimeParseException e) {
+            errMap.put("errEmployeeBirthday", "Đù trên trời rớt xuống à");
+        }
+
         if (employee.getEmployeeName() == null || employee.getEmployeeName().equals("")) {
             errMap.put("errEmployeeName", "Ủa không nhập tên thì lấy gì lưu?????");
         }
         if (employee.getEmployeeBirthday() == null || employee.getEmployeeBirthday().equals("")) {
             errMap.put("errEmployeeBirthday", "Đù trên trời rớt xuống à");
-        } else {
-            try {
-                employee.setEmployeeBirthday(simpleDateFormat.format(simpleDateFormat.parse(employee.getEmployeeBirthday())));
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
+        } else if(age < 18){
+            errMap.put("errEmployeeBirthday","Đi làm sớm đấy");
         }
         if (employee.getEmployeeIdCard() == null || employee.getEmployeeIdCard().equals("")) {
             errMap.put("errIdCard", "Ủa không nhập thì lấy Card đâu ra ??");
@@ -120,17 +131,25 @@ public class EmployeeServiceImpl implements IEmployeeService {
         Map<String, String> errMap = new HashMap<>();
         List<Employee> employeeList = iEmployeeRepsitory.getAll();
         boolean flag = false;
+        String pattern = "yyyy-MM-dd";
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern(pattern);
+        LocalDate birthday;
+        int age =  0;
+        try {
+            birthday = LocalDate.parse(employee.getEmployeeBirthday(), formatter);
+            LocalDate now = LocalDate.now();
+             age = Period.between(birthday, now).getYears();
+        } catch (DateTimeParseException e) {
+            errMap.put("errEmployeeBirthday", "Đù trên trời rớt xuống à");
+        }
+
         if (employee.getEmployeeName() == null || employee.getEmployeeName().equals("")) {
             errMap.put("errEmployeeName", "Ủa không nhập tên thì lấy gì lưu?????");
         }
         if (employee.getEmployeeBirthday() == null || employee.getEmployeeBirthday().equals("")) {
             errMap.put("errEmployeeBirthday", "Đù trên trời rớt xuống à");
-        } else {
-            try {
-                employee.setEmployeeBirthday(simpleDateFormat.format(simpleDateFormat.parse(employee.getEmployeeBirthday())));
-            } catch (ParseException e) {
-                e.printStackTrace();
-            }
+        } else if(age < 18){
+           errMap.put("errEmployeeBirthday","Đi làm sớm đấy");
         }
         if (employee.getEmployeeIdCard() == null || employee.getEmployeeIdCard().equals("")) {
             errMap.put("errIdCard", "Ủa không nhập thì lấy Card đâu ra ??");
@@ -192,7 +211,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
             errMap.put("errDivisionId", "Làm người ai lại đi f12");
         }
         if (errMap.isEmpty()) {
-            iEmployeeRepsitory.create(employee);
+            iEmployeeRepsitory.Edit(employee);
         }
         return errMap;
     }

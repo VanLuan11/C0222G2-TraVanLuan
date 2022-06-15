@@ -101,22 +101,21 @@
                     <td>${temp.employeePhone}</td>
                     <td>${temp.employeeEmail}</td>
                     <td>${temp.employeeAddress}</td>
-                    <td>
-                        <c:if test="${temp.positionId==1}">Quản lý</c:if>
-                        <c:if test="${temp.positionId==2}">Nhân viên</c:if>
-                    </td>
-                    <td>
-                        <c:if test="${temp.educationDegreeId==1}">Trung Cấp</c:if>
-                        <c:if test="${temp.educationDegreeId==2}">Cao Đẳng</c:if>
-                        <c:if test="${temp.educationDegreeId==3}">Đại Học</c:if>
-                        <c:if test="${temp.educationDegreeId==4}">Sau Đại Học</c:if>
-                    </td>
-                    <td>
-                        <c:if test="${temp.divisionId==1}">Sale-Marketing</c:if>
-                        <c:if test="${temp.divisionId==2}">Hành chính</c:if>
-                        <c:if test="${temp.divisionId==3}">Phục vụ</c:if>
-                        <c:if test="${temp.divisionId==4}">Quản lý</c:if>
-                    </td>
+                    <c:forEach items="${listPosition}" var="l">
+                        <c:if test="${l.positionId == temp.positionId}">
+                            <td>${l.positionName}</td>
+                        </c:if>
+                    </c:forEach>
+                    <c:forEach items="${listED}" var="l">
+                        <c:if test="${l.educationDegreeId == temp.educationDegreeId}">
+                            <td>${l.educationDegreeName}</td>
+                        </c:if>
+                    </c:forEach>
+                    <c:forEach items="${listDivision}" var="l">
+                        <c:if test="${l.divisionId == temp.divisionId}">
+                            <td>${l.divisionName}</td>
+                        </c:if>
+                    </c:forEach>
                     <td><a class="btn btn-danger" href="/employee?action=edit&idEdit=${temp.employeeId}">Edit</a></td>
                     <td>
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"

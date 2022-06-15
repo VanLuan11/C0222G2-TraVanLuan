@@ -43,7 +43,7 @@
                 <li class="nav-item ">
                     <a class="navbar-brand " href="#">
                         <img class="border-6"
-                             src="https://wikiland.vn/images/2020/08/furama-resort-spa-phu-quoc-wikiland.jpg" alt=""
+                             src="https://danangfantasticity.com/wp-content/uploads/2020/06/shilla-monogram-quangnam-danang-niem-tu-hao-cua-nganh-khach-san-han-quoc-chinh-thuc-ra-mat-tai-viet-nam.jpg" alt=""
                              width="40" height="40">
                     </a>
                 </li>
