@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: OS
@@ -11,6 +12,8 @@
     <title>$Title$</title>
   </head>
   <body>
-  $END$
+  <c:redirect url="dictionary">
+
+  </c:redirect>
   </body>
 </html>
