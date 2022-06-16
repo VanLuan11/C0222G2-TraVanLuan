@@ -12,7 +12,6 @@ public class ConvertController {
     @GetMapping("form-convert")
     public String showConvert(){
          return "convert";
-
     }
     @PostMapping ("convert")
     public String  getConvert(@RequestParam int vnd, Model model){

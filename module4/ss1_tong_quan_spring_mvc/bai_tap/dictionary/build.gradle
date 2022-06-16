@@ -21,3 +21,4 @@ dependencies {
     implementation group: 'org.springframework', name: 'spring-web', version: '4.3.17.RELEASE'
     implementation group: 'org.springframework', name: 'spring-webmvc', version: '4.3.17.RELEASE'
 }
+tasks.withType(JavaCompile) { options.encoding = 'UTF-8'}
