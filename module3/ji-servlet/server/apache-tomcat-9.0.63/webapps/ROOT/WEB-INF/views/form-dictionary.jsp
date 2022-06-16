@@ -15,21 +15,20 @@
 <form action="/form-dictionary" method="post">
     <table>
         <tr>
-            <td>Tiếng anh</td>
+            <td>English: </td>
             <td>
-                <input type="text" name="searchEnglish" value="${english}">
+                <input type="text" name="english" value="${english}">
             </td>
         </tr>
         <tr>
-            <td>Tiếng việt</td>
+            <td>Tiếng việt: </td>
             <td>
                 <input type="text" value="${tiengViet}" readonly>
             </td>
         </tr>
-        <tr>
+        <td>
             <button>Dịch</button>
-        </tr>
-
+        </td>
     </table>
 </form>
 </body>
