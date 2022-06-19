@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="b1f007f4-1a6b-4fcb-9a5a-fc64f9e0c815" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/java/com/controller/EmployeeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/java/com/molel/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/java/config/CharsetFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/controller/SandwichController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/service/ISandwichSerivce.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/service/Impl/ISandwichSerivceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-aop-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-beans-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-context-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-core-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-expression-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-jcl-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-web-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-webmvc-5.3.18.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/form-sandwich.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss1_tong_quan_spring_mvc/bai_tap/dictionary/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss1_tong_quan_spring_mvc/bai_tap/dictionary/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/build/classes/java/main/com/controller/SandwichController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/build/classes/java/main/com/controller/SandwichController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/build/libs/sandwich-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/build/libs/sandwich-1.0-SNAPSHOT.war" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2AgZmPU3AGRKJ7ewgChXbWY48dG" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="b1f007f4-1a6b-4fcb-9a5a-fc64f9e0c815" name="Default Changelist" comment="" />
+      <created>1655433346798</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1655433346798</updated>
+      <workItem from="1655433347967" duration="20000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>
