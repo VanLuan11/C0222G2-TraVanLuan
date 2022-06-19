@@ -13,7 +13,7 @@
   </head>
   <body>
   <c:redirect url="/home">
-    
+
   </c:redirect>
   </body>
 </html>

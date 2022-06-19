@@ -54,13 +54,13 @@
         <label>Thông tin đi lại</label> <span class="text-red">(*)</span> <br>
         <form:radiobutton path="vehicle" value="tàu bay"/> Tàu bay <form:radiobutton path="vehicle" value="tàu thuyền"/> tàu thuyền
         <form:radiobutton path="vehicle" value="ô tô"/> Ô tô <form:radiobutton path="vehicle" value="khác"/> Khác (Ghi rõ) <br>
-        <label>Số hiệu phương tiện</label> <br>
+        <label>Số hiệu phương tiện: </label> <br>
         <form:input type="text" class="col-12" path="licensePlates"/> <br>
-        <label>Số ghế</label> <br>
+        <label>Số ghế :</label> <br>
         <form:input type="text" class="col-12" path="numberOfSeats"/>
-        <label>Ngày khởi hành</label> <span class="text-red">(*)</span> <br>
+        <label>Ngày khởi hành</label> <span class="text-red">(*)</span>
         <form:input type="date" path="dateStart"/> <br>
-        <label>Ngày kết thúc</label> <span class="text-red">(*)</span> <br>
+        <label>Ngày kết thúc</label> <span class="text-red">(*)</span>
         <form:input type="date" path="dateEnd"/> <br>
         <label>Trong vòng 14 ngày qua, Anh/Chị có đến tỉnh/ thành phố nào?</label> <span class="text-red">(*)</span>
         <br>
