@@ -8,26 +8,27 @@
 <form th:action="@{/product/create}" method="post" th:object="${product}" novalidate="novalidate">
     <table th:border="1">
         <tr>
-            <td>Name product</td>
+            <td>Name</td>
             <td>
                 <input type="text" th:field="*{name}">
             </td>
         </tr>
         <tr>
-            <td>Color</td>
-            <td>
-                <input type="text" th:field="*{color}">
-            </td>
-        </tr>
-        <tr>Price</td>
+            <td>Price</td>
             <td>
                 <input type="text" th:field="*{price}">
             </td>
         </tr>
         <tr>
-            <td>Describe</td>
+            <td>color</td>
             <td>
-                <input type="text" th:field="*{describe}">
+                <input type="text" th:field="*{color}">
+            </td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>
+                <input type="text" th:field="*{status}">
             </td>
         </tr>
     </table>

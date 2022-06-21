@@ -1,7 +1,6 @@
 package com.repository.Impl;
 
 import com.model.Product;
-import com.repository.BaseRepository;
 import com.repository.IProductRepository;
 import org.springframework.stereotype.Service;
 
@@ -13,10 +12,17 @@ import java.util.List;
 public class ProductRepositoryImpl implements IProductRepository {
     @Override
     public List<Product> getAllProduct() {
-
-        TypedQuery<Product> typedQuery = BaseRepository.entityManager.createQuery
-                ("select s from Product s", Product.class);
+        TypedQuery typedQuery = BaseRepository.entityManager.createQuery
+                ("select s from Product s",Product.class);
         return typedQuery.getResultList();
+    }
+
+    @Override
+    public void create(Product product) {
+        EntityTransaction entityTransaction = BaseRepository.entityManager.getTransaction();
+        entityTransaction.begin();
+        BaseRepository.entityManager.persist(product);
+        entityTransaction.commit();
     }
 
     @Override
@@ -30,14 +36,6 @@ public class ProductRepositoryImpl implements IProductRepository {
     }
 
     @Override
-    public void create(Product product) {
-        EntityTransaction entityTransaction = BaseRepository.entityManager.getTransaction();
-        entityTransaction.begin();
-        BaseRepository.entityManager.persist(product);
-        entityTransaction.commit();
-    }
-
-    @Override
     public void edit(Product product) {
         EntityTransaction entityTransaction = BaseRepository.entityManager.getTransaction();
         entityTransaction.begin();
@@ -46,7 +44,7 @@ public class ProductRepositoryImpl implements IProductRepository {
     }
 
     @Override
-    public void delete(int id) {
+    public void delete(Integer id) {
         EntityTransaction entityTransaction = BaseRepository.entityManager.getTransaction();
         entityTransaction.begin();
         BaseRepository.entityManager.remove(BaseRepository.entityManager.find(Product.class,id));
