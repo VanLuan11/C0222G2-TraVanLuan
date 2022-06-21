@@ -353,7 +353,7 @@ and (dich_vu_di_kem.`status` = 0);
 
 -- 12.	Hiển thị thông tin ma_hop_dong, ho_ten (nhân viên), ho_ten (khách hàng), so_dien_thoai (khách hàng), ten_dich_vu, so_luong_dich_vu_di_kem (được tính dựa trên việc
 -- sum so_luong ở dich_vu_di_kem), tien_dat_coc của tất cả các dịch vụ đã từng được khách hàng đặt vào 3 tháng cuối năm 2020 nhưng chưa từng được khách hàng đặt vào 6 tháng đầu năm 2021.
-select hop_dong.ma_hop_dong, nhan_vien.ho_ten, khach_hang.ho_ten, khach_hang.so_dien_thoai, dich_vu.ten_dich_vu, sum(hop_dong_chi_tiet.so_luong)
+select hop_dong.ma_hop_dong, nhan_vien.ho_ten, khach_hang.ho_ten, khach_hang.jso_dien_thoai, dich_vu.ten_dich_vu, sum(hop_dong_chi_tiet.so_luong)
 as so_luong_dich_vu_di_kem, hop_dong.tien_dat_coc from hop_dong
 left join nhan_vien on hop_dong.ma_nhan_vien = nhan_vien.ma_nhan_vien
 left join khach_hang on hop_dong.ma_khach_hang = khach_hang.ma_khach_hang
@@ -436,7 +436,7 @@ set gia = gia * 2
 where dich_vu_di_kem.ma_dich_vu_di_kem in ( select * from (select dich_vu_di_kem.ma_dich_vu_di_kem from dich_vu_di_kem
 join hop_dong_chi_tiet on  dich_vu_di_kem.ma_dich_vu_di_kem = hop_dong_chi_tiet.ma_dich_vu_di_kem
 join hop_dong on  hop_dong_chi_tiet.ma_hop_dong = hop_dong.ma_hop_dong
-where (year(hop_dong.ngay_lam_hop_dong) = 2020) and (dich_vu_di_kem.`status` =0)
+where (year(hop_dong.ngay_lam_hoop_dong) = 2020) and (dich_vu_di_kem.`status` =0)
 group by dich_vu_di_kem.ma_dich_vu_di_kem
 having sum(hop_dong_chi_tiet.so_luong) >=10) bang_tam);
 SET SQL_SAFE_UPDATES = 1;  

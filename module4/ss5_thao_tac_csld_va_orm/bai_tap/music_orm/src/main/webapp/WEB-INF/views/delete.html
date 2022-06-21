@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/music/delete}" method="post" th:object="${music}" novalidate="novalidate">
+    <table th:border="1">
+        <tr>
+            <td>Name music</td>
+            <td>
+                <input type="text" th:field="*{nameMusic}">
+            </td>
+        </tr>
+        <tr>
+            <td>Singer</td>
+            <td>
+                <input type="text" th:field="*{singer}">
+            </td>
+        </tr>
+        <tr>
+            <td>Type</td>
+            <td>
+                <input type="text" th:field="*{typeMusic}">
+            </td>
+        </tr>
+        <tr>
+            <td>File</td>
+            <td>
+                <input type="text" th:field="*{filePath}">
+            </td>
+        </tr>
+    </table>
+    <button type="submit">Delete</button>
+    <button><a href="/music">Back Home</a></button>
+</form>
+</body>
+</html>

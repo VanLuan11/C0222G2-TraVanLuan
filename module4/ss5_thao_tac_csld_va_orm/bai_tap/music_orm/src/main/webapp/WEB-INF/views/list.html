@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/music/create}">create new music</a>
+</p>
+
+<table border="1px">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Name Music</th>
+        <th scope="col">Singer</th>
+        <th scope="col">Type Music</th>
+        <th scope="col">File Path</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="music : ${listMusic}">
+        <td th:text="${music.getId()}"></td>
+        <td th:text="${music.getNameMusic()}"></td>
+        <td th:text="${music.getSinger()}"></td>
+        <td th:text="${music.getTypeMusic()}"></td>
+        <td>
+            <audio controls th:attr="src=${music.getFilePath()}"></audio>
+        </td>
+        <td><a th:href="@{/music/{id}/edit(id=${music.getId()})}">Edit</a></td>
+        <td><a th:href="@{/music/{id}/delete(id=${music.getId()})}">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+
+</html>

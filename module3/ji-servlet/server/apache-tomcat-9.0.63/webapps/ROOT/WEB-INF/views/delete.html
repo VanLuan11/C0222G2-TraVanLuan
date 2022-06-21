@@ -6,34 +6,33 @@
 </head>
 <body>
 
-<form th:action="@{/product/delete}" method="get" th:object="${product}">
+<form th:action="@{/product/delete}" method="post" th:object="${product}" novalidate="novalidate">
     <table th:border="1">
         <tr>
-            <td>Id</td>
-            <td>
-                <input type="text" th:field="*{id}">
-            </td>
-        </tr>
-        <tr>
-            <td>Name</td>
+            <td>Name product</td>
             <td>
                 <input type="text" th:field="*{name}">
             </td>
         </tr>
         <tr>
-            <td>Price</td>
+            <td>Color</td>
             <td>
-                <input type="text" th:field="*{gia}">
+                <input type="text" th:field="*{color}">
+            </td>
+        </tr>
+        <tr>Price</td>
+            <td>
+                <input type="text" th:field="*{price}">
             </td>
         </tr>
         <tr>
-            <td>Status</td>
+            <td>Describe</td>
             <td>
-                <input type="text" th:field="*{trangThai}">
+                <input type="text" th:field="*{describe}">
             </td>
         </tr>
     </table>
-    <button>Delete</button>
+    <button>Create</button>
     <button><a href="/product">Back Home</a></button>
 </form>
 </body>

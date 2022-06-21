@@ -3,8 +3,8 @@ package com.model;
 public class Product {
     private Integer id;
     private String name;
-    private Integer gia;
-    private String trangThai;
+    private Integer price;
+    private String status;
 
     public Product() {
     }
@@ -12,8 +12,8 @@ public class Product {
     public Product(Integer id, String name, Integer gia, String trangThai) {
         this.id = id;
         this.name = name;
-        this.gia = gia;
-        this.trangThai = trangThai;
+        this.price = gia;
+        this.status = trangThai;
     }
 
     public Integer getId() {
@@ -33,19 +33,19 @@ public class Product {
     }
 
     public Integer getGia() {
-        return gia;
+        return price;
     }
 
-    public void setGia(Integer gia) {
-        this.gia = gia;
+    public void setGia(Integer price) {
+        this.price = price;
     }
 
     public String getTrangThai() {
-        return trangThai;
+        return status;
     }
 
     public void setTrangThai(String trangThai) {
-        this.trangThai = trangThai;
+        this.status = trangThai;
     }
 
     @Override
@@ -53,8 +53,8 @@ public class Product {
         return "Product{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", gia=" + gia +
-                ", trangThai='" + trangThai + '\'' +
+                ", gia=" + price +
+                ", trangThai='" + status + '\'' +
                 '}';
     }
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/product/create}" method="post" th:object="${product}" novalidate="novalidate">
+    <table th:border="1">
+        <tr>
+            <td>Name product</td>
+            <td>
+                <input type="text" th:field="*{name}">
+            </td>
+        </tr>
+        <tr>
+            <td>Color</td>
+            <td>
+                <input type="text" th:field="*{color}">
+            </td>
+        </tr>
+        <tr>Price</td>
+            <td>
+                <input type="text" th:field="*{price}">
+            </td>
+        </tr>
+        <tr>
+            <td>Describe</td>
+            <td>
+                <input type="text" th:field="*{describe}">
+            </td>
+        </tr>
+    </table>
+    <button>Create</button>
+    <button><a href="/product">Back Home</a></button>
+</form>
+</body>
+</html>
