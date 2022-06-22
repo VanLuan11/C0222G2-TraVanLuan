@@ -1,4 +1,4 @@
-package com.Srevice;
+package com.Service;
 
 import com.model.Product;
 

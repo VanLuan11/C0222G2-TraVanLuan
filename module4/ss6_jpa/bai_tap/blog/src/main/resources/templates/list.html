@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>
+    <a th:href="@{/blog/create}">Create new blog</a>
+</p>
+
+<table border="1px">
+    <thead>
+    <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Comtent</th>
+        <th scope="col">Note</th>
+        <th scope="col">Name</th>
+        <th scope="col">Edit</th>
+        <th scope="col">Delete</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="blog : ${listBlog}">
+        <td th:text="${blog.getId()}"></td>
+        <td th:text="${blog.getContent()}"></td>
+        <td th:text="${blog.getNote()}"></td>
+        <td th:text="${blog.getName()}"></td>
+        <td><a th:href="@{/blog/{id}/edit(id=${blog.getId()})}">Edit</a></td>
+        <td><a th:href="@{/blog/{id}/delete(id=${blog.getId()})}">Delete</a></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</body>
+</html>

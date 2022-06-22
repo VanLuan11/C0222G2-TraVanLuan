@@ -9,6 +9,12 @@
 <form th:action="@{/music/delete}" method="post" th:object="${music}" novalidate="novalidate">
     <table th:border="1">
         <tr>
+            <td>Id</td>
+            <td>
+                <input type="text" th:field="*{id}" readonly>
+            </td>
+        </tr>
+        <tr>
             <td>Name music</td>
             <td>
                 <input type="text" th:field="*{nameMusic}">

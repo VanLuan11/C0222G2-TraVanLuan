@@ -1,6 +1,6 @@
-package com.Srevice.Impl;
+package com.Service.Impl;
 
-import com.Srevice.IProductService;
+import com.Service.IProductService;
 import com.model.Product;
 import com.repository.IProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;

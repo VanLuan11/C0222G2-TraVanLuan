@@ -1,6 +1,6 @@
 package com.controller;
 
-import com.Srevice.IProductService;
+import com.Service.IProductService;
 import com.model.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -38,6 +38,7 @@ public class ProductController {
     }
     @PostMapping("/edit")
     public String showEdit(Product product){
+        System.out.println(product.getId());
         iProductService.edit(product);
         return "redirect: /product";
     }

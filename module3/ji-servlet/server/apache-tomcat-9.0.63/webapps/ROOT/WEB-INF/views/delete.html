@@ -9,6 +9,12 @@
 <form th:action="@{/product/delete}" method="post" th:object="${product}" novalidate="novalidate">
     <table th:border="1">
         <tr>
+            <td>Id</td>
+            <td>
+                <input type="text" th:field="*{id}" readonly>
+            </td>
+        </tr>
+        <tr>
             <td>Name</td>
             <td>
                 <input type="text" th:field="*{name}">

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form th:action="@{/blog/delete}" method="post" th:object="${blog}" novalidate="novalidate">
+    <table th:border="1">
+        <tr>
+            <td>Id</td>
+            <td>
+                <input type="text" th:field="*{id}">
+            </td>
+        </tr>
+        <tr>
+            <td>Content</td>
+            <td>
+                <input type="text" th:field="*{content}">
+            </td>
+        </tr>
+        <tr>
+            <td>Note</td>
+            <td>
+                <input type="text" th:field="*{note}">
+            </td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td>
+                <input type="text" th:field="*{name}">
+            </td>
+        </tr>
+    </table>
+    <button>Delete</button>
+    <button><a href="/blog">Back Home</a></button>
+</form>
+</body>
+</html>

@@ -8,6 +8,12 @@
 <form th:action="@{/music/edit}" method="post" th:object="${music}">
     <table th:border="1">
         <tr>
+            <td>Id</td>
+            <td>
+                <input type="text" th:field="*{id}" readonly>
+            </td>
+        </tr>
+        <tr>
             <td>Name music</td>
             <td>
                 <input type="text" th:field="*{nameMusic}">
