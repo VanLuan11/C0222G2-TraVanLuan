@@ -2,6 +2,7 @@ package com.luan.blog.controller;
 
 import com.luan.blog.model.Blog;
 import com.luan.blog.service.IBlogService;
+import com.luan.blog.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -16,9 +17,13 @@ public class BlogController {
     @Autowired
     private IBlogService blogService;
 
+    @Autowired
+    private ICategoryService categoryService;
+
     @GetMapping("")
     public String showBlog(Model model){
         model.addAttribute("listBlog",this.blogService.findAll());
+        model.addAttribute("listCategory",this.categoryService.getAllCategory());
         return "/list";
     }
     @GetMapping("/create")

@@ -2,45 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e576269d-435f-42dd-87db-48f343de59e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/repsitory/IEmployeeRepsitory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/repsitory/impl/EmployeeRepositoryImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/service/IEmployeeService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/service/impl/EmployeeServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/webapp/employee/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/webapp/employee/edit.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/webapp/employee/list.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/controller/CustomerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/model/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/model/CustomerType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/repsitory/ICustomerRepsitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/repsitory/ICustomerRepsitory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/repsitory/impl/CustomerRepsitoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/repsitory/impl/CustomerRepsitoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/service/ICustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/build/classes/java/main/model/service/impl/CustomerServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/build/libs/case_study-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/build/libs/case_study-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/controller/CustomerServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/controller/CustomerServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/customer/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/CustomerType.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/customer/CustomerType.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/EducationDegree.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/Employee/EducationDegree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/Employee/Employee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/Position.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/Employee/Position.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/model/Employee/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/repsitory/ICustomerRepsitory.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/repsitory/ICustomerRepsitory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/repsitory/impl/CustomerRepsitoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/repsitory/impl/CustomerRepsitoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/service/ICustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/service/ICustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/service/impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/case_study/src/main/java/model/service/impl/CustomerServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/controller/CustomerServlet.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/Customer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/model/CustomerType.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/ICustomerRepsitory.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/ICustomerRepsitory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/impl/CustomerRepsitoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/repsitory/impl/CustomerRepsitoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/ICustomerService.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/ICustomerService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/impl/CustomerServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/model/service/impl/CustomerServiceImpl.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/model/Blog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/model/Category.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/repository/IBlogRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/repository/ICategoryRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/service/IBlogService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/service/ICategoryService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/service/impl/BlogServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/service/impl/CategoryServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/java/com/luan/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/java/com/luan/blog/controller/BlogController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/java/com/luan/blog/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/java/com/luan/blog/service/IBlogService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,6 +70,7 @@
       <workItem from="1653972380205" duration="10000" />
       <workItem from="1654160392115" duration="595000" />
       <workItem from="1654532243044" duration="595000" />
+      <workItem from="1655998022229" duration="5000" />
     </task>
     <servers />
   </component>

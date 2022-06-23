@@ -14,16 +14,30 @@
 
 </nav>
 <div th th:fragment="cha" class="btn-dark">
-    <div class="container">
-        <h2>Create blog</h2>
-        <form th:action="@{/blog/create}" method="post" th:object="${blog}" novalidate="novalidate">
+    <div class="container ">
+        <h2>Edit blog</h2>
+        <form th:action="@{/blog/edit}" method="post" th:object="${blog}" novalidate="novalidate">
+            <div class="mb-3 mt-3">
+                <label>Id</label>
+                <input type="text" class="form-control" th:field="*{id}" readonly>
+            </div>
+            <div class="mb-3 mt-3">
+                <label>Time</label>
+                <input type="text" class="form-control" th:field="*{dateStartTime}">
+            </div>
             <div class="mb-3 mt-3">
                 <label>Content</label>
-                <input type="text" class="form-control" th:field="*{content}">
+                <select th:field="*{getCategory()}">
+                    <option th:each="category : ${listCategory}"></option>
+                </select>
             </div>
             <div class="mb-3 mt-3">
                 <label>Note</label>
                 <input type="text" class="form-control" th:field="*{note}">
+            </div>
+            <div class="mb-3 mt-3">
+                <label>Category</label>
+                <input type="text" class="form-control" th:field="*{category}">
             </div>
             <div class="mb-3 mt-3">
                 <label>Name</label>

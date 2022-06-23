@@ -17,8 +17,10 @@
     <thead>
     <tr>
         <th scope="col">Id</th>
-        <th scope="col">Comtent</th>
+        <th scope="col">Time</th>
+        <th scope="col">Content</th>
         <th scope="col">Note</th>
+        <th scope="col">Category</th>
         <th scope="col">Name</th>
         <th scope="col">Add</th>
         <th scope="col">Edit</th>
@@ -28,8 +30,10 @@
     <tbody>
     <tr th:each="blog : ${listBlog}">
         <td th:text="${blog.getId()}"></td>
+        <td th:text="${blog.getDateStartTime()}"></td>
         <td th:text="${blog.getContent()}"></td>
         <td th:text="${blog.getNote()}"></td>
+        <td th:text="${blog.getCategory().getName()}"></td>
         <td th:text="${blog.getName()}"></td>
         <td><a class="btn btn-danger" th:href="@{/blog/create}">Add</a></td>
         <td><a class="btn btn-danger" th:href="@{/blog/{id}/edit(id=${blog.getId()})}">Edit</a></td>

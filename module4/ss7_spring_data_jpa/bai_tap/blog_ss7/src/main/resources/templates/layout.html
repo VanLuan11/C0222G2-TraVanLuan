@@ -10,28 +10,27 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<nav th:replace="~{layout::nav}" class="navbar navbar-expand-lg navbar-dark bg-dark">
-
-</nav>
 <div th th:fragment="cha" class="btn-dark">
-    <div class="container">
-        <h2>Create blog</h2>
-        <form th:action="@{/blog/create}" method="post" th:object="${blog}" novalidate="novalidate">
-            <div class="mb-3 mt-3">
-                <label>Content</label>
-                <input type="text" class="form-control" th:field="*{content}">
-            </div>
-            <div class="mb-3 mt-3">
-                <label>Note</label>
-                <input type="text" class="form-control" th:field="*{note}">
-            </div>
-            <div class="mb-3 mt-3">
-                <label>Name</label>
-                <input type="text" class="form-control" th:field="*{name}">
-            </div>
-            <button type="submit" class="btn btn-danger">Edit</button>
-        </form>
+<nav th:fragment="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/blog">Blog</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/blog">Home</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
     </div>
+</nav>
 </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
