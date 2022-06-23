@@ -9,5 +9,5 @@ public interface IBlogService {
     void save(Blog blog);
     void delete(Integer id);
     void update(Blog blog);
-    Blog findById(Integer id);
+    Blog getBlog(Integer id);
 }

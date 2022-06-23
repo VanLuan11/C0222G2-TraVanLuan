@@ -33,7 +33,7 @@ public class BlogServiceImpl implements IBlogService {
     }
 
     @Override
-    public Blog findById(Integer id) {
-        return blogRepository.findById(id).orElse(null);
+    public Blog getBlog(Integer id) {
+        return blogRepository.getBlog(id);
     }
 }

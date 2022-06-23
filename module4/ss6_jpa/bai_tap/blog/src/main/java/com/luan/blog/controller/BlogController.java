@@ -33,7 +33,7 @@ public class BlogController {
     }
     @GetMapping("{id}/edit")
     public String showEdit(@PathVariable int id,Model model){
-        model.addAttribute("blog",this.blogService.findById(id));
+        model.addAttribute("blog",this.blogService.getBlog(id));
         return "/edit";
     }
     @PostMapping("/edit")
@@ -43,7 +43,7 @@ public class BlogController {
     }
     @GetMapping("{id}/delete")
     public String showDelete(@PathVariable int id, Model model){
-        model.addAttribute("blog",this.blogService.findById(id));
+        model.addAttribute("blog",this.blogService.getBlog(id));
         return "/delete";
     }
     @PostMapping("/delete")
