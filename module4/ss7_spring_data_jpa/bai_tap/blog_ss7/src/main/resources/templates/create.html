@@ -19,7 +19,7 @@
         <form th:action="@{/blog/create}" method="post" th:object="${blog}" novalidate="novalidate">
             <div class="mb-3 mt-3">
                 <label>Time</label>
-                <input type="text" class="form-control" th:field="*{dateStartTime}">
+                <input type="date" class="form-control" th:field="*{dateStartTime}">
             </div>
             <div class="mb-3 mt-3">
                 <label>Content</label>

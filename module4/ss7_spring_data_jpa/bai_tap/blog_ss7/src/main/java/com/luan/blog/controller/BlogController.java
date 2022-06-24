@@ -29,7 +29,7 @@ public class BlogController {
     @GetMapping("")
     public String showBlog(Model model,
                            @PageableDefault(value = 2)Pageable pageable,
-                           @RequestParam Optional<String> keyword){
+                           @RequestParam(name = "keyword") Optional<String> keyword){
         String keywordVal = keyword.orElse("");
         model.addAttribute("keywordVal",keywordVal);
         model.addAttribute("listBlog", this.blogService.findAllByName(keywordVal, pageable));
