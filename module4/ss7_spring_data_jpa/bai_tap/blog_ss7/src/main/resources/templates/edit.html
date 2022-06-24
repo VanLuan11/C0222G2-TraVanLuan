@@ -11,9 +11,7 @@
 </head>
 <body>
 <nav th:replace="~{layout::nav}" class="navbar navbar-expand-lg navbar-dark bg-dark">
-
 </nav>
-<div th th:fragment="cha" class="btn-dark">
     <div class="container ">
         <h2>Edit blog</h2>
         <form th:action="@{/blog/edit}" method="post" th:object="${blog}" novalidate="novalidate">
@@ -27,17 +25,19 @@
             </div>
             <div class="mb-3 mt-3">
                 <label>Content</label>
-                <select th:field="*{getCategory()}">
-                    <option th:each="category : ${listCategory}"></option>
-                </select>
+                <input type="text" class="form-control" th:field="*{content}">
             </div>
             <div class="mb-3 mt-3">
                 <label>Note</label>
                 <input type="text" class="form-control" th:field="*{note}">
             </div>
             <div class="mb-3 mt-3">
-                <label>Category</label>
-                <input type="text" class="form-control" th:field="*{category}">
+                <label>Category: </label>
+                <select th:field="*{category}">
+                    <option th:each="item, loop : ${listCategory}"
+                            th:text="${item.name}"
+                            th:value="${item.id}"></option>
+                </select>
             </div>
             <div class="mb-3 mt-3">
                 <label>Name</label>
@@ -46,7 +46,6 @@
             <button type="submit" class="btn btn-danger">Edit</button>
         </form>
     </div>
-</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

@@ -4,12 +4,13 @@ import com.luan.blog.model.Blog;
 import com.luan.blog.service.IBlogService;
 import com.luan.blog.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/blog")
@@ -19,17 +20,27 @@ public class BlogController {
 
     @Autowired
     private ICategoryService categoryService;
-
+//
+//    @GetMapping("/danhMuc")
+//    public String showC(Model model){
+//        model.addAttribute("listCategory",this.categoryService.getAllCategory());
+//        return "/category";
+//    }
     @GetMapping("")
-    public String showBlog(Model model){
-        model.addAttribute("listBlog",this.blogService.findAll());
+    public String showBlog(Model model,
+                           @PageableDefault(value = 2)Pageable pageable,
+                           @RequestParam Optional<String> keyword){
+        String keywordVal = keyword.orElse("");
+        model.addAttribute("keywordVal",keywordVal);
+        model.addAttribute("listBlog", this.blogService.findAllByName(keywordVal, pageable));
         model.addAttribute("listCategory",this.categoryService.getAllCategory());
         return "/list";
     }
     @GetMapping("/create")
     public String showCreate(Blog blog, Model model){
         model.addAttribute("blog",new Blog());
-        return "/create";
+        model.addAttribute("listCategory",this.categoryService.getAllCategory());
+        return "create";
     }
     @PostMapping("/create")
     public String getCreate(Blog blog){
@@ -39,7 +50,8 @@ public class BlogController {
     @GetMapping("{id}/edit")
     public String showEdit(@PathVariable int id,Model model){
         model.addAttribute("blog",this.blogService.getBlog(id));
-        return "/edit";
+        model.addAttribute("listCategory",this.categoryService.getAllCategory());
+        return "edit";
     }
     @PostMapping("/edit")
     public String getEdit(Blog blog){

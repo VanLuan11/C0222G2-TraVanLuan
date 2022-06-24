@@ -45,4 +45,13 @@ public class Category {
     public void setBlogList(List<Blog> blogList) {
         this.blogList = blogList;
     }
+
+    @Override
+    public String toString() {
+        return "Category{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", blogList=" + blogList +
+                '}';
+    }
 }

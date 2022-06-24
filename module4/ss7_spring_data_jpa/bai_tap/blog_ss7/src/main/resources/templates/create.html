@@ -18,6 +18,10 @@
         <h2>Create blog</h2>
         <form th:action="@{/blog/create}" method="post" th:object="${blog}" novalidate="novalidate">
             <div class="mb-3 mt-3">
+                <label>Time</label>
+                <input type="text" class="form-control" th:field="*{dateStartTime}">
+            </div>
+            <div class="mb-3 mt-3">
                 <label>Content</label>
                 <input type="text" class="form-control" th:field="*{content}">
             </div>
@@ -26,10 +30,18 @@
                 <input type="text" class="form-control" th:field="*{note}">
             </div>
             <div class="mb-3 mt-3">
+                <label>Category: </label>
+                <select th:field="*{category}">
+                    <option th:each="item, loop : ${listCategory}"
+                            th:text="${item.name}"
+                            th:value="${item.id}"></option>
+                </select>
+            </div>
+            <div class="mb-3 mt-3">
                 <label>Name</label>
                 <input type="text" class="form-control" th:field="*{name}">
             </div>
-            <button type="submit" class="btn btn-danger">Edit</button>
+            <button type="submit" class="btn btn-danger">Create</button>
         </form>
     </div>
 </div>

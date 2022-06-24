@@ -10,7 +10,6 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-<div th th:fragment="cha" class="btn-dark">
 <nav th:fragment="nav" class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
         <a class="navbar-brand" href="/blog">Blog</a>
@@ -24,14 +23,13 @@
                     <a class="nav-link active" aria-current="page" href="/blog">Home</a>
                 </li>
             </ul>
-            <form class="d-flex">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success" type="submit">Search</button>
+            <form class="d-flex" action="/blog" method="get">
+                <input type="hidden" name="keyword">
+                <input type="submit" value="search">
             </form>
         </div>
     </div>
 </nav>
-</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

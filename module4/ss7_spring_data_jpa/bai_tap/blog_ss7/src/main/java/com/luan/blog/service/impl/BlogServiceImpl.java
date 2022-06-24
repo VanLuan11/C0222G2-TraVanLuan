@@ -4,6 +4,8 @@ import com.luan.blog.model.Blog;
 import com.luan.blog.repository.IBlogRepository;
 import com.luan.blog.service.IBlogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -36,5 +38,15 @@ public class BlogServiceImpl implements IBlogService {
     @Override
     public Blog getBlog(Integer id) {
         return blogRepository.getBlog(id);
+    }
+
+    @Override
+    public Page<Blog> findAll(Pageable pageable) {
+        return blogRepository.findAll(pageable);
+    }
+
+    @Override
+    public Page<Blog> findAllByName(String keword, Pageable pageable) {
+        return blogRepository.findAllByName("%" + keword + "%", pageable);
     }
 }
