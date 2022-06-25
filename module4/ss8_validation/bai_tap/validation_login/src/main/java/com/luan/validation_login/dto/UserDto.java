@@ -21,7 +21,7 @@ public class UserDto {
     @NotBlank
     @NumberFormat
     private String phone;
-    
+
     @Min(18)
     private Integer age;
 
