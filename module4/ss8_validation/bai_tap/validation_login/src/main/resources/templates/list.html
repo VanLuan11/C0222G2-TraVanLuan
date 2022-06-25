@@ -16,35 +16,35 @@
     <thead>
     <tr>
         <th scope="col">Id</th>
-        <th scope="col">Time</th>
-        <th scope="col">Content</th>
-        <th scope="col">Note</th>
-        <th scope="col">Category</th>
-        <th scope="col">Name</th>
+        <th scope="col">First name</th>
+        <th scope="col">Last name</th>
+        <th scope="col">Phone</th>
+        <th scope="col">Age</th>
+        <th scope="col">Email</th>
         <th scope="col">Add</th>
         <th scope="col">Edit</th>
         <th scope="col">Delete</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:each="blog : ${listBlog}">
-        <td th:text="${blog.id}"></td>
-        <td th:text="${blog.dateStartTime}"></td>
-        <td th:text="${blog.content}"></td>
-        <td th:text="${blog.note}"></td>
-        <td th:text="${blog.category.name}"></td>
-        <td th:text="${blog.name}"></td>
-        <td><a class="btn btn-danger" th:href="@{/blog/create}">Add</a></td>
-        <td><a class="btn btn-danger" th:href="@{/blog/{id}/edit(id=${blog.id})}">Edit</a></td>
+    <tr th:each="userOjc : ${listUser}">
+        <td th:text="${userOjc.id}"></td>
+        <td th:text="${userOjc.firstname}"></td>
+        <td th:text="${userOjc.lastname}"></td>
+        <td th:text="${userOjc.phone}"></td>
+        <td th:text="${userOjc.age}"></td>
+        <td th:text="${userOjc.email}"></td>
+        <td><a class="btn btn-danger" th:href="@{/user/create}">Add</a></td>
+        <td><a class="btn btn-danger" th:href="@{/user/{id}/edit(id=${userOjc.id})}">Edit</a></td>
         <td>
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    th:data-bs-target="'#staticBackdrop' + ${blog.id}">
+                    th:data-bs-target="'#staticBackdrop' + ${userOjc.id}">
                 Delete
             </button>
 
             <!-- Modal -->
-            <div class="modal fade" th:id="staticBackdrop + ${blog.id}" data-bs-backdrop="static"
+            <div class="modal fade" th:id="staticBackdrop + ${userOjc.id}" data-bs-backdrop="static"
                  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
                 <div class="modal-dialog">
                     <div class="modal-content">
@@ -54,11 +54,11 @@
                                     aria-label="Close"></button>
                         </div>
                         <div class="modal-body">
-                            Do you want delete blog <span th:text="${blog.name}" class="text-warning"></span>
-                            with id = <span th:text="${blog.id}" class="text-warning"></span> ?
+                            <p style="color: black">Do you want delete ?</p>
+
                         </div>
                         <div class="modal-footer">
-                            <a th:href="@{/blog/{id}/delete(id=${blog.id})}"
+                            <a th:href="@{/user/{id}/delete(id=${userOjc.id})}"
                                class="btn btn-outline-success">Delete</a>
                             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close
                             </button>
@@ -70,17 +70,17 @@
     </tr>
     </tbody>
 </table>
-<div class="row">
-    <div>
-        <a th:if="${listBlog.hasPrevious()}"
-           th:href="@{/blog/(page=${listBlog.number -1}, keyword=${keywordVal})}">Previous</a>
-        <span th:text="${listBlog.number +1}"></span>
-        /
-        <span th:text="${listBlog.totalPages}"></span>
-        <a th:if="${listBlog.hasNext()}"
-           th:href="@{/blog/(page=${listBlog.number +1}, keyword=${keywordVal})}">Next</a>
-    </div>
-</div>
+<!--<div class="row">-->
+<!--    <div>-->
+<!--        <a th:if="${listBlog.hasPrevious()}"-->
+<!--           th:href="@{/blog/(page=${listBlog.number -1}, keyword=${keywordVal})}">Previous</a>-->
+<!--        <span th:text="${listBlog.number +1}"></span>-->
+<!--        /-->
+<!--        <span th:text="${listBlog.totalPages}"></span>-->
+<!--        <a th:if="${listBlog.hasNext()}"-->
+<!--           th:href="@{/blog/(page=${listBlog.number +1}, keyword=${keywordVal})}">Next</a>-->
+<!--    </div>-->
+<!--</div>-->
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

@@ -20,12 +20,7 @@ public class BlogController {
 
     @Autowired
     private ICategoryService categoryService;
-//
-//    @GetMapping("/danhMuc")
-//    public String showC(Model model){
-//        model.addAttribute("listCategory",this.categoryService.getAllCategory());
-//        return "/category";
-//    }
+
     @GetMapping("")
     public String showBlog(Model model,
                            @PageableDefault(value = 2)Pageable pageable,
@@ -51,7 +46,7 @@ public class BlogController {
     public String showEdit(@PathVariable int id,Model model){
         model.addAttribute("blog",this.blogService.getBlog(id));
         model.addAttribute("listCategory",this.categoryService.getAllCategory());
-        return "edit";
+        return "/edit";
     }
     @PostMapping("/edit")
     public String getEdit(Blog blog){
