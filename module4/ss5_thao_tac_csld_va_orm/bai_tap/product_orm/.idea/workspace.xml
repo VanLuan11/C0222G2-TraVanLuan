@@ -2,46 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f5d3df-467b-43d8-95e6-1e545fa9c869" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/bai_tap/blog/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/bai_tap/blog/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/bai_tap/blog/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/bai_tap/blog/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/bai_tap/blog/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../config.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/Srevice/IProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/Srevice/Impl/ProductServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/repository/Impl/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/repository/Impl/ProductRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module3/ji-servlet/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music_orm/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../music_orm/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music_orm/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../music_orm/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music_orm/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../music_orm/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music_orm/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../music_orm/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music_orm/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../music_orm/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music_orm/build/libs/customer-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../music_orm/build/libs/customer-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music_orm/src/main/webapp/WEB-INF/views/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/../music_orm/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../music_orm/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../music_orm/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/product_orm.main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/product_orm.main.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/thuc_hanh/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/thuc_hanh/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/thuc_hanh/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/thuc_hanh/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/thuc_hanh/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/thuc_hanh/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/thuc_hanh/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/thuc_hanh/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/Dto/ManufacturerDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/Dto/ProductDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/controller/ProductController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/model/Manufacturer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/model/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/repository/IManufacturerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/repository/IProductRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/IManufacturerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/IProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/impl/IManufacturerServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/impl/IProductServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/layout.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/Srevice/IProductService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/Srevice/Impl/ProductServiceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/controller/ProductController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/controller/ProductController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/repository/Impl/ProductRepositoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/repository/Impl/ProductRepositoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/libs/product_orm-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/build/libs/product_orm-1.0-SNAPSHOT.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Srevice/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Service/IProductService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/Srevice/Impl/ProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/Service/Impl/ProductServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/delete.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/edit.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +66,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/webapp/WEB-INF" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -212,6 +196,8 @@
       <workItem from="1655860464132" duration="2559000" />
       <workItem from="1655870604021" duration="13000" />
       <workItem from="1655907199236" duration="752000" />
+      <workItem from="1656161083258" duration="34000" />
+      <workItem from="1656162336763" duration="11000" />
     </task>
     <servers />
   </component>
