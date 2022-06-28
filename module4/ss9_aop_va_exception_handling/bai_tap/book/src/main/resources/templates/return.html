@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -12,7 +13,7 @@
         <th>Tên sách</th>
         <th>Tác giả</th>
         <th>Số lượng</th>
-        <th>Mượn sách</th>
+        <th>Trả sách</th>
     </tr>
     </thead>
     <tbody>
@@ -22,7 +23,7 @@
         <td th:text="*{author}"></td>
         <td th:text="*{quantity}"></td>
         <td>
-            <a th:href="@{borrow(id=${bookId.id})}">Mượn sách</a>
+            <a th:href="@{return(id=${bookId.id})}">trả sách</a>
         </td>
 
     </tr>

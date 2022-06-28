@@ -23,7 +23,17 @@ public class BookServiceImpl implements IBookService {
     }
 
     @Override
-    public void updateBook(int id) {
-        bookRepository.updateBook(id);
+    public void borrowBook(int id) {
+        bookRepository.borrowBook(id);
+    }
+
+    @Override
+    public List<Book> returnAll() {
+        return bookRepository.returnAll();
+    }
+
+    @Override
+    public void returnBook(int id) {
+        bookRepository.returnBook(id);
     }
 }

@@ -9,5 +9,9 @@ public interface IBookService {
 
     Book selectById(int id);
 
-    void updateBook(int id);
+    void borrowBook(int id);
+
+    List<Book> returnAll();
+
+    void returnBook(int id);
 }

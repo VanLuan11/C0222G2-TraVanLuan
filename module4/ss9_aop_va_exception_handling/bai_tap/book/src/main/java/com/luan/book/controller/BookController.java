@@ -3,20 +3,16 @@ package com.luan.book.controller;
 import com.luan.book.service.IBookService;
 import com.luan.book.service.IDetailService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping("book")
 public class BookController {
     @Autowired
     private IBookService bookService;
-    @Autowired
-    private IDetailService detailService;
 
     @GetMapping("")
     public String show(Model model){
@@ -29,10 +25,20 @@ public class BookController {
         return "detail";
     }
     @GetMapping("/borrow")
-    public String borrow(@RequestParam int id, Model model){
-        bookService.updateBook(id);
-        model.addAttribute("book", bookService.findAll());
-        return "home";
+    public String borrowBook(@RequestParam int id){
+        bookService.borrowBook(id);
+        return "redirect:/book/";
+    }
+
+    @GetMapping("/return")
+    public String showReturn( Model model){
+        model.addAttribute("returnBook", bookService.returnAll());
+        return "return";
+    }
+    @PostMapping("/return")
+    public String returnBook(@RequestParam int id){
+        bookService.returnBook(id);
+        return "redirect:/book/";
     }
 
     @ExceptionHandler(Exception.class)
