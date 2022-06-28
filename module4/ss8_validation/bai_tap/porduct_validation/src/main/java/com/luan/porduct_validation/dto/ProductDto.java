@@ -1,26 +1,26 @@
 package com.luan.porduct_validation.dto;
 
 import com.luan.porduct_validation.model.Manufacturer;
-import org.springframework.format.annotation.DateTimeFormat;
 
+import javax.validation.GroupSequence;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
-
+@GroupSequence(value = {One.class,Two.class,ProductDto.class})
 public class ProductDto {
-    @NotEmpty
-    @NotBlank
-    @Size(min = 5, max = 45, message = "Nhập đúng ký tự")
+    @NotEmpty(message = "không được để trống", groups = One.class)
+    @NotBlank(message = "không được để rỗng", groups = Two.class)
+    @Pattern(regexp =  "^(\\p{L}|\\d|,)+( (\\p{L}|\\d|,)+)*$", message = "không nhập ký tự", groups = ProductDto.class)
     private String nameProduct;
 
-    @NotEmpty
-    @NotBlank
-    @Size(min = 1, message = "Giá ko đc nhỏ hơn 0")
+    @NotEmpty(message = "không được để trống", groups = One.class)
+    @NotBlank(message = "không được để rỗng", groups = Two.class)
+    @Pattern(regexp =  "^(\\p{L}|\\d|,)+( (\\p{L}|\\d|,)+)*$", message = "không nhập ký tự", groups = ProductDto.class)
     private String price;
 
-    @NotEmpty
-    @NotBlank
-    @DateTimeFormat
+    @NotEmpty(message = "không được để trống", groups = One.class)
+    @NotBlank(message = "không được để rỗng", groups = Two.class)
     private String dateOfManufacture;
 
     private Manufacturer manufacturer;
@@ -28,7 +28,7 @@ public class ProductDto {
     public ProductDto() {
     }
 
-    public ProductDto(@NotEmpty @NotBlank @Size(min = 5, max = 45, message = "Nhập đúng ký tự") String nameProduct, @NotEmpty @NotBlank @Size(min = 1, message = "Giá ko đc nhỏ hơn 0") String price, @NotEmpty @NotBlank String dateOfManufacture, Manufacturer manufacturer) {
+    public ProductDto(@NotEmpty(message = "không được để trống", groups = One.class) @NotBlank(message = "không được để rỗng", groups = Two.class) @Size(min = 5, max = 45, message = "Nhập đúng ký tự", groups = ProductDto.class) String nameProduct, @NotEmpty(message = "không được để trống", groups = One.class) @NotBlank(message = "không được để rỗng", groups = Two.class) String price, @NotEmpty(message = "không được để trống", groups = One.class) @NotBlank(message = "không được để rỗng", groups = Two.class) String dateOfManufacture, Manufacturer manufacturer) {
         this.nameProduct = nameProduct;
         this.price = price;
         this.dateOfManufacture = dateOfManufacture;

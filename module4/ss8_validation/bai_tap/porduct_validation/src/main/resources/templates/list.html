@@ -68,17 +68,17 @@
     </tr>
     </tbody>
 </table>
-<!--<div class="row">-->
-<!--    <div>-->
-<!--        <a th:if="${listBlog.hasPrevious()}"-->
-<!--           th:href="@{/blog/(page=${listBlog.number -1}, keyword=${keywordVal})}">Previous</a>-->
-<!--        <span th:text="${listBlog.number +1}"></span>-->
-<!--        /-->
-<!--        <span th:text="${listBlog.totalPages}"></span>-->
-<!--        <a th:if="${listBlog.hasNext()}"-->
-<!--           th:href="@{/blog/(page=${listBlog.number +1}, keyword=${keywordVal})}">Next</a>-->
-<!--    </div>-->
-<!--</div>-->
+<div class="row">
+    <div>
+        <a th:if="${listProduct.hasPrevious()}"
+           th:href="@{/product/(page=${listProduct.number -1}, keyword=${keywordVal})}">Previous</a>
+        <span th:text="${listProduct.number +1}"></span>
+        /
+        <span th:text="${listProduct.totalPages}"></span>
+        <a th:if="${listProduct.hasNext()}"
+           th:href="@{/product/(page=${listProduct.number +1}, keyword=${keywordVal})}">Next</a>
+    </div>
+</div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
         integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"

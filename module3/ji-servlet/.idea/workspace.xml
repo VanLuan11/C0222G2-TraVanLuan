@@ -2,38 +2,200 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b1f007f4-1a6b-4fcb-9a5a-fc64f9e0c815" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/java/com/controller/EmployeeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/java/com/molel/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/java/config/CharsetFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/applicationContext.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/dispatcher-servlet.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/views/employee/create.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/views/employee/info.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../module4/ss4_databinding_va_form/thuc_hanh/databinding_va_form/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/controller/SandwichController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/service/ISandwichSerivce.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/service/Impl/ISandwichSerivceImpl.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-aop-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-beans-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-context-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-core-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-expression-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-jcl-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-web-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-webmvc-5.3.18.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/form-sandwich.jsp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss1_tong_quan_spring_mvc/bai_tap/dictionary/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss1_tong_quan_spring_mvc/bai_tap/dictionary/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/6.1.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/build/classes/java/main/com/controller/SandwichController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/build/classes/java/main/com/controller/SandwichController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/build/libs/sandwich-1.0-SNAPSHOT.war" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss2_spring_controller/bai_tap/sandwich/build/libs/sandwich-1.0-SNAPSHOT.war" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/java/com/luan/furuma/controller/CustomerController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/java/com/luan/furuma/model/Customer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/java/com/luan/furuma/repository/ICustomerRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/java/com/luan/furuma/service/ICustomreService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/java/com/luan/furuma/service/impl/CustomreServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/about-boxes-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/about-boxes-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/about-boxes-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/about-boxes-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/about.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/clients/client-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/clients/client-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/clients/client-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/clients/client-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/clients/client-5.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/clients/client-6.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/favicon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/features-1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/features-2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/features-3.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/features-4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/hero-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-9.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-details-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-details-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/portfolio/portfolio-details-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/team/team-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/team/team-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/team/team-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/testimonials-bg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/testimonials/testimonials-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/testimonials/testimonials-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/testimonials/testimonials-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/testimonials/testimonials-4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/img/testimonials/testimonials-5.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/js/main.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/aos/aos.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/aos/aos.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap-icons/bootstrap-icons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap-icons/bootstrap-icons.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap-icons/fonts/bootstrap-icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap-icons/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.rtl.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.rtl.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.rtl.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/css/bootstrap.rtl.min.css.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.bundle.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.esm.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.esm.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.esm.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.esm.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/bootstrap/js/bootstrap.min.js.map" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/css/animations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/css/boxicons.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/css/boxicons.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/css/transformations.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/boxicons/fonts/boxicons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/glightbox/css/glightbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/glightbox/css/glightbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/glightbox/js/glightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/glightbox/js/glightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/isotope-layout/isotope.pkgd.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/isotope-layout/isotope.pkgd.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/php-email-form/validate.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/purecounter/purecounter.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/remixicon/remixicon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/remixicon/remixicon.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/remixicon/remixicon.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/remixicon/remixicon.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/remixicon/remixicon.symbol.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/remixicon/remixicon.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/remixicon/remixicon.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/remixicon/remixicon.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/swiper/swiper-bundle.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/static/assets/vendor/swiper/swiper-bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/templates/customer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/case_study/src/main/resources/templates/home.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/dto/One.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/dto/Two.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/controller/BookController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/model/Book.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/model/Detail.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/repository/IBookRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/service/IBookService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/service/impl/BookServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/bai_tap/book/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/applicationContext.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/Service/IProductService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/Service/Impl/ProductServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/controller/ProductController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/model/Product.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/repository/IProductRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/repository/Impl/BaseRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/com/repository/Impl/ProductRepositoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/classes/hibernate.conf.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/dispatcher-servlet.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/FastInfoset-1.2.15.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/attoparser-2.0.4.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/byte-buddy-1.9.10.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/classmate-1.3.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/commons-logging-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/dom4j-2.1.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/hibernate-commons-annotations-5.1.0.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/hibernate-core-5.4.3.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/istack-commons-runtime-3.0.7.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/jandex-2.0.5.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/javassist-3.24.0-GA.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/javax.activation-api-1.2.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/javax.servlet-api-3.1.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/jaxb-api-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/jaxb-runtime-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/jboss-transaction-api_1.2_spec-1.1.1.Final.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/mysql-connector-java-8.0.11.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/protobuf-java-2.6.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/slf4j-api-1.7.25.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-aop-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-beans-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-context-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-core-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-expression-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-web-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/spring-webmvc-4.3.17.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/stax-ex-1.8.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/thymeleaf-3.0.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/thymeleaf-layout-dialect-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/thymeleaf-spring4-3.0.9.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/txw2-2.3.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/lib/unbescape-1.1.5.RELEASE.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/views/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/apache-tomcat-9.0.63/webapps/ROOT/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/repository/IBlogRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/repository/IBlogRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/controller/ProductController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/dto/ProductDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/dto/ProductDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/repository/IProductRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/repository/IProductRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/IProductService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/IProductService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/impl/IProductServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/impl/IProductServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/layout.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/layout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +229,7 @@
       <option name="presentableId" value="Default" />
       <updated>1655433346798</updated>
       <workItem from="1655433347967" duration="20000" />
+      <workItem from="1656423631518" duration="27000" />
     </task>
     <servers />
   </component>

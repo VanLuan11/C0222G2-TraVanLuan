@@ -73,12 +73,12 @@
 <div class="row">
     <div>
         <a th:if="${listBlog.hasPrevious()}"
-           th:href="@{/blog/(page=${listBlog.number -1}, keyword=${keywordVal})}">Previous</a>
+           th:href="@{/blog/(page=${listBlog.number -1}, keyword=${keywordVal},sort='date_Start_Time,asc' )}">Previous</a>
         <span th:text="${listBlog.number +1}"></span>
         /
         <span th:text="${listBlog.totalPages}"></span>
         <a th:if="${listBlog.hasNext()}"
-           th:href="@{/blog/(page=${listBlog.number +1}, keyword=${keywordVal})}">Next</a>
+           th:href="@{/blog/(page=${listBlog.number +1}, keyword=${keywordVal},xcsort='date_Start_Time,asc')}">Next</a>
     </div>
 </div>
 </body>

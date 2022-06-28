@@ -14,11 +14,11 @@
 
 </nav>
     <div class="container">
-        <h2>Create user</h2>
+        <h2>Create product</h2>
         <form th:action="@{/product/create}" method="post" th:object="${productDto}" novalidate="novalidate">
             <div class="mb-3 mt-3">
                 <label>Date</label>
-                <input type="text" class="form-control" th:field="*{dateOfManufacture}">
+                <input type="date" class="form-control" th:field="*{dateOfManufacture}">
             </div>
             <div style="color: red" th:errors="*{dateOfManufacture}"></div>
 
