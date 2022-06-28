@@ -30,12 +30,18 @@ public class BookController {
         return "redirect:/book/";
     }
 
-    @GetMapping("/return")
-    public String showReturn( Model model){
+    @GetMapping("/list")
+    public String borrowBook(Model model){
         model.addAttribute("returnBook", bookService.returnAll());
         return "return";
     }
-    @PostMapping("/return")
+
+//    @GetMapping("/return")
+//    public String showReturn(Model model){
+//        model.addAttribute("returnBook", bookService.returnAll());
+//        return "return";
+//    }
+    @GetMapping("/return")
     public String returnBook(@RequestParam int id){
         bookService.returnBook(id);
         return "redirect:/book/";

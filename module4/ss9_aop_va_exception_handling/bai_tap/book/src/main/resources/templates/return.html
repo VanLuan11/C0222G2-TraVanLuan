@@ -17,13 +17,13 @@
     </tr>
     </thead>
     <tbody>
-    <tr th:object="${bookId}">
-        <td th:text="*{id}"></td>
-        <td th:text="*{name}"></td>
-        <td th:text="*{author}"></td>
-        <td th:text="*{quantity}"></td>
+    <tr th:each="bookOjc : ${returnBook}">
+        <td th:text="*{bookOjc.id}"></td>
+        <td th:text="*{bookOjc.name}"></td>
+        <td th:text="*{bookOjc.author}"></td>
+        <td th:text="*{bookOjc.quantity}"></td>
         <td>
-            <a th:href="@{return(id=${bookId.id})}">trả sách</a>
+            <a th:href="@{return(id=${bookOjc.id})}">trả sách</a>
         </td>
 
     </tr>
