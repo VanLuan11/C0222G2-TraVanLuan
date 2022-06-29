@@ -7,11 +7,5 @@ import java.util.List;
 public interface IBookService {
     List<Book> findAll();
 
-    Book selectById(int id);
-
-    void borrowBook(int id);
-
-    List<Book> returnAll();
-
-    void returnBook(int id);
+    void save(Book book);
 }

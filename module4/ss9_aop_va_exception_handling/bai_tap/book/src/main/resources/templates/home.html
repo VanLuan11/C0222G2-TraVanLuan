@@ -1,30 +1,50 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+<head th:replace="~{/common::head}">
+
 </head>
 <body>
-<a th:href="@{/book/list}">Sách đã mượn</a>
-<table border="1">
-    <thead>
-    <tr>
-        <th>Id</th>
-        <th>Tên sách</th>
-        <th>Số lượng</th>
-        <th>Chi tiết</th>
-    </tr>
-    </thead>
-    <tbody>
-    <tr th:each="bookOjc: ${book}">
-        <td th:text="${bookOjc.id}"></td>
-        <td th:text="${bookOjc.name}"></td>
-        <td th:text="${bookOjc.quantity}"></td>
-        <td>
-            <a th:href="@{/book/detail(id=${bookOjc.id})}">Detail</a>
-        </td>
-    </tr>
-    </tbody>
-</table>
+<header th:replace="~{/common::header}">
+
+</header>
+
+<div class="main">
+    <div class="book-container container">
+        <table class="table">
+            <thead>
+            <tr class="table-header-line">
+                <th>STT</th>
+                <th>Tên sách</th>
+                <th>Tác giả</th>
+                <th>Số lượng</th>
+                <th>Lựa chọn</th>
+                <th>Lựa chọn</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="book : ${books}" class="table-body-line">
+                <td th:text="${book.getId()}"></td>
+                <td th:text="${book.getName()}"></td>
+                <td th:text="${book.getAuthor()}"></td>
+                <td th:text="${book.getQuantity()}"></td>
+                <td>
+                    <a href="" class="btn btn-primary text-white ">Mượn sách</a>
+                </td>
+                <td>
+                    <a href="" class="btn btn-dark text-white">Trả sách</a>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+
+
+<th:block th:replace="~{/common::library}">
+
+</th:block>
 </body>
 </html>

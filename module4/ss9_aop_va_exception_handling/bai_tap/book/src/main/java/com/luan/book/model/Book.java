@@ -10,21 +10,21 @@ public class Book {
     private Integer id;
     private String name;
     private String author;
-    private String quantity;
+    private Integer quantity;
+
     @OneToMany(mappedBy = "book")
     private List<Detail> detail;
-    private Integer status;
+
 
     public Book() {
     }
 
-    public Book(Integer id, String name, String author, String quantity, List<Detail> detail, Integer status) {
+    public Book(Integer id, String name, String author, Integer quantity, List<Detail> detail) {
         this.id = id;
         this.name = name;
         this.author = author;
         this.quantity = quantity;
         this.detail = detail;
-        this.status = status;
     }
 
     public Integer getId() {
@@ -51,11 +51,11 @@ public class Book {
         this.author = author;
     }
 
-    public String getQuantity() {
+    public Integer getQuantity() {
         return quantity;
     }
 
-    public void setQuantity(String quantity) {
+    public void setQuantity(Integer quantity) {
         this.quantity = quantity;
     }
 
@@ -65,13 +65,5 @@ public class Book {
 
     public void setDetail(List<Detail> detail) {
         this.detail = detail;
-    }
-
-    public Integer getStatus() {
-        return status;
-    }
-
-    public void setStatus(Integer status) {
-        this.status = status;
     }
 }

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{/common::head}">
+
+</head>
+<body>
+<header th:replace="~{/common::header}">
+
+</header>
+
+<div class="main">
+    <div class="create-container container">
+        <form action="/book/create" th:object="${book}" method="post">
+            <div class="row">
+                <div class="col-6">
+                    <label for="">Tên sách</label>
+                    <input type="text" placeholder="Tên sách" class="form-control" th:field="*{name}">
+                </div>
+                <div class="col-6">
+                    <label for="">Tên tác giả</label>
+                    <input type="text" placeholder="Tên tác giả" class="form-control" th:field="*{author}">
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-6">
+                    <label for="">Số lượng</label>
+                    <input type="text" placeholder="Số lượng" class="form-control" th:field="*{quantity}">
+                </div>
+                <div class="col-6">
+
+                </div>
+            </div>
+            <button class="btn btn-danger mt-5">Thêm mới</button>
+            <button class="btn btn-secondary mt-5">
+                <a href="/book" class="text-decoration-none text-white">Trở về</a>
+            </button>
+        </form>
+    </div>
+</div>
+
+
+
+
+
+<th:block th:replace="~{/common::library}">
+
+</th:block>
+</body>
+</html>

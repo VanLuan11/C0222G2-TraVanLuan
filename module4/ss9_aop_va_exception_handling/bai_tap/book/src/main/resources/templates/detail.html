@@ -10,24 +10,20 @@
     <tr>
         <th>Id</th>
         <th>Tên sách</th>
-        <th>Tác giả</th>
         <th>Số lượng</th>
-        <th>Mượn sách</th>
+        <th>Chi tiết</th>
     </tr>
     </thead>
     <tbody>
-    <tr th:object="${bookId}">
-        <td th:text="*{id}"></td>
-        <td th:text="*{name}"></td>
-        <td th:text="*{author}"></td>
-        <td th:text="*{quantity}"></td>
+    <tr th:each="b: ${detailB}">
+        <td th:text="${b.id}"></td>
+        <td th:text="${b.book.name}"></td>
+        <td th:text="${b.status}"></td>
         <td>
-            <a th:href="@{borrow(id=${bookId.id})}">Mượn sách</a>
+            <a th:href="@{/book/{id}/borrow(id=${b.id})}">Mượn sách</a>
         </td>
-
     </tr>
     </tbody>
-    <a href="/book">Trở về</a>
 </table>
 </body>
 </html>

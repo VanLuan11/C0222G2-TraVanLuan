@@ -1,5 +1,7 @@
 package com.luan.book.model;
 
+import org.springframework.beans.factory.annotation.Value;
+
 import javax.persistence.*;
 import javax.persistence.GenerationType;
 
@@ -9,17 +11,21 @@ public class Detail {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ManyToOne
+
+    @Column(columnDefinition = "int default 0")
+    private int status;
+
+    @ManyToOne(cascade = {CascadeType.ALL})
     @JoinColumn(name = "book_id", referencedColumnName = "id")
     private Book book;
 
     public Detail() {
     }
 
-    public Detail(Integer id, Book book) {
-        this.id = id;
+    public Detail(Book book) {
         this.book = book;
     }
+
 
     public Integer getId() {
         return id;
@@ -27,6 +33,14 @@ public class Detail {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public int getStatus() {
+        return status;
+    }
+
+    public void setStatus(int status) {
+        this.status = status;
     }
 
     public Book getBook() {
