@@ -5,20 +5,22 @@
     <title>Shop</title>
 </head>
 <body>
-<p>
-    <a href="/shopping-cart">Your cart</a>
-</p>
+    <p>
+        <a href="/shopping-cart">Your cart</a>
+    </p>
 <table border="1">
     <tr>
         <td>Name</td>
         <td>Price</td>
         <td>Add To Cart</td>
+        <td>Detail</td>
     </tr>
     <th:block th:each="product:${products}">
         <tr>
             <td th:text="${product.name}"></td>
             <td th:text="${product.price}"></td>
             <td><a th:href="@{/add/__${product.id}__(action='list')}">Add To Cart</a></td>
+            <td><a th:href="@{/detail(id=${product.id})}">Detail</a></td>
         </tr>
     </th:block>
 </table>

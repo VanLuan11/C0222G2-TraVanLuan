@@ -5,8 +5,10 @@ import com.luan.product.model.Product;
 import com.luan.product.service.IProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -37,7 +39,7 @@ public class ProductController {
         if (action.equals("show")) {
             cart.addProduct(productOptional.get());
             return "redirect:/shopping-cart";
-        }else if (action.equals("decrease")) {
+        } else if (action.equals("decrease")) {
             cart.decreaseProduct(productOptional.get());
             return "redirect:/shopping-cart";
         }
@@ -45,8 +47,15 @@ public class ProductController {
         cart.addProduct(productOptional.get());
         return "redirect:/shop";
     }
-//    @PostMapping("bying")
-//    public String getBy(){
-//
-//    }
+
+    @GetMapping("/detail")
+    public String showDetail(@RequestParam Long id, Model model){
+        Optional<Product> productOptional = productService.findById(id);
+        if(productOptional.isPresent()){
+            model.addAttribute("product", productOptional.get());
+            return "detail";
+        }
+        return "error.404";
+    }
+
 }
