@@ -27,7 +27,7 @@ public class Cart {
     }
 
     private Map.Entry<Product, Integer> selectItemInCart(Product product){
-        for (Map.Entry<Product, Integer> entry : products.entrySet()) {
+        for (Map.Entry<Product, Integer>  entry : products.entrySet()) {
             if(entry.getKey().getId().equals(product.getId())){
                 return entry;
             }
@@ -48,9 +48,9 @@ public class Cart {
         if (!checkItemInCart(product) ){
             products.put(product,1);
         } else {
-            Map.Entry<Product, Integer> itemEntry = selectItemInCart(product);
-            Integer newQuantity = itemEntry.getValue() - 1;
-            products.replace(itemEntry.getKey(),newQuantity);
+                Map.Entry<Product, Integer> itemEntry = selectItemInCart(product);
+                Integer newQuantity = itemEntry.getValue() - 1;
+                products.replace(itemEntry.getKey(),newQuantity);
         }
     }
 
