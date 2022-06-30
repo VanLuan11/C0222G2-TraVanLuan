@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cba814f5-4df5-41e3-b33b-fa2885cca351" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/bai_tap/book/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/bai_tap/book/src/main/resources/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/bai_tap/book/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/bai_tap/book/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/thuc_hanh/customer-management" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2BHy3tu1FPEfCvrcqZi17PMdXZ4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cba814f5-4df5-41e3-b33b-fa2885cca351" name="Default Changelist" comment="" />
+      <created>1656577108466</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656577108466</updated>
+      <workItem from="1656577109614" duration="1000" />
+      <workItem from="1656577117048" duration="5000" />
+    </task>
+    <servers />
+  </component>
+</project>

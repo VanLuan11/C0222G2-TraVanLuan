@@ -15,7 +15,6 @@
             <tr class="table-header-line">
                 <th>STT</th>
                 <th>Tên sách</th>
-                <th>Tác giả</th>
                 <th>Số lượng</th>
                 <th>Lựa chọn</th>
                 <th>Lựa chọn</th>
@@ -25,7 +24,6 @@
             <tr th:each="book : ${books}" class="table-body-line">
                 <td th:text="${book.getId()}"></td>
                 <td th:text="${book.getName()}"></td>
-                <td th:text="${book.getAuthor()}"></td>
                 <td th:text="${book.getQuantity()}"></td>
                 <td>
                     <a href="" class="btn btn-primary text-white ">Mượn sách</a>
@@ -38,11 +36,6 @@
         </table>
     </div>
 </div>
-
-
-
-
-
 <th:block th:replace="~{/common::library}">
 
 </th:block>

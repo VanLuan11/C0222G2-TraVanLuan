@@ -21,6 +21,11 @@ public class BlogServiceImpl implements IBlogService {
     }
 
     @Override
+    public List<Blog> findAllCategoryId(Integer id) {
+        return blogRepository.findAllCategoryId(id);
+    }
+
+    @Override
     public void save(Blog blog) {
         blogRepository.save(blog);
     }
