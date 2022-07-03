@@ -10,15 +10,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-@RequestMapping(value = "/blogRest")
+@RequestMapping("/blogRest")
 @RestController
+@CrossOrigin
 public class BlogRestfulController {
     @Autowired
     private IBlogService blogService;
@@ -26,7 +24,7 @@ public class BlogRestfulController {
     @Autowired
     private ICategoryService categoryService;
 
-    @GetMapping(value = "/listBlog")
+    @GetMapping("/listBlog")
     public ResponseEntity<Page<Blog>> getPageBlog(@PageableDefault(value = 2) Pageable pageable) {
         Page<Blog> blogPage = this.blogService.findAll(pageable);
 
@@ -36,7 +34,7 @@ public class BlogRestfulController {
         return new ResponseEntity<>(blogPage, HttpStatus.OK);
     }
 
-    @GetMapping(value = "/category")
+    @GetMapping("/category")
     public ResponseEntity<List<Category>> showCategory() {
         List<Category> categoryList = this.categoryService.getAllCategory();
         if (categoryList.isEmpty()) {
@@ -45,7 +43,7 @@ public class BlogRestfulController {
         return new ResponseEntity<>(categoryList, HttpStatus.OK);
     }
 
-    @GetMapping(value = "{id}")
+    @GetMapping("{id}")
     public ResponseEntity<Blog> showCategoryDetail(@PathVariable int id) {
         Blog blog = this.blogService.getBlog(id);
         if(blog == null){
@@ -54,7 +52,7 @@ public class BlogRestfulController {
         return new ResponseEntity<>(blog, HttpStatus.OK);
     }
 
-    @GetMapping(value = "{id}/id")
+    @GetMapping("{id}/id")
     public ResponseEntity<List<Blog>> showCategoryDetailId(@PathVariable int id) {
         List<Blog> blog = this.blogService.findAllCategoryId(id);
         if(blog == null){

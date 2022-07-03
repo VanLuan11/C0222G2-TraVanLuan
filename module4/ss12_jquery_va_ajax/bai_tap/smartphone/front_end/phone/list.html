@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>List Smartphone</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Producer:</td>
+        <td><input type="text" id="producer" placeholder="producer"></td>
+    </tr>
+    <tr>
+        <td>Model:</td>
+        <td><input type="text" id="model" placeholder="model"></td>
+    </tr>
+    <tr>
+        <td>Price:</td>
+        <td><input type="text" id="price" placeholder="price"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button onclick="addNewSmartPhone()">Submit</button>
+        </td>
+    </tr>
+</table>
+<h1>Smartphone List</h1>
+<table id="smartphoneList">
+
+    <tbody id="tableBody">
+
+    </tbody>
+
+</table>
+<table id="edit">
+
+</table>
+<script type="text/javascript">
+    function addNewSmartPhone() {
+        //lay du lieu
+        let producer = $('#producer').val();
+        let model = $('#model').val();
+        let price = $('#price').val();
+        let newSmartphone = {
+            producer: producer,
+            model: model,
+            price: price
+        };
+        // goi ajax
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "POST", //GET, DELETE, PUT...
+            url: "http://localhost:8080/smartphone/create",
+            data: JSON.stringify(newSmartphone),
+            success: successHandler
+        });
+    }
+
+    function successHandler() {
+        $.ajax({
+            type: "GET",
+            //tên API
+            url: "http://localhost:8080/smartphone",
+            //xử lý khi thành công
+            success: function (data) {
+                // hien thi danh sach o day
+                let content = '    <tr>\n' +
+                    '        <td>Producer</td>\n' +
+                    '        <td>Model</td>\n' +
+                    '        <td>Price</td>\n' +
+                    '        <td>Delete</td>\n' +
+                    '        <td>Update</td>\n';
+                for (let i = 0; i < data.length; i++) {
+                    content += getSmartphone(data[i]);
+                }
+                document.getElementById('smartphoneList').innerHTML = content;
+            }
+        });
+    }
+
+    function getSmartphone(smartphone) {
+        return `<tr><td >${smartphone.producer}</td><td >${smartphone.model}</td><td >${smartphone.price}</td>` +
+            `<td><a onclick="deleteFunction(${smartphone.id})">Delete</a></td>
+                <td><a  onclick="updateFunction(${smartphone.id})">update</a></td></tr>`;
+    }
+
+    function deleteFunction(id) {
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "DELETE", //GET, DELETE, PUT...
+            url: `http://localhost:8080/smartphone/${id}`,
+            success: successHandler
+        });
+    }
+
+    function updateFunction(id) {
+
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET", //GET, DELETE, PUT...
+            url: `http://localhost:8080/smartphone/edit/${id}`,
+            success: function (data) {
+                document.getElementById('edit').innerHTML = getSmartphoneEdit(data);
+            }
+        });
+    }
+
+    function getSmartphoneEdit(smartphone) {
+        return `<tr><td><input value='${smartphone.producer}' id='producerEdit'></td></tr>
+            <tr><td><input value='${smartphone.model}' id='modelEdit'></td></tr>
+            <tr><td><input value='${smartphone.price}' id='priceEdit'></td></tr>
+            <tr><td><button onclick="update(${smartphone.id})">Update</button>
+            <button id="hide">hide</button>
+            </td></tr>`;
+    }
+    $(document).ready(function () {
+        $("#hide").click(function () {
+            $("#edit").hide();
+        })
+    })
+
+
+    function update(id) {
+        let producer = $('#producerEdit').val();
+        let model = $('#modelEdit').val();
+        let price = $('#priceEdit').val();
+        let editSmartphone = {
+            id: id,
+            producer: producer,
+            model: model,
+            price: price
+        };
+        // goi ajax
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "POST", //GET, DELETE, PUT...
+            url: `http://localhost:8080/smartphone/edit`,
+            data: JSON.stringify(editSmartphone),
+            success: successHandler
+        });
+    }
+</script>
+</div>
+</body>
+</html>

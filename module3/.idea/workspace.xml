@@ -2,28 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e576269d-435f-42dd-87db-48f343de59e3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/controller/BlogController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/model/Blog.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/model/Category.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/repository/IBlogRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/repository/ICategoryRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/service/IBlogService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/service/ICategoryService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/service/impl/BlogServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/java/com/luan/blog/service/impl/CategoryServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../module4/ss7_spring_data_jpa/bai_tap/blog_ss7/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/java/com/luan/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/java/com/luan/blog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/java/com/luan/blog/service/IBlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/java/com/luan/blog/service/IBlogService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/create.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/delete.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss6_jpa/bai_tap/blog/src/main/resources/templates/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss11_web_serviceva_restful/thuc_hanh/customer/src/main/java/com/luan/customer/service/CustomerService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/effect_jquery/src/main/resources/templates/hello.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/effect_jquery/src/main/resources/templates/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/phone_jquery/src/main/java/com/luan/phone_jquery/controller/HomeController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/phone_jquery/src/main/java/com/luan/phone_jquery/controller/SmartphoneController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/phone_jquery/src/main/java/com/luan/phone_jquery/model/Smartphone.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/phone_jquery/src/main/java/com/luan/phone_jquery/repository/ISmartphoneRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/phone_jquery/src/main/java/com/luan/phone_jquery/service/ISmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/phone_jquery/src/main/java/com/luan/phone_jquery/service/impl/SmartphoneService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/phone_jquery/src/main/resources/templates/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../module4/ss12_jquery_va_ajax/thuc_hanh/phone_jquery/src/main/resources/templates/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss11_web_serviceva_restful/bai_tap/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss11_web_serviceva_restful/bai_tap/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss11_web_serviceva_restful/thuc_hanh/customer/src/main/java/com/luan/customer/controller/CustomerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss11_web_serviceva_restful/thuc_hanh/customer/src/main/java/com/luan/customer/controller/CustomerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss11_web_serviceva_restful/thuc_hanh/customer/src/main/java/com/luan/customer/model/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss11_web_serviceva_restful/thuc_hanh/customer/src/main/java/com/luan/customer/model/Customer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss11_web_serviceva_restful/thuc_hanh/customer/src/main/java/com/luan/customer/service/CustomerServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../module4/ss9_aop_va_exception_handling/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../module4/ss9_aop_va_exception_handling/thuc_hanh/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -71,6 +65,7 @@
       <workItem from="1654160392115" duration="595000" />
       <workItem from="1654532243044" duration="595000" />
       <workItem from="1655998022229" duration="5000" />
+      <workItem from="1656657105178" duration="180000" />
     </task>
     <servers />
   </component>
@@ -82,10 +77,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="223" y="67" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1536.824@0.0.1536.824" timestamp="1653627573669" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1653627125247">
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1656657254187">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1653627125247" />
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1656657254187" />
     <state x="360" y="23" key="new project wizard" timestamp="1653639740207">
       <screen x="0" y="0" width="1536" height="824" />
     </state>

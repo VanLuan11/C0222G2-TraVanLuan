@@ -1,6 +1,7 @@
 package com.luan.customer.controller;
 
 import com.luan.customer.model.Customer;
+import com.luan.customer.service.ICustomerService;
 import com.luan.customer.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -15,7 +16,7 @@ import java.util.Optional;
 public class CustomerController {
 
     @Autowired
-    private IGeneralService customerService;
+    private ICustomerService customerService;
 
     @GetMapping
     public ResponseEntity<Iterable<Customer>> findAllCustomer() {
