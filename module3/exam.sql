@@ -2,40 +2,57 @@ drop database if exists exam_module3;
 create database if not exists  exam_module3;
 use exam_module3;
 
-create table if not exists benh_nhan (
-ma_benh_nhan varchar(255),
-ten_benh_nhan varchar(255),
+create table if not exists `trang_thai`(
+id_trang_thai int auto_increment,
+trang_thai varchar(255),
 `status` bit(1) default 0,
-primary key(ma_benh_nhan)
+primary key(id_trang_thai)
 );
 
-
-create table if not exists benh_an(
-ma_benh_an varchar(255),
-ma_benh_nhan varchar(255),
-ngay_nhap_vien date,
-ngay_xuat_vien date,
-ly_do varchar(255),
+create table if not exists loai_mat_bang(
+id_loai_mat_bang int auto_increment,
+loai varchar(255),
 `status` bit(1) default 0,
-foreign key (ma_benh_nhan) references benh_nhan(ma_benh_nhan),
-primary key(ma_benh_an)
+primary key(id_loai_mat_bang)
 );
 
-insert into benh_nhan(ma_benh_nhan,ten_benh_nhan)
-value ('BN-001','Lệ Thị Tài'),
-('BN-002','Lệ Thị Hoàn'),
-('BN-003','Lệ Thị Trí'),
-('BN-004','Lệ Thị Phúc'),
-('BN-005','Lệ Thị Phương');
+create table if not exists mat_bang(
+ma_mat_bang varchar(255),
+dien_tich double,
+id_trang_thai int,
+tang int,
+id_loai_mat_bang int,
+mo_ta_chi_tiet varchar(255),
+gia_cho_thue double,
+ngay_bat_dau varchar(255),
+ngay_ket_thuc varchar(255),
+`status` bit(1) default 0,
+foreign key(id_trang_thai) references `trang_thai`(id_trang_thai),
+foreign key(id_loai_mat_bang) references loai_mat_bang(id_loai_mat_bang),
+primary key(ma_mat_bang)
+);
+ insert into `trang_thai` (trang_thai) 
+ value('Trống'),('Hạ Tầng'),('Đầy đủ');
+ 
+ insert into loai_mat_bang (loai)
+ value('Văn phòng chia sẻ'),('Văn phòng trọ gói');
+ 
+ insert into mat_bang(ma_mat_bang,dien_tich,id_trang_thai,tang,id_loai_mat_bang,mo_ta_chi_tiet,gia_cho_thue,ngay_bat_dau,ngay_ket_thuc) 
+ value ('MB-00-01',34,1,2,1,'Sạch sẻ',1000,'2022-04-05','2022-12-05'),
+ ('MB-00-02',44,2,1,1,'Sạch sẻ',2000,2021-01-05,2022-08-05),
+ ('MB-00-03',56,2,3,2,'có hồ bơi',45000,2022-05-05,2022-12-05),
+ ('MB-00-04',34,3,2,2,'có phòng tập',8000,2022-01-05,2022-07-03);
 
-insert into benh_an(ma_benh_an,ma_benh_nhan,ngay_nhap_vien,ngay_xuat_vien,ly_do) 
-value ('BA-001','BN-001','2021-3-4','2021-3-9','Bị đánh do quá láo'),
- ('BA-002','BN-004','2021-1-4','2021-2-3','Vấp con kiến bị té gãy răng'),
- ('BA-003','BN-002','2022-3-4','2022-3-8','covid'),
- ('BA-004','BN-005','2020-4-4','2020-4-9','Sống bất cần '),
- ('BA-005','BN-003','2022-6-2','2022-6-11','Bị chó cắn');
+select *  from `trang_thai` where `status` = 0 ;
+select *  from loai_mat_bang where `status` = 0 ;
 
-select benh_an.ma_benh_an, benh_nhan.ma_benh_nhan, benh_an.ngay_nhap_vien, benh_an.ngay_xuat_vien, benh_an.ly_do from benh_an 
-join benh_nhan on benh_an.ma_benh_nhan = benh_nhan.ma_benh_nhan where benh_an.`status` =0;
+select * from mat_bang where id_loai_mat_bang like ? or gia_cho_thue like ? or tang like ? and `status` = 0;
 
-update benh_an set `status` = 0 where ma_benh_an = 'BA-004' ;
+-- select benh_an.ma_benh_an, benh_nhan.ma_benh_nhan, benh_an.ngay_nhap_vien, benh_an.ngay_xuat_vien, benh_an.ly_do from benh_an 
+-- join benh_nhan on benh_an.ma_benh_nhan = benh_nhan.ma_benh_nhan where benh_an.`status` =0;
+
+-- select * from benh_an where ma_benh_an = ? ;
+
+-- SET SQL_SAFE_UPDATES = 0;
+-- update benh_an set benh_nhan.t
+-- SET SQL_SAFE_UPDATES = 1;

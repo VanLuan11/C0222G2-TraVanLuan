@@ -27,17 +27,21 @@
     </tr>
 </table>
 <h1>Smartphone List</h1>
-<table id="smartphoneList">
+<table id="smartphoneList" border="1">
 
     <tbody id="tableBody">
 
     </tbody>
 
 </table>
-<table id="edit">
+<table id="edit" border="1">
 
 </table>
 <script type="text/javascript">
+
+    // dùng để load lại dữ liệu
+    $("#tableBody").load(successHandler());
+
     function addNewSmartPhone() {
         //lay du lieu
         let producer = $('#producer').val();
@@ -68,6 +72,7 @@
             url: "http://localhost:8080/smartphone",
             //xử lý khi thành công
             success: function (data) {
+
                 // hien thi danh sach o day
                 let content = '    <tr>\n' +
                     '        <td>Producer</td>\n' +
@@ -79,6 +84,7 @@
                     content += getSmartphone(data[i]);
                 }
                 document.getElementById('smartphoneList').innerHTML = content;
+
             }
         });
     }
@@ -89,7 +95,9 @@
                 <td><a  onclick="updateFunction(${smartphone.id})">update</a></td></tr>`;
     }
 
+
     function deleteFunction(id) {
+        $('#edit').hide();
         $.ajax({
             headers: {
                 'Accept': 'application/json',
@@ -102,7 +110,7 @@
     }
 
     function updateFunction(id) {
-
+        $('#edit').show(id);
         $.ajax({
             headers: {
                 'Accept': 'application/json',
@@ -121,15 +129,24 @@
             <tr><td><input value='${smartphone.model}' id='modelEdit'></td></tr>
             <tr><td><input value='${smartphone.price}' id='priceEdit'></td></tr>
             <tr><td><button onclick="update(${smartphone.id})">Update</button>
-            <button id="hide">hide</button>
+            <button id="hide" onclick="hide()" >hide</button>
             </td></tr>`;
     }
-    $(document).ready(function () {
-        $("#hide").click(function () {
-            $("#edit").hide();
-        })
-    })
 
+
+    // $('#edit').on('click', '#hide', function (event) {
+    //     $('#edit').hide();
+    // event.preventDefault();
+    // });
+
+    //lỗi ko bắt đc sự kiện của jquery. nên sử dụng hàm trên
+    // $("#hide").click(function () {
+    //     $("#edit").hide()
+    // })
+
+    function hide() {
+        $('#edit').hide();
+    }
 
     function update(id) {
         let producer = $('#producerEdit').val();

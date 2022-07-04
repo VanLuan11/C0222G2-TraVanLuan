@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="643018de-87aa-4b43-b8e0-b6fc4e94c426" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/config/AppConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/config/WebSecurityConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/controller/MainController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/entity/AppRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/entity/AppUser.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/entity/UserRole.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/repostitory/AppUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/repostitory/UserRoleRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/service/UserDetailsServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/until/EncrytedPasswordUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/java/com/example/until/WebUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/resources/templates/403Page.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/resources/templates/_menu.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/resources/templates/adminPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/resources/templates/loginPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/resources/templates/logoutSuccessfulPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/resources/templates/userInfoPage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../spring-security-examle/src/main/resources/templates/welcomePage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/case_study_of_database/furuma_management.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module3/case_study_of_database/furuma_management.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../module3/exam.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../../../../module3/exam.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jquery_va_ajax/bai_tap/blog/front_end/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jquery_va_ajax/bai_tap/blog/front_end/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss12_jquery_va_ajax/bai_tap/smartphone/front_end/phone/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss12_jquery_va_ajax/bai_tap/smartphone/front_end/phone/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_aop_va_exception_handling/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop_va_exception_handling/thuc_hanh/customer-management" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="FxmlFile" />
+        <option value="HTML File" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="2BQhGr9kxLqRrDajXDFRRASescW" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/java/com/example" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\C0222G2-TraVanLuan\module4\ss14_spring_security\bai_tap\spring-security-examle2\src\main\java\com\example" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpringSecurityExamleApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="spring-security-examle.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.SpringSecurityExamleApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="643018de-87aa-4b43-b8e0-b6fc4e94c426" name="Default Changelist" comment="" />
+      <created>1656844124004</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1656844124004</updated>
+      <workItem from="1656844125644" duration="873000" />
+      <workItem from="1656845149423" duration="747000" />
+      <workItem from="1656845914223" duration="6000" />
+      <workItem from="1656845928237" duration="249000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1493" height="608" key="GridCell.Tab.0.bottom" timestamp="1656845901633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="608" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1656845901633" />
+    <state width="1493" height="608" key="GridCell.Tab.0.center" timestamp="1656845901633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="608" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1656845901633" />
+    <state width="1493" height="608" key="GridCell.Tab.0.left" timestamp="1656845901633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="608" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1656845901633" />
+    <state width="1493" height="608" key="GridCell.Tab.0.right" timestamp="1656845901633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="608" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1656845901633" />
+    <state width="1493" height="608" key="GridCell.Tab.1.bottom" timestamp="1656845901633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="608" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1656845901633" />
+    <state width="1493" height="608" key="GridCell.Tab.1.center" timestamp="1656845901633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="608" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1656845901633" />
+    <state width="1493" height="608" key="GridCell.Tab.1.left" timestamp="1656845901633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="608" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1656845901633" />
+    <state width="1493" height="608" key="GridCell.Tab.1.right" timestamp="1656845901633">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="608" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1656845901633" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1656844763751">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1656844763751" />
+  </component>
+</project>
