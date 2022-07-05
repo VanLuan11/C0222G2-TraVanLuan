@@ -35,33 +35,38 @@
 <header id="header" class="fixed-top " th:fragment="header">
     <div class="container d-flex align-items-center justify-content-between">
 
-        <h1 class="logo"><a th:href="@{/furama}">Furama</a></h1>
+        <h1 class="logo"><a th:href="@{/}">Furama</a></h1>
 
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" th:href="@{/furama}">Home</a></li>
+                <li><a class="nav-link scrollto active" th:href="@{/}">Home</a></li>
                 <li class="dropdown"><a href="#"><span>Customer</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
+                        <li><a >List Customer</a></li>
                         <li><a href="#">Add Customer</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#"><span>Employee</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
+                        <li><a href="#">List Customer</a></li>
                         <li><a href="#">Add Employee</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Services</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a th:href="@{/facility}"><span>Facility</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">Add Services</a></li>
+                        <li><a th:href="@{/facility}">List Facility</a></li>
+                        <li><a th:href="@{/facility/create}">Add Facility</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#"><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
+                        <li><a href="#">List Customer</a></li>
                         <li><a href="#">Add Contact</a></li>
                     </ul>
                 </li>
                 <li class="dropdown"><a href="#"><span>Contact Detail</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
+                        <li><a href="#">List Customer</a></li>
                         <li><a href="#">Add Contact Detail</a></li>
                     </ul>
                 </li>

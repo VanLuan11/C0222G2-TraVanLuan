@@ -40,7 +40,7 @@ public class BlogController {
     @PostMapping("/create")
     public String getCreate(Blog blog){
         this.blogService.save(blog);
-        return "redirect:/blog";
+        return "redirect:/blog/";
     }
     @GetMapping("{id}/edit")
     public String showEdit(@PathVariable int id, Model model){

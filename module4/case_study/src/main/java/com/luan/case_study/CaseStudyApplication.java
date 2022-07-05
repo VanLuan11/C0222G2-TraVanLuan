@@ -1,13 +1,13 @@
-package com.luan.furuma;
+package com.luan.case_study;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FurumaApplication {
+public class CaseStudyApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(FurumaApplication.class, args);
+        SpringApplication.run(CaseStudyApplication.class, args);
     }
 
 }

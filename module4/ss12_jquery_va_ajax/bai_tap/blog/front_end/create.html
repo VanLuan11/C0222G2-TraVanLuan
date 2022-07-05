@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="tbCreate">
+    <h2>Create</h2>
+
+    <div>
+        <input type="text" id="inputContent"/>
+        <label for="inputContent">Content</label>
+    </div>
+
+    <div>
+        <input type="date" id="time"/>
+    </div>
+
+    <div>
+        <input type="text" id="inputNote"/>
+        <label for="inputNote">Note</label>
+    </div>
+    <div>
+        <input type="text" id="inputName"/>
+        <label for="inputName">Name</label>
+    </div>
+    <select id="selectCategory">
+        <option value="1">tiểu thuyết</option>
+        <option value="2">trinh thám</option>
+        <option value="3">thuyết âm mưu</option>
+    </select>
+
+    <button id="btnCreate" type="button">Create</button>
+    <button type="button"><a href="list.html" style="text-decoration: none">Back</a></button>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+    $("#btnCreate").click(function () {
+
+        let content = $("#inputContent").val();
+        let time = $("#time").val();
+        let note = $("#inputNote").val();
+        let name = $("#inputName").val();
+        let category = $("#selectCategory").val();
+
+        console.log(content + " " + time + " " + note + "" + name + "" + category);
+
+        let blogOjc = {
+            content: content,
+            dateStartTime: time,
+            note: note,
+            name: name,
+            category: {
+                id: category
+            }
+        }
+
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "POST", //GET, DELETE, PUT...
+            url: "http://localhost:8080/blogRest/create",
+            data: JSON.stringify(blogOjc),
+            success: function () {
+                $("#inputContent").val("");
+                $("#time").val();
+                $("#inputNote").val();
+                $("#inputName").val();
+                $("#selectCategory").val();
+            },
+            error: function (resultError) {
+                console.log('Co loi xay ra');
+            }
+        });
+        console.log(blogOjc);
+    });
+</script>
+</body>
+</html>

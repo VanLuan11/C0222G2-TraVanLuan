@@ -9,6 +9,7 @@
 <div class="d-flex">
     <input type="search" placeholder="Search" aria-label="Search" id="searchValue">
     <button type="submit" id="btnSearch">Search</button>
+    <button type="button"><a href="create.html" style="text-decoration: none">Create</a></button>
 </div>
 <table class="table table-dark table-striped" border="1">
     <thead>
@@ -26,19 +27,24 @@
     <tbody id="tbBody">
     </tbody>
 </table>
+<button class="btn btn-outline-success" id="loadMore">Load more</button>
+
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
-    function getPageStudent(searchBlog,pageNumber) {
+
+    let totalPageTemp = 0;
+    function getPageStudent(pageNumber,size,searchBlog) {
                 $.ajax({
             headers: {
                 'Accept': 'application/json',
                 'Content-Type': 'application/json'
             },
             type: "GET", //GET, DELETE, PUT...
-            url: "http://localhost:8080/blogRest/list?page=" + pageNumber + "&keyword=" + searchBlog,
+            url: "http://localhost:8080/blogRest/list?page=" + pageNumber + "&size=" + size +"&searchValue=" + searchBlog,
             success: function(blogPage){
                 console.log(blogPage);
+                totalPageTemp = blogPage.totalElements;
                 let blogBodyHTML = "";
                 for (let i = 0; i < blogPage.content.length; i++) {
                     blogBodyHTML += `<tr>
@@ -64,11 +70,20 @@
             }
         });
     }
-    getPageStudent("", 0)
 
+    let i = 5;
+    getPageStudent(0, 5, "")
     $("#btnSearch").click(function () {
         let searchValue = $("#searchValue").val();
-        getPageStudent(searchValue, 0)
+        getPageStudent(0, 5,searchValue);
+        i=5;
+    })
+    $("#loadMore").click(function () {
+        let searchValue = $("#searchValue").val();
+        if (i < totalPageTemp) {
+            i+=5;
+            getPageStudent(0, i,searchValue);
+        }
     })
 
 </script>

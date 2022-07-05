@@ -90,9 +90,13 @@
     }
 
     function getSmartphone(smartphone) {
-        return `<tr><td >${smartphone.producer}</td><td >${smartphone.model}</td><td >${smartphone.price}</td>` +
-            `<td><a onclick="deleteFunction(${smartphone.id})">Delete</a></td>
-                <td><a  onclick="updateFunction(${smartphone.id})">update</a></td></tr>`;
+        return `<tr>
+                <td >${smartphone.producer}</td>
+                <td >${smartphone.model}</td>
+                <td >${smartphone.price}</td>` +
+               `<td><a onclick="deleteFunction(${smartphone.id})">Delete</a></td>
+                <td><a onclick="updateFunction(${smartphone.id})">update</a></td>
+                 </tr>`;
     }
 
 

@@ -12,7 +12,7 @@ public interface IBlogService {
 
     List<Blog> findAllCategoryId(Integer id);
 
-    void save(Blog blog);
+    Blog save(Blog blog);
 
     void delete(Integer id);
 
