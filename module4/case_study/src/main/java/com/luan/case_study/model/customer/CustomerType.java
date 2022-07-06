@@ -36,12 +36,12 @@ public class CustomerType {
         this.id = id;
     }
 
-    public String getTypeName() {
+    public String getName() {
         return name;
     }
 
-    public void setTypeName(String typeName) {
-        this.name = typeName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public int getStatus() {

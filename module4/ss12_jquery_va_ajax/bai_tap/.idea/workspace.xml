@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="56f5bcbc-6a10-462c-b48f-80579ee755ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/customer/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/customer/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/customer/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/employee/create.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/employee/edit.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/employee/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/controller/Facility.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/controller/FacilityController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/model/employee/Employee.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/model/employee/Employee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/model/employee/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/model/employee/Role.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/model/employee/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/model/employee/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/model/employee/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/model/employee/UserRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/repository/FacilityRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/repository/FacilityRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/service/IFacilityService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/service/IFacilityService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/service/impl/IFacilityServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/java/com/luan/case_study/service/impl/IFacilityServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/resources/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/static/assets/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/facility/create.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/facility/create.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/facility/edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/facility/edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/facility/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/facility/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../case_study/src/main/resources/templates/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/bai_tap/book/src/main/java/com/luan/book/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss9_aop_va_exception_handling/thuc_hanh/customer-management" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="2BYQVpcDtInSv1KUxrDHySjSHrZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="56f5bcbc-6a10-462c-b48f-80579ee755ff" name="Default Changelist" comment="" />
+      <created>1657080564485</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1657080564485</updated>
+      <workItem from="1657080565721" duration="24000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

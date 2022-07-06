@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Dewi Bootstrap Template - Index</title>
+    <title>Furuma</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -32,45 +32,49 @@
 <body>
 
 <!-- ======= Header ======= -->
-<header id="header" class="fixed-top " th:fragment="header">
+<header id="header" class="fixed-top ">
     <div class="container d-flex align-items-center justify-content-between">
+        <h1 class="logo">
+            <a th:href="@{/}"> <img style="border-radius: 50%"
+                                    src="https://bcp.cdnchinhphu.vn/Uploaded_VGP/hatheluc/20120328/1-1.png"
+                                    alt=""></a>
 
-        <h1 class="logo"><a th:href="@{/}">Furama</a></h1>
-
+            <a th:href="@{/}">Furama</a>
+        </h1>
         <nav id="navbar" class="navbar">
             <ul>
-                <li><a class="nav-link scrollto active" th:href="@{/}">Home</a></li>
-                <li class="dropdown"><a href="#"><span>Customer</span> <i class="bi bi-chevron-down"></i></a>
+                <li><a class="nav-link scrollto active" th:href="@{/}">Trang chủ</a></li>
+                <li class="dropdown"><a th:href="@{/customer}"><span>Khách hàng</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a >List Customer</a></li>
-                        <li><a href="#">Add Customer</a></li>
+                        <li><a th:href="@{/customer}">Danh sách khách hàng</a></li>
+                        <li><a th:href="@{/customer/create}">Thêm mới khách hàng</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Employee</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a th:href="@{/employee}"><span>Nhân viên</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">List Customer</a></li>
-                        <li><a href="#">Add Employee</a></li>
+                        <li><a th:href="@{/employee}">Danh sách nhân viên</a></li>
+                        <li><a th:href="@{/employee/create}">Thêm mới nhân viên</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a th:href="@{/facility}"><span>Facility</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a th:href="@{/facility}"><span>Quản lý cơ sở</span> <i
+                        class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a th:href="@{/facility}">List Facility</a></li>
-                        <li><a th:href="@{/facility/create}">Add Facility</a></li>
+                        <li><a th:href="@{/facility}">Danh sách cơ sở</a></li>
+                        <li><a th:href="@{/facility/create}">Thêm mới cơ sở</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Contact</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a th:href="@{/contract}"><span>Hợp đồng</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">List Customer</a></li>
-                        <li><a href="#">Add Contact</a></li>
+                        <li><a th:href="@{/contract}">Danh sách hợp đồng</a></li>
+                        <li><a th:href="@{/contract/create}">Thêm mới hợp đồng</a></li>
                     </ul>
                 </li>
-                <li class="dropdown"><a href="#"><span>Contact Detail</span> <i class="bi bi-chevron-down"></i></a>
+                <li class="dropdown"><a href="#"><span>Hợp đồng chi tiết</span> <i class="bi bi-chevron-down"></i></a>
                     <ul>
-                        <li><a href="#">List Customer</a></li>
-                        <li><a href="#">Add Contact Detail</a></li>
+                        <li><a href="#">Danh sách hợp đồng chi tiết</a></li>
+                        <li><a href="#">Thêm mới hợp chi tiết</a></li>
                     </ul>
                 </li>
-                <!--          <li><a class="getstarted scrollto" href="#about">Contact Detail</a></li>-->
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>
         </nav><!-- .navbar -->
@@ -80,71 +84,14 @@
 
 <!-- ======= Hero Section ======= -->
 <section id="hero">
-    <div class="hero-container" data-aos="fade-up" data-aos-delay="150">
+    <div class="antiHero"></div>
+    <div class="hero-container2 container" data-aos="fade-up" data-aos-delay="150">
         <h1>Furama Resort Đà Nẵng</h1>
     </div>
 </section><!-- End Hero -->
 
 <!-- ======= Footer ======= -->
 <footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-info">
-                        <h3>Dewi</h3>
-                        <p>
-                            A108 Adam Street <br>
-                            NY 535022, USA<br><br>
-                            <strong>Phone:</strong> +1 5589 55488 55<br>
-                            <strong>Email:</strong> info@example.com<br>
-                        </p>
-                        <div class="social-links mt-3">
-                            <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                            <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                            <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                            <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                            <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-2 col-md-6 footer-links">
-                    <h4>Useful Links</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-3 col-md-6 footer-links">
-                    <h4>Our Services</h4>
-                    <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-lg-4 col-md-6 footer-newsletter">
-                    <h4>Our Newsletter</h4>
-                    <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-                    <form action="" method="post">
-                        <input type="email" name="email"><input type="submit" value="Subscribe">
-                    </form>
-
-                </div>
-
-            </div>
-        </div>
-    </div>
-
     <div class="container">
         <div class="copyright">
             &copy; Copyright <strong><span>Dewi</span></strong>. All Rights Reserved
@@ -158,11 +105,6 @@
         </div>
     </div>
 </footer><!-- End Footer -->
-
-<div id="preloader"></div>
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
-
 <!-- Vendor JS Files -->
 <script th:src="@{/assets/vendor/purecounter/purecounter.js}"></script>
 <script th:src="@{/assets/vendor/aos/aos.js}"></script>

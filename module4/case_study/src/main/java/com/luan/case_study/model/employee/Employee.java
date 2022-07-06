@@ -36,9 +36,9 @@ public class Employee {
     @JoinColumn(name = "division_id", referencedColumnName = "id")
     private Division division;
 
-//    @ManyToOne
-//    @JoinColumn(name = "user_name", referencedColumnName = "user_name")
-//    private User user;
+    @ManyToOne
+    @JoinColumn(name = "user_name", referencedColumnName = "user_name")
+    private User user;
 
     @JsonBackReference
     @OneToMany(mappedBy = "employee")
@@ -49,7 +49,7 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(Integer id, String name, String birthday, String idCard, Double salary, String phone, String email, String address, Position position, EducationDegree educationDegree, Division division, List<Contract> contract, Integer status) {
+    public Employee(Integer id, String name, String birthday, String idCard, Double salary, String phone, String email, String address, Position position, EducationDegree educationDegree, Division division, User user, List<Contract> contract, Integer status) {
         this.id = id;
         this.name = name;
         this.birthday = birthday;
@@ -61,6 +61,7 @@ public class Employee {
         this.position = position;
         this.educationDegree = educationDegree;
         this.division = division;
+        this.user = user;
         this.contract = contract;
         this.status = status;
     }
@@ -151,6 +152,14 @@ public class Employee {
 
     public void setDivision(Division division) {
         this.division = division;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public List<Contract> getContract() {

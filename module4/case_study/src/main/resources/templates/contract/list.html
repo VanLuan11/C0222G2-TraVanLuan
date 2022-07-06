@@ -41,35 +41,37 @@
             <thead>
             <tr>
                 <th scope="col">TT</th>
-                <th scope="col">Tên cơ sở</th>
-                <th scope="col">Diện tích</th>
-                <th scope="col">Chi phí</th>
-                <th scope="col">Số người tối đa</th>
-                <th scope="col">Kiểu thuê</th>
+                <th scope="col">Ngày bắt đầu</th>
+                <th scope="col">Ngày kết thúc</th>
+                <th scope="col">Tiền cọc</th>
+                <th scope="col">Tổng tiền</th>
+                <th scope="col">Khách hàng</th>
+                <th scope="col">Nhân viên</th>
                 <th scope="col">Cơ sở thuê</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="f : ${listFacility}">
-                <td th:text="${f.id}"></td>
-                <td th:text="${f.name}"></td>
-                <td th:text="${f.area}"></td>
-                <td th:text="${f.cost}"></td>
-                <td th:text="${f.maxPeople}"></td>
-                <td th:text="${f.rentType.name}"></td>
-                <td th:text="${f.facilityType.name}"></td>
-                <td><a class="btn btn-danger" th:href="@{/facility/{id}/edit(id=${f.id})}">Sửa</a></td>
+            <tr th:each="c : ${listContract}">
+                <td th:text="${c.id}"></td>
+                <td th:text="${c.startDate}"></td>
+                <td th:text="${c.endDate}"></td>
+                <td th:text="${c.deposit}"></td>
+                <td th:text="${c.totalMoney}"></td>
+                <td th:text="${c.customer.name}"></td>
+                <td th:text="${c.employee.name}"></td>
+                <td th:text="${c.facility.name}"></td>
+                <td><a class="btn btn-danger" th:href="@{/contract/{id}/edit(id=${c.id})}">Sửa</a></td>
                 <td>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            th:data-bs-target="'#staticBackdrop' + ${f.id}">
+                            th:data-bs-target="'#staticBackdrop' + ${c.id}">
                         Xoá
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" th:id="staticBackdrop + ${f.id}" data-bs-backdrop="static"
+                    <div class="modal fade" th:id="staticBackdrop + ${c.id}" data-bs-backdrop="static"
                          data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                          aria-hidden="true">
                         <div class="modal-dialog">
@@ -80,12 +82,12 @@
                                             aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" style="color: black">
-                                    Bạn có chắn muốn xoá dịch vụ: <span th:text="${f.name}"
+                                    Bạn có chắn muốn xoá hợp đồng của khách hàng : <span th:text="${c.customer.name}"
                                                                         class="text-danger"></span>
-                                    với id: <span th:text="${f.id}" class="text-danger"></span> ?
+                                    với id: <span th:text="${c.id}" class="text-danger"></span> ?
                                 </div>
                                 <div class="modal-footer">
-                                    <a th:href="@{/facility/{id}/delete(id=${f.id})}"
+                                    <a th:href="@{/contract/{id}/delete(id=${c.id})}"
                                        class="btn btn-outline-success">Delete</a>
                                     <button type="button" class="btn btn-outline-secondary"
                                             data-bs-dismiss="modal">Close

@@ -41,26 +41,34 @@
             <thead>
             <tr>
                 <th scope="col">TT</th>
-                <th scope="col">Tên cơ sở</th>
-                <th scope="col">Diện tích</th>
-                <th scope="col">Chi phí</th>
-                <th scope="col">Số người tối đa</th>
-                <th scope="col">Kiểu thuê</th>
-                <th scope="col">Cơ sở thuê</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Ngày sinh</th>
+                <th scope="col">CMND</th>
+                <th scope="col">Lương</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Email</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Vị trí</th>
+                <th scope="col">Trình độ</th>
+                <th scope="col">Bộ phận</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="f : ${listFacility}">
+            <tr th:each="f : ${listEmployee}">
                 <td th:text="${f.id}"></td>
                 <td th:text="${f.name}"></td>
-                <td th:text="${f.area}"></td>
-                <td th:text="${f.cost}"></td>
-                <td th:text="${f.maxPeople}"></td>
-                <td th:text="${f.rentType.name}"></td>
-                <td th:text="${f.facilityType.name}"></td>
-                <td><a class="btn btn-danger" th:href="@{/facility/{id}/edit(id=${f.id})}">Sửa</a></td>
+                <td th:text="${f.birthday}"></td>
+                <td th:text="${f.idCard}"></td>
+                <td th:text="${f.salary}"></td>
+                <td th:text="${f.phone}"></td>
+                <td th:text="${f.email}"></td>
+                <td th:text="${f.address}"></td>
+                <td th:text="${f.position.name}"></td>
+                <td th:text="${f.educationDegree.name}"></td>
+                <td th:text="${f.division.name}"></td>
+                <td><a class="btn btn-danger" th:href="@{/employee/{id}/edit(id=${f.id})}">Sửa</a></td>
                 <td>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
@@ -85,7 +93,7 @@
                                     với id: <span th:text="${f.id}" class="text-danger"></span> ?
                                 </div>
                                 <div class="modal-footer">
-                                    <a th:href="@{/facility/{id}/delete(id=${f.id})}"
+                                    <a th:href="@{/employee/{id}/delete(id=${f.id})}"
                                        class="btn btn-outline-success">Delete</a>
                                     <button type="button" class="btn btn-outline-secondary"
                                             data-bs-dismiss="modal">Close

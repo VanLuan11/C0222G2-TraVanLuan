@@ -22,4 +22,15 @@ public class IFacilityServiceImpl implements IFacilityService {
     public Facility save(Facility facility) {
         return facilityRepository.save(facility);
     }
+
+    @Override
+    public void delete(int id) {
+        facilityRepository.deleteById(id);
+    }
+
+    @Override
+    public Facility findById(int id) {
+        return facilityRepository.findById(id).orElse(null);
+    }
+
 }

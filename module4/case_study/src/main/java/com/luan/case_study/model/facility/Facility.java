@@ -28,7 +28,7 @@ public class Facility {
     @JoinColumn(name = "facility_type_id", referencedColumnName = "id")
     private FacilityType facilityType;
 
-    @Column(name = "standard_room")
+    @Column(name = "standard_room", columnDefinition = "")
     private String standardRoom;
 
     @Column(name = "description_other_convenience")
@@ -39,7 +39,7 @@ public class Facility {
 
     @Column(name = "number_of_floors")
     private int numberOfFloors;
-
+    private String facilityFree;
     private int status;
 
     @JsonBackReference
@@ -49,7 +49,7 @@ public class Facility {
     public Facility() {
     }
 
-    public Facility(int id, String name, int area, double cost, int maxPeople, RentType rentType, FacilityType facilityType, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, int status) {
+    public Facility(int id, String name, int area, double cost, int maxPeople, RentType rentType, FacilityType facilityType, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, String facilityFree, int status, List<Contract> contract) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -61,7 +61,9 @@ public class Facility {
         this.descriptionOtherConvenience = descriptionOtherConvenience;
         this.poolArea = poolArea;
         this.numberOfFloors = numberOfFloors;
+        this.facilityFree = facilityFree;
         this.status = status;
+        this.contract = contract;
     }
 
     public int getId() {
@@ -152,11 +154,27 @@ public class Facility {
         this.numberOfFloors = numberOfFloors;
     }
 
+    public String getFacilityFree() {
+        return facilityFree;
+    }
+
+    public void setFacilityFree(String facilityFree) {
+        this.facilityFree = facilityFree;
+    }
+
     public int getStatus() {
         return status;
     }
 
     public void setStatus(int status) {
         this.status = status;
+    }
+
+    public List<Contract> getContract() {
+        return contract;
+    }
+
+    public void setContract(List<Contract> contract) {
+        this.contract = contract;
     }
 }

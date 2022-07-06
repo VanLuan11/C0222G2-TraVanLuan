@@ -36,7 +36,7 @@ public class BookController {
             Detail detail = new Detail(book);
             detailService.create(detail);
         }
-        return "redirect:/book";
+        return "redirect:/book/";
     }
 
     @GetMapping("/detail")

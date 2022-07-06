@@ -36,82 +36,61 @@
     <div class="antiHero">
     </div>
     <div class="container hero-container" data-aos-delay="150">
-        <h2>Create facility</h2>
-        <form style="color: white" id="eidtFacility" th:action="@{/facility/create}" method="post"
-              th:object="${facility}" novalidate="novalidate">
+        <h2>Create customer</h2>
+        <form style="color: white" th:action="@{/customer/create}" method="post" th:object="${customer}"
+              novalidate="novalidate">
             <div class="row">
                 <div class="mb-3 mt-3 col-6">
-                    <label>Id</label>
-                    <input type="text" class="form-control" th:field="*{id}" readonly>
-                </div>
-                <div class=" mb-3 mt-3 col-6">
-                    <label>Cơ sở thuê</label>
-                    <select id="selectFacility" th:field="*{facilityType}" class="form-control" onchange="getFrom()">
-                        <option th:each="item, loop : ${listFacilityType}"
-                                th:text="${item.name}"
-                                th:value="${item.id}"></option>
-                    </select>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="mb-3 mt-3 col-6">
-                    <label>Tên</label>
+                    <label>Tên khách</label>
                     <input type="text" class="form-control" th:field="*{name}">
                 </div>
+
                 <div class="mb-3 mt-3  col-6">
-                    <label>Diện tích</label>
-                    <input type="text" class="form-control" th:field="*{area}">
+                    <label>Ngày sinh</label>
+                    <input type="date" class="form-control" th:field="*{birthday}">
                 </div>
             </div>
-
             <div class="row">
-                <div class="mb-3 mt-3  col-6">
-                    <label>Chi phí</label>
-                    <input type="text" class="form-control" th:field="*{cost}">
+                <div class="mb-3 mt-3 col-6 ">
+                    <label>Giới tính</label>
+                    <select th:field="*{gender}" class="form-control">
+                        <option th:value="0">Nữ</option>
+                        <option th:value="1">Nam</option>
+                    </select>
                 </div>
-                <div class="mb-3 mt-3  col-6">
-                    <label>Kiểu thuê</label>
-                    <select th:field="*{rentType}" class="form-control">
-                        <option th:each="item, loop : ${listRentType}"
+
+                <div class="mb-3 mt-3 col-6 ">
+                    <label>CMND</label>
+                    <input type="text" class="form-control" th:field="*{idCard}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 mt-3 col-6 ">
+                    <label>SĐT</label>
+                    <input type="text" class="form-control" th:field="*{phone}">
+                </div>
+                <div class="mb-3 mt-3  col-6" id="descriptionOtherConvenience">
+                    <label>Email</label>
+                    <input type="email" class="form-control" th:field="*{email}">
+                </div>
+            </div>
+            <div class="row">
+                <div class="mb-3 mt-3 col-6 ">
+                    <label>Loại khách</label>
+                    <select th:field="*{customerType}" class="form-control">
+                        <option th:each="item, loop : ${listCustomerType}"
                                 th:text="${item.name}"
                                 th:value="${item.id}"></option>
                     </select>
                 </div>
 
-            </div>
-
-            <div class="row">
-                <div class="mb-3 mt-3  col-6" id="standardRoom" style="display: none">
-                    <label>Loại phòng</label>
-                    <input type="text" class="form-control" th:field="*{standardRoom}">
-                </div>
-                <div class="mb-3 mt-3  col-6" id="descriptionOtherConvenience" style="display: none">
-                    <label>Tiện ích khác</label>
-                    <input type="text" class="form-control"
-                           th:field="*{descriptionOtherConvenience}">
+                <div class="mb-3 mt-3 col-6 ">
+                    <label>Địa chỉ</label>
+                    <input type="text" class="form-control" th:field="*{address}">
                 </div>
             </div>
-
-            <div class="row">
-                <div class="mb-3 mt-3  col-6" id="poolArea" style="display: none">
-                    <label>Diện tích hồ bơi</label>
-                    <input type="text" class="form-control" th:field="*{poolArea}">
-                </div>
-                <div class="mb-3 mt-3 col-6" id="numberOfFloors" style="display: none">
-                    <label>Số tầng</label>
-                    <input type="text" class="form-control" th:field="*{numberOfFloors}">
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="mb-3 mt-3 col-6" id="facilityFree" style="display: none">
-                    <label>dịch vụ Free</label>
-                    <input type="text" class="form-control" th:field="*{facilityFree}">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-danger">Sửa</button>
-            <button type="submit" class="btn btn-danger"><a th:href="@{/facility}">Quay lại</a></button>
+            <button type="submit" class="btn btn-danger">Thêm</button>
+            <button type="submit" class="btn btn-danger"><a th:href="@{/customer}">Quay lại</a></button>
         </form>
     </div>
 </section>
@@ -134,24 +113,4 @@
 <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"-->
 <!--        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"-->
 <!--        crossorigin="anonymous"></script>-->
-<script>
-    function getFrom() {
-        let getValue = $('#selectFacility').val()
-        if (getValue === '1') {
-            $('#standardRoom').show()
-            $('#descriptionOtherConvenience').show()
-            $('#poolArea').show()
-            $('#numberOfFloors').show()
-            $('#facilityFree').hide()
-        }
-        if (getValue === '2') {
-            $('#poolArea').hide()
-            $('#facilityFree').hide()
-        }
-        if (getValue === '3') {
-            $('#poolArea').show()
-            $('#facilityFree').show()
-        }
-    }
-</script>
 </html>

@@ -367,7 +367,7 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   padding: 0;
 }
-#hero:before {
+#hero .before {
   content: "";
   background: rgba(13, 20, 26, 0.7);
   position: absolute;
@@ -376,7 +376,22 @@ h1, h2, h3, h4, h5, h6 {
   left: 0;
   right: 0;
 }
-#hero .hero-container {
+.create{
+  background-color: black;
+  height: 100px;
+  width: 100%;
+}
+
+.antiHero{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #000000;
+  opacity: 0.5;
+}
+#hero .hero-container2 {
   position: absolute;
   bottom: 0;
   top: 0;
@@ -388,6 +403,14 @@ h1, h2, h3, h4, h5, h6 {
   flex-direction: column;
   text-align: center;
 }
+#hero .hero-container {
+  position: absolute;
+  bottom: 0;
+  top: 20%;
+  left: 0;
+  right: 0;
+}
+
 #hero h1 {
   margin: 0 0 10px 0;
   font-size: 48px;
@@ -398,7 +421,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 #hero h2 {
   color: #eee;
-  margin-bottom: 50px;
+  margin-bottom: 0;
   font-size: 24px;
 }
 #hero .btn-get-started {
@@ -869,7 +892,7 @@ section {
 }
 
 /*--------------------------------------------------------------
-# Testimonials
+# Testimohenials
 --------------------------------------------------------------*/
 .testimonials {
   padding: 80px 0;

@@ -8,4 +8,8 @@ public interface IFacilityService {
     List<Facility> findAll();
 
     Facility save(Facility facility);
+
+    void delete(int id);
+
+    Facility findById(int id);
 }

@@ -41,35 +41,40 @@
             <thead>
             <tr>
                 <th scope="col">TT</th>
-                <th scope="col">Tên cơ sở</th>
-                <th scope="col">Diện tích</th>
-                <th scope="col">Chi phí</th>
-                <th scope="col">Số người tối đa</th>
-                <th scope="col">Kiểu thuê</th>
-                <th scope="col">Cơ sở thuê</th>
+                <th scope="col">Tên</th>
+                <th scope="col">Ngày sinh</th>
+                <th scope="col">Giới tính</th>
+                <th scope="col">CMND</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Email</th>
+                <th scope="col">Loại khách</th>
+                <th scope="col">Địa chỉ</th>
                 <th scope="col">Edit</th>
                 <th scope="col">Delete</th>
             </tr>
             </thead>
             <tbody>
-            <tr th:each="f : ${listFacility}">
-                <td th:text="${f.id}"></td>
-                <td th:text="${f.name}"></td>
-                <td th:text="${f.area}"></td>
-                <td th:text="${f.cost}"></td>
-                <td th:text="${f.maxPeople}"></td>
-                <td th:text="${f.rentType.name}"></td>
-                <td th:text="${f.facilityType.name}"></td>
-                <td><a class="btn btn-danger" th:href="@{/facility/{id}/edit(id=${f.id})}">Sửa</a></td>
+            <tr th:each="c : ${listCustomer}">
+                <td th:text="${c.id}"></td>
+                <td th:text="${c.name}"></td>
+                <td th:text="${c.birthday}"></td>
+                <td th:if="${c.gender}" th:text="${'Nam'}"></td>
+                <td th:unless="${c.gender}" th:text="${'Nữ'}"></td>
+                <td th:text="${c.idCard}"></td>
+                <td th:text="${c.phone}"></td>
+                <td th:text="${c.email}"></td>
+                <td th:text="${c.customerType.name}"></td>
+                <td th:text="${c.address}"></td>
+                <td><a class="btn btn-danger" th:href="@{/customer/{id}/edit(id=${c.id})}">Sửa</a></td>
                 <td>
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            th:data-bs-target="'#staticBackdrop' + ${f.id}">
+                            th:data-bs-target="'#staticBackdrop' + ${c.id}">
                         Xoá
                     </button>
 
                     <!-- Modal -->
-                    <div class="modal fade" th:id="staticBackdrop + ${f.id}" data-bs-backdrop="static"
+                    <div class="modal fade" th:id="staticBackdrop + ${c.id}" data-bs-backdrop="static"
                          data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                          aria-hidden="true">
                         <div class="modal-dialog">
@@ -80,12 +85,12 @@
                                             aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" style="color: black">
-                                    Bạn có chắn muốn xoá dịch vụ: <span th:text="${f.name}"
+                                    Bạn có chắn muốn xoá khách hàng: <span th:text="${c.name}"
                                                                         class="text-danger"></span>
-                                    với id: <span th:text="${f.id}" class="text-danger"></span> ?
+                                    với id: <span th:text="${c.id}" class="text-danger"></span> ?
                                 </div>
                                 <div class="modal-footer">
-                                    <a th:href="@{/facility/{id}/delete(id=${f.id})}"
+                                    <a th:href="@{/customer/{id}/delete(id=${c.id})}"
                                        class="btn btn-outline-success">Delete</a>
                                     <button type="button" class="btn btn-outline-secondary"
                                             data-bs-dismiss="modal">Close
