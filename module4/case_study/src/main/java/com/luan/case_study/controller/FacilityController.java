@@ -5,12 +5,13 @@ import com.luan.case_study.service.IFacilityTypeService;
 import com.luan.case_study.service.IFacilityService;
 import com.luan.case_study.service.IRentTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @Controller
 @RequestMapping("/facility")
@@ -23,9 +24,14 @@ public class FacilityController {
 
     @Autowired
     private IRentTypeService rentTypeService;
+
     @GetMapping("")
-    public String show(Model model){
-        model.addAttribute("listFacility",facilityService.findAll());
+    public String show(Model model,
+                       @PageableDefault(value = 5)Pageable pageable,
+                       @RequestParam(name = "keyword") Optional<String> keyword){
+        String keywordVal = keyword.orElse("");
+        model.addAttribute("keywordVal",keywordVal);
+        model.addAttribute("listFacility", this.facilityService.findAllByName(keywordVal, pageable));
         return "facility/list";
     }
     @GetMapping("/create")

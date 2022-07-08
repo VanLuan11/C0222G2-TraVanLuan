@@ -5,6 +5,8 @@ import com.luan.case_study.model.employee.Employee;
 import com.luan.case_study.repository.EmplyoeeRepository;
 import com.luan.case_study.service.IEmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +15,7 @@ import java.util.List;
 public class IEmployeeServiceImpl implements IEmployeeService {
     @Autowired
     private EmplyoeeRepository emplyoeeRepository;
+
     @Override
     public List<Employee> findAll() {
         return emplyoeeRepository.findAll();
@@ -21,5 +24,10 @@ public class IEmployeeServiceImpl implements IEmployeeService {
     @Override
     public Employee findById(int id) {
         return emplyoeeRepository.findById(id).orElse(null);
+    }
+
+    @Override
+    public Page<Employee> findAllByName(String keywordVal, Pageable pageable) {
+        return emplyoeeRepository.findAllByName("%" + keywordVal + "%", pageable);
     }
 }

@@ -36,8 +36,8 @@
     <div class="antiHero">
     </div>
     <div class="container hero-container" data-aos-delay="150">
-        <h2>Create facility</h2>
-        <form style="color: white" id="eidtFacility" th:action="@{/facility/create}" method="post"
+        <h2>Chỉnh sửa cơ sở</h2>
+        <form style="color: white" id="eidtFacility"  method="post"
               th:object="${facility}" novalidate="novalidate">
             <div class="row">
                 <div class="mb-3 mt-3 col-6">
@@ -111,7 +111,9 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-danger">Sửa</button>
-            <button type="submit" class="btn btn-danger"><a th:href="@{/facility}">Quay lại</a></button>
+            <button type="button" class="btn btn-danger">
+                <a style="color: white" th:href="@{/facility}">Quay lại</a>
+            </button>
         </form>
     </div>
 </section>

@@ -4,12 +4,13 @@ import com.luan.case_study.model.customer.Customer;
 import com.luan.case_study.service.ICustomerService;
 import com.luan.case_study.service.ICustomerTypeService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 
 @Controller
@@ -22,8 +23,12 @@ public class CustomerController {
     private ICustomerTypeService customerTypeService;
 
     @GetMapping("")
-    public String show(Model model){
-        model.addAttribute("listCustomer",customerService.findAll());
+    public String show(Model model,
+                       @PageableDefault(value = 5)Pageable pageable,
+                       @RequestParam(name = "keyword") Optional<String> keyword){
+        String keywordVal = keyword.orElse("");
+        model.addAttribute("keywordVal",keywordVal);
+        model.addAttribute("listCustomer", this.customerService.findAllByName(keywordVal, pageable));
         return "customer/list";
     }
 
@@ -54,7 +59,7 @@ public class CustomerController {
     }
     @GetMapping("{id}/delete")
     public String showDelete(@PathVariable int id){
-        customerService.delete(id);
+        customerService.deleteById(id);
         return "redirect:/customer/";
     }
 }

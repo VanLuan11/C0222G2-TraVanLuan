@@ -4,6 +4,8 @@ import com.luan.case_study.model.facility.Facility;
 import com.luan.case_study.repository.FacilityRepository;
 import com.luan.case_study.service.IFacilityService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -33,4 +35,9 @@ public class IFacilityServiceImpl implements IFacilityService {
         return facilityRepository.findById(id).orElse(null);
     }
 
+    @Override
+    public Page<Facility> findAllByName(String keywordVal, Pageable pageable) {
+        return facilityRepository.findAllByName("%" + keywordVal + "%", pageable);
+
+    }
 }

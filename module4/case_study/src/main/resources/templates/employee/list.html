@@ -27,6 +27,7 @@
 
     <link th:href="@{/assets/css/style.css}" rel="stylesheet">
 
+
 </head>
 
 <body>
@@ -36,7 +37,118 @@
 <section id="hero">
     <div class="antiHero">
     </div>
-    <div class="container hero-container" data-aos-delay="150">
+    <div class="container-fluid hero-container" data-aos-delay="150">
+        <div class="row">
+            <div style="text-align: center">
+                <h2>Danh sách nhân viên</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-3">
+                <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdropCreate">
+                    Thêm mới nhân viên
+                </button>
+            </div>
+            <div class="col-9">
+                <form class="d-flex col-2" style="margin-left: 83%" th:action="@{/employee}" method="get">
+                    <input placeholder="tìm kiếm" id="searchValue" class="form-control me-2" type="text" name="keyword">
+                    <button type="submit"  class="btn btn-danger" id="btnSearch">Search</button>
+                </form>
+            </div>
+        </div>
+
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdropCreate" data-bs-backdrop="static" data-bs-keyboard="false"
+             tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <h5>Thêm mới nhân viên</h5>
+                            <div class="text-danger" id="tableInputName"></div>
+                            <form id="contactForm" method="post">
+                                <!-- name input-->
+                                <div class="form-floating mb-2">
+                                    <input class="form-control" id="name" type="text">
+                                    <label for="name">Tên</label>
+                                </div>
+                                <!-- birthday input-->
+                                <div class="form-floating mb-2">
+                                    <input class="form-control" id="birthday" type="date">
+                                    <label for="birthday">Ngày sinh</label>
+                                </div>
+                                <!-- idCard input-->
+                                <div class="form-floating mb-2">
+                                    <input class="form-control" id="idCard" type="text">
+                                    <label for="idCard">CMND</label>
+                                </div>
+                                <!-- salary input-->
+                                <div class="form-floating mb-2">
+                                    <input class="form-control" id="salary" type="text">
+                                    <label for="salary">Lương</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input class="form-control" id="sdt" type="text">
+                                    <label for="salary">SĐT</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input class="form-control" id="email" type="text">
+                                    <label for="salary">Email</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <input class="form-control" id="diaChi" type="text">
+                                    <label for="salary">Địa chỉ</label>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <select class="form-select" aria-label="Default select example"
+                                            style="padding-top: 0.625rem !important;">
+                                        <option value="">Chọn vị trí</option>
+                                        <option value="">Lễ tân</option>
+                                        <option value="">Phục vụ</option>
+                                        <option value="">Chuyên viên</option>
+                                        <option value="">Giám sát</option>
+                                        <option value="">Quản lý</option>
+                                        <option value="">Giám đốc</option>
+                                    </select>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <select class="form-select" aria-label="Default select example"
+                                            style="padding-top: 0.625rem !important;">
+                                        <option value="">Chọn trình độ</option>
+                                        <option value="">Trung cấp</option>
+                                        <option value="">Cao Đẳng</option>
+                                        <option value="">Đại học</option>
+                                        <option value="">Sau đại học</option>
+                                    </select>
+                                </div>
+                                <div class="form-floating mb-2">
+                                    <select class="form-select" aria-label="Default select example"
+                                            style="padding-top: 0.625rem !important;">
+                                        <option value="">Chọn trình độ</option>
+                                        <option value="">Sale-Marketing</option>
+                                        <option value="">Hàng Chính</option>
+                                        <option value="">Phục vụ</option>
+                                        <option value="">Quản lý</option>
+                                    </select>
+                                </div>
+
+                                <!-- Submit Button-->
+                                <div class="modal-footer">
+                                    <a th:href="@{/employee/create}"
+                                       class="btn btn-outline-success">Thêm</a>
+                                    <button type="button" class="btn btn-outline-secondary"
+                                            data-bs-dismiss="modal">Đóng
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
         <table class="table table-dark table-cell">
             <thead>
             <tr>
@@ -55,55 +167,150 @@
                 <th scope="col">Delete</th>
             </tr>
             </thead>
-            <tbody>
-            <tr th:each="f : ${listEmployee}">
-                <td th:text="${f.id}"></td>
-                <td th:text="${f.name}"></td>
-                <td th:text="${f.birthday}"></td>
-                <td th:text="${f.idCard}"></td>
-                <td th:text="${f.salary}"></td>
-                <td th:text="${f.phone}"></td>
-                <td th:text="${f.email}"></td>
-                <td th:text="${f.address}"></td>
-                <td th:text="${f.position.name}"></td>
-                <td th:text="${f.educationDegree.name}"></td>
-                <td th:text="${f.division.name}"></td>
-                <td><a class="btn btn-danger" th:href="@{/employee/{id}/edit(id=${f.id})}">Sửa</a></td>
-                <td>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            th:data-bs-target="'#staticBackdrop' + ${f.id}">
-                        Xoá
-                    </button>
+            <tbody id="tbBody">
+<!--            <tr th:each="f : ${listEmployee}">-->
+<!--                <td th:text="${f.id}"></td>-->
+<!--                <td th:text="${f.name}"></td>-->
+<!--                <td th:text="${f.birthday}"></td>-->
+<!--                <td th:text="${f.idCard}"></td>-->
+<!--                <td th:text="${f.salary}"></td>-->
+<!--                <td th:text="${f.phone}"></td>-->
+<!--                <td th:text="${f.email}"></td>-->
+<!--                <td th:text="${f.address}"></td>-->
+<!--                <td th:text="${f.position.name}"></td>-->
+<!--                <td th:text="${f.educationDegree.name}"></td>-->
+<!--                <td th:text="${f.division.name}"></td>-->
+<!--                <td>-->
+<!--                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                            data-bs-target="#staticBackdropCreate">-->
+<!--                        sửa-->
+<!--                    </button>-->
 
-                    <!-- Modal -->
-                    <div class="modal fade" th:id="staticBackdrop + ${f.id}" data-bs-backdrop="static"
-                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title text-danger" id="staticBackdropLabel">Warning!</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
-                                </div>
-                                <div class="modal-body" style="color: black">
-                                    Bạn có chắn muốn xoá dịch vụ: <span th:text="${f.name}"
-                                                                        class="text-danger"></span>
-                                    với id: <span th:text="${f.id}" class="text-danger"></span> ?
-                                </div>
-                                <div class="modal-footer">
-                                    <a th:href="@{/employee/{id}/delete(id=${f.id})}"
-                                       class="btn btn-outline-success">Delete</a>
-                                    <button type="button" class="btn btn-outline-secondary"
-                                            data-bs-dismiss="modal">Close
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </td>
-            </tr>
+<!--                    &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                    <div class="modal fade" id="staticBackdropCreate2" data-bs-backdrop="static"-->
+<!--                         data-bs-keyboard="false"-->
+<!--                         tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">-->
+<!--                        <div class="modal-dialog">-->
+<!--                            <div class="modal-content">-->
+<!--                                <div class="modal-body">-->
+<!--                                    <div class="container-fluid">-->
+<!--                                        <h5>Chỉnh sửa nhân viên</h5>-->
+<!--                                        <div class="text-danger" id="tableInputName2"></div>-->
+<!--                                        <form id="contactForm2" method="post">-->
+<!--                                            &lt;!&ndash; name input&ndash;&gt;-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <input class="form-control" id="name2" type="text">-->
+<!--                                                <label for="name">Tên</label>-->
+<!--                                            </div>-->
+<!--                                            &lt;!&ndash; birthday input&ndash;&gt;-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <input class="form-control" id="birthday2" type="date">-->
+<!--                                                <label for="birthday">Ngày sinh</label>-->
+<!--                                            </div>-->
+<!--                                            &lt;!&ndash; idCard input&ndash;&gt;-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <input class="form-control" id="idCard2" type="text">-->
+<!--                                                <label for="idCard">CMND</label>-->
+<!--                                            </div>-->
+<!--                                            &lt;!&ndash; salary input&ndash;&gt;-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <input class="form-control" id="salary2" type="text">-->
+<!--                                                <label for="salary">Lương</label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <input class="form-control" id="sdt2" type="text">-->
+<!--                                                <label for="salary">SĐT</label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <input class="form-control" id="email2" type="text">-->
+<!--                                                <label for="salary">Email</label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <input class="form-control" id="diaChi2" type="text">-->
+<!--                                                <label for="salary">Địa chỉ</label>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <select class="form-select" aria-label="Default select example"-->
+<!--                                                        style="padding-top: 0.625rem !important;">-->
+<!--                                                    <option value="">Chọn vị trí</option>-->
+<!--                                                    <option value="">Lễ tân</option>-->
+<!--                                                    <option value="">Phục vụ</option>-->
+<!--                                                    <option value="">Chuyên viên</option>-->
+<!--                                                    <option value="">Giám sát</option>-->
+<!--                                                    <option value="">Quản lý</option>-->
+<!--                                                    <option value="">Giám đốc</option>-->
+<!--                                                </select>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <select class="form-select" aria-label="Default select example"-->
+<!--                                                        style="padding-top: 0.625rem !important;">-->
+<!--                                                    <option value="">Chọn trình độ</option>-->
+<!--                                                    <option value="">Trung cấp</option>-->
+<!--                                                    <option value="">Cao Đẳng</option>-->
+<!--                                                    <option value="">Đại học</option>-->
+<!--                                                    <option value="">Sau đại học</option>-->
+<!--                                                </select>-->
+<!--                                            </div>-->
+<!--                                            <div class="form-floating mb-2">-->
+<!--                                                <select class="form-select" aria-label="Default select example"-->
+<!--                                                        style="padding-top: 0.625rem !important;">-->
+<!--                                                    <option value="">Chọn trình độ</option>-->
+<!--                                                    <option value="">Sale-Marketing</option>-->
+<!--                                                    <option value="">Hàng Chính</option>-->
+<!--                                                    <option value="">Phục vụ</option>-->
+<!--                                                    <option value="">Quản lý</option>-->
+<!--                                                </select>-->
+<!--                                            </div>-->
+
+<!--                                            &lt;!&ndash; Submit Button&ndash;&gt;-->
+<!--                                            <div class="modal-footer">-->
+<!--                                                <a th:href="@{/employee/{id}/edit(id=${f.id})}"-->
+<!--                                                   class="btn btn-outline-success">Sửa</a>-->
+<!--                                                <button type="button" class="btn btn-outline-secondary"-->
+<!--                                                        data-bs-dismiss="modal">Đóng-->
+<!--                                                </button>-->
+<!--                                            </div>-->
+<!--                                        </form>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                <td>-->
+<!--                    &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                            th:data-bs-target="'#staticBackdrop' + ${f.id}">-->
+<!--                        Xoá-->
+<!--                    </button>-->
+
+<!--                    &lt;!&ndash; Modal &ndash;&gt;-->
+<!--                    <div class="modal fade" th:id="staticBackdrop + ${f.id}" data-bs-backdrop="static"-->
+<!--                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"-->
+<!--                         aria-hidden="true">-->
+<!--                        <div class="modal-dialog">-->
+<!--                            <div class="modal-content">-->
+<!--                                <div class="modal-header">-->
+<!--                                    <h5 class="modal-title text-danger" id="staticBackdropLabel">Cảnh báo!</h5>-->
+<!--                                    <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                                            aria-label="Close"></button>-->
+<!--                                </div>-->
+<!--                                <div class="modal-body" style="color: black">-->
+<!--                                    Bạn có chắn muốn nhân viên tên: <span th:text="${f.name}"-->
+<!--                                                                          class="text-danger"></span>-->
+<!--                                    với id: <span th:text="${f.id}" class="text-danger"></span> ?-->
+<!--                                </div>-->
+<!--                                <div class="modal-footer">-->
+<!--                                    <a th:href="@{/employee/{id}/delete(id=${f.id})}"-->
+<!--                                       class="btn btn-outline-success">Xoá</a>-->
+<!--                                    <button type="button" class="btn btn-outline-secondary"-->
+<!--                                            data-bs-dismiss="modal">Đóng-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </div>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </td>-->
+<!--            </tr>-->
             </tbody>
         </table>
     </div>
@@ -119,5 +326,55 @@
 <script th:src="@{/assets/vendor/php-email-form/validate.js}"></script>
 <!-- Template Main JS File -->
 <script th:src="@{/assets/js/main.js}"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+    let totalPageTemp = 0;
+    function getPageEmployeee(pageNumber,size,searchBlog) {
+        $.ajax({
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json'
+            },
+            type: "GET", //GET, DELETE, PUT...
+            url: "http://localhost:8080/blogRest/list?page=" + pageNumber + "&size=" + size +"&searchValue=" + searchBlog,
+            success: function(employeePage){
+                console.log(employeePage);
+                totalPageTemp = employeePage.totalElements;
+                let employeeBodyHTML = "";
+                for (let i = 0; i < employeePage.content.length; i++) {
+                    blogBodyHTML += `<tr>
+                        <td>${employeePage.content[i].id}</td>
+                        <td>${employeePage.content[i].dateStartTime}</td>
+                        <td>${employeePage.content[i].content}</td>
+                        <td>${employeePage.content[i].note}</td>
+                        <td>${employeePage.content[i].category.name}</td>
+                        <td>${employeePage.content[i].name}</td>
+                        <td>
+                            <a href="#">Edit</a>
+                        </td>
+                        <td>
+                            <a href="#">Delete</a>
+                        </td>
+                    </tr>`;
+                }
+
+                $("#tbBody").html(employeeBodyHTML);
+            },
+            error: function(resultError) {
+                console.log('Co loi xay ra',resultError);
+            }
+        });
+    }
+
+    let i = 5;
+    getPageEmployeee(0, 5, "")
+    $("#btnSearch").click(function () {
+        let searchValue = $("#searchValue").val();
+        getPageStudent(0, 5,searchValue);
+        i=5;
+    })
+
+</script>
 </body>
 </html>

@@ -31,12 +31,16 @@
 
 <body>
 <header class="fixed-top " th:replace="~{home:: #header}">
-
 </header>
 <section id="hero">
     <div class="antiHero">
     </div>
-    <div class="container hero-container" data-aos-delay="150">
+    <div class="container-fluid hero-container" data-aos-delay="150">
+        <form class="d-flex" style="margin-left: 83%" th:action="@{/customer}" method="get">
+            <input class="form-control me-2" type="text" name="keyword">
+            <input class="btn btn-danger" type="submit" value="search">
+        </form>
+        <h2 style="text-align: center">Danh sách khách hàng</h2>
         <table class="table table-dark table-cell">
             <thead>
             <tr>
@@ -80,20 +84,20 @@
                         <div class="modal-dialog">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <h5 class="modal-title text-danger" id="staticBackdropLabel">Warning!</h5>
+                                    <h5 class="modal-title text-danger" id="staticBackdropLabel">Cảnh báo!</h5>
                                     <button type="button" class="btn-close" data-bs-dismiss="modal"
                                             aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body" style="color: black">
                                     Bạn có chắn muốn xoá khách hàng: <span th:text="${c.name}"
-                                                                        class="text-danger"></span>
-                                    với id: <span th:text="${c.id}" class="text-danger"></span> ?
+                                                                           class="text-danger"></span>
+                                    với id: <span th:text="${c.id}" class="text-danger"></span> không?
                                 </div>
                                 <div class="modal-footer">
                                     <a th:href="@{/customer/{id}/delete(id=${c.id})}"
-                                       class="btn btn-outline-success">Delete</a>
+                                       class="btn btn-outline-success">Xoá</a>
                                     <button type="button" class="btn btn-outline-secondary"
-                                            data-bs-dismiss="modal">Close
+                                            data-bs-dismiss="modal">Đóng
                                     </button>
                                 </div>
                             </div>
@@ -103,6 +107,23 @@
             </tr>
             </tbody>
         </table>
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link" tabindex="-1" aria-disabled="true"
+                       th:if="${listCustomer.hasPrevious()}" th:href="@{/customer/(page=${listCustomer.number -1},
+                       keyword=${keywordVal})}">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" th:text="${listCustomer.number +1}"></a></li>
+                <li class="page-item"><a class="page-link">/</a></li>
+                <li class="page-item"><a class="page-link" th:text="${listCustomer.totalPages}"></a></li>
+                <li class="page-item">
+                    <a class="page-link" th:if="${listCustomer.hasNext()}"
+                       th:href="@{/customer/(page=${listCustomer.number +1}, keyword=${keywordVal})}">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </section>
 <footer th:replace="~{home :: #footer}"></footer>

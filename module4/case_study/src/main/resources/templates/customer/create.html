@@ -36,7 +36,7 @@
     <div class="antiHero">
     </div>
     <div class="container hero-container" data-aos-delay="150">
-        <h2>Create customer</h2>
+        <h2>Thêm mới khách hàng</h2>
         <form style="color: white" th:action="@{/customer/create}" method="post" th:object="${customer}"
               novalidate="novalidate">
             <div class="row">
@@ -90,7 +90,9 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-danger">Thêm</button>
-            <button type="submit" class="btn btn-danger"><a th:href="@{/customer}">Quay lại</a></button>
+            <button type="button" class="btn btn-danger">
+                <a style="color: white"  th:href="@{/customer}">Quay lại</a>
+            </button>
         </form>
     </div>
 </section>

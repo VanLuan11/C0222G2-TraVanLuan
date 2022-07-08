@@ -36,10 +36,10 @@
     <div class="antiHero">
     </div>
     <div class="container hero-container" data-aos-delay="150">
-        <h2>Create customer</h2>
-        <form style="color: white" th:action="@{/customer/edit}" method="post" th:object="${listCustomer}"
+        <h2>Chỉnh sửa khách hàng</h2>
+        <form style="color: white" th:action="@{/customer/edit}"  method="post" th:object="${listCustomer}"
               novalidate="novalidate">
-            <div class="mb-3 mt-3 col-6">
+            <div class="mb-3 mt-3 col-12">
                 <label>Id</label>
                 <input type="text" class="form-control" th:field="*{id}" readonly>
             </div>
@@ -95,7 +95,9 @@
                 </div>
             </div>
             <button type="submit" class="btn btn-danger">Sửa</button>
-            <button type="submit" class="btn btn-danger"><a th:href="@{/customer}">Quay lại</a></button>
+            <button type="button" class="btn btn-danger">
+                <a style="color: white" th:href="@{/customer}">Quay lại</a>
+            </button>
         </form>
     </div>
 </section>
@@ -118,24 +120,4 @@
 <!--<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"-->
 <!--        integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"-->
 <!--        crossorigin="anonymous"></script>-->
-<script>
-    function getFrom() {
-        let getValue = $('#selectFacility').val()
-        if (getValue === '1') {
-            $('#standardRoom').show()
-            $('#descriptionOtherConvenience').show()
-            $('#poolArea').show()
-            $('#numberOfFloors').show()
-            $('#facilityFree').hide()
-        }
-        if (getValue === '2') {
-            $('#poolArea').hide()
-            $('#facilityFree').hide()
-        }
-        if (getValue === '3') {
-            $('#poolArea').show()
-            $('#facilityFree').show()
-        }
-    }
-</script>
 </html>

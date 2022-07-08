@@ -36,61 +36,61 @@
     <div class="antiHero">
     </div>
     <div class="container hero-container" data-aos-delay="150">
-        <h2>Create contract</h2>
-        <form style="color: white" th:action="@{/contract/create}" method="post" th:object="${contract}"
+        <h2>Thêm mới khách hàng</h2>
+        <form style="color: white" th:action="@{/customer/create}" method="post" th:object="${customer}"
               novalidate="novalidate">
             <div class="row">
                 <div class="mb-3 mt-3 col-6">
-                    <label>Ngày bắt đầu</label>
-                    <input type="text" class="form-control" th:field="*{startDate}">
+                    <label>Tên khách</label>
+                    <input type="text" class="form-control" th:field="*{name}">
                 </div>
 
                 <div class="mb-3 mt-3  col-6">
-                    <label>Ngày kết thúc</label>
-                    <input type="date" class="form-control" th:field="*{endDate}">
+                    <label>Ngày sinh</label>
+                    <input type="date" class="form-control" th:field="*{birthday}">
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 mt-3 col-6 ">
-                    <label>Tiền cọc</label>
-                    <input type="text" class="form-control" th:field="*{deposit}">
+                    <label>Giới tính</label>
+                    <select th:field="*{gender}" class="form-control">
+                        <option th:value="0">Nữ</option>
+                        <option th:value="1">Nam</option>
+                    </select>
                 </div>
 
                 <div class="mb-3 mt-3 col-6 ">
-                    <label>Tổng tiền</label>
-                    <input type="text" class="form-control" th:field="*{totalMoney}" readonly>
+                    <label>CMND</label>
+                    <input type="text" class="form-control" th:field="*{idCard}">
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 mt-3 col-6 ">
-                    <label>Khách hàng</label>
-                    <select th:field="*{customer}" class="form-control">
-                        <option th:each="item, loop : ${listCustomer}"
-                                th:text="${item.name}"
-                                th:value="${item.id}"></option>
-                    </select>
+                    <label>SĐT</label>
+                    <input type="text" class="form-control" th:field="*{phone}">
                 </div>
-                <div class="mb-3 mt-3 col-6 ">
-                    <label>Nhân viên</label>
-                    <select th:field="*{employee}" class="form-control">
-                        <option th:each="item, loop : ${listEmployee}"
-                                th:text="${item.name}"
-                                th:value="${item.id}"></option>
-                    </select>
+                <div class="mb-3 mt-3  col-6" id="descriptionOtherConvenience">
+                    <label>Email</label>
+                    <input type="email" class="form-control" th:field="*{email}">
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 mt-3 col-6 ">
-                    <label>Cơ sở thuê</label>
-                    <select th:field="*{facility}" class="form-control">
-                        <option th:each="item, loop : ${listFacility}"
+                    <label>Loại khách</label>
+                    <select th:field="*{customerType}" class="form-control">
+                        <option th:each="item, loop : ${listCustomerType}"
                                 th:text="${item.name}"
                                 th:value="${item.id}"></option>
                     </select>
+                </div>
+
+                <div class="mb-3 mt-3 col-6 ">
+                    <label>Địa chỉ</label>
+                    <input type="text" class="form-control" th:field="*{address}">
                 </div>
             </div>
             <button type="submit" class="btn btn-danger">Thêm</button>
-            <button type="submit" class="btn btn-danger"><a th:href="@{/contract}">Quay lại</a></button>
+            <button type="submit" class="btn btn-danger"><a style="color: white" th:href="@{/customer}">Quay lại</a></button>
         </form>
     </div>
 </section>

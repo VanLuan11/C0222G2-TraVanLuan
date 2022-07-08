@@ -36,7 +36,8 @@
 <section id="hero">
     <div class="antiHero">
     </div>
-    <div class="container hero-container" data-aos-delay="150">
+    <div class="container-fluid hero-container" data-aos-delay="150">
+        <h2 style="text-align: center" >Danh sách hợp đồng</h2>
         <table class="table table-dark table-cell">
             <thead>
             <tr>
@@ -48,8 +49,7 @@
                 <th scope="col">Khách hàng</th>
                 <th scope="col">Nhân viên</th>
                 <th scope="col">Cơ sở thuê</th>
-                <th scope="col">Edit</th>
-                <th scope="col">Delete</th>
+                <th scope="col">Các dịch vụ đi kèm</th>
             </tr>
             </thead>
             <tbody>
@@ -62,36 +62,62 @@
                 <td th:text="${c.customer.name}"></td>
                 <td th:text="${c.employee.name}"></td>
                 <td th:text="${c.facility.name}"></td>
-                <td><a class="btn btn-danger" th:href="@{/contract/{id}/edit(id=${c.id})}">Sửa</a></td>
                 <td>
-                    <!-- Button trigger modal -->
-                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                            th:data-bs-target="'#staticBackdrop' + ${c.id}">
-                        Xoá
-                    </button>
+                    <div>
+                        <!-- Button trigger modal -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                th:data-bs-target="'#staticBackdrop' + ${c.id}">
+                            +
+                        </button>
 
-                    <!-- Modal -->
-                    <div class="modal fade" th:id="staticBackdrop + ${c.id}" data-bs-backdrop="static"
-                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
-                         aria-hidden="true">
-                        <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title text-danger" id="staticBackdropLabel">Warning!</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                            aria-label="Close"></button>
+                        <!-- Modal -->
+                        <div class="modal fade" th:id="staticBackdrop + ${c.id}" data-bs-backdrop="static"
+                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-danger" id="staticBackdropLabel">Danh sách dịch vụ đi
+                                            kèm</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="color: black">
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <a class="btn btn-outline-success">Thêm</a>
+                                        <button type="button" class="btn btn-outline-secondary"
+                                                data-bs-dismiss="modal">Đóng
+                                        </button>
+                                    </div>
                                 </div>
-                                <div class="modal-body" style="color: black">
-                                    Bạn có chắn muốn xoá hợp đồng của khách hàng : <span th:text="${c.customer.name}"
-                                                                        class="text-danger"></span>
-                                    với id: <span th:text="${c.id}" class="text-danger"></span> ?
-                                </div>
-                                <div class="modal-footer">
-                                    <a th:href="@{/contract/{id}/delete(id=${c.id})}"
-                                       class="btn btn-outline-success">Delete</a>
-                                    <button type="button" class="btn btn-outline-secondary"
-                                            data-bs-dismiss="modal">Close
-                                    </button>
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                th:data-bs-target="'#staticBackdrop'  + ${c.id}">
+                            Danh sách các dịch vụ đi kèm
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" th:id="staticBackdrop + ${c.id}" data-bs-backdrop="static"
+                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-danger" id="staticBackdropLabel2">Danh sách dịch vụ
+                                            đi kèm</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="color: black">
+                                        adsassdads
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary"
+                                                data-bs-dismiss="modal">Đóng
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

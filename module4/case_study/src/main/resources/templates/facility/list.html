@@ -31,12 +31,16 @@
 
 <body>
 <header class="fixed-top " th:replace="~{home:: #header}">
-
 </header>
 <section id="hero">
     <div class="antiHero">
     </div>
-    <div class="container hero-container" data-aos-delay="150">
+    <div class="container-fluid hero-container" data-aos-delay="150">
+        <form class="d-flex" style="margin-left: 83%" th:action="@{/facility}" method="get">
+            <input class="form-control me-2" type="text" name="keyword">
+            <input class="btn btn-danger" type="submit" value="search">
+        </form>
+        <h2 style="text-align: center">Danh sách cơ sở</h2>
         <table class="table table-dark table-cell">
             <thead>
             <tr>
@@ -98,6 +102,22 @@
             </tr>
             </tbody>
         </table>
+        <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-end">
+                <li class="page-item">
+                    <a class="page-link" tabindex="-1" aria-disabled="true"
+                       th:if="${listFacility.hasPrevious()}" th:href="@{/customer/(page=${listFacility.number -1},
+                       keyword=${keywordVal})}">Previous</a>
+                </li>
+                <li class="page-item"><a class="page-link" th:text="${listFacility.number +1}"></a></li>
+                <li class="page-item"><a class="page-link">/</a></li>
+                <li class="page-item"><a class="page-link" th:text="${listFacility.totalPages}"></a></li>
+                <li class="page-item">
+                    <a class="page-link" th:if="${listFacility.hasNext()}"
+                       th:href="@{/customer/(page=${listFacility.number +1}, keyword=${keywordVal})}">Next</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </section>
 <footer th:replace="~{home :: #footer}"></footer>
