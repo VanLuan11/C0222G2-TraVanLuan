@@ -10,13 +10,13 @@ import java.util.List;
 public class AttachFacility {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
-    private double cost;
+    private Double cost;
     private String unit;
     @Column(name = "facility_status")
     private String facilityStatus;
-    private int status;
+    private Integer status;
 
     @JsonBackReference
     @OneToMany(mappedBy = "attachFacility")
@@ -25,7 +25,7 @@ public class AttachFacility {
     public AttachFacility() {
     }
 
-    public AttachFacility(int id, String name, double cost, String unit, String facilityStatus, int status, List<ContractDetail> contractDetails) {
+    public AttachFacility(Integer id, String name, Double cost, String unit, String facilityStatus, Integer status, List<ContractDetail> contractDetails) {
         this.id = id;
         this.name = name;
         this.cost = cost;
@@ -35,11 +35,11 @@ public class AttachFacility {
         this.contractDetails = contractDetails;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -51,11 +51,11 @@ public class AttachFacility {
         this.name = name;
     }
 
-    public double getCost() {
+    public Double getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    public void setCost(Double cost) {
         this.cost = cost;
     }
 
@@ -75,11 +75,11 @@ public class AttachFacility {
         this.facilityStatus = facilityStatus;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 

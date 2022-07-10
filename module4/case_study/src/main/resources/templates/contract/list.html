@@ -1,31 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-    <title>Facility</title>
-    <meta content="" name="description">
-    <meta content="" name="keywords">
-
-    <!-- Favicons -->
-    <link th:href="@{/assets/img/favicon.png}" rel="icon">
-    <link th:href="@{/assets/img/apple-touch-icon.png}" rel="apple-touch-icon">
-
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
-          rel="stylesheet">
-
-    <!-- Vendor CSS Files -->
-    <link th:href="@{/assets/vendor/aos/aos.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/bootstrap-icons/bootstrap-icons.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/boxicons/css/boxicons.min.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/glightbox/css/glightbox.min.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/remixicon/remixicon.css}" rel="stylesheet">
-    <link th:href="@{/assets/vendor/swiper/swiper-bundle.min.css}" rel="stylesheet">
-
-    <link th:href="@{/assets/css/style.css}" rel="stylesheet">
+<head th:replace="~{home :: css}">
 
 </head>
 
@@ -37,36 +12,52 @@
     <div class="antiHero">
     </div>
     <div class="container-fluid hero-container" data-aos-delay="150">
-        <h2 style="text-align: center" >Danh sách hợp đồng</h2>
+        <h2 style="text-align: center">Danh sách hợp đồng</h2>
+        <div th:if="${msg}">
+            <h5 style="color: #ffffff" th:text="${msg}"></h5>
+        </div>
+        <div class="row">
+            <div class="col-10">
+                <button type="button" class="btn btn-danger">
+                    <a style="color: white" th:href="@{/contract/create}">Thêm mới</a>
+                </button>
+            </div>
+            <div class="col-2">
+                <form class="d-flex" th:action="@{/contract}" method="get">
+                    <input class="form-control me-2" type="text" name="keyword" placeholder="tìm kiếm"  th:value="${keywordVal}">
+                    <input class="btn btn-danger" type="submit" value="search">
+                </form>
+            </div>
+        </div>
         <table class="table table-dark table-cell">
             <thead>
             <tr>
                 <th scope="col">TT</th>
+                <th scope="col">Dịch vụ</th>
+                <th scope="col">Khách hàng</th>
+                <th scope="col">Nhân viên</th>
                 <th scope="col">Ngày bắt đầu</th>
                 <th scope="col">Ngày kết thúc</th>
                 <th scope="col">Tiền cọc</th>
                 <th scope="col">Tổng tiền</th>
-                <th scope="col">Khách hàng</th>
-                <th scope="col">Nhân viên</th>
-                <th scope="col">Cơ sở thuê</th>
                 <th scope="col">Các dịch vụ đi kèm</th>
             </tr>
             </thead>
             <tbody>
             <tr th:each="c : ${listContract}">
                 <td th:text="${c.id}"></td>
+                <td th:text="${c.facility.name}"></td>
+                <td th:text="${c.customer.name}"></td>
+                <td th:text="${c.employee.name}"></td>
                 <td th:text="${c.startDate}"></td>
                 <td th:text="${c.endDate}"></td>
                 <td th:text="${c.deposit}"></td>
                 <td th:text="${c.totalMoney}"></td>
-                <td th:text="${c.customer.name}"></td>
-                <td th:text="${c.employee.name}"></td>
-                <td th:text="${c.facility.name}"></td>
                 <td>
                     <div>
                         <!-- Button trigger modal -->
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                th:data-bs-target="'#staticBackdrop' + ${c.id}">
+                                th:attr="data-bs-target='#staticBackdrop' +${c.id}">
                             +
                         </button>
 
@@ -77,13 +68,35 @@
                             <div class="modal-dialog">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                        <h5 class="modal-title text-danger" id="staticBackdropLabel">Danh sách dịch vụ đi
-                                            kèm</h5>
+                                        <h5 class="modal-title text-danger" id="staticBackdropLabel">Thêm dịch vụ đi
+                                            kèm </h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                 aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body" style="color: black">
-
+                                        <form th:action="@{/contract/create/contractDetail}" method="post"
+                                              th:object="${contractDetail}">
+                                            <!-- name input-->
+                                            <div class="form-floating mb-2">
+                                                <input class="form-control" id="name2" type="text"
+                                                       th:value="${c.facility.name} " readonly>
+                                                <label>Dịch vụ</label>
+                                            </div>
+                                            <!-- birthday input-->
+                                            <div class="form-floating mb-2">
+                                                <select th:field="*{attachFacility}" class="form-control">
+                                                    <option value="">Dịch vụ chi tiết</option>
+                                                    <option th:each="item, loop : ${attachFacility}"
+                                                            th:text="${item.name}"
+                                                            th:value="${item.id}"></option>
+                                                </select>
+                                            </div>
+                                            <div class="form-floating mb-2">
+                                                <input class="form-control" type="text"
+                                                       th:field="${contractDetail.quantity}">
+                                                <label>Số lượng</label>
+                                            </div>
+                                        </form>
                                     </div>
                                     <div class="modal-footer">
                                         <a class="btn btn-outline-success">Thêm</a>
@@ -94,12 +107,15 @@
                                 </div>
                             </div>
                         </div>
+
+                        <!-- danh sách các dịch vụ đi kèm-->
                         <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                                th:data-bs-target="'#staticBackdrop'  + ${c.id}">
+                                th:data-bs-target="'#staticBackdrop2'  + ${c.id}">
                             Danh sách các dịch vụ đi kèm
                         </button>
+
                         <!-- Modal -->
-                        <div class="modal fade" th:id="staticBackdrop + ${c.id}" data-bs-backdrop="static"
+                        <div class="modal fade" th:id="staticBackdrop2 + ${c.id}" data-bs-backdrop="static"
                              data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
                              aria-hidden="true">
                             <div class="modal-dialog">
@@ -111,7 +127,24 @@
                                                 aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body" style="color: black">
-                                        adsassdads
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">Tên</th>
+                                                <th scope="col">Tiền</th>
+                                                <th scope="col">Số lượng</th>
+                                                <th scope="col">Trạng thái</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr th:each="c : ${attachFacility}">
+                                                <td th:text="${c.name}"></td>
+                                                <td th:text="${c.cost}"></td>
+                                                <td th:text="${c.unit}"></td>
+                                                <td th:text="${c.facilityStatus}"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="btn btn-outline-secondary"
@@ -126,18 +159,40 @@
             </tr>
             </tbody>
         </table>
+        <!-- phân trang-->
+        <div class="clearfix " style="margin-left: 83%">
+            <ul class="pagination" th:if="${listContract.totalPages > 0}">
+                <li class="page-item">
+                    <a class="page-link" th:if="${listContract.hasPrevious()}"
+                       th:href="@{'/contract/'(page=${listContract.number - 1}, keyword = ${keywordVal})}">
+                        Previous
+                    </a></li>
+                <div th:each="item1, loop : ${#numbers.sequence(1, listContract.totalPages )}">
+                    <div th:if="${(listContract.number + 1) == item1}">
+                        <li class="page-item active">
+                            <a class="page-link" href="#" th:text="${item1}"
+                               th:href="@{/contract/(page=(${item1}-1))}"></a>
+                        </li>
+                    </div>
+                    <div th:unless="${((listContract.number + 1) == item1)}">
+                        <li class="page-item">
+                            <a class="page-link" href="#" th:text="${item1}"
+                               th:href="@{/contract/(page=(${item1}-1))}"></a>
+                        </li>
+                    </div>
+                </div>
+                <li class="page-item">
+                    <a class="page-link" th:if="${listContract.hasNext()}"
+                       th:href="@{'/contract/'(page=${listContract.number + 1}, keyword = ${keywordVal})}">
+                        Next
+                    </a></li>
+            </ul>
+        </div>
     </div>
 </section>
 <footer th:replace="~{home :: #footer}"></footer>
-<!-- Vendor JS Files -->
-<script th:src="@{/assets/vendor/purecounter/purecounter.js}"></script>
-<script th:src="@{/assets/vendor/aos/aos.js}"></script>
-<script th:src="@{/assets/vendor/bootstrap/js/bootstrap.bundle.min.js}"></script>
-<script th:src="@{/assets/vendor/glightbox/js/glightbox.min.js}"></script>
-<script th:src="@{/assets/vendor/isotope-layout/isotope.pkgd.min.js}"></script>
-<script th:src="@{/assets/vendor/swiper/swiper-bundle.min.js}"></script>
-<script th:src="@{/assets/vendor/php-email-form/validate.js}"></script>
-<!-- Template Main JS File -->
-<script th:src="@{/assets/js/main.js}"></script>
+<div th:replace="~{home :: css2}">
+
+</div>
 </body>
 </html>

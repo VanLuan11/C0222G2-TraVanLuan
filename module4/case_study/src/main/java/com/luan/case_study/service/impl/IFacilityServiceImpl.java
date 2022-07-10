@@ -26,13 +26,13 @@ public class IFacilityServiceImpl implements IFacilityService {
     }
 
     @Override
-    public void delete(int id) {
+    public void deleteById(int id) {
         facilityRepository.deleteById(id);
     }
 
     @Override
     public Facility findById(int id) {
-        return facilityRepository.findById(id).orElse(null);
+        return facilityRepository.findById(id);
     }
 
     @Override

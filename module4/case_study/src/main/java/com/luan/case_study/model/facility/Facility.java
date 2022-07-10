@@ -12,13 +12,13 @@ import java.util.List;
 public class Facility {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
     private String name;
-    private int area;
-    private double cost;
+    private Integer area;
+    private Double cost;
 
     @Column(name = "max_people")
-    private int maxPeople;
+    private Integer maxPeople;
 
     @ManyToOne
     @JoinColumn(name = "rent_type_id", referencedColumnName = "id")
@@ -28,19 +28,19 @@ public class Facility {
     @JoinColumn(name = "facility_type_id", referencedColumnName = "id")
     private FacilityType facilityType;
 
-    @Column(name = "standard_room", columnDefinition = "")
+    @Column(name = "standard_room")
     private String standardRoom;
 
     @Column(name = "description_other_convenience")
     private String descriptionOtherConvenience;
 
     @Column(name = "pool_area")
-    private double poolArea;
+    private Double poolArea;
 
     @Column(name = "number_of_floors")
-    private int numberOfFloors;
+    private Integer numberOfFloors;
     private String facilityFree;
-    private int status;
+    private Integer status;
 
     @JsonBackReference
     @OneToMany(mappedBy = "facility")
@@ -49,7 +49,7 @@ public class Facility {
     public Facility() {
     }
 
-    public Facility(int id, String name, int area, double cost, int maxPeople, RentType rentType, FacilityType facilityType, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors, String facilityFree, int status, List<Contract> contract) {
+    public Facility(Integer id, String name, Integer area, Double cost, Integer maxPeople, RentType rentType, FacilityType facilityType, String standardRoom, String descriptionOtherConvenience, Double poolArea, Integer numberOfFloors, String facilityFree, Integer status, List<Contract> contract) {
         this.id = id;
         this.name = name;
         this.area = area;
@@ -66,11 +66,11 @@ public class Facility {
         this.contract = contract;
     }
 
-    public int getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -82,27 +82,27 @@ public class Facility {
         this.name = name;
     }
 
-    public int getArea() {
+    public Integer getArea() {
         return area;
     }
 
-    public void setArea(int area) {
+    public void setArea(Integer area) {
         this.area = area;
     }
 
-    public double getCost() {
+    public Double getCost() {
         return cost;
     }
 
-    public void setCost(double cost) {
+    public void setCost(Double cost) {
         this.cost = cost;
     }
 
-    public int getMaxPeople() {
+    public Integer getMaxPeople() {
         return maxPeople;
     }
 
-    public void setMaxPeople(int maxPeople) {
+    public void setMaxPeople(Integer maxPeople) {
         this.maxPeople = maxPeople;
     }
 
@@ -138,19 +138,19 @@ public class Facility {
         this.descriptionOtherConvenience = descriptionOtherConvenience;
     }
 
-    public double getPoolArea() {
+    public Double getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(double poolArea) {
+    public void setPoolArea(Double poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumberOfFloors() {
+    public Integer getNumberOfFloors() {
         return numberOfFloors;
     }
 
-    public void setNumberOfFloors(int numberOfFloors) {
+    public void setNumberOfFloors(Integer numberOfFloors) {
         this.numberOfFloors = numberOfFloors;
     }
 
@@ -162,11 +162,11 @@ public class Facility {
         this.facilityFree = facilityFree;
     }
 
-    public int getStatus() {
+    public Integer getStatus() {
         return status;
     }
 
-    public void setStatus(int status) {
+    public void setStatus(Integer status) {
         this.status = status;
     }
 

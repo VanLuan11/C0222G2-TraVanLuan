@@ -29,41 +29,11 @@ public class EmployeeController {
     @GetMapping("")
     public String show(Model model){
         model.addAttribute("listEmployee",employeeService.findAll());
-        return "employee/list";
-    }
-
-    @GetMapping("/create")
-    public String showCreate(Model model){
         model.addAttribute("employee",new Employee());
         model.addAttribute("listPosition",positionService.findAll());
         model.addAttribute("listEducationDegreeService",educationDegreeService.findAll());
         model.addAttribute("listDivisionService",divisionService.findAll());
-        return "employee/create";
+        return "employee/list";
     }
-//
-//    @PostMapping("/create")
-//    public String getCreate(Customer customer){
-//        customerService.save(customer);
-//        return "redirect:/customer/";
-//    }
-//
-    @GetMapping("{id}/edit")
-    public String showEdit(@PathVariable int id, Model model){
-        model.addAttribute("employee",employeeService.findById(id));
-        model.addAttribute("listPosition",positionService.findAll());
-        model.addAttribute("listEducationDegreeService",educationDegreeService.findAll());
-        model.addAttribute("listDivisionService",divisionService.findAll());
-        return "employee/edit";
-    }
-//
-//    @PostMapping("/edit")
-//    public String getEdit(Customer customer){
-//        customerService.save(customer);
-//        return "redirect:/customer/";
-//    }
-//    @GetMapping("{id}/delete")
-//    public String showDelete(@PathVariable int id){
-//        customerService.delete(id);
-//        return "redirect:/customer/";
-//    }
+
 }

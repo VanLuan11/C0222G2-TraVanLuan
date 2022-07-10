@@ -10,6 +10,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -27,7 +28,7 @@ public class FacilityController {
 
     @GetMapping("")
     public String show(Model model,
-                       @PageableDefault(value = 5)Pageable pageable,
+                       @PageableDefault(value = 3)Pageable pageable,
                        @RequestParam(name = "keyword") Optional<String> keyword){
         String keywordVal = keyword.orElse("");
         model.addAttribute("keywordVal",keywordVal);
@@ -42,7 +43,9 @@ public class FacilityController {
         return "facility/create";
     }
     @PostMapping("/create")
-    public String getCreate(Facility facility){
+    public String getCreate(Facility facility, RedirectAttributes redirectAttributes){
+        redirectAttributes.addFlashAttribute("msg",
+                "Đã thêm mới thành công :  " + facility.getName()+ "!");
        facilityService.save(facility);
         return "redirect:/facility/";
     }
@@ -55,13 +58,17 @@ public class FacilityController {
         return "facility/edit";
     }
     @PostMapping("/edit")
-    public String getEdit(Facility facility){
+    public String getEdit(Facility facility, RedirectAttributes redirectAttributes){
+        redirectAttributes.addFlashAttribute("msg",
+                "Chỉnh sửa thành công thành : " + facility.getName() + "!");
         facilityService.save(facility);
         return "redirect:/facility/";
     }
     @GetMapping("{id}/delete")
-    public String showDelete(@PathVariable int id){
-        facilityService.delete(id);
+    public String showDelete(@PathVariable int id, RedirectAttributes redirectAttributes, Facility facility){
+        redirectAttributes.addFlashAttribute("msg",
+                "Đã xoá thành công : " + facility.getName() + "!");
+        facilityService.deleteById(id);
         return "redirect:/facility/";
     }
 }

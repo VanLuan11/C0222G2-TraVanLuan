@@ -9,6 +9,7 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.Optional;
 
@@ -40,7 +41,9 @@ public class CustomerController {
     }
 
     @PostMapping("/create")
-    public String getCreate(Customer customer){
+    public String getCreate(Customer customer, RedirectAttributes redirectAttributes){
+        redirectAttributes.addFlashAttribute("msg",
+                "Đã thêm mới thành công :  " + customer.getName()+ "!");
         customerService.save(customer);
         return "redirect:/customer/";
     }
@@ -53,12 +56,16 @@ public class CustomerController {
     }
 
     @PostMapping("/edit")
-    public String getEdit(Customer customer){
+    public String getEdit(Customer customer, RedirectAttributes redirectAttributes){
+        redirectAttributes.addFlashAttribute("msg",
+                "Chỉnh sửa thành công thành : " + customer.getName() + "!");
         customerService.save(customer);
         return "redirect:/customer/";
     }
     @GetMapping("{id}/delete")
-    public String showDelete(@PathVariable int id){
+    public String showDelete(@PathVariable int id, RedirectAttributes redirectAttributes, Customer customer){
+        redirectAttributes.addFlashAttribute("msg",
+                "Đã xoá thành công : " + customer.getName() + "!");
         customerService.deleteById(id);
         return "redirect:/customer/";
     }

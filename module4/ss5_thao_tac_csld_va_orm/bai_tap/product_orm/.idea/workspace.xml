@@ -2,30 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="27f5d3df-467b-43d8-95e6-1e545fa9c869" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/thuc_hanh/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/thuc_hanh/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/thuc_hanh/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss6_jpa/thuc_hanh/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/thuc_hanh/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/thuc_hanh/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/thuc_hanh/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss7_spring_data_jpa/thuc_hanh/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/Dto/ManufacturerDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/Dto/ProductDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/controller/ProductController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/model/Manufacturer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/model/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/repository/IManufacturerRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/repository/IProductRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/IManufacturerService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/IProductService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/impl/IManufacturerServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/java/com/luan/porduct_validation/service/impl/IProductServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/create.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/edit.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/layout.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../ss8_validation/bai_tap/porduct_validation/src/main/resources/templates/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/java/com/luan/case_study/repository/CustomerRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/java/com/luan/case_study/repository/CustomerRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/employee/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../case_study/src/main/resources/templates/employee/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../ss9_aop_va_exception_handling/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../../ss9_aop_va_exception_handling/thuc_hanh/customer-management" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,6 +177,7 @@
       <workItem from="1655907199236" duration="752000" />
       <workItem from="1656161083258" duration="34000" />
       <workItem from="1656162336763" duration="11000" />
+      <workItem from="1657244220387" duration="81000" />
     </task>
     <servers />
   </component>

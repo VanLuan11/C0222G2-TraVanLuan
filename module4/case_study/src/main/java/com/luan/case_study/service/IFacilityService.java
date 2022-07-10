@@ -11,9 +11,10 @@ public interface IFacilityService {
 
     Facility save(Facility facility);
 
-    void delete(int id);
-
     Facility findById(int id);
 
     Page<Facility> findAllByName(String keywordVal, Pageable pageable);
+
+    void deleteById(int id);
 }
+

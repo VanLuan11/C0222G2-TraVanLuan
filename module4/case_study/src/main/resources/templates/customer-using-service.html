@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{home :: css}"></head>
+<body>
+<header class="fixed-top " th:replace="~{home:: #header}"></header>
+<section id="hero">
+    <div class="antiHero">
+    </div>
+    <div class="container-fluid hero-container" data-aos-delay="150">
+        <h2 style="text-align: center">Danh sách khách hàng</h2>
+        <div th:if="${msg}">
+            <h5 style="color: #ffffff" th:text="${msg}"></h5>
+        </div>
+        <div>
+            <form class="d-flex" style="margin-left: 83%" th:action="@{/customerUsingService}" method="get">
+                <input class="form-control me-2" type="text" name="keyword" placeholder="tìm kiếm"
+                       th:value="${keywordVal}">
+                <input class="btn btn-danger" type="submit" value="search">
+            </form>
+        </div>
+        <table class="table table-dark table-cell">
+            <thead>
+            <tr>
+                <th scope="col">TT</th>
+                <th scope="col">Tên</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Email</th>
+                <th scope="col">Dịch vụ</th>
+                <th scope="col">Dịch vụ đi kèm</th>
+                <th scope="col">Edit</th>
+                <th scope="col">Delete</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="c, loop : ${customerUsingService}">
+                <td th:text="${loop.count}"></td>
+                <td th:text="${c.customerName.name}"></td>
+                <td th:text="${c.customerPhone.phone}"></td>
+                <td th:text="${c.customerAddress.address}"></td>
+                <td th:text="${c.customerEmail.email}"></td>
+                <td th:text="${c.facilityName.name}"></td>
+                <td th:text="${c.attachFacilityName.name}"></td>
+                <td><a class="btn btn-danger" th:href="@{/facility/{id}/edit(id=${c.facilityID.id})}">Sửa</a></td>
+                <td>
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            th:data-bs-target="'#staticBackdrop' + ${c.facilityID.id}">
+                        Xoá
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" th:id="staticBackdrop + ${c.facilityID.id}" data-bs-backdrop="static"
+                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-danger" id="staticBackdropLabel">Cảnh báo!</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="color: black">
+                                    Bạn có chắn muốn xoá dich vụ : <span th:text="${c.facilityName.name}"
+                                                                           class="text-danger"></span>
+                                    với id: <span th:text="${c.facilityID.id}" class="text-danger"></span> không?
+                                </div>
+                                <div class="modal-footer">
+                                    <a th:href="@{/facility/{id}/delete(id=${c.facilityID.id})}"
+                                       class="btn btn-outline-success">Xoá</a>
+                                    <button type="button" class="btn btn-outline-secondary"
+                                            data-bs-dismiss="modal">Đóng
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!-- phân trang-->
+<!--        <div class="clearfix " style="margin-left: 83%">-->
+<!--            <ul class="pagination" th:if="${customerUsingService.totalPages > 0}">-->
+<!--                <li class="page-item">-->
+<!--                    <a class="page-link" th:if="${customerUsingService.hasPrevious()}"-->
+<!--                       th:href="@{'/customerUsingService/'(page=${customerUsingService.number - 1}, keyword = ${keywordVal})}">-->
+<!--                        Previous-->
+<!--                    </a></li>-->
+<!--                <div th:each="item1, loop : ${#numbers.sequence(1, customerUsingService.totalPages )}">-->
+<!--                    <div th:if="${(customerUsingService.number + 1) == item1}">-->
+<!--                        <li class="page-item active">-->
+<!--                            <a class="page-link" href="#" th:text="${item1}"-->
+<!--                               th:href="@{/customerUsingService/(page=(${item1}-1))}"></a>-->
+<!--                        </li>-->
+<!--                    </div>-->
+<!--                    <div th:unless="${((customerUsingService.number + 1) == item1)}">-->
+<!--                        <li class="page-item">-->
+<!--                            <a class="page-link" href="#" th:text="${item1}"-->
+<!--                               th:href="@{/customerUsingService/(page=(${item1}-1))}"></a>-->
+<!--                        </li>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--                <li class="page-item">-->
+<!--                    <a class="page-link" th:if="${customerUsingService.hasNext()}"-->
+<!--                       th:href="@{'/customerUsingService/'(page=${customerUsingService.number + 1}, keyword = ${keywordVal})}">-->
+<!--                        Next-->
+<!--                    </a></li>-->
+<!--            </ul>-->
+<!--        </div>-->
+    </div>
+</section>
+<footer th:replace="~{home :: #footer}"></footer>
+<div th:replace="~{home :: css2}"></div>
+</body>
+</html>
