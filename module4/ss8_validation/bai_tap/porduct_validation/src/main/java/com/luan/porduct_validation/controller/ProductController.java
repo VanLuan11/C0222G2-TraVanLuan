@@ -55,6 +55,7 @@ public class ProductController {
         this.productService.save(product);
         return "redirect:/product/";
     }
+
     @GetMapping("{id}/edit")
     public String showCreate(@PathVariable int id, Model model){
         model.addAttribute("product", productService.getProduct(id));

@@ -30,6 +30,7 @@
                 <div class="mb-3 mt-3 col-6">
                     <label>Tên</label>
                     <input type="text" class="form-control" th:field="*{name}">
+                    <div style="color: #34f30e" th:errors="*{name}"></div>
                 </div>
             </div>
 
@@ -37,16 +38,22 @@
                 <div class="mb-3 mt-3  col-6">
                     <label>Diện tích</label>
                     <input type="text" class="form-control" th:field="*{area}">
+                    <div style="color: #34f30e" th:errors="*{name}"></div>
+
                 </div>
                 <div class="mb-3 mt-3  col-6">
                     <label>Chi phí</label>
                     <input type="text" class="form-control" th:field="*{cost}">
+                    <div style="color: #34f30e" th:errors="*{name}"></div>
+
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 mt-3  col-6">
                     <label>Số lượng người</label>
                     <input type="text" class="form-control" th:field="*{maxPeople}">
+                    <div style="color: #34f30e" th:errors="*{name}"></div>
+
                 </div>
                 <div class="mb-3 mt-3  col-6">
                     <label>Kiểu thuê</label>

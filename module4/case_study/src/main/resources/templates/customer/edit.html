@@ -11,7 +11,7 @@
     </div>
     <div class="container hero-container" data-aos-delay="150">
         <h2>Chỉnh sửa khách hàng</h2>
-        <form style="color: white" th:action="@{/customer/edit}"  method="post" th:object="${listCustomer}"
+        <form style="color: white" th:action="@{/customer/edit}"  method="post" th:object="${customerDto}"
               novalidate="novalidate">
             <div class="mb-3 mt-3 col-12">
                 <label>Id</label>
@@ -22,11 +22,15 @@
                 <div class="mb-3 mt-3 col-6">
                     <label>Tên khách</label>
                     <input type="text" class="form-control" th:field="*{name}">
+                    <div style="color: #34f30e" th:errors="*{name}"></div>
+
                 </div>
 
                 <div class="mb-3 mt-3  col-6">
                     <label>Ngày sinh</label>
                     <input type="date" class="form-control" th:field="*{birthday}">
+                    <div style="color: #34f30e" th:errors="*{birthday}"></div>
+
                 </div>
             </div>
             <div class="row">
@@ -41,16 +45,20 @@
                 <div class="mb-3 mt-3 col-6 ">
                     <label>CMND</label>
                     <input type="text" class="form-control" th:field="*{idCard}">
+                    <div style="color: #34f30e" th:errors="*{idCard}"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 mt-3 col-6 ">
                     <label>SĐT</label>
                     <input type="text" class="form-control" th:field="*{phone}">
+                    <div style="color: #34f30e" th:errors="*{phone}"></div>
                 </div>
+
                 <div class="mb-3 mt-3  col-6" id="descriptionOtherConvenience">
                     <label>Email</label>
                     <input type="email" class="form-control" th:field="*{email}">
+                    <div style="color: #34f30e" th:errors="*{email}"></div>
                 </div>
             </div>
             <div class="row">
@@ -66,6 +74,7 @@
                 <div class="mb-3 mt-3 col-6 ">
                     <label>Địa chỉ</label>
                     <input type="text" class="form-control" th:field="*{address}">
+                    <div style="color: #34f30e" th:errors="*{address}"></div>
                 </div>
             </div>
             <button type="submit" class="btn btn-danger">Sửa</button>

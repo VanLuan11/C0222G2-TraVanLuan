@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{home :: css}">
+
+</head>
+
+<body>
+<header class="fixed-top " th:replace="~{home:: #header}">
+
+</header>
+<section id="hero">
+    <div class="antiHero">
+    </div>
+    <div class="container-fluid hero-container" data-aos-delay="150">
+        <h2 style="text-align: center">Danh sách khách hàng đang sử dụng dịch vụ</h2>
+        <div th:if="${msg}">
+            <h5 style="color: #ffffff" th:text="${msg}"></h5>
+        </div>
+        <div>
+            <form class="d-flex" style="margin-left: 83%" th:action="@{/contract}" method="get">
+                <input class="form-control me-2" type="text" name="keyword" placeholder="tìm kiếm"
+                       th:value="${keywordVal}">
+                <input class="btn btn-danger" type="submit" value="search">
+            </form>
+        </div>
+        <table class="table table-dark table-cell">
+            <thead>
+            <tr>
+                <th scope="col">TT</th>
+                <th scope="col">Tên</th>
+                <th scope="col">SĐT</th>
+                <th scope="col">Địa chỉ</th>
+                <th scope="col">Tên dịch vụ</th>
+                <th scope="col">Dịch vụ đi kèm</th>
+                <th scope="col">Sửa dịch vụ</th>
+                <th scope="col">Xoá dịch vụ</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="fa, loop : ${customerUsingServiceList}">
+                <td th:text="${loop.count}"></td>
+                <td th:text="${fa.customer.name}"></td>
+                <td th:text="${fa.customer.phone}"></td>
+                <td th:text="${fa.customer.address}"></td>
+                <td th:text="${fa.facility.name}" th:value="${fa.facility.id}"></td>
+                <td>
+                    <div>
+                        <!-- danh sách các dịch vụ đi kèm -->
+                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                th:attr="data-bs-target='#staticBackdrop' +${fa.id}">
+                            Danh sách các dịch vụ đi kèm
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" th:id="staticBackdrop + ${fa.id}" data-bs-backdrop="static"
+                             data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                             aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title text-danger" id="staticBackdropLabel">danh sách các dịch
+                                            vụ đi kèm</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body" style="color: black">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th scope="col">STT</th>
+                                                <th scope="col">Name Attach Service</th>
+                                                <th scope="col">quantity</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr th:each="details,loop : ${fa.contractDetails}">
+                                                <td th:text="${loop.count}"></td>
+                                                <td th:text="${details.attachFacility.name}"
+                                                    th:value="${details.attachFacility.id}"></td>
+                                                <td th:text="${details.quantity}"></td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-outline-secondary"
+                                                data-bs-dismiss="modal">Close
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <a th:href="@{/facility/{id}/edit(id=${fa.facility.id})}" class="btn btn-outline-warning"> Edit</a>
+                </td>
+                <td>
+                    <!-- danh sách các dịch vụ đi kèm-->
+                    <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                            th:data-bs-target="'#staticBackdrop2'  + ${fa.id}">
+                        Xoá
+                    </button>
+
+                    <!-- Modal -->
+                    <div class="modal fade" th:id="staticBackdrop2 + ${fa.id}" data-bs-backdrop="static"
+                         data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"
+                         aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title text-danger" id="staticBackdropLabel2">Cảnh báo</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body" style="color: black">
+                                    Bạn có muốn xoá dịch vụ <span th:text="${fa.facility.name}"
+                                                                  class="text-warning"></span>
+                                    với id <span th:text="${fa.facility.id}" class="text-warning"></span> không?
+                                </div>
+                                <div class="modal-footer">
+                                    <a href="" th:href="@{/facility/{id}/delete(id=${fa.facility.id})}"
+                                       class="btn btn-outline-success">Delete</a>
+                                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                                        Close
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <!-- phân trang-->
+        <div class="clearfix" style="margin-left: 83%">
+            <ul class="pagination" th:if="${customerUsingServiceList.totalPages > 0}">
+                <li class="page-item">
+                    <a class="page-link" th:if="${customerUsingServiceList.hasPrevious()}"
+                       th:href="@{'/contract/'(page=${customerUsingServiceList.number - 1})}">
+                        Previous
+                    </a>
+                </li>
+                <div th:each="item1, loop : ${#numbers.sequence(1, customerUsingServiceList.totalPages )}">
+                    <div th:if="${(customerUsingServiceList.number + 1) == item1}">
+                        <li class="page-item active">
+                            <a class="page-link" href="#" th:text="${item1}"
+                               th:href="@{/contract/(page=(${item1}-1))}"></a>
+                        </li>
+                    </div>
+                    <div th:unless="${((customerUsingServiceList.number + 1) == item1)}">
+                        <li class="page-item">
+                            <a class="page-link" href="#" th:text="${item1}"
+                               th:href="@{/contract/(page=(${item1}-1))}"></a>
+                        </li>
+                    </div>
+                </div>
+                <li class="page-item">
+                    <a class="page-link" th:if="${customerUsingServiceList.hasNext()}"
+                       th:href="@{'/contract/'(page=${customerUsingServiceList.number + 1})}">
+                        Next
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+<footer th:replace="~{home :: #footer}"></footer>
+<div th:replace="~{home :: css2}"></div>
+</body>
+</html>

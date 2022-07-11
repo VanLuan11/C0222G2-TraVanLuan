@@ -57,7 +57,8 @@
                 </div>
             </div>
 
-                <div class="mb-3 mt-3 ">
+            <div class="row">
+                <div class="mb-3 mt-3 col-6">
                     <label>Dịch vụ</label>
                     <select th:field="*{facility}" class="form-control">
                         <option value="">Chọn dịch vụ</option>
@@ -66,10 +67,68 @@
                                 th:value="${item.id}"></option>
                     </select>
                 </div>
-                <button type="submit" class="btn btn-danger">Thêm</button>
-                <button type="button" class="btn btn-danger"><a style="color: white" th:href="@{/contract}">Quay lại</a>
-                </button>
+            </div>
 
+
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    th:attr="data-bs-target='#staticBackdrop'">-->
+<!--                +-->
+<!--            </button>-->
+
+<!--            &lt;!&ndash; Modal &ndash;&gt;-->
+<!--            <div class="modal fade" th:id="staticBackdrop" data-bs-backdrop="static"-->
+<!--                 data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel"-->
+<!--                 aria-hidden="true">-->
+<!--                <div class="modal-dialog">-->
+<!--                    <div class="modal-content">-->
+<!--                        <div class="modal-header">-->
+<!--                            <h5 class="modal-title text-danger" id="staticBackdropLabel">Thêm dịch vụ đi-->
+<!--                                kèm </h5>-->
+<!--                            <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                                    aria-label="Close"></button>-->
+<!--                        </div>-->
+<!--                        <div class="modal-body" style="color: black">-->
+<!--                            <form th:action="@{/contract/createContractDetail}" method="post"-->
+<!--                                  th:object="${contractDetail}">-->
+
+<!--                                <div class="form-floating mb-2">-->
+<!--                                    <input class="form-control" type="text"-->
+<!--                                           th:field="*{contract.id}">-->
+<!--                                    <label>Id hợp đồng</label>-->
+<!--                                </div>-->
+
+
+<!--                                <div class="form-floating mb-2">-->
+<!--                                    <select th:field="*{attachFacility}" class="form-control">-->
+<!--                                        <option th:each="item, loop : ${attachFacility}"-->
+<!--                                                th:text="${item.name}"-->
+<!--                                                th:value="${item.id}"></option>-->
+<!--                                    </select>-->
+<!--                                    <label>Dịch vụ chi tiết</label>-->
+<!--                                </div>-->
+<!--                                <div class="form-floating mb-2">-->
+<!--                                    <input class="form-control" type="text"-->
+<!--                                           th:field="*{quantity}">-->
+<!--                                    <label>Số lượng</label>-->
+<!--                                </div>-->
+<!--                                <div class="modal-footer">-->
+<!--                                    <a>-->
+<!--                                        <button class="btn btn-outline-success" type="submit">Thêm</button>-->
+<!--                                    </a>-->
+<!--                                    <button type="button" class="btn btn-outline-secondary"-->
+<!--                                            data-bs-dismiss="modal">Đóng-->
+<!--                                    </button>-->
+<!--                                </div>-->
+<!--                            </form>-->
+<!--                        </div>-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <button type="submit" class="btn btn-danger">Thêm</button>
+            <button type="button" class="btn btn-danger"><a style="color: white" th:href="@{/contract}">Quay lại</a>
+            </button>
         </form>
     </div>
 </section>

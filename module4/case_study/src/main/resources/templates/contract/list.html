@@ -24,7 +24,8 @@
             </div>
             <div class="col-2">
                 <form class="d-flex" th:action="@{/contract}" method="get">
-                    <input class="form-control me-2" type="text" name="keyword" placeholder="tìm kiếm"  th:value="${keywordVal}">
+                    <input class="form-control me-2" type="text" name="keyword" placeholder="tìm kiếm"
+                           th:value="${keywordVal}">
                     <input class="btn btn-danger" type="submit" value="search">
                 </form>
             </div>
@@ -44,15 +45,15 @@
             </tr>
             </thead>
             <tbody>
-            <tr th:each="c : ${listContract}">
+            <tr th:each="c : ${contractList}">
                 <td th:text="${c.id}"></td>
                 <td th:text="${c.facility.name}"></td>
                 <td th:text="${c.customer.name}"></td>
                 <td th:text="${c.employee.name}"></td>
                 <td th:text="${c.startDate}"></td>
                 <td th:text="${c.endDate}"></td>
-                <td th:text="${c.deposit}"></td>
-                <td th:text="${c.totalMoney}"></td>
+                <td th:text="${#numbers.formatDecimal(c.deposit, 0, 'DEFAULT', 0, 'DEFAULT')}"></td>
+                <td th:text="${#numbers.formatDecimal(c.totalMoney, 0, 'DEFAULT', 0, 'DEFAULT')}"></td>
                 <td>
                     <div>
                         <!-- Button trigger modal -->
@@ -74,15 +75,15 @@
                                                 aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body" style="color: black">
-                                        <form th:action="@{/contract/create/contractDetail}" method="post"
+                                        <form th:action="@{/contract/createContractDetail}" method="post"
                                               th:object="${contractDetail}">
-                                            <!-- name input-->
+
                                             <div class="form-floating mb-2">
-                                                <input class="form-control" id="name2" type="text"
-                                                       th:value="${c.facility.name} " readonly>
-                                                <label>Dịch vụ</label>
+                                                <select th:field="*{contract}" class="form-control" hidden>
+                                                    <option th:value="${c.id}"></option>
+                                                </select>
                                             </div>
-                                            <!-- birthday input-->
+
                                             <div class="form-floating mb-2">
                                                 <select th:field="*{attachFacility}" class="form-control">
                                                     <option value="">Dịch vụ chi tiết</option>
@@ -93,17 +94,20 @@
                                             </div>
                                             <div class="form-floating mb-2">
                                                 <input class="form-control" type="text"
-                                                       th:field="${contractDetail.quantity}">
+                                                       th:field="*{quantity}">
                                                 <label>Số lượng</label>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <a>
+                                                    <button class="btn btn-outline-success" type="submit">Thêm</button>
+                                                </a>
+                                                <button type="button" class="btn btn-outline-secondary"
+                                                        data-bs-dismiss="modal">Đóng
+                                                </button>
                                             </div>
                                         </form>
                                     </div>
-                                    <div class="modal-footer">
-                                        <a class="btn btn-outline-success">Thêm</a>
-                                        <button type="button" class="btn btn-outline-secondary"
-                                                data-bs-dismiss="modal">Đóng
-                                        </button>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -130,18 +134,17 @@
                                         <table class="table">
                                             <thead>
                                             <tr>
+                                                <th scope="col">STT</th>
                                                 <th scope="col">Tên</th>
-                                                <th scope="col">Tiền</th>
                                                 <th scope="col">Số lượng</th>
-                                                <th scope="col">Trạng thái</th>
                                             </tr>
                                             </thead>
                                             <tbody>
-                                            <tr th:each="c : ${attachFacility}">
-                                                <td th:text="${c.name}"></td>
-                                                <td th:text="${c.cost}"></td>
-                                                <td th:text="${c.unit}"></td>
-                                                <td th:text="${c.facilityStatus}"></td>
+                                            <tr th:each="cd,loop : ${c.contractDetailList}">
+                                                <td th:text="${loop.count}"></td>
+                                                <td th:text="${cd.attachFacility.name}"
+                                                    th:value="${cd.attachFacility.id}"></td>
+                                                <td th:text="${cd.quantity}"></td>
                                             </tr>
                                             </tbody>
                                         </table>
@@ -159,22 +162,24 @@
             </tr>
             </tbody>
         </table>
+
         <!-- phân trang-->
-        <div class="clearfix " style="margin-left: 83%">
-            <ul class="pagination" th:if="${listContract.totalPages > 0}">
+        <div class="clearfix" style="margin-left: 83%">
+            <ul class="pagination" th:if="${contractList.totalPages > 0}">
                 <li class="page-item">
-                    <a class="page-link" th:if="${listContract.hasPrevious()}"
-                       th:href="@{'/contract/'(page=${listContract.number - 1}, keyword = ${keywordVal})}">
+                    <a class="page-link" th:if="${contractList.hasPrevious()}"
+                       th:href="@{'/contract/'(page=${contractList.number - 1}, keyword =${keywordVal})}">
                         Previous
-                    </a></li>
-                <div th:each="item1, loop : ${#numbers.sequence(1, listContract.totalPages )}">
-                    <div th:if="${(listContract.number + 1) == item1}">
+                    </a>
+                </li>
+                <div th:each="item1, loop : ${#numbers.sequence(1, contractList.totalPages )}">
+                    <div th:if="${(contractList.number + 1) == item1}">
                         <li class="page-item active">
                             <a class="page-link" href="#" th:text="${item1}"
                                th:href="@{/contract/(page=(${item1}-1))}"></a>
                         </li>
                     </div>
-                    <div th:unless="${((listContract.number + 1) == item1)}">
+                    <div th:unless="${((contractList.number + 1) == item1)}">
                         <li class="page-item">
                             <a class="page-link" href="#" th:text="${item1}"
                                th:href="@{/contract/(page=(${item1}-1))}"></a>
@@ -182,17 +187,16 @@
                     </div>
                 </div>
                 <li class="page-item">
-                    <a class="page-link" th:if="${listContract.hasNext()}"
-                       th:href="@{'/contract/'(page=${listContract.number + 1}, keyword = ${keywordVal})}">
+                    <a class="page-link" th:if="${contractList.hasNext()}"
+                       th:href="@{'/contract/'(page=${contractList.number + 1}, keyword = ${keywordVal})}">
                         Next
-                    </a></li>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 </section>
 <footer th:replace="~{home :: #footer}"></footer>
-<div th:replace="~{home :: css2}">
-
-</div>
+<div th:replace="~{home :: css2}"></div>
 </body>
 </html>

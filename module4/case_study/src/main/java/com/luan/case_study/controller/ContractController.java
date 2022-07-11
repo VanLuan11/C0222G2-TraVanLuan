@@ -1,10 +1,12 @@
 package com.luan.case_study.controller;
 
+import com.luan.case_study.dto.ContractDto;
 import com.luan.case_study.model.contract.Contract;
 import com.luan.case_study.model.contract.ContractDetail;
 import com.luan.case_study.model.customer.Customer;
 import com.luan.case_study.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
@@ -32,23 +34,34 @@ public class ContractController {
     @Autowired
     private IAttachFacilityService attachFacilityService;
 
+    @Autowired
+    private IContractDetailService contractDetailService;
+
+
+    @GetMapping("/customer-using-service")
+    public String listCustomerUsingService(Model model,@PageableDefault(value = 5)Pageable pageable){
+        model.addAttribute("customerUsingServiceList",contractService.findAllCustomerUsingService(pageable));
+        return "contract/customer-using-service";
+    }
 
     @GetMapping("")
-    public String show(Model model,
-                       @PageableDefault(value = 3) Pageable pageable,
-                       @RequestParam(name = "keyword") Optional<String> keyword) {
+    public String showListContract(Model model,
+                                   @PageableDefault(value = 4) Pageable pageable,
+                                   @RequestParam Optional<String> keyword) {
         String keywordVal = keyword.orElse("");
+        Page<ContractDto> contractDtoPage = this.contractService.getAllContract(keywordVal, pageable);
+        model.addAttribute("contractList", contractDtoPage);
         model.addAttribute("keywordVal", keywordVal);
-        model.addAttribute("contractDetail", new ContractDetail());
-        model.addAttribute("listContract", this.contractService.findAllByName(keywordVal, pageable));
         model.addAttribute("attachFacility", attachFacilityService.findAll());
+        model.addAttribute("contractDetail", new ContractDetail());
         return "contract/list";
     }
 
     @GetMapping("/create")
     public String showCreate(Model model) {
         model.addAttribute("contract", new Contract());
-        model.addAttribute("contractDetail", contractService.findAll());
+        model.addAttribute("contractDetail", new ContractDetail());
+        model.addAttribute("attachFacility", attachFacilityService.findAll());
         model.addAttribute("listCustomer", customerService.findAll());
         model.addAttribute("listEmployee", employeeService.findAll());
         model.addAttribute("listFacility", facilityService.findAll());
@@ -56,9 +69,14 @@ public class ContractController {
     }
 
     @PostMapping("/create")
-    public String showCreateDetail(Contract contract) {
+    public String showCreateDetail(Contract contract, RedirectAttributes redirectAttributes) {
+        redirectAttributes.addFlashAttribute("msg","Thêm mới hợp đồng thành công!");
         contractService.save(contract);
         return "redirect:/contract/";
     }
-
+    @PostMapping("/createContractDetail")
+    public String createContractDetail(@ModelAttribute ContractDetail contractDetail){
+        contractDetailService.save(contractDetail);
+        return "redirect:/contract/";
+    }
 }

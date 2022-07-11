@@ -1,14 +1,18 @@
 package com.luan.case_study.controller;
 
+import com.luan.case_study.dto.FacilityDto;
 import com.luan.case_study.model.facility.Facility;
 import com.luan.case_study.service.IFacilityTypeService;
 import com.luan.case_study.service.IFacilityService;
 import com.luan.case_study.service.IRentTypeService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
@@ -37,15 +41,22 @@ public class FacilityController {
     }
     @GetMapping("/create")
     public String showCreate(Model model){
-        model.addAttribute("facility", new Facility());
+        model.addAttribute("facilityDto", new FacilityDto());
         model.addAttribute("listRentType",rentTypeService.findAll());
         model.addAttribute("listFacilityType",facilityTypeService.findAll());
         return "facility/create";
     }
     @PostMapping("/create")
-    public String getCreate(Facility facility, RedirectAttributes redirectAttributes){
+    public String getCreate(@ModelAttribute @Validated FacilityDto facilityDto,
+                            BindingResult bindingResult,
+                            RedirectAttributes redirectAttributes){
+        if(bindingResult.hasErrors()){
+            return "facility/create";
+        }
+        Facility facility = new Facility();
+        BeanUtils.copyProperties(facilityDto,facility);
         redirectAttributes.addFlashAttribute("msg",
-                "Đã thêm mới thành công :  " + facility.getName()+ "!");
+                "Đã thêm mới thành công  !");
        facilityService.save(facility);
         return "redirect:/facility/";
     }
@@ -58,16 +69,23 @@ public class FacilityController {
         return "facility/edit";
     }
     @PostMapping("/edit")
-    public String getEdit(Facility facility, RedirectAttributes redirectAttributes){
+    public String getEdit(@ModelAttribute @Validated FacilityDto facilityDto,
+                          BindingResult bindingResult,
+                          RedirectAttributes redirectAttributes){
+        if(bindingResult.hasErrors()){
+            return "facility/edit";
+        }
+        Facility facility = new Facility();
+        BeanUtils.copyProperties(facilityDto,facility);
         redirectAttributes.addFlashAttribute("msg",
-                "Chỉnh sửa thành công thành : " + facility.getName() + "!");
+                "Chỉnh sửa thành công thành !");
         facilityService.save(facility);
         return "redirect:/facility/";
     }
     @GetMapping("{id}/delete")
-    public String showDelete(@PathVariable int id, RedirectAttributes redirectAttributes, Facility facility){
+    public String showDelete(@PathVariable int id, RedirectAttributes redirectAttributes){
         redirectAttributes.addFlashAttribute("msg",
-                "Đã xoá thành công : " + facility.getName() + "!");
+                "Đã xoá thành công !");
         facilityService.deleteById(id);
         return "redirect:/facility/";
     }
