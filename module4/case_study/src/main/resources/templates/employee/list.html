@@ -146,7 +146,7 @@
                 <td th:text="${f.name}"></td>
                 <td th:text="${f.birthday}"></td>
                 <td th:text="${f.idCard}"></td>
-                <td th:text="${f.salary}"></td>
+                <td th:text="${#numbers.formatDecimal(f.salary, 0, 'DEFAULT', 0, 'DEFAULT')}"></td>
                 <td th:text="${f.phone}"></td>
                 <td th:text="${f.email}"></td>
                 <td th:text="${f.address}"></td>

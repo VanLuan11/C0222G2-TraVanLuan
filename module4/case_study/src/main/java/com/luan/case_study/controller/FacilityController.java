@@ -16,6 +16,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
+import javax.jws.WebParam;
 import java.util.Optional;
 
 @Controller
@@ -49,8 +50,10 @@ public class FacilityController {
     @PostMapping("/create")
     public String getCreate(@ModelAttribute @Validated FacilityDto facilityDto,
                             BindingResult bindingResult,
-                            RedirectAttributes redirectAttributes){
+                            RedirectAttributes redirectAttributes, Model model){
         if(bindingResult.hasErrors()){
+            model.addAttribute("listRentType",rentTypeService.findAll());
+            model.addAttribute("listFacilityType",facilityTypeService.findAll());
             return "facility/create";
         }
         Facility facility = new Facility();
@@ -63,7 +66,10 @@ public class FacilityController {
 
     @GetMapping("{id}/edit")
     public String showEdit(@PathVariable int id, Model model){
-        model.addAttribute("facility",facilityService.findById(id));
+        Facility facility = this.facilityService.findById(id);
+        FacilityDto facilityDto = new FacilityDto();
+        BeanUtils.copyProperties(facility,facilityDto);
+        model.addAttribute("facilityDto",facilityDto);
         model.addAttribute("listRentType",rentTypeService.findAll());
         model.addAttribute("listFacilityType",facilityTypeService.findAll());
         return "facility/edit";
@@ -71,8 +77,10 @@ public class FacilityController {
     @PostMapping("/edit")
     public String getEdit(@ModelAttribute @Validated FacilityDto facilityDto,
                           BindingResult bindingResult,
-                          RedirectAttributes redirectAttributes){
+                          RedirectAttributes redirectAttributes,Model model){
         if(bindingResult.hasErrors()){
+            model.addAttribute("listRentType",rentTypeService.findAll());
+            model.addAttribute("listFacilityType",facilityTypeService.findAll());
             return "facility/edit";
         }
         Facility facility = new Facility();

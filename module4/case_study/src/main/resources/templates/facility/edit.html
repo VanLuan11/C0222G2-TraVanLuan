@@ -12,7 +12,7 @@
     <div class="container hero-container" data-aos-delay="150">
         <h2>Chỉnh sửa</h2>
         <form style="color: white" th:action="@{/facility/edit}" method="post"
-              th:object="${facility}" novalidate="novalidate">
+              th:object="${facilityDto}" novalidate="novalidate">
             <div class="row">
                 <div class="mb-3 mt-3 col-3">
                     <label>Id</label>
@@ -38,22 +38,18 @@
                 <div class="mb-3 mt-3  col-6">
                     <label>Diện tích</label>
                     <input type="text" class="form-control" th:field="*{area}">
-                    <div style="color: #34f30e" th:errors="*{name}"></div>
 
                 </div>
                 <div class="mb-3 mt-3  col-6">
                     <label>Chi phí</label>
                     <input type="text" class="form-control" th:field="*{cost}">
-                    <div style="color: #34f30e" th:errors="*{name}"></div>
-
+                    <div style="color: #34f30e" th:errors="*{cost}"></div>
                 </div>
             </div>
             <div class="row">
                 <div class="mb-3 mt-3  col-6">
                     <label>Số lượng người</label>
                     <input type="text" class="form-control" th:field="*{maxPeople}">
-                    <div style="color: #34f30e" th:errors="*{name}"></div>
-
                 </div>
                 <div class="mb-3 mt-3  col-6">
                     <label>Kiểu thuê</label>

@@ -12,28 +12,25 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.Pattern;
 import java.util.List;
 
-@GroupSequence(value = {DtoOne.class, DtoTwo.class, FacilityDto.class})
+
 public class FacilityDto {
 
-    @NotEmpty(message = "không được để trống", groups = DtoOne.class)
-    @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class)
+    private Integer id;
+
+    @NotEmpty(message = "không được để trống")
+    @NotBlank(message = "không đc để rỗng")
     @Pattern(regexp = "^([A-Z][^A-Z\\s]+)(\\s[A-Z][^A-Z\\s]+)*$",
-            message = "tên chữ cái đầu phải viết hoa", groups = FacilityDto.class)
+            message = "tên chữ cái đầu phải viết hoa")
     private String name;
 
-    @NotEmpty(message = "không được để trống", groups = DtoOne.class)
-    @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class)
-    @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = FacilityDto.class)
+
     private Integer area;
 
-    @NotEmpty(message = "không được để trống", groups = DtoOne.class)
-    @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class)
-    @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = FacilityDto.class)
+    @NotEmpty(message = "không được để trống")
+    @NotBlank(message = "không đc để rỗng")
+    @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm")
     private Double cost;
 
-    @NotEmpty(message = "không được để trống", groups = DtoOne.class)
-    @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class)
-    @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = FacilityDto.class)
     private Integer maxPeople;
     private RentType rentType;
     private FacilityType facilityType;
@@ -41,7 +38,6 @@ public class FacilityDto {
     private String descriptionOtherConvenience;
     private Double poolArea;
 
-    @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = FacilityDto.class)
     private Integer numberOfFloors;
     private String facilityFree;
     private Integer status;
@@ -50,8 +46,9 @@ public class FacilityDto {
     public FacilityDto() {
     }
 
-    public FacilityDto(@NotEmpty(message = "không được để trống", groups = DtoOne.class) @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class) @Pattern(regexp = "^([A-Z][^A-Z\\s]+)(\\s[A-Z][^A-Z\\s]+)*$",
-            message = "tên chữ cái đầu phải viết hoa", groups = FacilityDto.class) String name, @NotEmpty(message = "không được để trống", groups = DtoOne.class) @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class) @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = FacilityDto.class) Integer area, @NotEmpty(message = "không được để trống", groups = DtoOne.class) @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class) @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = FacilityDto.class) Double cost, @NotEmpty(message = "không được để trống", groups = DtoOne.class) @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class) @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = FacilityDto.class) Integer maxPeople, RentType rentType, FacilityType facilityType, String standardRoom, String descriptionOtherConvenience, Double poolArea, @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = FacilityDto.class) Integer numberOfFloors, String facilityFree, Integer status, List<Contract> contract) {
+    public FacilityDto(Integer id, @NotEmpty(message = "không được để trống") @NotBlank(message = "không đc để rỗng") @Pattern(regexp = "^([A-Z][^A-Z\\s]+)(\\s[A-Z][^A-Z\\s]+)*$",
+            message = "tên chữ cái đầu phải viết hoa") String name, Integer area, @NotEmpty(message = "không được để trống") @NotBlank(message = "không đc để rỗng") @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm") Double cost, Integer maxPeople, RentType rentType, FacilityType facilityType, String standardRoom, String descriptionOtherConvenience, Double poolArea, Integer numberOfFloors, String facilityFree, Integer status, List<Contract> contract) {
+        this.id = id;
         this.name = name;
         this.area = area;
         this.cost = cost;
@@ -65,6 +62,14 @@ public class FacilityDto {
         this.facilityFree = facilityFree;
         this.status = status;
         this.contract = contract;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 
     public String getName() {

@@ -1,4 +1,4 @@
 package com.luan.case_study.dto;
 
-public class DtoOne {
+public interface DtoOne {
 }

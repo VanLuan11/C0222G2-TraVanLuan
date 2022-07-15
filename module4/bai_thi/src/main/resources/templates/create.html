@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{home :: css}">
+
+</head>
+<body>
+<header class="fixed-top " th:replace="~{home:: #header}">
+</header>
+<section id="hero">
+    <div class="antiHero">
+    </div>
+    <div class="container hero-container" data-aos-delay="150">
+        <h2>Thêm mới</h2>
+        <form style="color: white" th:action="@{/home/create}" method="post" th:object="${hopDong}"
+              novalidate="novalidate">
+            <div class="mb-3 mt-3">
+                <label>Mã hợp đồng</label>
+                <input type="text" class="form-control" th:field="*{maHopDong}">
+<!--                <div style="color: #34f30e" th:errors="*{name}"></div>-->
+            </div>
+
+            <div class=" mb-3 mt-3">
+                <label>Mã phòng</label>
+                <select id="selectFacility" th:field="*{phongTro}" class="form-control">
+                    <option value="">Chọn mã phòng</option>
+                    <option th:each="item, loop : ${listPhongTro}"
+                            th:text="${item.maPhong}"
+                            th:value="${item.id}"></option>
+                </select>
+            </div>
+            <div class="mb-3 mt-3">
+                <label>Tên người thuê</label>
+                <input type="text" class="form-control" th:field="*{tenNguoiThue}">
+                <!--                <div style="color: #34f30e" th:errors="*{name}"></div>-->
+            </div>
+            <div class="mb-3 mt-3">
+                <label>CMND</label>
+                <input type="text" class="form-control" th:field="*{cmnd}">
+                <!--                <div style="color: #34f30e" th:errors="*{name}"></div>-->
+            </div>
+            <div class="mb-3 mt-3">
+                <label>Ngày làm hợp đồng</label>
+                <input type="date" class="form-control" th:field="*{ngayLamHopDong}">
+                <!--                <div style="color: #34f30e" th:errors="*{name}"></div>-->
+            </div>
+            <div class="mb-3 mt-3">
+                <label>Thời gian thuê</label>
+                <input type="text" class="form-control" th:field="*{thoiGianThue}">
+                <!--                <div style="color: #34f30e" th:errors="*{name}"></div>-->
+            </div>
+            <button type="submit" class="btn btn-danger">Thêm</button>
+            <button type="button" class="btn btn-danger">
+                <a style="color: white" th:href="@{/home}">Quay lại</a>
+            </button>
+        </form>
+    </div>
+</section>
+<footer th:replace="~{home :: #footer}"></footer>
+</body>
+<div th:replace="~{home :: css2}"></div>
+</html>

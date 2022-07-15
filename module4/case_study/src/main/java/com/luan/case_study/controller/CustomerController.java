@@ -46,10 +46,9 @@ public class CustomerController {
     }
 
     @PostMapping("/create")
-    public String getCreate(@ModelAttribute @Valid CustomerDto customerDto,
+    public String getCreate(@ModelAttribute @Validated CustomerDto customerDto,
                             BindingResult bindingResult,
-                            RedirectAttributes redirectAttributes,
-                            Model model) {
+                            RedirectAttributes redirectAttributes, Model model) {
         if (bindingResult.hasErrors()) {
             model.addAttribute("listCustomerType", customerTypeService.findAll());
             return "customer/create";
@@ -68,6 +67,7 @@ public class CustomerController {
         Customer customer = this.customerService.findById(id);
         CustomerDto customerDto = new CustomerDto();
         BeanUtils.copyProperties(customer, customerDto);
+        model.addAttribute("customerDto",customerDto);
         model.addAttribute("listCustomerType", customerTypeService.findAll());
         return "customer/edit";
     }
@@ -76,8 +76,9 @@ public class CustomerController {
     @PostMapping("/edit")
     public String getEdit(@ModelAttribute @Validated CustomerDto customerDto,
                           BindingResult bindingResult,
-                          RedirectAttributes redirectAttributes) {
+                          RedirectAttributes redirectAttributes, Model model) {
         if(bindingResult.hasErrors()){
+            model.addAttribute("listCustomerType", customerTypeService.findAll());
             return "customer/edit";
         }
         Customer customer = new Customer();
@@ -94,6 +95,4 @@ public class CustomerController {
         customerService.deleteById(id);
         return "redirect:/customer/";
     }
-
-
 }

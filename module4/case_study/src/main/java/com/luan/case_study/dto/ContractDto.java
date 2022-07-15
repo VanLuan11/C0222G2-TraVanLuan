@@ -4,6 +4,7 @@ import com.luan.case_study.model.contract.ContractDetail;
 import com.luan.case_study.model.customer.Customer;
 import com.luan.case_study.model.employee.Employee;
 import com.luan.case_study.model.facility.Facility;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.validation.GroupSequence;
 import javax.validation.constraints.NotBlank;
@@ -13,7 +14,13 @@ import java.util.List;
 @GroupSequence(value = {DtoOne.class, DtoTwo.class, ContractDto.class})
 public class ContractDto {
     private Integer id;
+
+    @NotEmpty(message = "không được để trống", groups = DtoOne.class)
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private String startDate;
+
+    @NotEmpty(message = "không được để trống", groups = DtoOne.class)
+    @DateTimeFormat(pattern = "dd-MM-yyyy")
     private String endDate;
 
     @NotEmpty(message = "không được để trống", groups = DtoOne.class)
@@ -29,7 +36,7 @@ public class ContractDto {
     public ContractDto() {
     }
 
-    public ContractDto(Integer id, String startDate, String endDate, Double deposit, Customer customer, Employee employee, Facility facility, List<ContractDetail> contractDetailList, Integer totalMoney) {
+    public ContractDto(Integer id, @NotEmpty(message = "không được để trống", groups = DtoOne.class) String startDate, @NotEmpty(message = "không được để trống", groups = DtoOne.class) String endDate, @NotEmpty(message = "không được để trống", groups = DtoOne.class) @NotBlank(message = "không đc để rỗng", groups = DtoTwo.class) @Pattern(regexp = "^([0-9]+)*$", message = "không được nhập số âm", groups = ContractDto.class) Double deposit, Customer customer, Employee employee, Facility facility, List<ContractDetail> contractDetailList, Integer totalMoney) {
         this.id = id;
         this.startDate = startDate;
         this.endDate = endDate;

@@ -18,6 +18,7 @@ public interface CustomerRepository extends JpaRepository<Customer, Integer> {
             countQuery = "select count(*) from (select * from customer where `name` like :keyword and `status` = 0) khach_hang")
     Page<Customer> findAllByName(@Param("keyword") String keywordVal, Pageable pageable);
 
+
     @Modifying
     @Query(value = "update customer set status = 1 where id = :id", nativeQuery = true)
     void deleteById(@Param("id") int id);

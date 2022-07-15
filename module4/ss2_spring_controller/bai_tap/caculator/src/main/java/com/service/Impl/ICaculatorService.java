@@ -25,7 +25,7 @@ public class ICaculatorService implements com.service.ICaculatorService {
                     result = num1/num2;
                     result = 0;
                 }catch (Exception e){
-                    e.getStackTrace();
+                    System.err.println("ádasd");
                 }
                 break;
         }
