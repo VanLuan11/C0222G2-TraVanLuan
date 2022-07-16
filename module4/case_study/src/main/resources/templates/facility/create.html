@@ -10,86 +10,7 @@
     <div class="antiHero">
     </div>
     <div class="container hero-container" data-aos-delay="150">
-        <h2>Thêm mới</h2>
-        <form style="color: white" th:action="@{/facility/create}" method="post" th:object="${facilityDto}"
-              novalidate="novalidate">
-            <div class="row">
-                <div class=" mb-3 mt-3 col-6">
-                    <label>Cơ sở thuê</label>
-                    <select id="selectFacility" th:field="*{facilityType}" class="form-control" onchange="getFrom()">
-                        <option value="">Chọn cơ sở thuê</option>
-                        <option th:each="item, loop : ${listFacilityType}"
-                                th:text="${item.name}"
-                                th:value="${item.id}"></option>
-                    </select>
-                </div>
-                <div class="mb-3 mt-3 col-6">
-                    <label>Tên</label>
-                    <input type="text" class="form-control" th:field="*{name}">
-                    <div style="color: #34f30e" th:errors="*{name}"></div>
-
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="mb-3 mt-3  col-6">
-                    <label>Diện tích</label>
-                    <input type="text" class="form-control" th:field="*{area}">
-
-                </div>
-                <div class="mb-3 mt-3  col-6">
-                    <label>Chi phí</label>
-                    <input type="text" class="form-control" th:field="*{cost}">
-                    <div style="color: #34f30e" th:errors="*{cost}"></div>
-
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb-3 mt-3  col-6">
-                    <label>Số lượng người</label>
-                    <input type="text" class="form-control" th:field="*{maxPeople}">
-
-                </div>
-                <div class="mb-3 mt-3  col-6">
-                    <label>Kiểu thuê</label>
-                    <select th:field="*{rentType}" class="form-control">
-                        <option th:each="item, loop : ${listRentType}"
-                                th:text="${item.name}"
-                                th:value="${item.id}"></option>
-                    </select>
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb-3 mt-3  col-6" id="standardRoom" style="display: none">
-                    <label>Loại phòng</label>
-                    <input type="text" class="form-control" th:field="*{standardRoom}">
-                </div>
-                <div class="mb-3 mt-3  col-6" id="descriptionOtherConvenience" style="display: none">
-                    <label>Tiện ích khác</label>
-                    <input type="text" class="form-control"
-                           th:field="*{descriptionOtherConvenience}">
-                </div>
-            </div>
-            <div class="row">
-                <div class="mb-3 mt-3  col-3" id="poolArea" style="display: none">
-                    <label>Diện tích hồ bơi</label>
-                    <input type="text" class="form-control" th:field="*{poolArea}">
-
-                </div>
-                <div class="mb-3 mt-3 col-3" id="numberOfFloors" style="display: none">
-                    <label>Số tầng</label>
-                    <input type="text" class="form-control" th:field="*{numberOfFloors}">
-                </div>
-                <div class="mb-3 mt-3 col-6" id="facilityFree" style="display: none">
-                    <label>dịch vụ Free</label>
-                    <input type="text" class="form-control" th:field="*{facilityFree}">
-                </div>
-            </div>
-            <button type="submit" class="btn btn-danger">Thêm</button>
-            <button type="button" class="btn btn-danger">
-                <a style="color: white" th:href="@{/facility}">Quay lại</a>
-            </button>
-        </form>
+        
     </div>
 </section>
 <footer th:replace="~{home :: #footer}"></footer>
@@ -98,38 +19,5 @@
 
 </div>
 
-<script>
-    function getFrom() {
-        let getValue = $('#selectFacility').val()
-        if (getValue === '') {
-            $('#standardRoom').hide()
-            $('#descriptionOtherConvenience').hide()
-            $('#poolArea').hide()
-            $('#numberOfFloors').hide()
-            $('#facilityFree').hide()
-        }
-        if (getValue === '1') {
-            $('#standardRoom').show()
-            $('#descriptionOtherConvenience').show()
-            $('#poolArea').show()
-            $('#numberOfFloors').show()
-            $('#facilityFree').hide()
-        }
-        if (getValue === '2') {
-            $('#standardRoom').show()
-            $('#descriptionOtherConvenience').show()
-            $('#poolArea').hide()
-            $('#numberOfFloors').show()
-            $('#facilityFree').hide()
-        }
-        if (getValue === '3') {
-            $('#standardRoom').hide()
-            $('#descriptionOtherConvenience').hide()
-            $('#poolArea').hide()
-            $('#numberOfFloors').hide()
-            $('#poolArea').hide()
-            $('#facilityFree').show()
-        }
-    }
-</script>
+
 </html>
