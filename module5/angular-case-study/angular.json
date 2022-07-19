@@ -25,10 +25,8 @@
             ],
             "styles": [
               "src/styles.css",
-              "src/assets/vendor/bootstrap/css/bootstrap.css"
             ],
-            "scripts": ["src/assets/vendor/bootstrap/js/bootstrap.js",
-              "src/assets/vendor/bootstrap/js/bootstrap.bundle.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -1,0 +1,86 @@
+<div class="container" style="margin-top: 10%">
+  <h2>Create Service</h2>
+  <form method="post" novalidate="novalidate">
+    <div class="row">
+      <div class="mb-3 mt-3 col-6">
+        <label>Name</label>
+        <input type="text" class="form-control" >
+      </div>
+
+      <div class="mb-3 mt-3  col-6">
+        <label>Area</label>
+        <input type="text" class="form-control">
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 mt-3  col-6">
+        <label>Cost</label>
+        <input type="text" class="form-control" >
+      </div>
+
+      <div class="mb-3 mt-3  col-6">
+        <label>Amount of people</label>
+        <input type="text" class="form-control" >
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 mt-3  col-6">
+        <label>Rent type</label>
+        <select class="form-control">
+          <option value="" >Choose rent type</option>
+          <option value="1" >Year</option>
+          <option value="2" >month</option>
+          <option value="3" >day</option>
+          <option value="4" >hours</option>
+        </select>
+      </div>
+
+      <div class=" mb-3 mt-3 col-6">
+        <label>Rental service</label>
+        <select id="selectFacility" class="form-control" onchange="getFrom()">
+          <option value="">Choose rental service</option>
+          <option value="1">Villa</option>
+          <option value="2">House</option>
+          <option value="3">Room</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 mt-3  col-6" id="standardRoom" style="display: none">
+        <label>Kind of room</label>
+        <input type="text" class="form-control" >
+      </div>
+
+      <div class="mb-3 mt-3  col-6" id="otherConvenience" style="display: none">
+        <label>Other utilities</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="mb-3 mt-3  col-6" id="poolArea" style="display: none">
+        <label>Area pool</label>
+        <input type="text" class="form-control" >
+      </div>
+
+      <div class="mb-3 mt-3  col-6" id="numberOfFloors" style="display: none">
+        <label>Floor</label>
+        <input type="text" class="form-control">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="mb-3 mt-3 col-6" id="facilityFree" style="display: none">
+        <label>Free service</label>
+        <input type="text" class="form-control" >
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-success"><i class="fa-solid fa-plus-minus"></i></button>
+    <button type="button" class="btn btn-danger">
+      <a style="color: white" href="facility_list.html"><i class="fa-solid fa-share"></i></a>
+    </button>
+  </form>
+</div>

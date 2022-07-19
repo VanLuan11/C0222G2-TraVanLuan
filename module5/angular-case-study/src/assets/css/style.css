@@ -90,8 +90,8 @@ h1, h2, h3, h4, h5, h6 {
 --------------------------------------------------------------*/
 
 #header {
-  top: 50px;
-  height: 70px;
+  top: 0px;
+  height: 90px;
   z-index: 997;
   transition: all 0.5s;
   padding: 10px 0;
