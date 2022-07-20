@@ -7,8 +7,14 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { ListFacilityComponent } from './facility/list-facility/list-facility.component';
-import { CreateComponent } from './facility/create/create.component';
-import { EditComponent } from './facility/edit/edit.component';
+
+import { ListCustomerComponent } from './customer/list-customer/list-customer.component';
+import { EditFacilityComponent } from './facility/edit-facility/edit-facility.component';
+import { CreateFacilityComponent } from './facility/create-facility/create-facility.component';
+import { EditCustomerComponent } from './customer/edit-customer/edit-customer.component';
+import { CreateCustomerComponent } from './customer/create-customer/create-customer.component';
+import { ListContractComponent } from './contract/list-contract/list-contract.component';
+import { CreateContractComponent } from './contract/create-contract/create-contract.component';
 
 
 @NgModule({
@@ -18,8 +24,13 @@ import { EditComponent } from './facility/edit/edit.component';
     HeaderComponent,
     FooterComponent,
     ListFacilityComponent,
-    CreateComponent,
-    EditComponent,
+    ListCustomerComponent,
+    EditFacilityComponent,
+    CreateFacilityComponent,
+    EditCustomerComponent,
+    CreateCustomerComponent,
+    ListContractComponent,
+    CreateContractComponent,
   ],
   imports: [
     BrowserModule,
