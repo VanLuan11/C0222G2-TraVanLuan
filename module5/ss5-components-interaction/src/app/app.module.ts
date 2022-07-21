@@ -5,16 +5,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
+import { CountDownTimerComponent } from './count-down-timer/count-down-timer.component';
 import { RatingBarComponent } from './rating-bar/rating-bar.component';
-import { CountdownTimerAppComponent } from './countdown-timer-app/countdown-timer-app.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NameCardComponent,
     ProgressBarComponent,
+    CountDownTimerComponent,
     RatingBarComponent,
-    CountdownTimerAppComponent
   ],
   imports: [
     BrowserModule,

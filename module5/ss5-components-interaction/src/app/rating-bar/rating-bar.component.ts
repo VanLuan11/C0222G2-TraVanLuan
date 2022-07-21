@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChanges} from '@angular/core';
-import {IRatingUnit} from '../i-rating-unit';
+import {IRatingUnit} from '../irating-unit';
 
 @Component({
   selector: 'app-rating-bar',
@@ -7,6 +7,7 @@ import {IRatingUnit} from '../i-rating-unit';
   styleUrls: ['./rating-bar.component.css']
 })
 export class RatingBarComponent implements OnInit, OnChanges {
+
   @Input()
   max = 10;
   @Input()
@@ -53,6 +54,5 @@ export class RatingBarComponent implements OnInit, OnChanges {
   reset() {
     this.ratingUnits.forEach((item, idx) => item.active = idx < this.ratingValue);
   }
-
 
 }
