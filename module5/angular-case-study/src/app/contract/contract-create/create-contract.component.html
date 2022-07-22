@@ -1,44 +1,33 @@
 <div class="container" style="margin-top: 10%">
   <h2>Create Contract</h2>
-  <form method="post"
-        novalidate="novalidate">
-    <div class="row">
-      <div class="mb-3 mt-3 col-6">
-        <label>Start date</label>
-        <input type="date" class="form-control" >
-      </div>
-
-      <div class="mb-3 mt-3  col-6">
-        <label>End date</label>
-        <input type="date" class="form-control">
-      </div>
+  <div class="row">
+    <div class="mb-3 mt-3 col-6">
+      <label>Start date</label>
+      <input type="date" class="form-control" >
     </div>
-    <div class="row">
-      <div class="mb-3 mt-3 col-6 ">
-        <label>Deposit</label>
-        <input type="text" class="form-control">
-      </div>
-      <div class="mb-3 mt-3 col-6 ">
-        <label>Total money</label>
-        <input type="text" class="form-control" readonly >
-      </div>
-    </div>
-    <div class="row">
-      <div class="mb-3 mt-3 col-6 ">
-        <label>Customer</label>
-        <select class="form-control">
-          <option value="">Choose Customer</option>
-          <option ></option>
-        </select>
-      </div>
 
-      <div class="mb-3 mt-3 col-6 ">
-        <label>Employee</label>
-        <select class="form-control">
-          <option value="">Choose Employee</option>
-          <option ></option>
-        </select>
-      </div>
+    <div class="mb-3 mt-3  col-6">
+      <label>End date</label>
+      <input type="date" class="form-control">
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 mt-3 col-6 ">
+      <label>Deposit</label>
+      <input type="text" class="form-control">
+    </div>
+    <div class="mb-3 mt-3 col-6 ">
+      <label>Total money</label>
+      <input type="text" class="form-control" readonly >
+    </div>
+  </div>
+  <div class="row">
+    <div class="mb-3 mt-3 col-6 ">
+      <label>Customer</label>
+      <select class="form-control">
+        <option value="">Choose Customer</option>
+        <option ></option>
+      </select>
     </div>
 
     <div class="row">
@@ -56,5 +45,5 @@
     <button type="button" class="btn btn-danger">
       <a style="color: white" [routerLink]="['/contract-list']"><i class="fa-solid fa-share"></i></a>
     </button>
-  </form>
+  </div>
 </div>

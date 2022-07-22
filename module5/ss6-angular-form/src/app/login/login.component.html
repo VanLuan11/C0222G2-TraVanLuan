@@ -1,0 +1,18 @@
+<form [formGroup]="loginFormReactive" (ngSubmit)="createLogin()">
+  <div class="row">
+    <label>Email</label>
+    <input class="form-control" type="text" formControlName="email" name="email">
+    <p style="color: red" *ngIf="loginFormReactive.controls.email.hasError('required')
+  && loginFormReactive.controls.email.touched">khong dc de rong</p>
+    <p style="color: red" *ngIf="loginFormReactive.controls.email.hasError('email')">nhap dung dinh dang email</p>
+  </div>
+
+  <div class="row">
+    <label>Password</label>
+    <input formControlName="password" name="password"><br>
+    <p style="color: red" *ngIf="loginFormReactive.controls.password.hasError('required')
+  && loginFormReactive.controls.password.touched">khong dc de rong</p>
+    <p style="color: red" *ngIf="loginFormReactive.controls.password.hasError('minlength')">do dai khong nho hon
+      6</p>
+  </div>
+</form>

@@ -5,6 +5,5 @@ export interface Contract {
   deposit?: number;
   totalMoney?: number;
   customer?: string;
-  employee?: string;
   service?: string;
 }

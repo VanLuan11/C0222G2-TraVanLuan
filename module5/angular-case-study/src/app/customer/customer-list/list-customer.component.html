@@ -35,11 +35,38 @@
       <td>{{c.id}}</td>
       <td>{{c.name}}</td>
       <td>{{c.dateOfBirth | date:'dd-MM-yyyy'}}</td>
-      <td>{{c.gender}}</td>
+      <td>
+        <span ngSwitch="{{c.gender}}">
+              <span *ngSwitchCase="1">
+                Nam
+              </span>
+              <span *ngSwitchCase="0">
+                Nữ
+              </span>
+              <span *ngSwitchDefault>
+                Khác
+              </span>
+        </span>
+      </td>
       <td>{{c.idCard}}</td>
       <td>{{c.phone}}</td>
       <td>{{c.email}}</td>
-      <td>{{c.customerType}}</td>
+      <td>
+        <span ngSwitch="{{c.customerType}}">
+            <span *ngSwitchCase="3">
+                tầng cao xã hội
+              </span>
+              <span *ngSwitchCase="2">
+                tầng trung xã hội
+              </span>
+              <span *ngSwitchCase="1">
+                tầng thấp xã hội
+              </span>
+              <span *ngSwitchCase="0">
+                dưới đáy xã hội
+              </span>
+        </span>
+      </td>
       <td>{{c.address}}</td>
       <td>
         <a class="btn btn-success" [routerLink]="['/customer-edit']"><i class="fa-solid fa-pen"></i></a>

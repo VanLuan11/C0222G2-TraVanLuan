@@ -1,0 +1,103 @@
+<form [formGroup]="registerFormReactive" (ngSubmit)="createRegister()">
+  <div class="row">
+    <label>Email</label>
+    <input class="form-control" type="text" formControlName="email" name="email">
+    <p style="color: red" *ngIf="registerFormReactive.controls.email.hasError('required')
+  && registerFormReactive.controls.email.touched">khong dc de rong</p>
+    <p style="color: red" *ngIf="registerFormReactive.controls.email.hasError('email')
+    && registerFormReactive.controls.phone.touched">nhap dung dinh dang email</p>
+  </div>
+
+  <div formGroupName="pass">
+    <div>
+      <label for="exampleInputPassword1" class="form-label">Password</label>
+      <input type="password" class="form-control" id="exampleInputPassword1" formControlName="password"
+             name="password">
+    </div>
+    <div
+         *ngIf="registerFormReactive.controls.pass.get('password').hasError('minlength') && registerFormReactive.controls.pass.get('password').touched">
+      password khong dc nho hon 6
+    </div>
+    <div
+         *ngIf="registerFormReactive.controls.pass.get('password').hasError('required') && registerFormReactive.controls.pass.get('password').touched">
+      password khong dc de trong
+    </div>
+    <div >
+      <label for="exampleInputPassword1" class="form-label">Confirm Password</label>
+      <input type="password" class="form-control" id="confirmPassword" formControlName="confirmPassword"
+             name="confirmPassword">
+    </div>
+    <div
+      *ngIf="registerFormReactive.controls.pass.get('confirmPassword').hasError('minlength') && registerFormReactive.controls.pass.get('confirmPassword').touched">
+      confirm password khong dc nho hon 6
+    </div>
+    <div
+      *ngIf="registerFormReactive.controls.pass.get('confirmPassword').hasError('required') && registerFormReactive.controls.pass.get('confirmPassword').touched">
+      confirm password khong dc de trong
+    </div>
+
+    <div
+         *ngIf="registerFormReactive.controls.pass.hasError('confirmPass') && registerFormReactive.controls.pass.touched">
+     password khong giong nhau
+    </div>
+  </div>
+
+
+  <div class="row">
+    <label>Country</label>
+    <select class="form-select" aria-label="Default select example" formControlName="country" name="country">
+      <option value="">Choose country</option>
+      <option value="vietNam">Việt Nam</option>
+      <option value="anDo">Ân độ</option>
+      <option value="anh">Anh</option>
+    </select>
+    <p style="color: red" *ngIf="registerFormReactive.controls.country.hasError('required')
+  && registerFormReactive.controls.country.touched">khong dc de rong</p>
+  </div>
+
+  <div class="row">
+    <label>Age</label>
+    <input formControlName="age" name="age"><br>
+    <p style="color: red" *ngIf="registerFormReactive.controls.age.hasError('required')
+  && registerFormReactive.controls.age.touched">khong dc de rong</p>
+    <p style="color: red" *ngIf="registerFormReactive.controls.age.hasError('min')
+    && registerFormReactive.controls.phone.touched">tuoi phai lon hon 18</p>
+  </div>
+
+  <div>
+    <input formControlName="gender" class="form-check-input" type="radio" name="flexRadioDefault"
+           id="flexRadioDefault1" value="0">
+    <label class="form-check-label" for="flexRadioDefault1">
+      Nữ
+    </label>
+
+
+    <input formControlName="gender" class="form-check-input" type="radio" name="flexRadioDefault"
+           id="flexRadioDefault2" value="1">
+    <label class="form-check-label" for="flexRadioDefault2">
+      Nam
+    </label>
+
+
+    <input formControlName="gender" class="form-check-input" type="radio" name="flexRadioDefault"
+           id="flexRadioDefault3">
+    <label class="form-check-label" for="flexRadioDefault2" value="2">
+      Khác
+    </label>
+
+  </div>
+  <p style="color: red" *ngIf="registerFormReactive.controls.gender.hasError('required')
+  && registerFormReactive.controls.gender.touched">khong dc de rong</p>
+
+  <div class="row">
+    <label>Phone</label>
+    <input formControlName="phone" name="phone"><br>
+    <p style="color: red" *ngIf="registerFormReactive.controls.phone.hasError('required')
+  && registerFormReactive.controls.phone.touched">khong dc de rong</p>
+    <p style="color: red"
+       *ngIf="registerFormReactive.controls.phone.hasError('pattern') && registerFormReactive.controls.phone.touched">
+      bắt đầu với +84, và theo sau
+      là 9 đến 10 chữ số</p>
+  </div>
+  <button type="submit">save</button>
+</form>
