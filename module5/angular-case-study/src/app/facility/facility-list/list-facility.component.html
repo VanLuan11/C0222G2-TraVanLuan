@@ -4,14 +4,15 @@
   <a class="btn btn-success" [routerLink]="['/facility-create']"><i class="fa-solid fa-plus-minus"></i></a>
 
   <div class="row" style="margin-bottom: 5%">
-    <div class="col-sm-12 col-md-6 col-lg-4">
+    <div class="col-sm-12 col-md-6 col-lg-4" *ngFor="let f of facilities">
       <div class="card" style="width: 100%;">
         <img height="250px" src="https://hotel24h.net/data/news/2829/88849003.jpg"
              class="card-img-top" alt="...">
         <div class="card-body">
-          <h5 class="card-title">Ocean Suite</h5>
-          <p class="card-text">Room size: 85.8 m <sup>2</sup></p>
-
+          <h5 class="card-title">{{f.nameService}}</h5>
+          <p class="card-text">Id: {{f.id}}</p>
+          <p class="card-text">Loại phòng: {{f.standardRoom}}</p>
+          <p class="card-text">Diện tích: {{f.area}} <sup>2</sup></p>
           <div style="margin-left: 75%">
 
             <a class="btn btn-success" [routerLink]="['/facility-edit']"><i class="fa-solid fa-pen"></i></a>
@@ -51,367 +52,367 @@
         </div>
       </div>
     </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card" style="width: 100%;">
-        <img height="250px" src="https://hotel24h.net/data/news/2829/furama-resort-da-nang-34.jpg" class="card-img-top"
-             alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Ocean Studio Suite</h5>
-          <p class="card-text">Room size: 40.1 m <sup>2</sup></p>
+<!--    <div class="col-sm-12 col-md-6 col-lg-4">-->
+<!--      <div class="card" style="width: 100%;">-->
+<!--        <img height="250px" src="https://hotel24h.net/data/news/2829/furama-resort-da-nang-34.jpg" class="card-img-top"-->
+<!--             alt="...">-->
+<!--        <div class="card-body">-->
+<!--          <h5 class="card-title">Ocean Studio Suite</h5>-->
+<!--          <p class="card-text">Room size: 40.1 m <sup>2</sup></p>-->
 
-          <div style="margin-left: 75%">
-            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>
+<!--          <div style="margin-left: 75%">-->
+<!--            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>-->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </div>
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#exampleModal">-->
+<!--              <i class="fa-solid fa-trash-can"></i>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" style="color: red" id="exampleModalLabel2">Warning!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Do you want delete facility <span class="text-warning"></span>
-                  with id = <span class="text-warning"></span> ?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-rectangle-xmark"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card" style="width: 100%;">
-        <img height="250px" src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M-1047x563.jpg"
-             class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Ocean Deluxe</h5>
-          <p class="card-text">Room size: 43.7 m <sup>2</sup></p>
+<!--          &lt;!&ndash; Modal &ndash;&gt;-->
+<!--          <div class="modal fade" id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--               aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h5 class="modal-title" style="color: red" id="exampleModalLabel2">Warning!</h5>-->
+<!--                  <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                          aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                  Do you want delete facility <span class="text-warning"></span>-->
+<!--                  with id = <span class="text-warning"></span> ?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">-->
+<!--                    <i class="fa-solid fa-rectangle-xmark"></i>-->
+<!--                  </button>-->
+<!--                  <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-12 col-md-6 col-lg-4">-->
+<!--      <div class="card" style="width: 100%;">-->
+<!--        <img height="250px" src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Ocean-Deluxe-double-bed-M-1047x563.jpg"-->
+<!--             class="card-img-top" alt="...">-->
+<!--        <div class="card-body">-->
+<!--          <h5 class="card-title">Ocean Deluxe</h5>-->
+<!--          <p class="card-text">Room size: 43.7 m <sup>2</sup></p>-->
 
-          <div style="margin-left: 75%">
-            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>
+<!--          <div style="margin-left: 75%">-->
+<!--            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>-->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </div>
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#exampleModal">-->
+<!--              <i class="fa-solid fa-trash-can"></i>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" style="color: red" id="exampleModalLabel3">Warning!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Do you want delete facility <span class="text-warning"></span>
-                  with id = <span class="text-warning"></span> ?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-rectangle-xmark"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row" style="margin-bottom: 5%">
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card" style="width: 100%;">
-        <img height="250px" src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Lagoon-Superior-twin-bed-M-1047x563.jpg"
-             class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Lagoon Superior</h5>
-          <p class="card-text">Room size: 40.1 m <sup>2</sup></p>
+<!--          &lt;!&ndash; Modal &ndash;&gt;-->
+<!--          <div class="modal fade" id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--               aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h5 class="modal-title" style="color: red" id="exampleModalLabel3">Warning!</h5>-->
+<!--                  <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                          aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                  Do you want delete facility <span class="text-warning"></span>-->
+<!--                  with id = <span class="text-warning"></span> ?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">-->
+<!--                    <i class="fa-solid fa-rectangle-xmark"></i>-->
+<!--                  </button>-->
+<!--                  <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="row" style="margin-bottom: 5%">-->
+<!--    <div class="col-sm-12 col-md-6 col-lg-4">-->
+<!--      <div class="card" style="width: 100%;">-->
+<!--        <img height="250px" src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Lagoon-Superior-twin-bed-M-1047x563.jpg"-->
+<!--             class="card-img-top" alt="...">-->
+<!--        <div class="card-body">-->
+<!--          <h5 class="card-title">Lagoon Superior</h5>-->
+<!--          <p class="card-text">Room size: 40.1 m <sup>2</sup></p>-->
 
-          <div style="margin-left: 75%">
-            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>
+<!--          <div style="margin-left: 75%">-->
+<!--            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>-->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </div>
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#exampleModal">-->
+<!--              <i class="fa-solid fa-trash-can"></i>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" style="color: red" id="exampleModalLabel4">Warning!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Do you want delete facility <span class="text-warning"></span>
-                  with id = <span class="text-warning"></span> ?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-rectangle-xmark"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--          &lt;!&ndash; Modal &ndash;&gt;-->
+<!--          <div class="modal fade" id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--               aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h5 class="modal-title" style="color: red" id="exampleModalLabel4">Warning!</h5>-->
+<!--                  <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                          aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                  Do you want delete facility <span class="text-warning"></span>-->
+<!--                  with id = <span class="text-warning"></span> ?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">-->
+<!--                    <i class="fa-solid fa-rectangle-xmark"></i>-->
+<!--                  </button>-->
+<!--                  <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
 
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card" style="width: 100%;">
-        <img height="250px"
-             src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Garden-Superior-TwinBed-1-F-370x239.jpg"
-             class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Garden Superior</h5>
-          <p class="card-text">Room size: 40.1 m <sup>2</sup></p>
-          <div style="margin-left: 75%">
-            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>
+<!--    <div class="col-sm-12 col-md-6 col-lg-4">-->
+<!--      <div class="card" style="width: 100%;">-->
+<!--        <img height="250px"-->
+<!--             src="https://furamavietnam.com/wp-content/uploads/2018/03/Vietnam_Danang_Furama_Garden-Superior-TwinBed-1-F-370x239.jpg"-->
+<!--             class="card-img-top" alt="...">-->
+<!--        <div class="card-body">-->
+<!--          <h5 class="card-title">Garden Superior</h5>-->
+<!--          <p class="card-text">Room size: 40.1 m <sup>2</sup></p>-->
+<!--          <div style="margin-left: 75%">-->
+<!--            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>-->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </div>
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#exampleModal">-->
+<!--              <i class="fa-solid fa-trash-can"></i>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" style="color: red" id="exampleModalLabel5">Warning!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Do you want delete facility <span class="text-warning"></span>
-                  with id = <span class="text-warning"></span> ?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-rectangle-xmark"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card" style="width: 100%;">
-        <img height="250px"
-             src="https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Garden-Deluxe-twin-bed-F-370x239.jpg"
-             class="card-img-top" alt="...">
-        <div class="card-body">
+<!--          &lt;!&ndash; Modal &ndash;&gt;-->
+<!--          <div class="modal fade" id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--               aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h5 class="modal-title" style="color: red" id="exampleModalLabel5">Warning!</h5>-->
+<!--                  <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                          aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                  Do you want delete facility <span class="text-warning"></span>-->
+<!--                  with id = <span class="text-warning"></span> ?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">-->
+<!--                    <i class="fa-solid fa-rectangle-xmark"></i>-->
+<!--                  </button>-->
+<!--                  <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-12 col-md-6 col-lg-4">-->
+<!--      <div class="card" style="width: 100%;">-->
+<!--        <img height="250px"-->
+<!--             src="https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Garden-Deluxe-twin-bed-F-370x239.jpg"-->
+<!--             class="card-img-top" alt="...">-->
+<!--        <div class="card-body">-->
 
-          <h5 class="card-title">Garden Deluxe</h5>
-          <p class="card-text">Room size: 43.7 m <sup>2</sup></p>
+<!--          <h5 class="card-title">Garden Deluxe</h5>-->
+<!--          <p class="card-text">Room size: 43.7 m <sup>2</sup></p>-->
 
-          <div style="margin-left: 75%">
-            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>
+<!--          <div style="margin-left: 75%">-->
+<!--            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>-->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </div>
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#exampleModal">-->
+<!--              <i class="fa-solid fa-trash-can"></i>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" style="color: red" id="exampleModalLabel6">Warning!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Do you want delete facility <span class="text-warning"></span>
-                  with id = <span class="text-warning"></span> ?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-rectangle-xmark"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row" style="margin-bottom: 5%">
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card" style="width: 100%;">
-        <img height="250px" src="http://dimg04.c-ctrip.com/images/0200t120008thruze52F9.jpg"
-             class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Presidential Suitte</h5>
-          <p class="card-text">Room size: 130 m <sup>2</sup></p>
+<!--          &lt;!&ndash; Modal &ndash;&gt;-->
+<!--          <div class="modal fade" id="exampleModal6" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--               aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h5 class="modal-title" style="color: red" id="exampleModalLabel6">Warning!</h5>-->
+<!--                  <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                          aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                  Do you want delete facility <span class="text-warning"></span>-->
+<!--                  with id = <span class="text-warning"></span> ?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">-->
+<!--                    <i class="fa-solid fa-rectangle-xmark"></i>-->
+<!--                  </button>-->
+<!--                  <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="row" style="margin-bottom: 5%">-->
+<!--    <div class="col-sm-12 col-md-6 col-lg-4">-->
+<!--      <div class="card" style="width: 100%;">-->
+<!--        <img height="250px" src="http://dimg04.c-ctrip.com/images/0200t120008thruze52F9.jpg"-->
+<!--             class="card-img-top" alt="...">-->
+<!--        <div class="card-body">-->
+<!--          <h5 class="card-title">Presidential Suitte</h5>-->
+<!--          <p class="card-text">Room size: 130 m <sup>2</sup></p>-->
 
-          <div style="margin-left: 75%">
-            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>
+<!--          <div style="margin-left: 75%">-->
+<!--            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>-->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </div>
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#exampleModal">-->
+<!--              <i class="fa-solid fa-trash-can"></i>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" style="color: red" id="exampleModalLabel7">Warning!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Do you want delete facility <span class="text-warning"></span>
-                  with id = <span class="text-warning"></span> ?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-rectangle-xmark"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card" style="width: 100%;">
-        <img height="250px"
-             src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/43345033.jpg?k=21b67e4d5a725a22825fe065d3b856df9842734249fecd135eb1969c0661200b&o=&hp=1"
-             class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title">Beach Front Villas</h5>
-          <p class="card-text">Room size: 900 m <sup>2</sup></p>
-          <div style="margin-left: 75%">
-            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>
+<!--          &lt;!&ndash; Modal &ndash;&gt;-->
+<!--          <div class="modal fade" id="exampleModal7" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--               aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h5 class="modal-title" style="color: red" id="exampleModalLabel7">Warning!</h5>-->
+<!--                  <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                          aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                  Do you want delete facility <span class="text-warning"></span>-->
+<!--                  with id = <span class="text-warning"></span> ?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">-->
+<!--                    <i class="fa-solid fa-rectangle-xmark"></i>-->
+<!--                  </button>-->
+<!--                  <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-12 col-md-6 col-lg-4">-->
+<!--      <div class="card" style="width: 100%;">-->
+<!--        <img height="250px"-->
+<!--             src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/43345033.jpg?k=21b67e4d5a725a22825fe065d3b856df9842734249fecd135eb1969c0661200b&o=&hp=1"-->
+<!--             class="card-img-top" alt="...">-->
+<!--        <div class="card-body">-->
+<!--          <h5 class="card-title">Beach Front Villas</h5>-->
+<!--          <p class="card-text">Room size: 900 m <sup>2</sup></p>-->
+<!--          <div style="margin-left: 75%">-->
+<!--            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>-->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </div>
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#exampleModal">-->
+<!--              <i class="fa-solid fa-trash-can"></i>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" style="color: red" id="exampleModalLabel8">Warning!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Do you want delete facility <span class="text-warning"></span>
-                  with id = <span class="text-warning"></span> ?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-rectangle-xmark"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-6 col-lg-4">
-      <div class="card" style="width: 100%;">
-        <img height="250px"
-             src="https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Pool_Villas-1047x563.jpg"
-             class="card-img-top" alt="...">
-        <div class="card-body">
+<!--          &lt;!&ndash; Modal &ndash;&gt;-->
+<!--          <div class="modal fade" id="exampleModal8" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--               aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h5 class="modal-title" style="color: red" id="exampleModalLabel8">Warning!</h5>-->
+<!--                  <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                          aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                  Do you want delete facility <span class="text-warning"></span>-->
+<!--                  with id = <span class="text-warning"></span> ?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">-->
+<!--                    <i class="fa-solid fa-rectangle-xmark"></i>-->
+<!--                  </button>-->
+<!--                  <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="col-sm-12 col-md-6 col-lg-4">-->
+<!--      <div class="card" style="width: 100%;">-->
+<!--        <img height="250px"-->
+<!--             src="https://furamavietnam.com/wp-content/uploads/2018/08/Vietnam_Danang_Furama_Villas_Pool_Villas-1047x563.jpg"-->
+<!--             class="card-img-top" alt="...">-->
+<!--        <div class="card-body">-->
 
-          <h5 class="card-title">Pool Villas</h5>
-          <p class="card-text">Room size: 320 m <sup>2</sup></p>
+<!--          <h5 class="card-title">Pool Villas</h5>-->
+<!--          <p class="card-text">Room size: 320 m <sup>2</sup></p>-->
 
-          <div style="margin-left: 75%">
-            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>
+<!--          <div style="margin-left: 75%">-->
+<!--            <a class="btn btn-success" href="facility_edit.html"><i class="fa-solid fa-pen"></i></a>-->
 
-            <!-- Button trigger modal -->
-            <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                    data-bs-target="#exampleModal">
-              <i class="fa-solid fa-trash-can"></i>
-            </button>
-          </div>
+<!--            &lt;!&ndash; Button trigger modal &ndash;&gt;-->
+<!--            <button type="button" class="btn btn-danger" data-bs-toggle="modal"-->
+<!--                    data-bs-target="#exampleModal">-->
+<!--              <i class="fa-solid fa-trash-can"></i>-->
+<!--            </button>-->
+<!--          </div>-->
 
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"
-               aria-hidden="true">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <h5 class="modal-title" style="color: red" id="exampleModalLabel9">Warning!</h5>
-                  <button type="button" class="btn-close" data-bs-dismiss="modal"
-                          aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                  Do you want delete facility <span class="text-warning"></span>
-                  with id = <span class="text-warning"></span> ?
-                </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
-                    <i class="fa-solid fa-rectangle-xmark"></i>
-                  </button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<!--          &lt;!&ndash; Modal &ndash;&gt;-->
+<!--          <div class="modal fade" id="exampleModal9" tabindex="-1" aria-labelledby="exampleModalLabel"-->
+<!--               aria-hidden="true">-->
+<!--            <div class="modal-dialog">-->
+<!--              <div class="modal-content">-->
+<!--                <div class="modal-header">-->
+<!--                  <h5 class="modal-title" style="color: red" id="exampleModalLabel9">Warning!</h5>-->
+<!--                  <button type="button" class="btn-close" data-bs-dismiss="modal"-->
+<!--                          aria-label="Close"></button>-->
+<!--                </div>-->
+<!--                <div class="modal-body">-->
+<!--                  Do you want delete facility <span class="text-warning"></span>-->
+<!--                  with id = <span class="text-warning"></span> ?-->
+<!--                </div>-->
+<!--                <div class="modal-footer">-->
+<!--                  <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">-->
+<!--                    <i class="fa-solid fa-rectangle-xmark"></i>-->
+<!--                  </button>-->
+<!--                  <button type="button" class="btn btn-primary">Save changes</button>-->
+<!--                </div>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
   </div>
   <nav aria-label="Page navigation example">
     <ul class="pagination justify-content-end">
