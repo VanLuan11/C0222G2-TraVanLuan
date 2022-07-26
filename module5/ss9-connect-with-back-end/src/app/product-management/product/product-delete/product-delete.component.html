@@ -1,0 +1,31 @@
+<h1>Xoá sản phẩm</h1>
+<form [formGroup]="productFormDelete" (ngSubmit)="delete(id)">
+  <table>
+    <tr>
+      <td><input type="hidden" formControlName="id"></td>
+    </tr>
+    <tr>
+      <td>Tên sản phẩm:</td>
+      <td><input type="text" formControlName="name"></td>
+    </tr>
+    <tr>
+      <td>Giá sản phẩm</td>
+      <td><input type="number" formControlName="price"></td>
+    </tr>
+    <tr>
+      <td>Mô tả về sản phẩm</td>
+      <td><input type="text" formControlName="description"></td>
+    </tr>
+    <tr>
+      <td>Danh mục sản phẩm</td>
+      <td>
+        <select formControlName="category" [compareWith]="compareCategory" [(ngModel)]="product.category">
+          <option *ngFor="let category of categories" [ngValue]="category">{{category.name}}</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><button>Xoá</button></td>
+    </tr>
+  </table>
+</form>

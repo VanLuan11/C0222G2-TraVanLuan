@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup} from '@angular/forms';
 import {ActivatedRoute, ParamMap, Router} from '@angular/router';
 import {ProductService} from '../../service/product.service';
@@ -13,6 +13,7 @@ export class ProductDeleteComponent implements OnInit {
   productForm: FormGroup;
   id: number;
   p: Product;
+
   constructor(private activatedRoute: ActivatedRoute,
               private productService: ProductService,
               private route: Router) {
@@ -33,7 +34,8 @@ export class ProductDeleteComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  delete(){
+
+  delete() {
     this.productService.deleteProduct(this.id);
     this.route.navigateByUrl('/list');
   }

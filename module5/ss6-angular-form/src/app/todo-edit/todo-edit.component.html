@@ -1,0 +1,14 @@
+
+<div class="container">
+  <form [formGroup]="todoFormEdit" *ngIf="todoForm" (ngSubmit)="updateTodo()">
+    <div>
+      <label>ID</label>
+      <input type="text"  formControlName="id">
+    </div>
+    <div>
+      <label>content</label>
+      <input type="text" formControlName="content" >
+    </div>
+    <button>SAVE</button>
+  </form>
+</div>

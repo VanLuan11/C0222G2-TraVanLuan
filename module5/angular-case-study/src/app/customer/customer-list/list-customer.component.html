@@ -26,13 +26,13 @@
       <th>Email</th>
       <th>CustomerType</th>
       <th>Address</th>
-      <th>Edit</th>
-      <th>Delete</th>
+      <th colspan="2" style="text-align: center">Action</th>
+
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let c of customer">
-      <td>{{c.id}}</td>
+    <tr *ngFor="let c of customer; index as i">
+      <td>{{i+1}}</td>
       <td>{{c.name}}</td>
       <td>{{c.dateOfBirth | date:'dd-MM-yyyy'}}</td>
       <td>

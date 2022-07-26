@@ -1,0 +1,106 @@
+{
+  "product": [
+    {
+      "id": 2,
+      "name": "IPhone 11",
+      "price": 1560000,
+      "description": "Like new",
+      "category": {
+        "id": 1,
+        "name": "IPhone"
+      }
+    },
+    {
+      "id": 3,
+      "name": "IPhone X",
+      "price": 968000,
+      "description": "97%",
+      "category": {
+        "id": 1,
+        "name": "IPhone"
+      }
+    },
+    {
+      "id": 4,
+      "name": "IPhone 8",
+      "price": 7540000,
+      "description": "98%",
+      "category": {
+        "id": 1,
+        "name": "IPhone"
+      }
+    },
+    {
+      "id": 5,
+      "name": "IPhone 11 Pro",
+      "price": 1895000,
+      "description": "Like new",
+      "category": {
+        "id": 1,
+        "name": "IPhone"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Tivi LG",
+      "price": 12312,
+      "description": "New",
+      "category": {
+        "id": 3,
+        "name": "LG"
+      }
+    },
+    {
+      "id": 7,
+      "name": "7",
+      "price": 7,
+      "description": "7",
+      "category": {
+        "id": 2,
+        "name": "Samsung"
+      }
+    },
+    {
+      "id": 8,
+      "name": "8",
+      "price": 8,
+      "description": "8",
+      "category": {
+        "id": 2,
+        "name": "Samsung"
+      }
+    },
+    {
+      "name": "asdads",
+      "price": 1231,
+      "description": "123123",
+      "category": {
+        "id": 2,
+        "name": "Samsung"
+      },
+      "id": 9
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "IPhone"
+    },
+    {
+      "id": 2,
+      "name": "Samsung"
+    },
+    {
+      "id": 3,
+      "name": "LG"
+    },
+    {
+      "id": 4,
+      "name": "ads"
+    },
+    {
+      "id": 5,
+      "name": "eqe"
+    }
+  ]
+}

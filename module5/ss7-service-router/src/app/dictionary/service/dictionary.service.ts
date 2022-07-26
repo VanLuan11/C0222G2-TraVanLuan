@@ -11,8 +11,8 @@ export class DictionaryService {
     this.dictionary.push({word: 'Hello', mean: 'chào'},
       {word: 'Dog', mean: 'Chó'},
       {word: 'Cat', mean: 'Mèo'},
-      {word: 'bird', mean: 'Chim'},
-      {word: 'fish', mean: 'Cá'});
+      {word: 'Bird', mean: 'Chim'},
+      {word: 'Fish', mean: 'Cá'});
   }
 
   findAll() {
