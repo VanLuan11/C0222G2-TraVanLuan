@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {FormControl, FormGroup} from "@angular/forms";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Customer} from "../../model/customer";
 import {CustomerType} from "../../model/customer-type";
 import {ActivatedRoute, convertToParamMap, Router} from "@angular/router";
 import {CustomerService} from "../../service/customer.service";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-edit-customer',
@@ -17,14 +18,15 @@ export class EditCustomerComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
               private customerService: CustomerService,
-              private router: Router) {
+              private router: Router,
+              private toastr: ToastrService) {
   }
 
   ngOnInit(): void {
     this.getCustomerFindById()
   }
 
-  getCustomerFindById(){
+  getCustomerFindById() {
     this.activatedRoute.paramMap.subscribe((paramMap) => {
       const idEdit = +paramMap.get('id');
       this.customerService.findById(idEdit).subscribe(customer => {
@@ -34,14 +36,14 @@ export class EditCustomerComponent implements OnInit {
         }, () => {
           this.customerFormEdit = new FormGroup({
             id: new FormControl(customer.id),
-            name: new FormControl(customer.name),
-            dateOfBirth: new FormControl(customer.dateOfBirth),
-            gender: new FormControl(customer.gender),
-            idCard: new FormControl(customer.idCard),
-            phone: new FormControl(customer.phone),
-            email: new FormControl(customer.email),
-            customerType: new FormControl(customer.customerType),
-            address: new FormControl(customer.address)
+            name: new FormControl(customer.name, [Validators.required, Validators.pattern('^([A-Z][^A-Z0-9\\s]+)(\\s[A-Z][^A-Z0-9\\s]+)*$')]),
+            dateOfBirth: new FormControl(customer.dateOfBirth, [Validators.required]),
+            gender: new FormControl(customer.gender, [Validators.required]),
+            idCard: new FormControl(customer.idCard, [Validators.required, Validators.pattern('^[0-9]{6,9}$')]),
+            phone: new FormControl(customer.phone, [Validators.required, Validators.pattern('^[\+84][0-9]{9,10}$')]),
+            email: new FormControl(customer.email, [Validators.required, Validators.email]),
+            customerType: new FormControl(customer.customerType, [Validators.required]),
+            address: new FormControl(customer.address, [Validators.required]),
           })
         })
       })
@@ -49,20 +51,30 @@ export class EditCustomerComponent implements OnInit {
   }
 
 
-  update(){
+  update() {
     console.log(this.customerFormEdit.value)
-    this.customerService.updateCustomer(this.customerFormEdit.value).subscribe(value => {
-
-    },error => {}, ()=>{
-      this.router.navigateByUrl('customer-list').then(() =>{
-        alert('Update success!')
+    if (this.customerFormEdit.valid) {
+      this.customerService.updateCustomer(this.customerFormEdit.value).subscribe(value => {
+      }, error => {
+      }, () => {
+        this.router.navigateByUrl('customer-list').then(() => {
+          alert('Update success!')
+        })
       })
-    })
+    }
   }
+
   compareCustomerType(c1: CustomerType, c2: CustomerType): boolean {
     if ((c1 && c2) != undefined) {
       console.log(c1.id === c2.id);
       return c1.id === c2.id;
     }
+  }
+
+  showToastr() {
+    this.toastr.success('Update success!', 'Tittle', {
+      timeOut: 1500,
+      progressBar: true,
+    });
   }
 }

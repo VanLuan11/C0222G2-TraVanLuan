@@ -8,11 +8,19 @@
       <div class="mb-3 mt-3 col-6">
         <label>Name</label>
         <input type="text" class="form-control" formControlName="name">
+        <small style="color: red" *ngIf="customerFormEdit.controls.name.hasError('required') &&
+         customerFormEdit.controls.name.touched">Name cannot be empty!</small>
+
+        <small style="color: red" *ngIf="customerFormEdit.controls.name.hasError('pattern') &&
+         customerFormEdit.controls.name.touched">First letter capitalized and no numbers!</small>
       </div>
 
       <div class="mb-3 mt-3  col-6">
         <label>Date of birth</label>
         <input type="date" class="form-control" formControlName="dateOfBirth">
+
+        <small style="color: red" *ngIf="customerFormEdit.controls.dateOfBirth.hasError('required') &&
+         customerFormEdit.controls.dateOfBirth.touched">Date of birth cannot be empty!</small>
       </div>
     </div>
 
@@ -23,22 +31,41 @@
           <option value="1">Nam</option>
           <option value="0">Nữ</option>
         </select>
+
+        <small style="color: red" *ngIf="customerFormEdit.controls.gender.hasError('required') &&
+         customerFormEdit.controls.gender.touched">Gender cannot be empty!</small>
       </div>
 
       <div class="mb-3 mt-3 col-6 ">
         <label>Id Card</label>
         <input type="text" class="form-control" formControlName="idCard">
+        <small style="color: red" *ngIf="customerFormEdit.controls.idCard.hasError('required') &&
+         customerFormEdit.controls.idCard.touched">Id card cannot be empty!</small>
+
+        <small style="color: red" *ngIf="customerFormEdit.controls.idCard.hasError('pattern') &&
+         customerFormEdit.controls.idCard.touched">Id card from 0->9 numbers!</small>
       </div>
     </div>
     <div class="row">
       <div class="mb-3 mt-3 col-6 ">
         <label>Phone</label>
         <input type="text" class="form-control" formControlName="phone">
+        <small style="color: red" *ngIf="customerFormEdit.controls.phone.hasError('required') &&
+         customerFormEdit.controls.phone.touched">Phone cannot be empty!</small>
+
+        <small style="color: red" *ngIf="customerFormEdit.controls.phone.hasError('pattern') &&
+         customerFormEdit.controls.phone.touched">Phone (84)+90xxxxxxx or (84)+91xxxxxxx!</small>
       </div>
 
       <div class="mb-3 mt-3  col-6" id="descriptionOtherConvenience">
         <label>Email</label>
         <input type="email" class="form-control" formControlName="email">
+
+        <small style="color: red" *ngIf="customerFormEdit.controls.email.hasError('required') &&
+         customerFormEdit.controls.email.touched">Email cannot be empty!</small>
+
+        <small style="color: red" *ngIf="customerFormEdit.controls.email.hasError('email') &&
+         customerFormEdit.controls.email.touched">Email lethitaidn@gmail.com!</small>
       </div>
     </div>
 
@@ -48,14 +75,18 @@
         <select formControlName="customerType" class="form-control" [compareWith]="compareCustomerType">
           <option *ngFor="let customerType1 of customerType" [ngValue]="customerType1">{{customerType1.name}}</option>
         </select>
+        <small style="color: red" *ngIf="customerFormEdit.controls.customerType.hasError('required') &&
+         customerFormEdit.controls.customerType.touched">Customer type cannot be empty!</small>
       </div>
 
       <div class="mb-3 mt-3 col-6 ">
         <label>Address</label>
         <input type="text" class="form-control" formControlName="address">
+        <small style="color: red" *ngIf="customerFormEdit.controls.address.hasError('required') &&
+         customerFormEdit.controls.address.touched">Address cannot be empty!</small>
       </div>
     </div>
-    <button type="submit" class="btn btn-success" style="margin: 5px"><i class="fa-solid fa-pen"></i></button>
+    <button type="submit" class="btn btn-success" (click)="showToastr()" style="margin: 5px"><i class="fa-solid fa-pen"></i></button>
     <button type="button" class="btn btn-danger" [routerLink]="['/customer-list']"><i class="fa-solid fa-share"></i>
     </button>
   </form>

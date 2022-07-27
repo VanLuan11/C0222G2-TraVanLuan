@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Customer} from "../../model/customer";
 import {CustomerService} from "../../service/customer.service";
 import {Router} from "@angular/router";
+import {ToastrService} from "ngx-toastr";
 
 @Component({
   selector: 'app-list-customer',
@@ -16,11 +17,12 @@ export class ListCustomerComponent implements OnInit {
   p: number = 1;
 
   constructor(private customerService: CustomerService,
-              private router: Router) {
+              private router: Router,
+              private toastr: ToastrService) {
   }
 
   ngOnInit(): void {
-   this.getAllCustomer()
+    this.getAllCustomer()
   }
 
   deleteCustomer() {
@@ -36,9 +38,17 @@ export class ListCustomerComponent implements OnInit {
     this.name = c.name
     this.phone = c.phone
   }
-  getAllCustomer(){
+
+  getAllCustomer() {
     this.customerService.getAllCustomer().subscribe(data => {
       this.customer = data;
     })
+  }
+
+  showToastr() {
+    this.toastr.success('Delete success!', 'Tittle', {
+      timeOut: 1500,
+      progressBar: true,
+    });
   }
 }

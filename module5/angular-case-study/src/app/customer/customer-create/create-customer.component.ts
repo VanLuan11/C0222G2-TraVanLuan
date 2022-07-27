@@ -4,6 +4,8 @@ import {Customer} from "../../model/customer";
 import {ActivatedRoute, Router} from "@angular/router";
 import {CustomerService} from "../../service/customer.service";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
+import {ToastrService} from "ngx-toastr";
+import {timeout} from "rxjs/operators";
 
 @Component({
   selector: 'app-create-customer',
@@ -18,35 +20,47 @@ export class CreateCustomerComponent implements OnInit {
 
   constructor(private activatedRoute: ActivatedRoute,
               private customerService: CustomerService,
-              private router: Router) {
+              private router: Router,
+              private toastr: ToastrService) {
   }
 
   ngOnInit() {
+    this.createValidate()
+  }
+
+  createValidate() {
     this.customerService.getAllCustomerType().subscribe(data => {
       this.customerType = data;
-    },error => {}, ()=>{
+    }, error => {
+    }, () => {
       this.customerFormCreate = new FormGroup({
-        name: new FormControl('',[Validators.required, Validators.pattern('^([A-Z][^A-Z0-9\s]+)(\s[A-Z][^A-Z0-9\s]+)*$')]),
-        dateOfBirth: new FormControl('',[Validators.required]),
-        gender: new FormControl('',[Validators.required]),
-        idCard: new FormControl('',[Validators.required, Validators.pattern('^[0-9]{6,9}$')]),
-        phone: new FormControl('',[Validators.required, Validators.pattern('^[\+84][0-9]{9,10}$')]),
-        email: new FormControl('',[Validators.required, Validators.email]),
-        customerType: new FormControl('',[Validators.required]),
-        address: new FormControl('',[Validators.required]),
+        name: new FormControl('', [Validators.required, Validators.pattern('^([A-Z][^A-Z0-9\\s]+)(\\s[A-Z][^A-Z0-9\\s]+)*$')]),
+        dateOfBirth: new FormControl('', [Validators.required]),
+        gender: new FormControl('', [Validators.required]),
+        idCard: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{6,9}$')]),
+        phone: new FormControl('', [Validators.required, Validators.pattern('^[\+84][0-9]{9,10}$')]),
+        email: new FormControl('', [Validators.required, Validators.email]),
+        customerType: new FormControl('', [Validators.required]),
+        address: new FormControl('', [Validators.required]),
       })
     })
   }
+
   create() {
     console.log(this.customerFormCreate.value);
-    if (this.customerFormCreate.valid){
+    if (this.customerFormCreate.valid) {
       this.customerService.saveCustomer(this.customerFormCreate.value).subscribe(data => {
         this.router.navigateByUrl("/customer-list").then(() => {
-          alert("Create success!");
         })
-      });
-    }else {
-     alert('Bạn phải nhập thông tin mới đươc')
+      })
     }
+  }
+
+  showToastr() {
+    this.toastr.success('Create success!', 'Tittle', {
+      timeOut:1500,
+      progressBar: true,
+
+    });
   }
 }

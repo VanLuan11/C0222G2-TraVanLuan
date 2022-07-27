@@ -1,9 +1,9 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
-  "version": 1,
+  "version": 1, 
   "newProjectRoot": "projects",
   "projects": {
-    "angular-case-study": {
+    "exam-module5": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-case-study",
+            "outputPath": "dist/exam-module5",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -24,7 +24,6 @@
               "src/assets"
             ],
             "styles": [
-              "node_modules/ngx-toastr/toastr.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -63,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-case-study:build"
+            "browserTarget": "exam-module5:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-case-study:build:production"
+              "browserTarget": "exam-module5:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-case-study:build"
+            "browserTarget": "exam-module5:build"
           }
         },
         "test": {
@@ -111,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-case-study:serve"
+            "devServerTarget": "exam-module5:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-case-study:serve:production"
+              "devServerTarget": "exam-module5:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "angular-case-study"
+  "defaultProject": "exam-module5"
 }

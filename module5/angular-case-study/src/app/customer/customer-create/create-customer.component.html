@@ -54,7 +54,7 @@
          customerFormCreate.controls.phone.touched">Phone cannot be empty!</small>
 
         <small style="color: red" *ngIf="customerFormCreate.controls.phone.hasError('pattern') &&
-         customerFormCreate.controls.phone.touched">Phone cannot be formatted! example: (84)+90xxxxxxx or (84)+91xxxxxxx!</small>
+         customerFormCreate.controls.phone.touched">Phone (84)+90xxxxxxx or (84)+91xxxxxxx!</small>
       </div>
 
       <div class="mb-3 mt-3  col-6">
@@ -65,7 +65,7 @@
          customerFormCreate.controls.email.touched">Email cannot be empty!</small>
 
         <small style="color: red" *ngIf="customerFormCreate.controls.email.hasError('email') &&
-         customerFormCreate.controls.email.touched">Email cannot be formatted! example: lethitaidn@gmail.com</small>
+         customerFormCreate.controls.email.touched">Email lethitaidn@gmail.com!</small>
 
       </div>
     </div>
@@ -89,7 +89,7 @@
          customerFormCreate.controls.address.touched">Address cannot be empty!</small>
       </div>
     </div>
-    <button type="submit" class="btn btn-success" style="margin: 5px"><i class="fa-solid fa-plus-minus"></i></button>
+    <button type="submit" class="btn btn-success" (click)="showToastr()" style="margin: 5px"><i class="fa-solid fa-plus-minus"></i></button>
     <button type="button" class="btn btn-danger"  [routerLink]="['/customer-list']"><i class="fa-solid fa-share"></i>
     </button>
   </form>

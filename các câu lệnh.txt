@@ -1,7 +1,15 @@
 //cài json
 npm install -g json-server
+
 //chạy json
 json-server --watch db.json
+
 //cài phần trang
 npm i ngx-pagination
+
+// cài thông báo
+npm install ngx-toastr@12.1.0
+
+//chạy thônng báo
+npm install @angular/animations
 
