@@ -1,5 +1,5 @@
 {
-  "name": "angular-case-study",
+  "name": "ss8-modules-and-di",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -42,7 +42,6 @@
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~5.18.0",
-    "typescript": "~3.7.5",
-    "ngx-pagination": "~5.1.1"
+    "typescript": "~3.7.5"
   }
 }

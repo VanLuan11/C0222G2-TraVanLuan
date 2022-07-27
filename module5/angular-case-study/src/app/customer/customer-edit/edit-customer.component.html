@@ -1,73 +1,62 @@
 <div class="container" style="margin-top: 10%">
   <h2>Edit Customer</h2>
-  <form method="post" novalidate="novalidate">
+  <form [formGroup]="customerFormEdit" (ngSubmit)="update()">
+
+      <input type="text" class="form-control" formControlName="id" hidden>
+
     <div class="row">
       <div class="mb-3 mt-3 col-6">
-        <label>Id</label>
-        <input type="text" class="form-control" >
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="name">
       </div>
 
-      <div class="mb-3 mt-3 col-6">
-        <label>Name</label>
-        <input type="text" class="form-control" >
+      <div class="mb-3 mt-3  col-6">
+        <label>Date of birth</label>
+        <input type="date" class="form-control" formControlName="dateOfBirth">
       </div>
     </div>
 
     <div class="row">
-      <div class="mb-3 mt-3  col-6">
-        <label>Date of birth</label>
-        <input type="date" class="form-control" >
-      </div>
-
       <div class="mb-3 mt-3 col-6 ">
         <label>Gender</label>
-        <select  class="form-control">
-          <option value="2">Khác</option>
+        <select  class="form-control" formControlName="gender">
           <option value="1">Nam</option>
           <option value="0">Nữ</option>
         </select>
       </div>
-    </div>
-    <div class="row">
+
       <div class="mb-3 mt-3 col-6 ">
         <label>Id Card</label>
-        <input type="text" class="form-control" >
+        <input type="text" class="form-control" formControlName="idCard">
       </div>
-
+    </div>
+    <div class="row">
       <div class="mb-3 mt-3 col-6 ">
         <label>Phone</label>
-        <input type="text" class="form-control" >
+        <input type="text" class="form-control" formControlName="phone">
       </div>
-    </div>
 
-    <div class="row">
       <div class="mb-3 mt-3  col-6" id="descriptionOtherConvenience">
         <label>Email</label>
-        <input type="email" class="form-control">
-      </div>
-
-      <div class="mb-3 mt-3 col-6 ">
-        <label>Type of customer</label>
-        <select class="form-control">
-          <option value="" >Choose type of customer</option>
-          <option value="1" >Diamond</option>
-          <option value="2" >Platinium</option>
-          <option value="3" >Gold</option>
-          <option value="4" >Silver</option>
-          <option value="5" >Member</option>
-        </select>
+        <input type="email" class="form-control" formControlName="email">
       </div>
     </div>
 
     <div class="row">
       <div class="mb-3 mt-3 col-6 ">
+        <label>Type of customer</label>
+        <select formControlName="customerType" class="form-control" [compareWith]="compareCustomerType">
+          <option *ngFor="let customerType1 of customerType" [ngValue]="customerType1">{{customerType1.name}}</option>
+        </select>
+      </div>
+
+      <div class="mb-3 mt-3 col-6 ">
         <label>Address</label>
-        <input type="text" class="form-control" >
+        <input type="text" class="form-control" formControlName="address">
       </div>
     </div>
-    <button type="submit" class="btn btn-success"><i class="fa-solid fa-pen"></i></button>
-    <button type="button" class="btn btn-danger">
-      <a style="color: white" [routerLink]="['/customer-list']"><i class="fa-solid fa-share"></i></a>
+    <button type="submit" class="btn btn-success" style="margin: 5px"><i class="fa-solid fa-pen"></i></button>
+    <button type="button" class="btn btn-danger" [routerLink]="['/customer-list']"><i class="fa-solid fa-share"></i>
     </button>
   </form>
 </div>

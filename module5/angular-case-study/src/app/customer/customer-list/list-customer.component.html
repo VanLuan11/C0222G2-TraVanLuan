@@ -7,11 +7,11 @@
     </div>
 
     <div class="col-3">
-      <form class="d-flex">
+      <div class="d-flex">
         <input class="form-control me-2 buttons1" type="search" name="search"
                aria-label="Search" placeholder="search">
         <button class="btn btn-success buttons1" type="submit" name="name">Search</button>
-      </form>
+      </div>
     </div>
   </div>
   <table class="table table-hover">
@@ -27,21 +27,20 @@
       <th>CustomerType</th>
       <th>Address</th>
       <th colspan="2" style="text-align: center">Action</th>
-
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let c of customer; index as i">
+    <tr *ngFor="let c of customer | paginate: {itemsPerPage: 3, currentPage: p}; index as i">
       <td>{{i+1}}</td>
       <td>{{c.name}}</td>
       <td>{{c.dateOfBirth | date:'dd-MM-yyyy'}}</td>
       <td>
         <span ngSwitch="{{c.gender}}">
-              <span *ngSwitchCase="1">
-                Nam
-              </span>
               <span *ngSwitchCase="0">
-                Nữ
+                Male
+              </span>
+              <span *ngSwitchCase="1">
+                Female
               </span>
               <span *ngSwitchDefault>
                 Khác
@@ -51,49 +50,24 @@
       <td>{{c.idCard}}</td>
       <td>{{c.phone}}</td>
       <td>{{c.email}}</td>
-      <td>
-        <span ngSwitch="{{c.customerType}}">
-            <span *ngSwitchCase="3">
-                tầng cao xã hội
-              </span>
-              <span *ngSwitchCase="2">
-                tầng trung xã hội
-              </span>
-              <span *ngSwitchCase="1">
-                tầng thấp xã hội
-              </span>
-              <span *ngSwitchCase="0">
-                dưới đáy xã hội
-              </span>
-        </span>
-      </td>
+      <td>{{c.customerType.name}}</td>
       <td>{{c.address}}</td>
       <td>
-        <a class="btn btn-success" [routerLink]="['/customer-edit']"><i class="fa-solid fa-pen"></i></a>
+        <a class="btn btn-success" [routerLink]="['/customer-edit',c.id]"><i class="fa-solid fa-pen"></i></a>
       </td>
       <td>
         <!-- Button delete modal -->
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
-                data-bs-target="#exampleModal">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        (click)="showDelete(c)">
           <i class="fa-solid fa-trash-can"></i>
         </button>
       </td>
     </tr>
     </tbody>
   </table>
-  <nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-end">
-      <li class="page-item disabled">
-        <a class="page-link" href="#" tabindex="-1" aria-disabled="true"><i class="fa-solid fa-angles-left  "></i></a>
-      </li>
-      <li class="page-item"><a class="page-link" href="#">1</a></li>
-      <li class="page-item"><a class="page-link" href="#">2</a></li>
-      <li class="page-item"><a class="page-link" href="#">3</a></li>
-      <li class="page-item">
-        <a class="page-link" href="#"><i class="fa-solid fa-angles-right"></i></a>
-      </li>
-    </ul>
-  </nav>
+</div>
+<div class="container">
+  <pagination-controls (pageChange)="p = $event" class="d-flex flex-row-reverse"></pagination-controls>
 </div>
 
 <!-- Modal delete -->
@@ -107,14 +81,13 @@
                 aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Do you want delete customer <span class="text-warning"></span>
-        with id = <span class="text-warning"></span> ?
+        Do you want delete customer {{name}} with Phone {{phone}} ?
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-outline-dark" data-bs-dismiss="modal">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
           <i class="fa-solid fa-rectangle-xmark"></i>
         </button>
-        <button type="button" class="btn btn-outline-danger">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal"  (click)="deleteCustomer()">
           <i class="fa-solid fa-trash-can"></i></button>
       </div>
     </div>

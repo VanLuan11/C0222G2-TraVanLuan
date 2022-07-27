@@ -19,7 +19,7 @@ const routes: Routes = [
   {path: 'facility-edit', component: EditFacilityComponent},
   {path: 'customer-list', component: ListCustomerComponent},
   {path: 'customer-create', component: CreateCustomerComponent},
-  {path: 'customer-edit', component: EditCustomerComponent},
+  {path: 'customer-edit/:id', component: EditCustomerComponent},
   {path: 'contract-list', component: ListContractComponent},
   {path: 'contract-create', component: CreateContractComponent},
 

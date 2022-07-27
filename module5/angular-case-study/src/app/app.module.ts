@@ -7,7 +7,6 @@ import { HomeComponent } from './home/home.component';
 import { HeaderComponent } from './common/header/header.component';
 import { FooterComponent } from './common/footer/footer.component';
 import { ListFacilityComponent } from './facility/facility-list/list-facility.component';
-
 import { ListCustomerComponent } from './customer/customer-list/list-customer.component';
 import { EditFacilityComponent } from './facility/facility-edit/edit-facility.component';
 import { CreateFacilityComponent } from './facility/facility-create/create-facility.component';
@@ -15,6 +14,9 @@ import { EditCustomerComponent } from './customer/customer-edit/edit-customer.co
 import { CreateCustomerComponent } from './customer/customer-create/create-customer.component';
 import { ListContractComponent } from './contract/contract-list/list-contract.component';
 import { CreateContractComponent } from './contract/contract-create/create-contract.component';
+import {HttpClientModule} from "@angular/common/http";
+import {ReactiveFormsModule} from "@angular/forms";
+import {NgxPaginationModule} from "ngx-pagination";
 
 
 
@@ -36,6 +38,9 @@ import { CreateContractComponent } from './contract/contract-create/create-contr
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxPaginationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

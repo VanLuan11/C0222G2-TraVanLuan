@@ -1,6 +1,6 @@
 import {Component, OnInit} from '@angular/core';
-import {Contract} from "../contract";
-import {Customer} from "../../customer/customer";
+import {Contract} from "../../model/contract";
+import {Customer} from "../../model/customer";
 
 @Component({
   selector: 'app-list-contract',
