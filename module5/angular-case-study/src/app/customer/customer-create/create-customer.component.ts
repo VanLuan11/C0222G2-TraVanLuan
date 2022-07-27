@@ -50,7 +50,7 @@ export class CreateCustomerComponent implements OnInit {
     console.log(this.customerFormCreate.value);
     if (this.customerFormCreate.valid) {
       this.customerService.saveCustomer(this.customerFormCreate.value).subscribe(data => {
-        this.router.navigateByUrl("/customer-list").then(() => {
+        this.router.navigateByUrl("customer-list").then(() => {
         })
       })
     }

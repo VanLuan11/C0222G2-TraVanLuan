@@ -9,8 +9,8 @@
       "phone": "0912342342",
       "email": "lethitaidn@gmail.com",
       "customerType": {
-        "id": 5,
-        "name": "Member"
+        "id": 3,
+        "name": "Gold"
       },
       "address": "Da Nang"
     },
@@ -23,8 +23,8 @@
       "phone": "0912342342",
       "email": "lethibingdn@gmail.com",
       "customerType": {
-        "id": 4,
-        "name": "Silver"
+        "id": 5,
+        "name": "Member"
       },
       "address": "Da Nang"
     },
@@ -39,6 +39,20 @@
       "customerType": {
         "id": 2,
         "name": "Platinium"
+      },
+      "address": "Da Nang"
+    },
+    {
+      "id": 4,
+      "name": "Lệ Thị Tài",
+      "dateOfBirth": "1990-03-09",
+      "gender": 0,
+      "idCard": "98866666",
+      "phone": "0912342342",
+      "email": "lethitaidn@gmail.com",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
       },
       "address": "Da Nang"
     }

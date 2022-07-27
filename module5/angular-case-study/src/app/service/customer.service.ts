@@ -39,4 +39,7 @@ export class CustomerService {
   updateCustomer(customer: Customer): Observable<Customer> {
     return this.httpClient.patch(this.URL_CUSTOMER + '/' + customer.id, customer);
   }
+  customerListBySearch(searchName: string, searchIdCard: string): Observable<Customer[]>{
+    return this.httpClient.get<Customer[]>("http://localhost:3000/customer?name_like=" + searchName + "&idCard_like=" + searchIdCard);
+  }
 }
