@@ -34,11 +34,11 @@ export class CreateCustomerComponent implements OnInit {
     }, error => {
     }, () => {
       this.customerFormCreate = new FormGroup({
-        name: new FormControl('', [Validators.required, Validators.pattern('^([A-Z][^A-Z0-9\\s]+)(\\s[A-Z][^A-Z0-9\\s]+)*$')]),
+        name: new FormControl('', [Validators.required, Validators.pattern(/^([A-Z][^A-Z0-9\s]+)(\s[A-Z][^A-Z0-9\s]+)*$/)]),
         dateOfBirth: new FormControl('', [Validators.required]),
         gender: new FormControl('', [Validators.required]),
-        idCard: new FormControl('', [Validators.required, Validators.pattern('^[0-9]{6,9}$')]),
-        phone: new FormControl('', [Validators.required, Validators.pattern('^[\+84][0-9]{9,10}$')]),
+        idCard: new FormControl('', [Validators.required, Validators.pattern(/^[0-9]{6,9}$/)]),
+        phone: new FormControl('', [Validators.required, Validators.pattern(/^[\+84][0-9]{9,10}$/)]),
         email: new FormControl('', [Validators.required, Validators.email]),
         customerType: new FormControl('', [Validators.required]),
         address: new FormControl('', [Validators.required]),
@@ -57,8 +57,8 @@ export class CreateCustomerComponent implements OnInit {
   }
 
   showToastr() {
-    this.toastr.success('Create success!', 'Tittle', {
-      timeOut:1500,
+    this.toastr.success('Success!', 'Create', {
+      timeOut:1000,
       progressBar: true,
 
     });

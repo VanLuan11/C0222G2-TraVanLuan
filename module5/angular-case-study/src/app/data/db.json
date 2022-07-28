@@ -5,8 +5,8 @@
       "name": "Lệ Thị Tài",
       "dateOfBirth": "1990-03-09",
       "gender": 0,
-      "idCard": "123123132",
-      "phone": "0912342342",
+      "idCard": "785649756",
+      "phone": "0917345673",
       "email": "lethitaidn@gmail.com",
       "customerType": {
         "id": 3,
@@ -19,7 +19,7 @@
       "name": "Lệ Thị Bình",
       "dateOfBirth": "2004-05-07",
       "gender": 1,
-      "idCard": "123123132",
+      "idCard": "969478688",
       "phone": "0912342342",
       "email": "lethibingdn@gmail.com",
       "customerType": {
@@ -33,8 +33,8 @@
       "name": "Lệ Thị Phương",
       "dateOfBirth": "2000-09-02",
       "gender": 0,
-      "idCard": "123123132",
-      "phone": "0912342342",
+      "idCard": "875765677",
+      "phone": "098346555",
       "email": "lethiphuongdn@gmail.com",
       "customerType": {
         "id": 2,
@@ -44,12 +44,26 @@
     },
     {
       "id": 4,
-      "name": "Lệ Thị Tài",
-      "dateOfBirth": "1990-03-09",
+      "name": "Lệ Thị Phúc",
+      "dateOfBirth": "1999-08-02",
       "gender": 0,
-      "idCard": "98866666",
+      "idCard": "988666668",
       "phone": "0912342342",
-      "email": "lethitaidn@gmail.com",
+      "email": "lethiphucdn@gmail.com",
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      },
+      "address": "Da Nang"
+    },
+    {
+      "id": 5,
+      "name": "Lệ Thị Hậu",
+      "dateOfBirth": "2000-08-17",
+      "gender": 0,
+      "idCard": "837693486",
+      "phone": "0912474545",
+      "email": "lethihaudn@gmail.com",
       "customerType": {
         "id": 3,
         "name": "Gold"

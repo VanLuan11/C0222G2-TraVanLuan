@@ -1,6 +1,6 @@
 <div class="container" style="margin-top: 10%">
   <h2>Edit Customer</h2>
-  <form [formGroup]="customerFormEdit" (ngSubmit)="update()">
+  <form [formGroup]="customerFormEdit" (ngSubmit)="update()" *ngIf="customerFormEdit">
 
       <input type="text" class="form-control" formControlName="id" hidden>
 
@@ -72,9 +72,11 @@
     <div class="row">
       <div class="mb-3 mt-3 col-6 ">
         <label>Type of customer</label>
+
         <select formControlName="customerType" class="form-control" [compareWith]="compareCustomerType">
           <option *ngFor="let customerType1 of customerType" [ngValue]="customerType1">{{customerType1.name}}</option>
         </select>
+
         <small style="color: red" *ngIf="customerFormEdit.controls.customerType.hasError('required') &&
          customerFormEdit.controls.customerType.touched">Customer type cannot be empty!</small>
       </div>

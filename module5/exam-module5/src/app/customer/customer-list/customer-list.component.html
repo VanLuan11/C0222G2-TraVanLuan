@@ -1,0 +1,100 @@
+<div class="container" style="margin-top: 10%">
+  <h1 style="margin-left: 45%">Customer</h1>
+
+  <div class="row">
+    <div class="col-6">
+      <a class="btn btn-success" [routerLink]="['/customer-create']"><i class="fa-solid fa-plus-minus"></i></a>
+    </div>
+
+    <div class="col-6">
+      <div class="d-flex">
+        <form class="d-flex" [formGroup]="searchForm" (ngSubmit)="getFormSearch()" >
+          <input class="form-control me-2 buttons1" type="search" name="search"
+                 aria-label="Search" placeholder="Search name" formControlName="searchName">
+          <input class="form-control me-2 buttons2" type="search" name="search"
+                 aria-label="Search" placeholder="Search id card" formControlName="searchAddress">
+          <button class="btn btn-success buttons1" type="submit" name="name" >Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <table class="table table-hover">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Name</th>
+      <th>Date of birth</th>
+      <th>Gender</th>
+      <th>Customer Type</th>
+      <th>Address</th>
+      <th colspan="2" style="text-align: center">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let c of customer | paginate: {itemsPerPage: 3, currentPage: p}; index as i">
+      <td>{{i+1}}</td>
+      <td>{{c.name}}</td>
+      <td>{{c.dateOfBirth | date:'dd-MM-yyyy'}}</td>
+      <td>
+        <span ngSwitch="{{c.gender}}">
+              <span *ngSwitchCase="0">
+                Male
+              </span>
+              <span *ngSwitchCase="1">
+                Female
+              </span>
+              <span *ngSwitchDefault>
+                Khác
+              </span>
+        </span>
+      </td>
+
+      <td>{{c.customerType.name}}</td>
+      <td>{{c.address}}</td>
+      <td>
+        <a class="btn btn-success" [routerLink]="['/customer-edit',c.id]"><i class="fa-solid fa-pen"></i></a>
+      </td>
+      <td>
+
+        <!-- Button delete modal -->
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="showDelete(c)">
+          <i class="fa-solid fa-trash-can"></i>
+        </button>
+
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <p *ngIf="customer.length == 0" style="border-top: none; text-align: center"> No data</p>
+</div>
+<div class="container">
+  <pagination-controls (pageChange)="p = $event" class="d-flex flex-row-reverse"></pagination-controls>
+</div>
+
+<!-- Modal delete -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" style="color: red" id="exampleModalLabel">Warning!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Do you want delete customer <span style="color: #d21111">{{name}}</span> with Phone
+        <span style="color: #d21111">{{address}}</span> ?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-dark" data-bs-dismiss="modal">
+          <i class="fa-solid fa-rectangle-xmark"></i>
+        </button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" (click)="showToastr()"
+                (click)="deleteCustomer(idDelete)">
+          <i class="fa-solid fa-trash-can"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--end modal-->
+

@@ -14,10 +14,20 @@ export class ListCustomerComponent implements OnInit {
   customer: Customer[] = [];
   p: number = 1;
   searchForm: FormGroup;
+  idDelete: number;
+  name: string;
+  phone: string;
 
   constructor(private customerService: CustomerService,
               private router: Router,
               private toastr: ToastrService) {
+  }
+
+  showToastr() {
+    this.toastr.success('Success!', 'Delete', {
+      timeOut: 1000,
+      progressBar: true,
+    });
   }
 
   ngOnInit(): void {
@@ -25,31 +35,24 @@ export class ListCustomerComponent implements OnInit {
     this.formSearch()
   }
 
-  deleteCustomer(id: number) {
-    this.customerService.deleteCustomer(id).subscribe(value => {
-      this.router.navigateByUrl('customer-list').then(() => {
-        this.ngOnInit()
-      })
-    })
-  }
-
-  // showDelete(c: Customer) {
-  //   this.idDelete = c.id;
-  //   this.name = c.name
-  //   this.phone = c.phone
-  // }
-
   getAllCustomer() {
     this.customerService.getAllCustomer().subscribe(data => {
       this.customer = data;
     })
   }
 
-  showToastr() {
-    this.toastr.success('Delete success!', 'Tittle', {
-      timeOut: 1500,
-      progressBar: true,
-    });
+  showDelete(customer: Customer) {
+    this.idDelete = customer.id;
+    this.name = customer.name
+    this.phone = customer.phone
+  }
+
+  deleteCustomer(idDelete) {
+    this.customerService.deleteCustomer(idDelete).subscribe(value => {
+      this.router.navigateByUrl('customer-list').then(() => {
+        this.ngOnInit()
+      })
+    })
   }
 
   formSearch() {

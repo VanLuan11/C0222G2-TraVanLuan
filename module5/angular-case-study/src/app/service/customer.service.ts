@@ -9,8 +9,8 @@ import {CustomerType} from "../model/customer-type";
 })
 export class CustomerService {
   customer: Customer[] = [];
-  customerType: CustomerType[]=[];
-  private URL_CUSTOMER = " http://localhost:3000/customer";
+  customerType: CustomerType[] = [];
+  private URL_CUSTOMER = "http://localhost:3000/customer";
   private URL_CUSTOMER_TYPE = " http://localhost:3000/customerType";
 
   constructor(private httpClient: HttpClient) {
@@ -20,7 +20,7 @@ export class CustomerService {
     return this.httpClient.get<Customer[]>(this.URL_CUSTOMER);
   }
 
-  getAllCustomerType(): Observable<CustomerType[]>{
+  getAllCustomerType(): Observable<CustomerType[]> {
     return this.httpClient.get<CustomerType[]>(this.URL_CUSTOMER_TYPE)
   }
 
@@ -29,17 +29,18 @@ export class CustomerService {
   }
 
   findById(id: number): Observable<Customer> {
-    return this.httpClient.get<Customer>(this.URL_CUSTOMER +'/'+ id);
+    return this.httpClient.get<Customer>(this.URL_CUSTOMER + '/' + id);
   }
 
   deleteCustomer(idDelete: number): Observable<Customer> {
-    return  this.httpClient.delete(this.URL_CUSTOMER + '/' + idDelete);
+    return this.httpClient.delete(this.URL_CUSTOMER + '/' + idDelete);
   }
 
   updateCustomer(customer: Customer): Observable<Customer> {
     return this.httpClient.patch(this.URL_CUSTOMER + '/' + customer.id, customer);
   }
-  customerListBySearch(searchName: string, searchIdCard: string): Observable<Customer[]>{
-    return this.httpClient.get<Customer[]>("http://localhost:3000/customer?name_like=" + searchName + "&idCard_like=" + searchIdCard);
+
+  customerListBySearch(searchName: string, searchIdCard: string): Observable<Customer[]> {
+    return this.httpClient.get<Customer[]>(this.URL_CUSTOMER + "?name_like=" + searchName + "&idCard_like=" + searchIdCard);
   }
 }

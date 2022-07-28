@@ -1,0 +1,62 @@
+<div class="container" style="margin-top: 10%">
+  <h2>Create Customer</h2>
+  <form [formGroup]="customerFormCreate" (ngSubmit)="create()" *ngIf="customerFormCreate">
+    <div class="row">
+      <div class="mb-3 mt-3 col-6">
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="name">
+
+        <small style="color: red" *ngIf="customerFormCreate.controls.name.hasError('required') &&
+         customerFormCreate.controls.name.touched">Name cannot be empty!</small>
+
+        <small style="color: red" *ngIf="customerFormCreate.controls.name.hasError('pattern') &&
+         customerFormCreate.controls.name.touched">First letter capitalized and no numbers!</small>
+      </div>
+
+      <div class="mb-3 mt-3  col-6">
+        <label>Date of birth</label>
+        <input type="date" class="form-control" formControlName="dateOfBirth">
+
+        <small style="color: red" *ngIf="customerFormCreate.controls.dateOfBirth.hasError('required') &&
+         customerFormCreate.controls.dateOfBirth.touched">Date of birth cannot be empty!</small>
+      </div>
+    </div>
+    <div class="row">
+      <div class="mb-3 mt-3 col-6 ">
+        <label>Gender</label>
+        <select class="form-control" formControlName="gender">
+          <option value="">Choose gender</option>
+          <option value="1">Female</option>
+          <option value="0">Male</option>
+        </select>
+
+        <small style="color: red" *ngIf="customerFormCreate.controls.gender.hasError('required') &&
+         customerFormCreate.controls.gender.touched">Gender cannot be empty!</small>
+      </div>
+
+      <div class="mb-3 mt-3 col-6 ">
+        <label>Type of customer</label>
+        <select class="form-control" formControlName="customerType">
+          <option value="">Choose type customer</option>
+          <option *ngFor="let c of customerType" [ngValue]="c">{{c.name}}</option>
+        </select>
+
+        <small style="color: red" *ngIf="customerFormCreate.controls.customerType.hasError('required') &&
+         customerFormCreate.controls.customerType.touched">Customer type cannot be empty!</small>
+      </div>
+    </div>
+    <div class="row">
+
+      <div class="mb-3 mt-3 col-6 ">
+        <label>Address</label>
+        <input type="text" class="form-control" formControlName="address">
+
+        <small style="color: red" *ngIf="customerFormCreate.controls.address.hasError('required') &&
+         customerFormCreate.controls.address.touched">Address cannot be empty!</small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="showToastr()" style="margin: 5px"> <i class="fa-solid fa-plus-minus"></i></button>
+    <button type="button" class="btn btn-danger" [routerLink]="['/customer-list']"><i class="fa-solid fa-share"></i>
+    </button>
+  </form>
+</div>
