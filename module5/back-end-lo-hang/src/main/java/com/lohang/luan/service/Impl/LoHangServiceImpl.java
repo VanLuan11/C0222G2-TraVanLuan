@@ -8,6 +8,8 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 
 @Service
 public class LoHangServiceImpl implements ILoHangService {
@@ -15,8 +17,8 @@ public class LoHangServiceImpl implements ILoHangService {
     private ILoHangRepository loHangRepository;
 
     @Override
-    public Page<LoHang> findAll(Pageable pageable) {
-        return this.loHangRepository.findAll(pageable);
+    public List<LoHang> findAll() {
+        return this.loHangRepository.findAll();
     }
 
     @Override
@@ -33,4 +35,6 @@ public class LoHangServiceImpl implements ILoHangService {
     public LoHang findById(Integer id) {
         return this.loHangRepository.findById(id).orElse(null);
     }
+
+
 }

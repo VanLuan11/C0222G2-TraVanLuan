@@ -10,24 +10,26 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+import java.util.Optional;
 
 
 @RequestMapping("/rest/loHang")
 @RestController
 @CrossOrigin
-public class LoHangController {
+public class LoHangRestController {
 
     @Autowired
     private ILoHangService loHangService;
 
 
-    @GetMapping("/list")
-    public ResponseEntity<Page<LoHang>> getAllConsignment(@PageableDefault(5) Pageable pageable) {
-        Page<LoHang> consignmentPage = this.loHangService.findAll(pageable);
-        if (consignmentPage.isEmpty()) {
+    @GetMapping("")
+    public ResponseEntity<List<LoHang>> getAllConsignment() {
+        List<LoHang> loHangList= this.loHangService.findAll();
+        if (loHangList.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else {
-            return new ResponseEntity<>(consignmentPage, HttpStatus.OK);
+            return new ResponseEntity<>(loHangList, HttpStatus.OK);
         }
     }
 
@@ -38,8 +40,8 @@ public class LoHangController {
     }
 
     @PostMapping("/create")
-    public ResponseEntity<Void> createConsignment(@RequestBody LoHang consignment) {
-        this.loHangService.save(consignment);
+    public ResponseEntity<Void> createConsignment(@RequestBody LoHang loHang) {
+        this.loHangService.save(loHang);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
@@ -50,8 +52,8 @@ public class LoHangController {
     }
 
     @PatchMapping("/update")
-    public ResponseEntity<Void> updateConsignment(@RequestBody LoHang consignment) {
-        this.loHangService.save(consignment);
+    public ResponseEntity<Void> updateConsignment(@RequestBody LoHang loHang) {
+        this.loHangService.save(loHang);
         return new ResponseEntity<>(HttpStatus.OK);
     }
 }

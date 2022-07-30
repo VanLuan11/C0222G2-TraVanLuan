@@ -5,18 +5,6 @@
     <div class="col-6">
       <a class="btn btn-success" [routerLink]="['/loHang-create']"><i class="fa-solid fa-plus-minus"></i></a>
     </div>
-
-    <div class="col-6">
-      <div class="d-flex">
-        <form class="d-flex" [formGroup]="searchForm" (ngSubmit)="getFormSearch()" >
-          <input class="form-control me-2 buttons1" type="search" name="search"
-                 aria-label="Search" placeholder="Search san pham" formControlName="searchSanPham">
-          <input class="form-control me-2 buttons2" type="search" name="search"
-                 aria-label="Search" placeholder="Search " formControlName="searchNgayNhap">
-          <button class="btn btn-success buttons1" type="submit" name="name" >Search</button>
-        </form>
-      </div>
-    </div>
   </div>
   <table class="table table-hover">
     <thead>
@@ -33,7 +21,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let c of loHang | paginate: {itemsPerPage: 3, currentPage: p}; index as i">
+    <tr *ngFor="let c of loHang | paginate: {itemsPerPage: 5, currentPage: p}; index as i">
       <td>{{c.maLoHang}}</td>
       <td>{{c.sanPham.tenSanPham}}</td>
       <td>{{c.sanPham.giaTien | currency: 'VND'}}</td>
@@ -43,7 +31,8 @@
       <td>{{c.ngaySanXuat |date:'dd-MM-yyyy'}}</td>
       <td>{{c.ngayHetHan |date:'dd-MM-yyyy'}}</td>
       <td>
-        <a class="btn btn-success" [routerLink]="['/loHang-edit',c.id]"><i class="fa-solid fa-pen"></i></a>
+        {{c.ngayHetHan |date:'dd-MM-yyyy'}}
+
       </td>
       <td>
 

@@ -19,7 +19,7 @@ public class SanPhamRestController {
     @Autowired
     private ISanPhamService sanPhamService;
 
-    @GetMapping("/list")
+    @GetMapping("")
     public ResponseEntity<List<SanPham>> getAllProduct() {
         List<SanPham> productList = this.sanPhamService.findAll();
         return new ResponseEntity<>(productList, HttpStatus.OK);
