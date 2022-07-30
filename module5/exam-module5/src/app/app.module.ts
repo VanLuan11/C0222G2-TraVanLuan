@@ -8,19 +8,21 @@ import {NgxPaginationModule} from "ngx-pagination";
 import {ReactiveFormsModule} from "@angular/forms";
 import {HttpClientModule} from "@angular/common/http";
 import {ToastrModule} from "ngx-toastr";
-import {CustomerListComponent} from './customer/customer-list/customer-list.component';
-import {CustomerEditComponent} from './customer/customer-edit/customer-edit.component';
-import {CustomerCreateComponent} from './customer/customer-create/customer-create.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { HomeComponent } from './home/home.component';
+import { LoHangListComponent } from './lohang/lo-hang-list/lo-hang-list.component';
+import { LoHangCreateComponent } from './lohang/lo-hang-create/lo-hang-create.component';
+import { LoHangEditComponent } from './lohang/lo-hang-edit/lo-hang-edit.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     HeaderComponent,
-    CustomerListComponent,
-    CustomerEditComponent,
-    CustomerCreateComponent,
+    HomeComponent,
+    LoHangListComponent,
+    LoHangCreateComponent,
+    LoHangEditComponent,
   ],
   imports: [
     BrowserModule,

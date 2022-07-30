@@ -1,0 +1,68 @@
+<div class="container" style="margin-top: 10%">
+  <h2>Create Lô Hàng</h2>
+  <form [formGroup]="loHangFormEdit" (ngSubmit)="edit()" *ngIf="loHangFormEdit">
+
+    <input type="hidden" class="form-control" formControlName="id">
+    <div class="row">
+      <div class="mb-3 mt-3 col-6">
+        <label>Mã lô hàng</label>
+        <input type="text" class="form-control" formControlName="maLoHang">
+
+        <small style="color: red" *ngIf="loHangFormEdit.controls.maLoHang.hasError('required') &&
+         loHangFormEdit.controls.maLoHang.touched">Không được để rống!</small>
+
+        <small style="color: red" *ngIf="loHangFormEdit.controls.maLoHang.hasError('pattern') &&
+         loHangFormEdit.controls.maLoHang.touched">(LH-xxxx), X là số nguyên!</small>
+      </div>
+      <div class="mb-3 mt-3  col-6">
+        <label>Sản phẩm</label>
+        <select class="form-control" formControlName="sanPham" [compareWith]="compareSanPham">
+          <option *ngFor="let c of sanPham" [ngValue]="c">{{c.tenSanPham}}</option>
+        </select>
+
+        <small style="color: red" *ngIf="loHangFormEdit.controls.sanPham.hasError('required') &&
+         loHangFormEdit.controls.sanPham.touched">Không được để rống!</small>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="mb-3 mt-3 col-6 ">
+        <label>Số lượng</label>
+        <input type="text" class="form-control" formControlName="soLuong">
+
+        <small style="color: red" *ngIf="loHangFormEdit.controls.soLuong.hasError('required') &&
+         loHangFormEdit.controls.soLuong.touched">Không được để rống!</small>
+
+        <small style="color: red" *ngIf="loHangFormEdit.controls.soLuong.hasError('pattern') &&
+         loHangFormEdit.controls.soLuong.touched">Phải là số nguyên dương!</small>
+      </div>
+      <div class="mb-3 mt-3 col-6 ">
+        <label>Ngày nhập hàng</label>
+        <input type="date" class="form-control" formControlName="ngayNhap">
+
+        <small style="color: red" *ngIf="loHangFormEdit.controls.ngayNhap.hasError('required') &&
+         loHangFormEdit.controls.ngayNhap.touched">Không được để rống!</small>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="mb-3 mt-3 col-6 ">
+        <label>Ngày sản xuất</label>
+        <input type="date" class="form-control" formControlName="ngaySanXuat">
+
+        <small style="color: red" *ngIf="loHangFormEdit.controls.ngaySanXuat.hasError('required') &&
+         loHangFormEdit.controls.ngaySanXuat.touched">Không được để rống!</small>
+      </div>
+      <div class="mb-3 mt-3 col-6 ">
+        <label>Ngày hết hạn</label>
+        <input type="date" class="form-control" formControlName="ngayHetHan">
+
+        <small style="color: red" *ngIf="loHangFormEdit.controls.ngayHetHan.hasError('required') &&
+         loHangFormEdit.controls.ngayHetHan.touched">Không được để rống!</small>
+      </div>
+    </div>
+    <button type="submit" class="btn btn-success" (click)="showToastr()" style="margin: 5px"> <i class="fa-solid fa-plus-minus"></i></button>
+    <button type="button" class="btn btn-danger" [routerLink]="['/loHang-list']"><i class="fa-solid fa-share"></i>
+    </button>
+  </form>
+</div>

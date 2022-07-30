@@ -1,15 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CustomerCreateComponent} from "./customer/customer-create/customer-create.component";
-import {CustomerListComponent} from "./customer/customer-list/customer-list.component";
-import {CustomerEditComponent} from "./customer/customer-edit/customer-edit.component";
+import {HomeComponent} from "./home/home.component";
+import {LoHangListComponent} from "./lohang/lo-hang-list/lo-hang-list.component";
+import {LoHangCreateComponent} from "./lohang/lo-hang-create/lo-hang-create.component";
+import {LoHangEditComponent} from "./lohang/lo-hang-edit/lo-hang-edit.component";
 
 
 const routes: Routes = [
-  {path: '', pathMatch: 'full', redirectTo: 'customer-list'},
-  {path: 'customer-list', component: CustomerListComponent},
-  {path: 'customer-create', component: CustomerCreateComponent},
-  {path: 'customer-edit/:id', component: CustomerEditComponent},
+  {path: '', pathMatch: 'full', redirectTo: 'loHang-list'},
+  {path: 'loHang-list', component: LoHangListComponent},
+  {path: 'loHang-create', component: LoHangCreateComponent},
+  {path: 'loHang-edit/:id', component: LoHangEditComponent},
+  {path: 'home', component: HomeComponent},
 ];
 
 @NgModule({
