@@ -15,6 +15,7 @@ export class LoHangCreateComponent implements OnInit {
 
   sanPham: SanPham[] = [];
   loHangFormCreate: FormGroup;
+  submit = false;
 
   constructor(private activatedRoute: ActivatedRoute,
               private loHangService: LoHangService,
@@ -43,20 +44,50 @@ export class LoHangCreateComponent implements OnInit {
   }
 
   create() {
-    console.log(this.loHangFormCreate.value);
     if (this.loHangFormCreate.valid) {
+      this.submit= false;
       this.loHangService.saveLoHang(this.loHangFormCreate.value).subscribe(data => {
         this.showToastr();
         this.router.navigateByUrl("loHang-list").then(() => {
         })
       })
+    }else {
+      this.submit = true;
     }
   }
 
+
   showToastr() {
-    this.toastr.success('Success!', 'Create', {
-      timeOut:1000,
-      progressBar: true,
-    });
+    if (this.loHangFormCreate.valid){
+      this.submit= false;
+      this.toastr.success('Success!', 'Create', {
+        timeOut:1000,
+        progressBar: true,
+      });
+    }else{
+      this.toastr.error('Submit fail!','Create',{
+        timeOut:1000,
+        progressBar: true,
+      })
+    }
+  }
+
+  getMaLoHang(){
+    return this.loHangFormCreate.controls.maLoHang;
+  }
+  getSanPham(){
+    return this.loHangFormCreate.controls.sanPham;
+  }
+  getSoLuong(){
+    return this.loHangFormCreate.controls.soLuong;
+  }
+  getNgayNhap(){
+    return this.loHangFormCreate.controls.ngayNhap;
+  }
+  getNgaySanXuat(){
+    return this.loHangFormCreate.controls.ngaySanXuat;
+  }
+  getNgayHetHan(){
+    return this.loHangFormCreate.controls.ngayHetHan;
   }
 }

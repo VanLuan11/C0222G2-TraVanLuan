@@ -1,0 +1,107 @@
+.container{
+    margin-top: 10%
+}
+.hide_content{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 400px
+}
+body{
+    background-image:linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url('../img/image3.jpg')
+}
+
+.table-wrapper{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+thead{
+    font-size: 50px;
+}
+
+
+table {
+    border-collapse: collapse;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+table thead tr {
+    height: 30%;
+    background: #6c5c48;
+    color: #fff;
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: unset;
+}
+
+a, th, td, label{
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+}
+.mid{
+    text-align: center;
+}
+.button_close{
+    text-align: right;
+    margin-top: 10px
+}
+.button-detail{
+    font-size: 25px;
+}
+.title{
+    color: white;
+    text-align: center;
+}
+.bi{
+    color: black;
+}
+.checked {
+    color: orange;
+}
+
+/*header*/
+header * {
+    box-sizing: border-box;
+}
+
+
+header #menu {
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+}
+header .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+header #menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 20px;
+    -webkit-transition: padding 2s;
+}
+
+header #menu a:hover {
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #6c5c48;
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+header li {
+    margin: 0 10px 0 10px;
+}

@@ -15,8 +15,35 @@ export class LoHangService {
   constructor(private httpClient: HttpClient) {
   }
 
-  getAllLoHang(): Observable<LoHang[]> {
-    return this.httpClient.get<LoHang[]>(this.URL_LOHANG);
+  getAll(page: number, searchName, searchDateCheckOut, searchStartDate, searchEndDate) {
+    let productName;
+    let dateCheckOut;
+    let startDate;
+    let endDate;
+    if (searchName == null) {
+      productName = '';
+    } else {
+      productName = searchName;
+    }
+    if (searchDateCheckOut == null) {
+      dateCheckOut = '';
+    } else {
+      dateCheckOut = searchDateCheckOut;
+    }
+
+    if (searchStartDate == null) {
+      startDate = '1000-01-01';
+    } else {
+      startDate = searchStartDate;
+    }
+
+    if (searchEndDate == null) {
+      endDate = '8000-01-01';
+    } else {
+      endDate = searchEndDate;
+    }
+    return this.httpClient.get<LoHang[]>(this.URL_LOHANG + '/page?page=' + page + '&searchName=' + productName +
+      '&searchDateCheckOut=' + dateCheckOut + '&searchStartDate=' + startDate + '&searchEndDate=' + endDate);
   }
 
   getAllSanPham(): Observable<SanPham[]> {
@@ -38,8 +65,5 @@ export class LoHangService {
   deleteLoHang(idDelete: number): Observable<LoHang> {
     return this.httpClient.delete(this.URL_LOHANG + '/delete/' + idDelete);
   }
-  
-  loHangListBySearch(searchSanPham: string, searchNgayNhap: string): Observable<LoHang[]> {
-    return this.httpClient.get<LoHang[]>(this.URL_LOHANG + "&sanPham.tenSanPham_like=" + searchSanPham + "&ngayNhap_like=" + searchNgayNhap);
-  }
+
 }

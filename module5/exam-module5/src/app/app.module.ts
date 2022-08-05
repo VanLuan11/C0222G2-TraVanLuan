@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { LoHangListComponent } from './lohang/lo-hang-list/lo-hang-list.component';
 import { LoHangCreateComponent } from './lohang/lo-hang-create/lo-hang-create.component';
 import { LoHangEditComponent } from './lohang/lo-hang-edit/lo-hang-edit.component';
+import { FeedbackComponent } from './feedback/feedback.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { LoHangEditComponent } from './lohang/lo-hang-edit/lo-hang-edit.componen
     LoHangListComponent,
     LoHangCreateComponent,
     LoHangEditComponent,
+    FeedbackComponent,
   ],
   imports: [
     BrowserModule,

@@ -4,7 +4,6 @@ import {Router} from "@angular/router";
 import {ToastrService} from "ngx-toastr";
 import {LoHang} from "../../model/lo-hang";
 import {LoHangService} from "../../service/lo-hang.service";
-import {SanPham} from "../../model/san-pham";
 
 @Component({
   selector: 'app-lo-hang-list',
@@ -14,12 +13,13 @@ import {SanPham} from "../../model/san-pham";
 export class LoHangListComponent implements OnInit {
 
   loHang: LoHang[] = [];
-  p: number = 1;
   searchForm: FormGroup;
   idDelete: number;
   tenSanPham: string;
   ngayNhap: string;
-
+  number: number;
+  totalPages: number;
+  countTotalPages: number[];
 
   constructor(private loHangService: LoHangService,
               private router: Router,
@@ -34,14 +34,40 @@ export class LoHangListComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.getAllLoHang()
-    this.formSearch()
+    this.getAll(0, '', '', '1000-01-01', '8000-01-01');
+    this.searchForm = new FormGroup({
+      searchName: new FormControl(),
+      searchDateCheckOut: new FormControl(),
+      searchStartDate: new FormControl(),
+      searchEndDate: new FormControl()
+    });
   }
 
-  getAllLoHang() {
-    this.loHangService.getAllLoHang().subscribe(data => {
-      this.loHang = data;
-    })
+  getAll(page: number, searchName, searchDateCheckOut, searchStartDate, searchEndDate) {
+    this.loHangService.getAll(page, searchName, searchDateCheckOut, searchStartDate, searchEndDate).subscribe((data: LoHang[]) => {
+        if (data != null) {
+          // @ts-ignore
+          this.consignment = data.content;
+        } else {
+          this.loHang = [];
+        }
+        if (this.loHang.length !== 0) {
+          // @ts-ignore
+          this.totalPages = data.totalPages;
+          // @ts-ignore
+          this.countTotalPages = new Array(data.totalPages);
+          // @ts-ignore
+          this.number = data.number;
+        }
+      });
+  }
+
+  getSearch() {
+    const productName = this.searchForm.value.searchName;
+    const dateCheckOut = this.searchForm.value.searchDateCheckOut;
+    const startDate = this.searchForm.value.searchStartDate;
+    const endDate = this.searchForm.value.searchEndDate;
+    this.getAll(0, productName, dateCheckOut, startDate, endDate);
   }
 
   showDelete(loHang: LoHang) {
@@ -58,17 +84,23 @@ export class LoHangListComponent implements OnInit {
     })
   }
 
-  formSearch() {
-    this.searchForm = new FormGroup({
-      searchSanPham: new FormControl(""),
-      searchNgayNhap: new FormControl(""),
-    });
-  }
-
-  getFormSearch() {
-    this.loHangService.loHangListBySearch(this.searchForm.value.searchSanPham, this.searchForm.value.searchNgayNhap).subscribe(data => {
-      this.loHang = data;
-      console.log(data);
-    })
-  }
+  // goPrevious() {
+  //   let numberPage: number = this.number;
+  //   if (numberPage > 0) {
+  //     numberPage--;
+  //     this.getAll(numberPage);
+  //   }
+  // }
+  //
+  // goNext() {
+  //   let numberPage: number = this.number;
+  //   if (numberPage < this.totalPages - 1) {
+  //     numberPage++;
+  //     this.getAll(numberPage);
+  //   }
+  // }
+  //
+  // goItem(i: number) {
+  //   this.getAll(i);
+  // }
 }

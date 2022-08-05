@@ -2,8 +2,37 @@
   <h1 style="margin-left: 45%">Lô hàng</h1>
 
   <div class="row">
-    <div class="col-6">
+    <div class="col-2">
       <a class="btn btn-success" [routerLink]="['/loHang-create']"><i class="fa-solid fa-plus-minus"></i></a>
+    </div>
+    <div class="col-10">
+      <form class="d-flex" [formGroup]="searchForm" (ngSubmit)="getSearch()">
+        <div class="col-2">
+          <label>Name Product</label>
+          <input class="form-control me-2 buttons1" type="search" placeholder="Search By Name"
+                 formControlName="searchName" name="searchName">
+        </div>
+        <div class="col-3">
+          <label>Date Check In</label>
+          <input class="form-control me-2 buttons1" type="date" placeholder="Search By Date Check Out"
+                 formControlName="searchDateCheckOut" name="searchDateCheckOut">
+        </div>
+        <div class="col-3">
+          <label>Date In</label>
+          <input class="form-control me-2 buttons1 col-6" type="date" placeholder="Search By Start Date"
+                 formControlName="searchStartDate" name="searchStartDate">
+        </div>
+        <div class="col-3">
+          <label>To</label>
+          <input class="form-control me-2 buttons1 col-6" type="date" placeholder="Search By End Date"
+                 formControlName="searchEndDate" name="searchEndDate">
+        </div>
+        <div class="col-1">
+          <label>.</label>
+          <input type="submit" class="btn btn-outline-success buttons1 form-control" value="search">
+        </div>
+      </form>
+
     </div>
   </div>
   <table class="table table-hover">
@@ -14,14 +43,14 @@
       <th>Giá tiền</th>
       <th>Đơn vị</th>
       <th>Số lượng</th>
-      <th>Ngày nhập </th>
+      <th>Ngày nhập</th>
       <th>Ngày sản xuất</th>
       <th>Ngày hết hạn</th>
       <th colspan="2" style="text-align: center">Action</th>
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let c of loHang | paginate: {itemsPerPage: 5, currentPage: p}; index as i">
+    <tr *ngFor="let c of loHang; index as i">
       <td>{{c.maLoHang}}</td>
       <td>{{c.sanPham.tenSanPham}}</td>
       <td>{{c.sanPham.giaTien | currency: 'VND'}}</td>
@@ -32,24 +61,62 @@
       <td>{{c.ngayHetHan |date:'dd-MM-yyyy'}}</td>
       <td>
         {{c.ngayHetHan |date:'dd-MM-yyyy'}}
-
+      </td>
+      <td>
+        <a class="btn btn-success" [routerLink]="['/loHang-edit',c.id]"><i class="fa-solid fa-pen"></i></a>
       </td>
       <td>
 
         <!-- Button delete modal -->
-        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="showDelete(c)">
+        <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="showDelete(c)">
           <i class="fa-solid fa-trash-can"></i>
         </button>
-
       </td>
     </tr>
     </tbody>
   </table>
+<!--  <div class="container-fluid mt-3">-->
+<!--    <ul class="pagination float-end">-->
+<!--      <div *ngIf="number == 0">-->
+<!--        <li class="page-item disabled">-->
+<!--          <button class="page-link" hidden (click)="goPrevious()">Previous</button>-->
+<!--        </li>-->
+<!--      </div>-->
+<!--      <div *ngIf="number != 0">-->
+<!--        <li class="page-item">-->
+<!--          <button class="page-link" (click)="goPrevious()">Previous</button>-->
+<!--        </li>-->
+<!--      </div>-->
+<!--      <div *ngFor="let count of countTotalPages; index as i">-->
+<!--        <div *ngIf="i == number">-->
+<!--          <li class="page-item active">-->
+<!--            <button class="page-link" (click)="goItem(i)">{{i + 1}}</button>-->
+<!--          </li>-->
+<!--        </div>-->
+<!--        <div *ngIf="i != number">-->
+<!--          <li class="page-item">-->
+<!--            <button class="page-link" (click)="goItem(i)">{{i + 1}}</button>-->
+<!--          </li>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div *ngIf="number == totalPages - 1">-->
+<!--        <li class="page-item disabled">-->
+<!--          <button class="page-link" (click)="goNext()">Next</button>-->
+<!--        </li>-->
+<!--      </div>-->
+<!--      <div *ngIf="number != totalPages - 1">-->
+<!--        <li class="page-item">-->
+<!--          <button class="page-link" (click)="goNext()">Next</button>-->
+<!--        </li>-->
+<!--      </div>-->
+<!--    </ul>-->
+<!--  </div>-->
   <p *ngIf="loHang.length == 0" style="border-top: none; text-align: center"> No data</p>
 </div>
-<div class="container">
-  <pagination-controls (pageChange)="p = $event" class="d-flex flex-row-reverse"></pagination-controls>
-</div>
+<!--<div class="container">-->
+<!--  <pagination-controls (pageChange)="p = $event" class="d-flex flex-row-reverse"></pagination-controls>-->
+<!--</div>-->
 
 <!-- Modal delete -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"

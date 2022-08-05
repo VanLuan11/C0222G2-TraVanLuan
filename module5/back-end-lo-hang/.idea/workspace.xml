@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cd02544c-136b-45d8-9f0a-1e277750755c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/thuc_hanh/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../module4/ss9_aop_va_exception_handling/thuc_hanh/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew.bat" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/LuanApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/controller/LoHangRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/controller/SanPhamRestController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/model/LoHang.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/model/SanPham.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/repository/ILoHangRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/repository/ISanPhamRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/service/ILoHangService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/service/ISanPhamService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/service/Impl/LoHangServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/lohang/luan/service/Impl/SanPhamServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/lohang/luan/LuanApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exam-module5/src/app/lohang/lo-hang-list/lo-hang-list.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../exam-module5/src/app/lohang/lo-hang-list/lo-hang-list.component.html" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="ProjectId" id="2CenZwZnAyKP38e2NrApDLnDYvH" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../exam-back-end" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+  </component>
+  <component name="RunManager">
+    <configuration name="LuanApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="luan.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.lohang.luan.LuanApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cd02544c-136b-45d8-9f0a-1e277750755c" name="Default Changelist" comment="" />
+      <created>1659171976097</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1659171976097</updated>
+      <workItem from="1659171979194" duration="11312000" />
+      <workItem from="1659317887664" duration="80000" />
+      <workItem from="1659317976858" duration="630000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser" timestamp="1659190346430">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="574" y="128" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1659190346430" />
+    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1659318012333">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1659318012333" />
+    <state width="1493" height="473" key="GridCell.Tab.0.bottom" timestamp="1659194125660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="473" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1659194125660" />
+    <state width="1493" height="473" key="GridCell.Tab.0.center" timestamp="1659194125660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="473" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1659194125660" />
+    <state width="1493" height="473" key="GridCell.Tab.0.left" timestamp="1659194125660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="473" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1659194125660" />
+    <state width="1493" height="473" key="GridCell.Tab.0.right" timestamp="1659194125660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="473" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1659194125660" />
+    <state width="1493" height="473" key="GridCell.Tab.1.bottom" timestamp="1659194125660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="473" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1659194125660" />
+    <state width="1493" height="473" key="GridCell.Tab.1.center" timestamp="1659194125660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="473" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1659194125660" />
+    <state width="1493" height="473" key="GridCell.Tab.1.left" timestamp="1659194125660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="473" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1659194125660" />
+    <state width="1493" height="473" key="GridCell.Tab.1.right" timestamp="1659194125660">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="1493" height="473" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1659194125660" />
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1659186303619">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="431" y="145" width="672" height="678" key="search.everywhere.popup/0.0.1536.824@0.0.1536.824" timestamp="1659186303619" />
+  </component>
+</project>

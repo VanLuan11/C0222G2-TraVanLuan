@@ -15,6 +15,7 @@ export class LoHangEditComponent implements OnInit {
   loHangFormEdit: FormGroup;
   loHang: LoHang = {}
   sanPham: SanPham[] = [];
+  submit = false;
 
   constructor(private activatedRoute: ActivatedRoute,
               private loHangService: LoHangService,
@@ -52,11 +53,14 @@ export class LoHangEditComponent implements OnInit {
   edit() {
     if (this.loHangFormEdit.valid) {
       this.loHangService.editLoHang(this.loHangFormEdit.value).subscribe(value => {
+        this.submit = false;
         this.showToastr()
-        this.router.navigateByUrl('loHang-list').then(() =>{
+        this.router.navigateByUrl('loHang-list').then(() => {
 
-        } )
+        })
       })
+    }else {
+      this.submit = true;
     }
   }
 
@@ -68,9 +72,36 @@ export class LoHangEditComponent implements OnInit {
   }
 
   showToastr() {
-    this.toastr.success('Success!', 'Update', {
-      timeOut: 1000,
-      progressBar: true,
-    });
+    if (this.loHangFormEdit.valid){
+      this.submit= false;
+      this.toastr.success('Success!', 'Edit', {
+        timeOut:1000,
+        progressBar: true,
+      });
+    }else{
+      this.toastr.error('Submit fail!','Edit',{
+        timeOut:1000,
+        progressBar: true,
+      })
+    }
+  }
+
+  getMaLoHang(){
+    return this.loHangFormEdit.controls.maLoHang;
+  }
+  getSanPham(){
+    return this.loHangFormEdit.controls.sanPham;
+  }
+  getSoLuong(){
+    return this.loHangFormEdit.controls.soLuong;
+  }
+  getNgayNhap(){
+    return this.loHangFormEdit.controls.ngayNhap;
+  }
+  getNgaySanXuat(){
+    return this.loHangFormEdit.controls.ngaySanXuat;
+  }
+  getNgayHetHan(){
+    return this.loHangFormEdit.controls.ngayHetHan;
   }
 }

@@ -8,11 +8,11 @@
         <label>Mã lô hàng</label>
         <input type="text" class="form-control" formControlName="maLoHang">
 
-        <small style="color: red" *ngIf="loHangFormEdit.controls.maLoHang.hasError('required') &&
-         loHangFormEdit.controls.maLoHang.touched">Không được để rống!</small>
+        <small style="color: red" *ngIf="getMaLoHang().hasError('required') &&
+         getMaLoHang().touched || submit">Không được để rống!</small>
 
-        <small style="color: red" *ngIf="loHangFormEdit.controls.maLoHang.hasError('pattern') &&
-         loHangFormEdit.controls.maLoHang.touched">(LH-xxxx), X là số nguyên!</small>
+        <small style="color: red" *ngIf="getMaLoHang().hasError('pattern') &&
+         getMaLoHang().touched || submit">(LH-xxxx), X là số nguyên!</small>
       </div>
       <div class="mb-3 mt-3  col-6">
         <label>Sản phẩm</label>
@@ -20,8 +20,8 @@
           <option *ngFor="let c of sanPham" [ngValue]="c">{{c.tenSanPham}}</option>
         </select>
 
-        <small style="color: red" *ngIf="loHangFormEdit.controls.sanPham.hasError('required') &&
-         loHangFormEdit.controls.sanPham.touched">Không được để rống!</small>
+        <small style="color: red" *ngIf="getSanPham().hasError('required') &&
+         getSanPham().touched || submit">Không được để rống!</small>
       </div>
     </div>
 
@@ -30,18 +30,18 @@
         <label>Số lượng</label>
         <input type="text" class="form-control" formControlName="soLuong">
 
-        <small style="color: red" *ngIf="loHangFormEdit.controls.soLuong.hasError('required') &&
-         loHangFormEdit.controls.soLuong.touched">Không được để rống!</small>
+        <small style="color: red" *ngIf="getSoLuong().hasError('required') &&
+         getSoLuong().touched || submit">Không được để rống!</small>
 
-        <small style="color: red" *ngIf="loHangFormEdit.controls.soLuong.hasError('pattern') &&
-         loHangFormEdit.controls.soLuong.touched">Phải là số nguyên dương!</small>
+        <small style="color: red" *ngIf="getSoLuong().hasError('pattern') &&
+         getSoLuong().touched || submit">Phải là số nguyên dương!</small>
       </div>
       <div class="mb-3 mt-3 col-6 ">
         <label>Ngày nhập hàng</label>
         <input type="date" class="form-control" formControlName="ngayNhap">
 
-        <small style="color: red" *ngIf="loHangFormEdit.controls.ngayNhap.hasError('required') &&
-         loHangFormEdit.controls.ngayNhap.touched">Không được để rống!</small>
+        <small style="color: red" *ngIf="getNgayNhap().hasError('required') &&
+         getNgayNhap().touched || submit">Không được để rống!</small>
       </div>
     </div>
 
@@ -50,15 +50,15 @@
         <label>Ngày sản xuất</label>
         <input type="date" class="form-control" formControlName="ngaySanXuat">
 
-        <small style="color: red" *ngIf="loHangFormEdit.controls.ngaySanXuat.hasError('required') &&
-         loHangFormEdit.controls.ngaySanXuat.touched">Không được để rống!</small>
+        <small style="color: red" *ngIf="getNgaySanXuat().hasError('required') &&
+         getNgaySanXuat().touched || submit">Không được để rống!</small>
       </div>
       <div class="mb-3 mt-3 col-6 ">
         <label>Ngày hết hạn</label>
         <input type="date" class="form-control" formControlName="ngayHetHan">
 
-        <small style="color: red" *ngIf="loHangFormEdit.controls.ngayHetHan.hasError('required') &&
-         loHangFormEdit.controls.ngayHetHan.touched">Không được để rống!</small>
+        <small style="color: red" *ngIf="getNgayHetHan().hasError('required') &&
+         getNgayHetHan().touched || submit">Không được để rống!</small>
       </div>
     </div>
     <button type="submit" class="btn btn-success" (click)="showToastr()" style="margin: 5px"> <i class="fa-solid fa-plus-minus"></i></button>

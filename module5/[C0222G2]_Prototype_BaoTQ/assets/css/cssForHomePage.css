@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+
+#menu {
+    background-color: rgba(0, 0, 0, 0);
+    transition: 0.4s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    font-family: 'Montserrat', sans-serif;
+}
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+#menu a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 20px;
+    -webkit-transition: padding 2s;
+}
+
+#menu a:hover {
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #6c5c48;
+    border-radius: 20px;
+    transition: 0.5s;
+
+}
+
+li {
+    margin: 0 10px 0 10px;
+}
+
+
+/*body*/
+
+#demo img{
+    filter: brightness(50%);
+    height: 800px !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    overflow: hidden !important;
+}
+p{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-10%, -10%);
+    color: white;
+    font-size: 100px;
+    white-space: nowrap;
+}
+.carousel-caption {
+    width: 900px;
+    left: 50%;
+    top: 50% !important;
+    transform: translate(-50%,-50%);
+    font-size: 100px;
+    /*white-space: nowrap;*/
+
+}
+
+
+.text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-5%, -10%);
+    color: white;
+    font-size: 20px;
+    object-fit: cover !important;
+    overflow: clip;
+}
+
+.buttonOrder {
+    height: 60px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0);
+    color: #ffffff;
+    border-color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+.buttonOrder:hover {
+    background-color: #6c5c48;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+}
+#firstBodyArea {
+    position: relative;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    backdrop-filter: brightness(20%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/img/bg.jpg);
+    padding-bottom: 50px;
+
+}
+
+#firstBodyContent{
+    padding-top: 50px;
+    font-family: 'Bungee', cursive;
+}
+
+#secondBodyArea {
+    position: relative;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    backdrop-filter: brightness(20%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/assets/img/bg3.jpg);
+    padding-bottom: 50px;
+}
+
+#thirdBodyArea {
+    position: relative;
+    background-repeat: no-repeat;
+    /*background-attachment: fixed;*/
+    background-size: cover;
+    backdrop-filter: brightness(20%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/assets/img/bg2.jpg);
+    padding-bottom: 50px;
+    font-family: 'Bungee', cursive;
+}
+
+
+
+
+
+
+.card {
+    margin: 10px;
+    height: 360px;
+    width: 300px;
+    border-radius: 20px;
+    transition: background 0.8s;
+    overflow: hidden;
+    background: #000;
+    box-shadow: 0 70px 63px -60px #000;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-family: 'Bungee', cursive;
+    color: #fff;
+    margin: 20px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.card0 {
+    background: url("/assets/img/caffee1.jpg") center center no-repeat;
+    background-size: 300px;
+}
+.card0:hover {
+    background: url("/assets/img/caffee1.jpg") left center no-repeat;
+    background-size: 350px;
+}
+.card0:hover h2 {
+    opacity: 1;
+}
+.card1 {
+    background: url("/assets/img/caffee2.jpg") center center no-repeat;
+    background-size: 300px;
+}
+.card1:hover {
+    background: url("/assets/img/caffee2.jpg") left center no-repeat;
+    background-size: 350px;
+}
+.card1:hover h2 {
+    opacity: 1;
+}
+.card2 {
+    background: url("/assets/img/caffee3.jpg") center center no-repeat;
+    background-size: 300px;
+}
+.card2:hover {
+    background: url("/assets/img/caffee3.jpg") left center no-repeat;
+    background-size: 350px;
+}
+.card2:hover h2 {
+    opacity: 1;
+}
+.card3 {
+    background: url("/assets/img/caffee4.jpg") center center no-repeat;
+    background-size: 300px;
+}
+.card3:hover {
+    background: url("/assets/img/caffee4.jpg") left center no-repeat;
+    background-size: 350px;
+}
+.card3:hover h2 {
+    opacity: 1;
+}
+
+
+/*footer*/
+
+#footer {
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: brightness(10%);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(/assets/img/footer.jpg);
+    padding-bottom: 50px;
+}
