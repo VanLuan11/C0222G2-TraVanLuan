@@ -1,5 +1,5 @@
 <!-- Navbar Start -->
-<div class="container-fluid bg-dark ">
+<div class="container-fluid bg-dark">
   <div class="row px-xl-5">
     <div class="col-lg-3 d-none d-lg-block">
       <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse"
@@ -19,18 +19,7 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav mr-auto py-0">
             <a href="index.html" class="nav-item nav-link">Home</a>
-            <a href="shop.html" class="nav-item nav-link active">Shop</a>
-            <a href="detail.html" class="nav-item nav-link">Shop Detail</a>
-            <div class="nav-item dropdown">
-              <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Pages <i
-                class="fa fa-angle-down mt-1"></i></a>
-              <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
-                <a href="cart.html" class="dropdown-item">Shopping Cart</a>
-                <a href="checkout.html" class="dropdown-item">Checkout</a>
-              </div>
-            </div>
-            <a href="contact.html" class="nav-item nav-link">Contact</a>
-            <a href="" class="btn px-0 ml-3 " style="padding-top: 20px">
+            <a [routerLink]="'/cart'" class="btn px-0 ml-3 " style="padding-top: 20px">
               <i class="fas fa-shopping-cart text-primary"></i>
               <span class="badge text-secondary border border-secondary rounded-circle"
                     style="padding-bottom: 2px;">0</span>
@@ -38,12 +27,10 @@
           </div>
           <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
             <a [routerLink]="'/login'" class="btn px-0">
-              <span class="badge text-secondary "
-                    style="padding-bottom: 2px;">Đăng nhập</span>
+              <span class="badge text-secondary " style="padding-bottom: 2px;">Đăng nhập</span>
             </a>
             <a href="" class="btn px-0">
-              <span class="badge text-secondary "
-                    style="padding-bottom: 2px;">Đăng ký</span>
+              <span class="badge text-secondary " style="padding-bottom: 2px;">Đăng ký</span>
             </a>
           </div>
         </div>
