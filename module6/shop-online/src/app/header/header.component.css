@@ -672,7 +672,7 @@ pre code {
 }
 
 .container, .container-fluid, .container-lg, .container-md, .container-sm, .container-xl, .container-xxl {
-  --bs-gutter-x: 1.5rem;
+  --bs-gutter-x: 2rem;
   --bs-gutter-y: 0;
   width: 100%;
   padding-right: calc(var(--bs-gutter-x) * .5);
@@ -6177,7 +6177,7 @@ a.close.disabled {
 }
 
 .bg-primary {
-  background-color: #FFD333 !important;
+  background-color: #23a4d5 !important;
 }
 
 a.bg-primary:hover, a.bg-primary:focus,

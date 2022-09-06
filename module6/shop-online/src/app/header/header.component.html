@@ -1,25 +1,25 @@
 <!-- Navbar Start -->
-<div class="container-fluid bg-dark">
-  <div class="row px-xl-5">
-    <div class="col-lg-3 d-none d-lg-block">
-      <a class="btn d-flex align-items-center justify-content-between bg-primary w-100" data-toggle="collapse"
-         href="#navbar-vertical" >
-        <span class="h1 text-uppercase">TVL Shop</span>
+<div class="container-fluid bg-primary">
+  <div class="row">
+    <div class="col-lg-3 d-none d-lg-block ">
+      <a class="btn align-items-center justify-content-between  w-100" data-toggle="collapse"
+         href="#navbar-vertical">
+        <span class="h1 text-uppercase"  style="font-family: 'Candara Light'; color: #ffffff">Tech Toys Shop</span>
       </a>
     </div>
     <div class="col-lg-9">
-      <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
+      <nav class="navbar navbar-expand-lg navbar-dark py-3 py-lg-0 px-0">
         <a href="" class="text-decoration-none d-block d-lg-none">
-          <span class="h1 text-uppercase text-dark bg-light px-2">Multi</span>
-          <span class="h1 text-uppercase text-light bg-primary px-2 ml-n1">Shop</span>
+          <span class="h1 text-uppercase text-primary">TVL Shop</span>
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav mr-auto py-0">
-            <a href="index.html" class="nav-item nav-link">Home</a>
-            <a [routerLink]="'/cart'" class="btn px-0 ml-3 " style="padding-top: 20px">
+            <a href="index.html" class="nav-item nav-link " style="font-size: 20px">Trang chủ</a>
+            <a href="index.html" class="nav-item nav-link " style="font-size: 20px">Thêm mới sản phẩm</a>
+            <a [routerLink]="'/cart'" class="btn px-0 ml-3 " style="padding-top: 20px; font-size: 20px">
               <i class="fas fa-shopping-cart text-primary"></i>
               <span class="badge text-secondary border border-secondary rounded-circle"
                     style="padding-bottom: 2px;">0</span>
@@ -27,10 +27,18 @@
           </div>
           <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
             <a [routerLink]="'/login'" class="btn px-0">
-              <span class="badge text-secondary " style="padding-bottom: 2px;">Đăng nhập</span>
+              <span class="badge text-secondary " *ngIf="role=== ''" style="padding-bottom: 2px; font-size: 20px">Đăng nhập</span>
             </a>
             <a href="" class="btn px-0">
-              <span class="badge text-secondary " style="padding-bottom: 2px;">Đăng ký</span>
+              <span class="badge text-secondary " *ngIf="role=== ''" style="padding-bottom: 2px; font-size: 20px">Đăng ký</span>
+            </a>
+            <a *ngIf="token !== ''" class="btn px-0">
+              <span class="badge text-secondary "
+                    style="padding-bottom: 2px; font-size: 20px; color:#FFD333">{{username}}: </span>
+            </a>
+            <a *ngIf="token !== ''" class="btn px-0" style="background-color: #23a4d5;" >
+              <span class="badge text-secondary " (click)="onLogout()"
+                    style="padding-bottom: 2px; font-size: 20px; color:#FFD333">Đăng xuất</span>
             </a>
           </div>
         </div>

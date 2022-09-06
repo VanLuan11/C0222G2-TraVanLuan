@@ -11,7 +11,7 @@ import {CartComponent} from './cart/cart.component';
 import {ChartsModule} from 'ng2-charts';
 import {ToastrModule} from 'ngx-toastr';
 import {HttpClientModule} from '@angular/common/http';
-import { LoginComponent } from './login/login.component';
+import {LoginModule} from './login/login.module';
 
 
 @NgModule({
@@ -22,14 +22,13 @@ import { LoginComponent } from './login/login.component';
     HomeComponent,
     DetailProductComponent,
     CartComponent,
-    LoginComponent,
-
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ChartsModule,
     HttpClientModule,
+    LoginModule,
     ToastrModule.forRoot(
       {
         timeOut: 2000,
