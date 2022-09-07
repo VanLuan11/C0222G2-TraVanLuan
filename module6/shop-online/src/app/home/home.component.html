@@ -59,10 +59,10 @@
       <span class="bg-white" style="border-radius: 12px">LAPTOP GAMING</span>
     </h2>
     <div class="row ">
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
+      <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let p of listProduct">
         <div class="product-item bg-light mb-4">
           <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-1.jpg" alt="">
+            <img class="img-fluid w-100" [src]="p.image" alt="">
             <div class="product-action">
               <a class="btn btn-outline-dark btn-square" href=""><i
                 class="fa fa-shopping-cart"></i></a>
@@ -71,220 +71,9 @@
             </div>
           </div>
           <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop Acer Aspire 7 A715 42G R4XX</p>
+            <p class="h6 text-decoration-none text-truncate" href="">{{p.nameProduct}}</p>
             <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">15.450.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-2.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop MSI Modern 15 A11MU 1022VN</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">15.490.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-3.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop Lenovo IdeaPad Gaming 3 15ACH6
-              (82K201BBVN)</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">15.950.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-4.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop Asus Gaming TUF FA506IHR-HN019W</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">15.990.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-5.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop MSI GF63 Thin 11SC 664VN</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">16.150.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-6.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Acer Aspire 7 A715-42G-R05G</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">16.450.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-7.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop Lenovo Ideapad Gaming 3 15IHU6
-              (82K10178VN)</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">16.450.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-8.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop MSI Modern 15 A5M 236VN</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">16.490.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-9.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop GIGABYTE U4 UD-50S1823SO</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">16.750.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-10.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop Asus Gaming TUF FX506LH-HN188W</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">16.990.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-11.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">LAPTOP GAMING MSI BRAVO 15 B5DD 275VN</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">17.150.000 đ</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" src="assets/img/carousel/product-12.jpg" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" href="">Laptop MSI Modern 15 A5M 237VN</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">17.690.000 đ</h5>
+              <h5 class="text-danger">{{p.price | currency: 'VND':'' }}đ</h5>
             </div>
           </div>
         </div>
@@ -292,6 +81,44 @@
     </div>
   </div>
   <!-- Products End -->
+  <div class="col-lg-12">
+    <nav>
+      <ul class="pagination justify-content-center">
+        <div *ngIf="number == 0">
+          <li class="page-item disabled">
+            <button class="page-link" (click)="goPrevious()" hidden>Quay Lại</button>
+          </li>
+        </div>
+        <div *ngIf="number != 0">
+          <li class="page-item">
+            <button class="page-link" (click)="goPrevious()">Quay Lại</button>
+          </li>
+        </div>
+        <div *ngFor="let count of countTotalPages; index as i">
+          <div *ngIf="i == number">
+            <li class="page-item active">
+              <button class="page-link" (click)="goItem(i)">{{i + 1}}</button>
+            </li>
+          </div>
+          <div *ngIf="i != number">
+            <li class="page-item">
+              <button class="page-link" (click)="goItem(i)">{{i + 1}}</button>
+            </li>
+          </div>
+        </div>
+        <div *ngIf="number == totalPages - 1">
+          <li class="page-item disabled">
+            <button class="page-link" (click)="goNext()">Tiếp</button>
+          </li>
+        </div>
+        <div *ngIf="number != totalPages - 1">
+          <li class="page-item">
+            <button class="page-link" (click)="goNext()">Tiếp</button>
+          </li>
+        </div>
+      </ul>
+    </nav>
+  </div>
 </div>
 
 

@@ -4,7 +4,7 @@
     <div class="col-lg-3 d-none d-lg-block ">
       <a class="btn align-items-center justify-content-between  w-100" data-toggle="collapse"
          href="#navbar-vertical">
-        <span class="h1 text-uppercase"  style="font-family: 'Candara Light'; color: #ffffff">Tech Toys Shop</span>
+        <span class="h1 text-uppercase" style="font-family: 'Candara Light'; color: #ffffff">Tech Toys Shop</span>
       </a>
     </div>
     <div class="col-lg-9">
@@ -18,7 +18,23 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav mr-auto py-0">
             <a href="index.html" class="nav-item nav-link " style="font-size: 20px">Trang chủ</a>
-            <a href="index.html" class="nav-item nav-link " style="font-size: 20px">Thêm mới sản phẩm</a>
+            <li class="nav-item dropdown">
+              <a  class="nav-item nav-link " style="font-size: 20px" *ngIf="role=== 'ROLE_ADMIN'">
+                Danh mục sản phầm</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Laptop gaming</a></li>
+                <li><a class="dropdown-item" href="#">Laptop văn phòng</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a  class="nav-item nav-link " style="font-size: 20px" *ngIf="role=== 'ROLE_ADMIN'">
+                Danh mục quản lý</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Thêm mới sản phẩm</a></li>
+                <li><a class="dropdown-item" href="#">Danh sách phản hồi</a></li>
+                <li><a class="dropdown-item" href="#">Danh sách khách hàng</a></li>
+              </ul>
+            </li>
             <a [routerLink]="'/cart'" class="btn px-0 ml-3 " style="padding-top: 20px; font-size: 20px">
               <i class="fas fa-shopping-cart text-primary"></i>
               <span class="badge text-secondary border border-secondary rounded-circle"
@@ -36,7 +52,7 @@
               <span class="badge text-secondary "
                     style="padding-bottom: 2px; font-size: 20px; color:#FFD333">{{username}}: </span>
             </a>
-            <a *ngIf="token !== ''" class="btn px-0" style="background-color: #23a4d5;" >
+            <a *ngIf="token !== ''" class="btn px-0" style="background-color: #23a4d5;">
               <span class="badge text-secondary " (click)="onLogout()"
                     style="padding-bottom: 2px; font-size: 20px; color:#FFD333">Đăng xuất</span>
             </a>
