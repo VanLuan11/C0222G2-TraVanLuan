@@ -32,7 +32,7 @@ public class ProductRestController {
             return new ResponseEntity<>(productPage, HttpStatus.OK);
         }
     }
-    @GetMapping("/laptopGaming")
+    @GetMapping("/lapTopGaming")
     public ResponseEntity<List<Product>> getAllLaptopGaming() {
         List<Product> productPage = productService.findAllLaptopGaming();
         if (productPage.isEmpty()) {
@@ -43,7 +43,7 @@ public class ProductRestController {
         }
     }
 
-    @GetMapping("/laptopVanPhong")
+    @GetMapping("/lapTopVanPhong")
     public ResponseEntity<List<Product>> getAllLaptopVanPhong() {
         List<Product> productPage = productService.findAllLaptopVanPhong();
         if (productPage.isEmpty()) {
@@ -52,6 +52,15 @@ public class ProductRestController {
         } else {
             return new ResponseEntity<>(productPage, HttpStatus.OK);
         }
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Product> getFeedbackById(@PathVariable int id) {
+        Optional<Product> feedback = productService.findProductById(id);
+        if (!feedback.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(feedback.get(), HttpStatus.OK);
     }
 
 

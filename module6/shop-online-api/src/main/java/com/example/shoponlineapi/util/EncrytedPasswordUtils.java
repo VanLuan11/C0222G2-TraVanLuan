@@ -18,10 +18,11 @@ public class EncrytedPasswordUtils {
         return encoder.encode(password);
     }
 
+    //thay đổi mật khẩu
     public static void main(String[] args) {
-//        String password = "123456a@";
-//        String encrytedPassword = new EncrytedPasswordUtils().encrytePassword(password);
-//        System.out.println(encrytedPassword);
+        String password = "123456a@";
+        String encrytedPassword = new EncrytedPasswordUtils().encrytePassword(password);
+        System.out.println(encrytedPassword);
 //        System.out.println("Encryted Password: " + encrytedPassword);
     }
 

@@ -9,6 +9,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class IProductServiceImpl implements IProductService {
@@ -29,6 +30,11 @@ public class IProductServiceImpl implements IProductService {
     @Override
     public List<Product> findAllLaptopVanPhong() {
         return productRepository.findAllLaptopVanPhong();
+    }
+
+    @Override
+    public Optional<Product> findProductById(int id) {
+        return productRepository.findProductById(id);
     }
 
 }

@@ -8,6 +8,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @Repository
 public interface IProductRepository extends JpaRepository<Product, Integer> {
@@ -21,4 +22,7 @@ public interface IProductRepository extends JpaRepository<Product, Integer> {
 
     @Query(value = " select * from product where is_deleted = 0 and category_id = 2 ", nativeQuery = true)
     List<Product> findAllLaptopVanPhong();
+
+    @Query(value = " select * from product where is_deleted = 0 and category_id = 2 ", nativeQuery = true)
+    Optional<Product> findProductById(int id);
 }

@@ -18,4 +18,12 @@ export class ProductService {
   getAllProduct(page: number) {
     return this.httpClient.get<Product[]>(this.URL_PRODUCT + '/page?page=' + page)
   }
+
+  getAllLapTopGaming() {
+    return this.httpClient.get<Product[]>(this.URL_PRODUCT + '/lapTopGaming')
+  }
+
+  getAllLapTopVanPhong() {
+    return this.httpClient.get<Product[]>(this.URL_PRODUCT + '/lapTopVanPhong')
+  }
 }
