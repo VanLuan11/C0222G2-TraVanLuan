@@ -15,6 +15,8 @@ import {LoginModule} from './login/login.module';
 import { LapTopGamingComponent } from './lap-top-gaming/lap-top-gaming.component';
 import { LapTopVanPhongComponent } from './lap-top-van-phong/lap-top-van-phong.component';
 import { HomeLapTopComponent } from './home-lap-top/home-lap-top.component';
+import { GuaranteeComponent } from './guarantee/guarantee.component';
+import { TransportComponent } from './transport/transport.component';
 
 
 @NgModule({
@@ -28,6 +30,8 @@ import { HomeLapTopComponent } from './home-lap-top/home-lap-top.component';
     LapTopGamingComponent,
     LapTopVanPhongComponent,
     HomeLapTopComponent,
+    GuaranteeComponent,
+    TransportComponent,
   ],
   imports: [
     BrowserModule,

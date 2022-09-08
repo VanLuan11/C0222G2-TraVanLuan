@@ -28,6 +28,7 @@ public class AppUser {
     @Column(nullable = false)
     private String password;
 
+    @Column(columnDefinition = "DATE")
     private Date creationDate;
 
     @Column(columnDefinition = "bit(1) default 0")

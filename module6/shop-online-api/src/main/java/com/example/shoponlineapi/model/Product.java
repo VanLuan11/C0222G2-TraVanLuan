@@ -7,6 +7,7 @@ import lombok.Setter;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+import java.util.Date;
 import java.util.List;
 import java.util.Objects;
 
@@ -21,12 +22,13 @@ public class Product {
     private String image;
     private String nameProduct;
     private double price;
-    private String cpu;
-    private String hdh;
-    private String ram;
-    private String screen;
-    private String ssd;
-    private String vga;
+    private Integer quantity;
+
+    @Column(columnDefinition = "DATE")
+    private Date dateOfManufacture;
+
+    @Column(columnDefinition = "text")
+    private String specifications;
 
     @Column(columnDefinition = "text")
     private String description;

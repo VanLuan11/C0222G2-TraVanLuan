@@ -23,6 +23,7 @@ public class Feedback {
 
     private Integer rating;
 
+    @Column(columnDefinition = "DATE")
     private Date feedbackDate;
 
     @ManyToOne

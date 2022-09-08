@@ -6,6 +6,8 @@ import {HomeLoginComponent} from './login/home-login/home-login.component';
 import {LapTopGamingComponent} from './lap-top-gaming/lap-top-gaming.component';
 import {LapTopVanPhongComponent} from './lap-top-van-phong/lap-top-van-phong.component';
 import {HomeLapTopComponent} from './home-lap-top/home-lap-top.component';
+import {GuaranteeComponent} from './guarantee/guarantee.component';
+import {TransportComponent} from './transport/transport.component';
 
 
 
@@ -17,6 +19,8 @@ const routes: Routes = [
   {path: 'login', component: HomeLoginComponent},
   {path: 'lapTopGaming', component: LapTopGamingComponent},
   {path: 'lapTopVP', component: LapTopVanPhongComponent},
+  {path: 'baoHanh', component: GuaranteeComponent},
+  {path: 'vanChuyen', component: TransportComponent}
 ];
 
 @NgModule({

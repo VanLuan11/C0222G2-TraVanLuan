@@ -22,8 +22,8 @@
               <a  class="nav-item nav-link " style="padding-top: 25px; font-size: 15px">
                 Danh mục sản phẩm</a>
               <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" [routerLink]="'/lapTopGaming'">Laptop gaming</a></li>
-                <li><a class="dropdown-item" [routerLink]="'/lapTopVP'">Laptop văn phòng</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/lapTopGaming']">Laptop gaming</a></li>
+                <li><a class="dropdown-item" [routerLink]="['/lapTopVP']">Laptop văn phòng</a></li>
               </ul>
             </li>
             <li class="nav-item dropdown">
@@ -35,19 +35,18 @@
                 <li><a class="dropdown-item" href="#">Danh sách khách hàng</a></li>
               </ul>
             </li>
-            <a [routerLink]="'/cart'" class="btn px-0 ml-3 " style="padding-top: 20px; font-size: 20px">
+            <a [routerLink]="['/baoHanh']" class="nav-item nav-link " style="padding-top: 25px; font-size: 15px">Chính sách bảo hành</a>
+            <a [routerLink]="['/vanChuyen']"class="nav-item nav-link " style="padding-top: 25px; font-size: 15px">Chính sách vận chuyển</a>
+
+            <a [routerLink]="['/cart']" class="btn px-0 ml-3 " style="padding-top: 20px; font-size: 20px">
               <i class="fas fa-shopping-cart text-primary"></i>
               <span class="badge text-secondary border border-secondary rounded-circle"
                     style="padding-bottom: 2px;">0</span>
             </a>
-            <a href="index.html" class="nav-item nav-link " style="padding-top: 25px; font-size: 15px">Trang chủ</a>
-            <a href="index.html" class="nav-item nav-link " style="padding-top: 25px; font-size: 15px">Trang chủ</a>
-            <a href="index.html" class="nav-item nav-link " style="padding-top: 25px; font-size: 15px">Trang chủ</a>
-            <a href="index.html" class="nav-item nav-link " style="padding-top: 25px; font-size: 15px">Trang chủ</a>
 
           </div>
           <div class="navbar-nav ml-auto py-0 d-none d-lg-block">
-            <a [routerLink]="'/login'" class="btn px-0">
+            <a [routerLink]="['/login']" class="btn px-0">
               <span class="badge text-secondary " *ngIf="role=== ''" style="padding-bottom: 2px; font-size: 20px">Đăng nhập</span>
             </a>
             <a href="" class="btn px-0">

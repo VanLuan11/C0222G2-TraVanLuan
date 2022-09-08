@@ -16,6 +16,7 @@ public class OrderService {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
+    @Column(columnDefinition = "DATE")
     private Date creationDate;
 
     private Integer quantity;
