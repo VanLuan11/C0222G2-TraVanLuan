@@ -1,10 +1,10 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
-import {CookieService} from '../login/service/cookie.service';
+import {CookieService} from '../../login/service/cookie.service';
 import {ToastrService} from 'ngx-toastr';
-import {LogoutService} from '../login/service/logout.service';
+import {LogoutService} from '../../login/service/logout.service';
 import {Router} from '@angular/router';
-import {CommonService} from '../login/service/common.service';
+import {CommonService} from '../../login/service/common.service';
 
 @Component({
   selector: 'app-header',
@@ -12,6 +12,7 @@ import {CommonService} from '../login/service/common.service';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit, OnDestroy {
+
   role: string = '';
   username: string = '';
   token: string = '';
@@ -96,4 +97,5 @@ export class HeaderComponent implements OnInit, OnDestroy {
     // send message to subscribers via observable subject
     this.commonService.sendUpdate('Đăng Xuất thành công!');
   }
+
 }

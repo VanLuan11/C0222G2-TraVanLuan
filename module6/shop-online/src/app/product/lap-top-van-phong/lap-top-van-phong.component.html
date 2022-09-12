@@ -1,35 +1,168 @@
-<app-home></app-home>
-<div class="container mt-3 ">
-  <!-- Products Start -->
-  <div class="container-fluid pt-2 pb-2 ">
-    <h2 class="section-title position-relative text-uppercase  mb-4">
-      <span class="bg-white" style="border-radius: 12px">LAPTOP VĂN PHÒNG</span>
-    </h2>
-    <div class="row ">
-      <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let p of listProduct">
-        <div class="product-item bg-light mb-4">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" [src]="p.image" alt="">
-            <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href=""><i
-                class="fa fa-shopping-cart"></i></a>
-              <a class="btn btn-outline-dark btn-square"><i class="far fa-heart"></i></a>
-              <a class="btn btn-outline-dark btn-square" [routerLink]="'/detail'"><i class="fa fa-search"></i></a>
-            </div>
-          </div>
-          <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" >{{p.nameProduct}}</p>
-            <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">{{p.price | currency: 'VND':'' }}đ
-                <h6>Số lượng ({{p.quantity}})</h6>
-              </h5>
+<!-- Shop Start -->
+<div class="container-fluid">
+  <div class="row px-xl-5">
+    <!-- Shop Sidebar Start -->
+    <div class="col-lg-3 col-md-4">
+      <!-- Price Start -->
+      <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Theo Giá</span>
+      </h5>
+      <div class="bg-light p-4 mb-30">
+        <!--        <form>-->
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="filter-price" class="custom-control-input" checked id="price-all"
+                 (input)="filterPrice('0', '400000000000')">
+          <label class="custom-control-label" for="price-all">Tất cả giá bán</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="filter-price" class="custom-control-input" id="price-1"
+                 (input)="filterPrice('0', '15000000')">
+          <label class="custom-control-label" for="price-1">0 đ - 15.000.000 đ</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="filter-price" class="custom-control-input" id="price-2"
+                 (input)="filterPrice('15000000', '25000000')">
+          <label class="custom-control-label" for="price-2">15.000.000 đ - 25.000.000 đ</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="filter-price" class="custom-control-input" id="price-3"
+                 (input)="filterPrice('25000000', '35000000')">
+          <label class="custom-control-label" for="price-3">25.000.000 đ - 35.000.000 đ</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="filter-price" class="custom-control-input" id="price-4"
+                 (input)="filterPrice('35000000', '45000000')">
+          <label class="custom-control-label" for="price-4">35.000.000 đ - 45.000.000 đ</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="filter-price" class="custom-control-input" id="price-5"
+                 (input)="filterPrice('45000000', '55000000')">
+          <label class="custom-control-label" for="price-5">45.000.000 đ - 55.000.000 đ</label>
+        </div>
+        <!--        </form>-->
+      </div>
+
+
+      <!-- Color Start -->
+      <h5 class="section-title position-relative text-uppercase mb-3"><span class="bg-secondary pr-3">Theo hãng</span>
+      </h5>
+      <div class="bg-light p-4 mb-30">
+        <!--        <form>-->
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="origin" class="custom-control-input" checked id="color-all"
+                 (input)="filterOrigin('')">
+          <label class="custom-control-label" for="color-all">Tất cả hãng</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="origin" class="custom-control-input" id="color-1" (input)="filterOrigin('Acer')">
+          <label class="custom-control-label" for="color-1">Acer</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="origin" class="custom-control-input" id="color-2" (input)="filterOrigin('Asus')">
+          <label class="custom-control-label" for="color-2">Asus</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="origin" class="custom-control-input" id="color-3" (input)="filterOrigin('Lenovo')">
+          <label class="custom-control-label" for="color-3">Lenovo</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between mb-3">
+          <input type="radio" name="origin" class="custom-control-input" id="color-4" (input)="filterOrigin('Dell')">
+          <label class="custom-control-label" for="color-4">Dell</label>
+        </div>
+        <div class="custom-control custom-checkbox d-flex align-items-center justify-content-between">
+          <input type="radio" name="origin" class="custom-control-input" id="color-5" (input)="filterOrigin('Msi')">
+          <label class="custom-control-label" for="color-5">Msi</label>
+        </div>
+        <!--        </form>-->
+      </div>
+
+
+    </div>
+    <!-- Shop Sidebar End -->
+
+    <!-- Shop Product Start -->
+    <div class="col-lg-9 col-md-8">
+      <div class="row pb-3">
+        <div class="col-12 pb-1">
+          <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="section-title position-relative text-uppercase  mb-4">
+              <span class="bg-white" style="border-radius: 12px">LAPTOP Văn Phòng</span>
+            </h2>
+            <div class="ml-2">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">Sắp xếp
+                </button>
+                <div class="dropdown-menu dropdown-menu-right">
+                  <a class="dropdown-item" (click)="sortProduct('date_of_manufacture,desc')">Sản phầm mới</a>
+                  <a class="dropdown-item" (click)="sortProduct('price,desc')">Giá giảm dần</a>
+                  <a class="dropdown-item" (click)="sortProduct('price,asc')">Giá tâng dần</a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
+        <div class="col-lg-3 col-md-4 col-sm-6 pb-1" *ngFor="let p of listProduct">
+          <div class="product-item bg-light mb-4">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" [src]="p.image" alt="">
+              <div class="product-action">
+                <a class="btn btn-outline-dark btn-square" href=""><i
+                  class="fa fa-shopping-cart"></i></a>
+                <a class="btn btn-outline-dark btn-square" [routerLink]="'/detail'"><i class="fa fa-search"></i></a>
+              </div>
+            </div>
+            <div class="text-center py-4">
+              <p class="h6 text-decoration-none text-truncate" href="">{{p.nameProduct}}</p>
+              <div class="d-flex align-items-center justify-content-center mt-2">
+                <h5 class="text-danger">{{(p.price | currency: 'VND':'').replace(',', '.').replace(',', '.')}}đ
+                  <h6>Số lượng ({{p.quantity}})</h6>
+                </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <nav>
+            <ul class="pagination justify-content-center">
+              <div *ngIf="number == 0">
+                <li class="page-item disabled">
+                  <button class="page-link" (click)="goPrevious()" hidden>Quay Lại</button>
+                </li>
+              </div>
+              <div *ngIf="number != 0">
+                <li class="page-item">
+                  <button class="page-link" (click)="goPrevious()">Quay Lại</button>
+                </li>
+              </div>
+              <div *ngFor="let count of countTotalPages; index as i">
+                <div *ngIf="i == number">
+                  <li class="page-item active">
+                    <button class="page-link" (click)="goItem(i)">{{i + 1}}</button>
+                  </li>
+                </div>
+                <div *ngIf="i != number">
+                  <li class="page-item">
+                    <button class="page-link" (click)="goItem(i)">{{i + 1}}</button>
+                  </li>
+                </div>
+              </div>
+              <div *ngIf="number == totalPages - 1">
+                <li class="page-item disabled">
+                  <button class="page-link" (click)="goNext()">Tiếp</button>
+                </li>
+              </div>
+              <div *ngIf="number != totalPages - 1">
+                <li class="page-item">
+                  <button class="page-link" (click)="goNext()">Tiếp</button>
+                </li>
+              </div>
+            </ul>
+          </nav>
+        </div>
       </div>
     </div>
+    <!-- Shop Product End -->
   </div>
-  <!-- Products End -->
 </div>
+<!-- Shop End -->
 
 

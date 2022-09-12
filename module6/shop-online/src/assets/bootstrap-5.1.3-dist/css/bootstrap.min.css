@@ -3589,7 +3589,7 @@ textarea.form-control-lg {
   }
 }
 
-.dropdown, .dropend, .dropstart, .dropup {
+. dropdown, .dropend, .dropstart, .dropup {
   position: relative
 }
 
@@ -5827,15 +5827,15 @@ textarea.form-control-lg {
   outline: 0
 }
 
-.modal-backdrop {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1050;
-  width: 100vw;
-  height: 100vh;
-  background-color: #000
-}
+/*.modal-backdrop {*/
+/*  position: fixed;*/
+/*  top: 0;*/
+/*  left: 0;*/
+/*  z-index: 1050;*/
+/*  width: 100vw;*/
+/*  height: 100vh;*/
+/*  background-color: #000*/
+/*}*/
 
 .modal-backdrop.fade {
   opacity: 0

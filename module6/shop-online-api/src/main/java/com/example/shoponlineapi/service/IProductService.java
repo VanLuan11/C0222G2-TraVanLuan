@@ -4,16 +4,17 @@ import com.example.shoponlineapi.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import java.util.List;
-import java.util.Optional;
+
 
 public interface IProductService {
 
     Page<Product> findAllProduct(Pageable pageable);
 
-    List<Product> findAllLaptopGaming();
+    Page<Product> findAllLapTopGaming(Pageable pageable, String nameProduct, String start, String end);
 
-    List<Product> findAllLaptopVanPhong();
+    Page<Product> findAllLapTopVP(Pageable pageable, String nameProduct, String start, String end);
 
-    Optional<Product> findProductById(int id);
+    void deleteProductById(Integer id);
+
+    Product findProductById(int id);
 }

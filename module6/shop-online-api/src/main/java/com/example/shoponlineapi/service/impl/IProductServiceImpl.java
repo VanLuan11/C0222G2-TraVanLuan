@@ -8,7 +8,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+
 import java.util.Optional;
 
 @Service
@@ -17,24 +17,31 @@ public class IProductServiceImpl implements IProductService {
     @Autowired
     private IProductRepository productRepository;
 
+
     @Override
     public Page<Product> findAllProduct(Pageable pageable) {
         return productRepository.findAllProduct(pageable);
     }
 
     @Override
-    public List<Product> findAllLaptopGaming() {
-        return productRepository.findAllLaptopGaming();
-    }
-
-    @Override
-    public List<Product> findAllLaptopVanPhong() {
-        return productRepository.findAllLaptopVanPhong();
-    }
-
-    @Override
-    public Optional<Product> findProductById(int id) {
+    public Product findProductById(int id) {
         return productRepository.findProductById(id);
     }
+
+    @Override
+    public Page<Product> findAllLapTopGaming(Pageable pageable, String nameProduct, String start, String end) {
+        return productRepository.findAllLapTopGaming(pageable, "%" + nameProduct + "%", start, end);
+    }
+
+    @Override
+    public Page<Product> findAllLapTopVP(Pageable pageable, String nameProduct, String start, String end) {
+        return productRepository.findAllLapTopVP(pageable, "%" + nameProduct + "%", start, end);
+    }
+
+    @Override
+    public void deleteProductById(Integer id) {
+        productRepository.deleteProductById(id);
+    }
+
 
 }

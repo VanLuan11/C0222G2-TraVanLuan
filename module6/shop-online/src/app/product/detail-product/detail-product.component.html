@@ -1,66 +1,66 @@
 <!-- Shop Detail Start -->
-<div class="container pb-1 pt-4">
-  <div class="row px-xl-5" *ngIf="product">
-    <div class="col-lg-5 mb-30 h-auto">
-      <div class="product-item bg-light h-100 p-30">
-        <div class="product-img position-relative overflow-hidden">
-          <img class="img-fluid w-100" [src]="product.image" alt="">
+<div class="row">
+  <div class="container pb-1 pt-4 col-8">
+    <div class="row px-xl-5" *ngIf="product">
+      <div class="col-lg-5 mb-30 h-auto">
+        <div class="product-item bg-light h-100 p-30">
+          <div class="product-img position-relative overflow-hidden">
+            <img class="img-fluid w-100" [src]="product.image" alt="">
+          </div>
         </div>
       </div>
-    </div>
 
-    <div class="col-lg-7 h-auto mb-30">
-      <div class="h-100 bg-light p-30">
-        <h3>{{product.nameProduct}}</h3>
-        <h3 class="font-weight-semi-bold mb-4">{{product.price}}</h3>
-        <p class="mb-4">
-          {{product.specifications}}</p>
-        <p class="mb-4"> {{product.quantity}}</p>
-        <div class="d-flex align-items-center mb-4 pt-2">
-          <div class="input-group quantity mr-3" style="width: 130px;">
-            <div class="input-group-btn">
-              <button class="btn btn-primary btn-minus">
-                <i class="fa fa-minus"></i>
-              </button>
+      <div class="col-lg-7 h-auto mb-30">
+        <div class="h-100 bg-light p-30">
+          <h3>{{product.nameProduct}}</h3>
+          <p class="mb-4">{{product.specifications}}</p>
+          <p class="mb-4"> {{product.quantity}}</p>
+          <h4 class="font-weight-semi-bold mb-4">{{product.price | currency: 'VND':''}} đ</h4>
+          <div class="d-flex align-items-center mb-4 pt-2">
+            <div class="input-group quantity mr-3" style="width: 130px;">
+              <div class="input-group-btn">
+                <button class="btn btn-primary btn-minus">
+                  <i class="fa fa-minus"></i>
+                </button>
+              </div>
+              <input type="text" class="form-control bg-secondary border-0 text-center" value="1">
+              <div class="input-group-btn">
+                <button class="btn btn-primary btn-plus">
+                  <i class="fa fa-plus"></i>
+                </button>
+              </div>
             </div>
-            <input type="text" class="form-control bg-secondary border-0 text-center" value="1">
-            <div class="input-group-btn">
-              <button class="btn btn-primary btn-plus">
-                <i class="fa fa-plus"></i>
-              </button>
-            </div>
+            <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Thêm vào giỏ hàng
+            </button>
+            <button [routerLink]="['/home']" class="btn btn-primary" style="margin-left: 5px"><i class="fa fa-undo mr-1"></i> Quay lại
+            </button>
           </div>
-          <button class="btn btn-primary px-3"><i class="fa fa-shopping-cart mr-1"></i> Thêm vào giỏ hàng
-          </button>
         </div>
       </div>
     </div>
   </div>
-  <!--    <div class="row px-xl-5">-->
-  <!--      <div class="col">-->
-  <!--        <div class="bg-light p-30">-->
-  <!--          <div class="tab-content">-->
-  <!--            <div class="tab-pane fade show active" id="tab-pane-1">-->
-  <!--              <h3 class="mb-3">Mô Tả Sản Phẩm</h3>-->
-  <!--              <h5 class="mb-3">Laptop gaming tốt nhất phân khúc</h5>-->
-  <!--              <p>Acer Aspire 7 2020 A715 42G R4XX tích hợp card đồ họa NVIDIA GTX1650 4GB GDDR6 ra mắt năm 2020, là laptop-->
-  <!--                chơi game tốt nhất phân khúc. Không chỉ vậy, phiên bản này còn mang thiết kế mới gọn gàng và sexy hơn.-->
-  <!--                Aspire 7 2020 được trang bị hệ thống tản nhiệt mạnh mẽ bậc nhất trong phân khúc, thừa hưởng công nghệ từ-->
-  <!--                các dòng máy cao cấp hơn của Acer, cùng cấu hình đỉnh cao, giúp cho người dùng có thể vừa chơi game vừa-->
-  <!--                làm việc ở bất cứ lúc nào.</p>-->
-  <!--              <h5 class="mb-3">Thiết kế tối ưu trải nghiệm chơi game</h5>-->
-  <!--              <p>Hệ thống hai quạt tản nhiệt, 3 ống đồng fullsize, heatsink size lớn giúp Acer Aspire 7 A715 2020 tối ưu-->
-  <!--                khả năng tản nhiệt. Bản lề thiết kế chắc chắn ít bị rung lắc khi chơi, có khả năng mở góc 180 độ giúp bảo-->
-  <!--                vệ máy tốt hơn.</p>-->
-  <!--              <h5 class="mb-3">Dịch vụ bảo hành 3S1</h5>-->
-  <!--              <p>3S1 là chính sách bảo hành nhanh của Acer dành cho game thủ. Aspire 7 được hưởng Bảo hành 3S1 siêu nhanh:-->
-  <!--                bảo hành nhanh, trong vòng 3 ngày kể cả thứ 7 và chủ nhật, quá 3 ngày 1 đổi 1 sản phẩm mới có giá trị-->
-  <!--                tương đương hoặc cao hơn.</p>-->
-  <!--            </div>-->
-  <!--          </div>-->
-  <!--        </div>-->
-  <!--      </div>-->
-  <!--    </div>-->
+  <div class="col-4 pb-1 pt-4 small ">
+    <div class="oneshop-single-product-right d-none d-lg-block">
+      <!-- Gift -->
+      <div class="oneshop-ctkm mb-3">
+        <div class="heading">Chương trình khuyến mãi</div>
+        <div class="ctn"><p><strong>Thời gian áp dụng</strong>: Từ ngày&nbsp;<strong>16/08/2022</strong>&nbsp;đến ngày&nbsp;<strong>30/09/2022</strong><br>
+          Áp dụng:với tất cả quý khách hàng mua&nbsp;<strong>laptop Lenovo</strong>&nbsp;tại&nbsp;<strong>SP ONE</strong></p>
+          <p>TẶNG NGAY&nbsp;<strong>01 Áo khoác Legion</strong>&nbsp;cùng combo&nbsp;<strong>ba lô IdeaPad Modern</strong>&nbsp;trị giá<br>
+            <strong>799.000VNĐ</strong>&nbsp;&amp; chuột&nbsp;<strong>Lenovo Legion M300s</strong>&nbsp;trị giá&nbsp;<strong>899.000VNĐ</strong></p>
+          <p><u><strong>Khuyến mãi:</strong></u></p>
+          <p>Khi mua với giá<strong> 16,450,000 </strong>tặng quà cực shock</p>
+          <p><strong>🎁</strong>Tặng <strong>Balo Lenovo </strong>trị giá<strong> 600,000</strong></p>
+          <p><strong>🎁Tặng Chuột Gaming </strong>trị giá<strong> 300,000</strong></p>
+          <p><strong>🎁</strong>Tặng voucher vệ sinh, cân màu máy trị giá <strong>1,990,000</strong></p>
+          <p>Giá cực Shock chỉ <strong>17,450,000</strong> tặng ngay</p>
+          <p><strong>🎁 RAM Laptop 8GB Bus 3200Mhz trị giá 1.390,000</strong></p>
+          <p><strong>🎁 Balo Lenovo</strong>&nbsp;trị giá <strong>600,000</strong></p>
+          <p><strong>🎁 Voucher vệ sinh, cân màu 2 năm </strong>trị giá<strong>&nbsp;1,990,000</strong></p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Shop Detail End -->
 

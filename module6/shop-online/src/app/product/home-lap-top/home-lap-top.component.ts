@@ -1,9 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import {Product} from '../model/product';
-import {ProductService} from '../service/product.service';
+import {Component, OnInit} from '@angular/core';
+import {Product} from '../../model/product';
+import {ProductService} from '../../service/product.service';
 import {ToastrService} from 'ngx-toastr';
 import {Title} from '@angular/platform-browser';
-import {CookieService} from '../login/service/cookie.service';
+import {CookieService} from '../../login/service/cookie.service';
+import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-home-lap-top',
@@ -19,6 +20,11 @@ export class HomeLapTopComponent implements OnInit {
   totalPages: number;
   number: number;
   countTotalPages: number[];
+  id: number;
+  name: string;
+  price: number;
+  date: string;
+
 
   constructor(private cookieService: CookieService,
               private productService: ProductService,
@@ -29,15 +35,17 @@ export class HomeLapTopComponent implements OnInit {
     this.token = this.readCookieService('jwToken');
     this.title.setTitle('Tech Shop');
   }
+
   readCookieService(key: string): string {
     return this.cookieService.getCookie(key);
   }
 
   ngOnInit(): void {
-    this.getAllProduct(0)
+    this.getAllProduct(0);
+
   }
 
-  getAllProduct(page: number) {
+  getAllProduct(page) {
     this.productService.getAllProduct(page)
       .subscribe((data: Product[]) => {
         if (data != null) {
@@ -77,6 +85,13 @@ export class HomeLapTopComponent implements OnInit {
 
   goItem(i: number) {
     this.getAllProduct(i);
+  }
+
+  showDelete(p: Product) {
+    this.id = p.id;
+    this.name = p.nameProduct;
+    this.price= p.price
+    this.date = p.dateOfManufacture;
   }
 
 }
