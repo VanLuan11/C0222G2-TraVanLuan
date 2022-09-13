@@ -1,42 +1,40 @@
 package com.example.shoponlineapi.model;
+
+
 import lombok.*;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
+
 import java.util.Objects;
 
+@Entity
 @Getter
 @Setter
 @RequiredArgsConstructor
-@Entity
-public class OrderService {
+public class Coupon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    private Integer quantity;
+    @Column(unique = true)
+    private String name;
+
+    @Column(columnDefinition = "double default 0")
+    private Integer discountPercent;
 
     @Column(columnDefinition = "bit(1) default 0")
     private Boolean isDeleted;
 
-    @ManyToOne
-    @JoinColumn(name = "product_id", referencedColumnName = "id")
-    private Product product;
-
-    @ManyToOne
-    @JoinColumn(name = "customer_id", referencedColumnName = "id")
-    private Customer customer;
-
-    @ManyToOne
-    @JoinColumn(name = "bill_id", referencedColumnName = "id")
-    private Bill bill;
+    @OneToMany(mappedBy = "coupon")
+    private List<ProductCoupon> productCouponList;
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        OrderService that = (OrderService) o;
-        return id != null && Objects.equals(id, that.id);
+        Coupon coupon = (Coupon) o;
+        return id != null && Objects.equals(id, coupon.id);
     }
 
     @Override
@@ -44,3 +42,4 @@ public class OrderService {
         return getClass().hashCode();
     }
 }
+

@@ -55,4 +55,5 @@ public class AppUser {
     public int hashCode() {
         return getClass().hashCode();
     }
+
 }

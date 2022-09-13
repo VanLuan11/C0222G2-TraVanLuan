@@ -4,7 +4,11 @@ import {ProductService} from '../../service/product.service';
 import {ToastrService} from 'ngx-toastr';
 import {Title} from '@angular/platform-browser';
 import {CookieService} from '../../login/service/cookie.service';
-import {FormControl, FormGroup} from '@angular/forms';
+import {Customer} from '../../model/customer';
+import {CommonService} from '../../login/service/common.service';
+import {OrderService} from '../../service/order.service';
+// @ts-ignore
+import Order = jasmine.Order;
 
 @Component({
   selector: 'app-home-lap-top',
@@ -17,19 +21,21 @@ export class HomeLapTopComponent implements OnInit {
   token: string = '';
 
   listProduct: Product[] = [];
+  product: Product = {};
   totalPages: number;
   number: number;
   countTotalPages: number[];
   id: number;
-  name: string;
-  price: number;
-  date: string;
+  customer: Customer;
+
 
 
   constructor(private cookieService: CookieService,
               private productService: ProductService,
               private toast: ToastrService,
-              private title: Title) {
+              private title: Title,
+              private  commonService: CommonService,
+              private orderService: OrderService) {
     this.role = this.readCookieService('role');
     this.username = this.readCookieService('username');
     this.token = this.readCookieService('jwToken');
@@ -88,10 +94,32 @@ export class HomeLapTopComponent implements OnInit {
   }
 
   showDelete(p: Product) {
-    this.id = p.id;
-    this.name = p.nameProduct;
-    this.price= p.price
-    this.date = p.dateOfManufacture;
+    this.product = p;
   }
 
+  deleteById(id: number) {
+    this.productService.deleteProductById(id).subscribe(value => {
+      this.toast.success('Xoá sản phầm thành công!');
+      this.ngOnInit()
+    })
+  }
+
+  addToCart(product: Product) {
+    let order: Order = {
+      customer: this.customer,
+      product: product,
+      quantity: 1
+    };
+    this.orderService.addOrder(order).subscribe((po: Order) => {
+      this.toast.success('Thêm thành công sản phẩm ' + po.product.name);
+      this.sendMessage();
+    }, error => {
+      if (error.error.message == 'quantity') {
+        this.toast.warning('Bạn đã thêm vượt quá số lượng sản phẩm!');
+      }
+    });
+  }
+  sendMessage(): void {
+    this.commonService.sendUpdate('Success!');
+  }
 }

@@ -20,7 +20,7 @@ public class AppUserService implements IAppUserService {
      * @date-create 9/8/2022
      */
     @Override
-    public AppUser findAppUserByUserName(String username) {
+    public AppUser findAppUserByUsername(String username) {
         return this.IAppUserRepository.findAppUserByUserName(username);
     }
 

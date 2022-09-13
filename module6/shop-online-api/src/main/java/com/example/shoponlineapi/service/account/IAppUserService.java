@@ -5,7 +5,7 @@ import com.example.shoponlineapi.model.account.AppUser;
 
 public interface IAppUserService {
 
-    AppUser findAppUserByUserName(String username);
+    AppUser findAppUserByUsername(String username);
 
     void updatePassword(AppUser appUser);
 

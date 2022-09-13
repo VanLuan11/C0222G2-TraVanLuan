@@ -20,29 +20,38 @@ public class Product {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String image;
-    private String nameProduct;
+    private String name;
+    @Column(columnDefinition = "DATE")
+    private Date dateIn;
     private double price;
+    private String manufacturer;
+    private String guaranteeTime;
+    private Double  discount;
     private Integer quantity;
 
-    @Column(columnDefinition = "DATE")
-    private Date dateOfManufacture;
-
     @Column(columnDefinition = "text")
-    private String specifications;
+    private String specification;
 
     @Column(columnDefinition = "text")
     private String description;
+
+    @OneToMany(mappedBy = "product")
+    private List<ProductCoupon> productCouponList;
+
+    @OneToMany(mappedBy = "product")
+    @JsonIgnore
+    private List<Promotion>  promotionList;
 
     @ManyToOne
     @JoinColumn(name = "category_id", referencedColumnName = "id")
     private Category category;
 
+    @Column(columnDefinition = "bit(1) default 0")
+    private Boolean isDeleted;
+
     @JsonIgnore
     @OneToMany(mappedBy = "product")
     List<OrderService> orderServiceList;
-
-    @Column(columnDefinition = "bit(1) default 0")
-    private Boolean isDeleted;
 
     @Override
     public boolean equals(Object o) {

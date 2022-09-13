@@ -1,6 +1,6 @@
 import {Injectable} from '@angular/core';
 import {environment} from '../../environments/environment';
-import {HttpClient} from '@angular/common/http';
+import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {CookieService} from '../login/service/cookie.service';
 import {Product} from '../model/product';
 import {Observable} from 'rxjs';
@@ -70,7 +70,7 @@ export class ProductService {
     return this.httpClient.get<Product>(this.URL_PRODUCT + '/detail/' + id);
   }
 
-  getDeleteById(id): Observable<Product> {
-    return this.httpClient.get<Product>(this.URL_PRODUCT + '/delete/' + id);
+  deleteProductById(id): Observable<Product> {
+    return this.httpClient.delete<Product>(this.URL_PRODUCT + '/delete/' + id, {headers: new HttpHeaders({'authorization': this.header})}).pipe();
   }
 }

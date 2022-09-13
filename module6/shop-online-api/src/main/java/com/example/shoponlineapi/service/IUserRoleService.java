@@ -1,7 +1,6 @@
 package com.example.shoponlineapi.service;
 
-
-import com.example.shoponlineapi.model.account.UserRole;
+import com.shoponlineapi.model.account.UserRole;
 
 public interface IUserRoleService {
 

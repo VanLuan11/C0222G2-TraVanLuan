@@ -1,5 +1,6 @@
 package com.example.shoponlineapi.model;
 
+import com.shoponlineapi.model.account.AppUser;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -18,27 +19,31 @@ public class Feedback {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(columnDefinition = "text")
     private String content;
 
-    private Integer rating;
-
-    @Column(columnDefinition = "DATE")
     private Date feedbackDate;
+
+    @Column(columnDefinition = "text")
+    private String image;
+
+    private Integer rate;
+
+    @Column(columnDefinition = "bit(1) default 0")
+    private Boolean isDeleted;
+
+    @OneToOne(mappedBy = "feedback")
+    private Bill bill;
 
     @ManyToOne
     @JoinColumn(name = "customer_id", referencedColumnName = "id")
     private Customer customer;
 
-    @Column(columnDefinition = "bit(1) default 0")
-    private Boolean isDeleted;
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || Hibernate.getClass(this) != Hibernate.getClass(o)) return false;
-        Feedback feedBack = (Feedback) o;
-        return id != null && Objects.equals(id, feedBack.id);
+        Feedback feedback = (Feedback) o;
+        return id != null && Objects.equals(id, feedback.id);
     }
 
     @Override
