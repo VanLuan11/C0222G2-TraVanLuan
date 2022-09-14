@@ -1,7 +1,8 @@
-package com.example.shoponlineapi.filter;
+package com.example.shoponlineapi.security.filter;
 
+
+import com.example.shoponlineapi.security.util.JwtTokenUtil;
 import com.example.shoponlineapi.service.jwt.JwtUserDetailsService;
-import com.example.shoponlineapi.util.JwtTokenUtil;
 import io.jsonwebtoken.ExpiredJwtException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
@@ -27,15 +28,13 @@ public class JwtRequestFilter extends OncePerRequestFilter {
     private JwtTokenUtil jwtTokenUtil;
 
     /**
+     * @function After setting the Authentication in the context,
+     * we specify that the current user is authenticated. So it passes the Spring Security Configurations successfully.
      * @param request
      * @param response
      * @param chain
      * @throws ServletException
      * @throws IOException
-     * @function After setting the Authentication in the context,
-     * we specify that the current user is authenticated. So it passes the Spring Security Configurations successfully.
-     * @author: PhuongTD
-     * @date-create 9/8/2022
      */
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)

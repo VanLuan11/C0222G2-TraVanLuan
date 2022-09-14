@@ -1,5 +1,6 @@
 package com.example.shoponlineapi.repository;
 
+
 import com.example.shoponlineapi.model.Bill;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

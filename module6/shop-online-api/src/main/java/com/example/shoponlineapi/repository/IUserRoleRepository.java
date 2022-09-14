@@ -1,7 +1,8 @@
 package com.example.shoponlineapi.repository;
 
-import com.shoponlineapi.model.account.AppUser;
-import com.shoponlineapi.model.account.UserRole;
+
+import com.example.shoponlineapi.model.account.AppUser;
+import com.example.shoponlineapi.model.account.UserRole;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

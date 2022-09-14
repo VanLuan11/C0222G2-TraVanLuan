@@ -1,5 +1,8 @@
 package com.example.shoponlineapi.model;
-import lombok.*;
+
+import lombok.Getter;
+import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;

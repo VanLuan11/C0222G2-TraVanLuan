@@ -1,4 +1,4 @@
-package com.example.shoponlineapi.util;
+package com.example.shoponlineapi.security.util;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;

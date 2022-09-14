@@ -1,10 +1,9 @@
 package com.example.shoponlineapi.service.jwt;
 
 
+
 import com.example.shoponlineapi.model.account.AppUser;
 import com.example.shoponlineapi.model.account.UserRole;
-import com.example.shoponlineapi.repository.IAppUserRepository;
-import com.example.shoponlineapi.repository.account.IUserRoleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
@@ -25,14 +24,13 @@ public class JwtUserDetailsService implements UserDetailsService {
     private com.example.shoponlineapi.repository.IAppUserRepository IAppUserRepository;
 
     @Autowired
-    private com.example.shoponlineapi.repository.account.IUserRoleRepository IUserRoleRepository;
+    private com.example.shoponlineapi.repository.IUserRoleRepository IUserRoleRepository;
 
     /**
+     *
      * @param userName
      * @return username, password, roles list
      * @throws UsernameNotFoundException
-     * @creator PhuongTD
-     * @date-create 9/8/2022
      */
     @Override
     public UserDetails loadUserByUsername(String userName) throws UsernameNotFoundException {

@@ -2,8 +2,10 @@ package com.example.shoponlineapi.service;
 
 
 
-import com.shoponlineapi.dto.RegisterDTO;
-import com.shoponlineapi.model.account.AppUser;
+
+
+import com.example.shoponlineapi.dto.RegisterDTO;
+import com.example.shoponlineapi.model.account.AppUser;
 
 import java.util.List;
 

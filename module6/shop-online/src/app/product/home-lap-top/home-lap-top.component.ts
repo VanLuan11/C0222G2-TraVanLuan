@@ -9,6 +9,8 @@ import {CommonService} from '../../login/service/common.service';
 import {OrderService} from '../../service/order.service';
 // @ts-ignore
 import Order = jasmine.Order;
+import {Router} from '@angular/router';
+import {CustomerService} from '../../service/customer.service';
 
 @Component({
   selector: 'app-home-lap-top',
@@ -27,6 +29,7 @@ export class HomeLapTopComponent implements OnInit {
   countTotalPages: number[];
   id: number;
   customer: Customer;
+  infoStatus: boolean = false;
 
 
 
@@ -35,7 +38,9 @@ export class HomeLapTopComponent implements OnInit {
               private toast: ToastrService,
               private title: Title,
               private  commonService: CommonService,
-              private orderService: OrderService) {
+              private orderService: OrderService,
+              private router: Router,
+              private customerService: CustomerService) {
     this.role = this.readCookieService('role');
     this.username = this.readCookieService('username');
     this.token = this.readCookieService('jwToken');
@@ -48,7 +53,7 @@ export class HomeLapTopComponent implements OnInit {
 
   ngOnInit(): void {
     this.getAllProduct(0);
-
+    this.getCustomerByUsername(this.username);
   }
 
   getAllProduct(page) {
@@ -117,6 +122,27 @@ export class HomeLapTopComponent implements OnInit {
       if (error.error.message == 'quantity') {
         this.toast.warning('Bạn đã thêm vượt quá số lượng sản phẩm!');
       }
+    });
+  }
+
+  getCustomerByUsername(username: string) {
+    this.customerService.getCustomerByUserName(username).subscribe(value => {
+      this.customer = value;
+      if (value == null) {
+        this.infoStatus = true;
+      } else {
+        this.infoStatus = value.appUser.isDeleted;
+      }
+    });
+  }
+
+  addToCartMessage() {
+    this.toast.warning('Vui lòng đăng nhập thành viên để thực hiện chức năng này!');
+  }
+
+  updateInfoMessage() {
+    this.router.navigateByUrl('/info').then(value => {
+      this.toast.warning('Vui lòng cập nhật thông tin để mua hàng!');
     });
   }
   sendMessage(): void {

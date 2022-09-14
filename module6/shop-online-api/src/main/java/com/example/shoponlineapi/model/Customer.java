@@ -1,8 +1,8 @@
 package com.example.shoponlineapi.model;
 
 
+import com.example.shoponlineapi.model.account.AppUser;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.shoponlineapi.model.account.AppUser;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

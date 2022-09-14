@@ -1,6 +1,5 @@
 package com.example.shoponlineapi.model;
 
-import com.shoponlineapi.model.account.AppUser;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;

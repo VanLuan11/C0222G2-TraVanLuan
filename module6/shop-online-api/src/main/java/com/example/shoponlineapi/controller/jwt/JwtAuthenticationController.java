@@ -4,11 +4,10 @@ package com.example.shoponlineapi.controller.jwt;
 import com.example.shoponlineapi.model.account.AppUser;
 import com.example.shoponlineapi.model.jwt.JwtRequest;
 import com.example.shoponlineapi.model.jwt.JwtResponse;
-
-import com.example.shoponlineapi.service.account.IAppUserService;
+import com.example.shoponlineapi.security.util.JwtTokenUtil;
+import com.example.shoponlineapi.security.util.LoginUtil;
+import com.example.shoponlineapi.service.IAppUserService;
 import com.example.shoponlineapi.service.jwt.JwtUserDetailsService;
-import com.example.shoponlineapi.util.JwtTokenUtil;
-import com.example.shoponlineapi.util.LoginUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -78,7 +77,7 @@ public class JwtAuthenticationController {
         SecurityContextHolder.getContext()
                 .setAuthentication(authenticate(authenticationRequest.getUsername(), authenticationRequest.getPassword()));
 
-        AppUser appUser = this.appUserService.findAppUserByUsername(authenticationRequest.getUsername());
+        AppUser appUser = this.appUserService.findAppUserByUserName(authenticationRequest.getUsername());
         Date date = new Date(System.currentTimeMillis());
 
         if (date.toLocalDate().compareTo(appUser.getCreationDate().toLocalDate().plusDays(30)) >= 0) {

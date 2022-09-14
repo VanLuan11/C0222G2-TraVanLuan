@@ -1,9 +1,12 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
-import {environment} from '../../environments/environment';
-import {Customer} from '../model/customer';
+import {environment} from "../../environments/environment";
+import {HttpClient} from "@angular/common/http";
+import {Customer} from "../model/customer";
+import {Observable} from "rxjs";
+import {Order} from "../model/order";
 const APL_URL = `${environment.apiUrl}`
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,24 +15,23 @@ export class OrderService {
 
   constructor(private httpClient: HttpClient) { }
 
-  addOrder(productOrder: OrderService): Observable<OrderService> {
-    // @ts-ignore
+  addOrder(productOrder: Order): Observable<Order> {
     return this.httpClient.post(this.URL_CONNECT + "/add/cart", productOrder);
   }
 
-  getProductInCardByCustomer(customer: Customer): Observable<OrderService[]> {
-    return this.httpClient.post<OrderService[]>(this.URL_CONNECT+ "/cart/products", customer);
+  getProductInCardByCustomer(customer: Customer): Observable<Order[]> {
+    return this.httpClient.post<Order[]>(this.URL_CONNECT+ "/cart/products", customer);
   }
 
-  minusQuantity(productOrder: OrderService): Observable<OrderService[]> {
-    return this.httpClient.post<OrderService[]>(this.URL_CONNECT + "/cart/minus/quantity", productOrder);
+  minusQuantity(productOrder: Order): Observable<Order[]> {
+    return this.httpClient.post<Order[]>(this.URL_CONNECT + "/cart/minus/quantity", productOrder);
   }
 
-  plusQuantity(productOrder: OrderService): Observable<OrderService[]> {
-    return this.httpClient.post<OrderService[]>(this.URL_CONNECT + "/cart/plus/quantity", productOrder);
+  plusQuantity(productOrder: Order): Observable<Order[]> {
+    return this.httpClient.post<Order[]>(this.URL_CONNECT + "/cart/plus/quantity", productOrder);
   }
 
-  deleteProductInCard(po: OrderService):Observable<any> {
+  deleteProductInCard(po: Order):Observable<any> {
     return this.httpClient.post(this.URL_CONNECT + "/cart/delete", po);
   }
 

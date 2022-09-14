@@ -373,7 +373,7 @@ public class OrderRestController {
             template += "                            <tr>\n" +
                     "                                <td style=\"font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000;  line-height: 18px;  vertical-align: top; padding:10px 0;\"\n" +
                     "                                    class=\"article\">\n" +
-                    "                                    " + paymentDto.getProductOrderList().get(i).getProduct().getNameProduct() + "\n" +
+                    "                                    " + paymentDto.getProductOrderList().get(i).getProduct().getName() + "\n" +
                     "                                </td>\n" +
                     "                                <td style=\"font-size: 12px; font-family: 'Open Sans', sans-serif; color: #646a6e;  line-height: 18px;  vertical-align: top; padding:10px 0;\"\n" +
                     "                                    align=\"center\">" + paymentDto.getProductOrderList().get(i).getQuantity() + "\n" +

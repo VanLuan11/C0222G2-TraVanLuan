@@ -92,7 +92,7 @@
                 <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-bs-toggle="dropdown">Sắp xếp
                 </button>
                 <div class="dropdown-menu dropdown-menu-right">
-                  <a class="dropdown-item" (click)="sortProduct('date_of_manufacture,desc')">Sản phầm mới</a>
+                  <a class="dropdown-item" (click)="sortProduct('date_in,desc')">Sản phầm mới</a>
                   <a class="dropdown-item" (click)="sortProduct('price,desc')">Giá giảm dần</a>
                   <a class="dropdown-item" (click)="sortProduct('price,asc')">Giá tâng dần</a>
                 </div>
@@ -107,15 +107,17 @@
               <div class="product-action">
                 <a class="btn btn-outline-dark btn-square" href=""><i
                   class="fa fa-shopping-cart"></i></a>
-                <a class="btn btn-outline-dark btn-square" [routerLink]="'/detail'"><i class="fa fa-search"></i></a>
+                <a class="btn btn-outline-dark btn-square" [routerLink]="['/detail',p.id]"><i
+                  class="fa fa-search"></i></a>
               </div>
             </div>
             <div class="text-center py-4">
-              <p class="h6 text-decoration-none text-truncate" href="">{{p.nameProduct}}</p>
+              <p class="h6 text-decoration-none text-truncate" href="">{{p.name}} </p>
               <div class="d-flex align-items-center justify-content-center mt-2">
-                <h5 class="text-danger">{{(p.price | currency: 'VND':'').replace(',', '.').replace(',', '.')}}đ
-                  <h6>Số lượng ({{p.quantity}})</h6>
-                </h5>
+                <b class="text-danger">{{(p.price - (p.price * p.discount / 100) | currency: 'VND' : '').replace(',', '.').replace(',', '.').replace(',', '.')}}đ</b>
+                <b class="text-muted ml-2">
+                  <b class="text-success">(-{{p.discount}}%) <small class="text-danger" >({{p.quantity}})</small></b>
+                </b>
               </div>
             </div>
           </div>

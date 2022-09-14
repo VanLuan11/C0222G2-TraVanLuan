@@ -1,6 +1,8 @@
 package com.example.shoponlineapi.service;
 
-import com.shoponlineapi.model.Customer;
+
+
+import com.example.shoponlineapi.model.Customer;
 
 import java.util.List;
 

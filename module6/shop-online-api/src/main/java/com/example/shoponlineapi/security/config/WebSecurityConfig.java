@@ -1,8 +1,7 @@
-package com.example.shoponlineapi.config;
+package com.example.shoponlineapi.security.config;
 
-
-import com.example.shoponlineapi.authentication.JwtAuthenticationEntryPoint;
-import com.example.shoponlineapi.filter.JwtRequestFilter;
+import com.example.shoponlineapi.security.authentication.JwtAuthenticationEntryPoint;
+import com.example.shoponlineapi.security.filter.JwtRequestFilter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,8 +35,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * @param auth
      * @throws Exception
-     * @creator: PhuongTD
-     * @date-create 9/8/2022
      */
     @Autowired
     public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception {
@@ -50,8 +47,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * @return
      * @throws Exception
-     * @creator: PhuongTD
-     * @date-create 9/8/2022
      */
     @Bean
     @Override
@@ -62,8 +57,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     /**
      * @param httpSecurity
      * @throws Exception
-     * @creator: PhuongTD
-     * @date-create 9/8/2022
      */
     @Override
     protected void configure(HttpSecurity httpSecurity) throws Exception {
@@ -71,10 +64,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         httpSecurity.csrf().disable()
                 // dont authenticate this particular request
                 .authorizeRequests().antMatchers(
-                "/authenticate",
-                "/sendSimpleEmail",
-                "/forgotPassword/**",
-                "/findPassword", "/**").permitAll().
+                        "/authenticate",
+                        "/sendSimpleEmail",
+                        "/forgotPassword/**",
+                        "/findPassword","/**").permitAll().
                 // all other requests need to be authenticated
                         anyRequest().authenticated().and().
                 // make sure we use stateless session; session won't be used to

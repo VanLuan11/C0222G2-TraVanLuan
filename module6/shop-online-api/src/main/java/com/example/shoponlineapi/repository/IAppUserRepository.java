@@ -13,10 +13,10 @@ import java.util.List;
 
 public interface IAppUserRepository extends JpaRepository<AppUser, Integer> {
     /**
-     * @param
-     * @return AppUser list
      * @creator TaiLV
      * Date 09/08/2022
+     * @param
+     * @return  AppUser list
      */
     @Query(value = " select app_user.id, app_user.user_name,app_user.creation_date, app_user.password, app_user.is_deleted from app_user " +
             " where is_deleted = 0 ", nativeQuery = true)
@@ -25,7 +25,7 @@ public interface IAppUserRepository extends JpaRepository<AppUser, Integer> {
     @Transactional
     @Modifying
     @Query(value = " INSERT INTO `app_user` " +
-            " (`creation_date`, `password`, `user_name`) VALUES (:#{#appUser.creationDate}, :#{#appUser.password}, :#{#appUser.userName}) ", nativeQuery = true)
+            " (`creation_date`, `password`, `user_name`) VALUES (:#{#appUser.creationDate}, :#{#appUser.password}, :#{#appUser.userName}) ",nativeQuery = true)
     void saveAppUser(AppUser appUser);
 
     @Query(value = " SELECT app_user.id, app_user.user_name,app_user.creation_date, app_user.password, app_user.is_deleted FROM app_user where user_name = :username ", nativeQuery = true)
@@ -35,5 +35,4 @@ public interface IAppUserRepository extends JpaRepository<AppUser, Integer> {
     @Modifying
     @Query(value = " update app_user au set au.password = :#{#appUser.password} where au.user_name = :#{#appUser.userName}  ", nativeQuery = true)
     void updatePassword(@Param("appUser") AppUser appUser);
-
 }

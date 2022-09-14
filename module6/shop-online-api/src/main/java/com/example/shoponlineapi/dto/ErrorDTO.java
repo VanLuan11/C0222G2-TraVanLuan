@@ -5,6 +5,7 @@ import com.example.shoponlineapi.model.OrderService;
 import lombok.Data;
 
 import java.util.List;
+
 @Data
 public class ErrorDTO {
     private String message;

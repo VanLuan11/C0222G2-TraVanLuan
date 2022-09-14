@@ -20,12 +20,12 @@ public interface IProductRepository extends JpaRepository<Product, Integer> {
     @Query(value = " select * from product where is_deleted = 0 and id = :id ", nativeQuery = true)
     Product findProductById(int id);
 
-    @Query(value = " select * from product where is_deleted = 0 and category_id = 1 and name_product like :nameProduct and (price between :start and :end ) ", nativeQuery = true,
-            countQuery = " select count(*) from (select * from product where is_deleted = 0 and category_id = 1 and name_product like :nameProduct and (price between :start and :end ) ) gaming")
+    @Query(value = " select * from product where is_deleted = 0 and category_id = 1 and `name` like :nameProduct and (price between :start and :end ) ", nativeQuery = true,
+            countQuery = " select count(*) from (select * from product where is_deleted = 0 and category_id = 1 and `name` like :nameProduct and (price between :start and :end ) ) gaming")
     Page<Product> findAllLapTopGaming(Pageable pageable, String nameProduct, String start, String end);
 
-    @Query(value = " select * from product where is_deleted = 0 and category_id = 2 and name_product like :nameProduct and (price between :start and :end ) ", nativeQuery = true,
-            countQuery = " select count(*) from (select * from product where is_deleted = 0 and category_id = 2 and name_product like :nameProduct and (price between :start and :end ) ) vp")
+    @Query(value = " select * from product where is_deleted = 0 and category_id = 2 and `name` like :nameProduct and (price between :start and :end ) ", nativeQuery = true,
+            countQuery = " select count(*) from (select * from product where is_deleted = 0 and category_id = 2 and `name` like :nameProduct and (price between :start and :end ) ) vp")
     Page<Product> findAllLapTopVP(Pageable pageable, String nameProduct, String start, String end);
 
     @Transactional

@@ -1,7 +1,8 @@
 package com.example.shoponlineapi.service.impl;
 
+
 import com.example.shoponlineapi.model.account.UserRole;
-import com.example.shoponlineapi.repository.account.IUserRoleRepository;
+import com.example.shoponlineapi.repository.IUserRoleRepository;
 import com.example.shoponlineapi.service.IUserRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

@@ -1,4 +1,4 @@
-package com.example.shoponlineapi.authentication;
+package com.example.shoponlineapi.security.authentication;
 
 import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
@@ -14,14 +14,6 @@ public class JwtAuthenticationEntryPoint implements AuthenticationEntryPoint, Se
 
     private static final long serialVersionUID = -7858869558953243875L;
 
-    /**
-     * @param request
-     * @param response
-     * @param authException
-     * @throws IOException
-     * @creator: PhuongTD
-     * @date-create 9/8/2022
-     */
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response,
                          AuthenticationException authException) throws IOException {

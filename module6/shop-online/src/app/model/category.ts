@@ -2,5 +2,7 @@ import {Product} from './product';
 
 export interface Category {
   id?: number;
-  nameCategory?: string;
+  name?: string;
+  totalProduct: number;
+  product?: Product[];
 }

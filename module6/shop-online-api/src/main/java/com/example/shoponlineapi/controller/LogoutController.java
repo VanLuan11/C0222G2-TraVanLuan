@@ -1,8 +1,9 @@
 package com.example.shoponlineapi.controller;
 
 
-import com.example.shoponlineapi.util.JwtTokenUtil;
-import com.example.shoponlineapi.util.LoginUtil;
+
+import com.example.shoponlineapi.security.util.JwtTokenUtil;
+import com.example.shoponlineapi.security.util.LoginUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

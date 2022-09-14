@@ -4,10 +4,10 @@ package com.example.shoponlineapi.controller.simple_email;
 import com.example.shoponlineapi.model.account.AppUser;
 import com.example.shoponlineapi.model.jwt.JwtRequest;
 import com.example.shoponlineapi.model.jwt.JwtResponse;
-import com.example.shoponlineapi.service.account.IAppUserService;
-import com.example.shoponlineapi.util.EncrytedPasswordUtils;
-import com.example.shoponlineapi.util.JwtTokenUtil;
-import com.example.shoponlineapi.util.LoginUtil;
+import com.example.shoponlineapi.security.util.EncrytedPasswordUtils;
+import com.example.shoponlineapi.security.util.JwtTokenUtil;
+import com.example.shoponlineapi.security.util.LoginUtil;
+import com.example.shoponlineapi.service.IAppUserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
@@ -67,7 +67,7 @@ public class SimpleEmailController {
         if (jwtRequest.getUsername() == null) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        AppUser appUser = this.appUserService.findAppUserByUsername(jwtRequest.getUsername());
+        AppUser appUser = this.appUserService.findAppUserByUserName(jwtRequest.getUsername());
         if (appUser != null) {
 
             MimeMessage message = emailSender.createMimeMessage();
@@ -140,7 +140,7 @@ public class SimpleEmailController {
             return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
         }
         if (checkTokenExists(jwtRequest.getToken())) {
-            AppUser appUser = this.appUserService.findAppUserByUsername(jwtTokenUtil.getUsernameFromToken(jwtRequest.getToken()));
+            AppUser appUser = this.appUserService.findAppUserByUserName(jwtTokenUtil.getUsernameFromToken(jwtRequest.getToken()));
             if (appUser != null) {
                 if (bindingResult.hasErrors()) {
                     return new ResponseEntity<>(bindingResult.getFieldErrors(), HttpStatus.OK);

@@ -1,5 +1,6 @@
 package com.example.shoponlineapi.repository;
 
+
 import com.example.shoponlineapi.model.Customer;
 import com.example.shoponlineapi.model.OrderService;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -9,7 +10,6 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-
 
 public interface IOrderServiceRepository extends JpaRepository<OrderService, Integer> {
     @Query(value = " select po.* from order_service po " +

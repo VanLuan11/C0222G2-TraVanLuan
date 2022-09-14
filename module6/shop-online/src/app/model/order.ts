@@ -1,11 +1,11 @@
 import {Customer} from './customer';
 import {Product} from './product';
 
-export interface OrderService {
+export interface Order {
   id?: number;
-  creationDate?: string;
   quantity?: number;
   isDeleted?: boolean;
+  product?: Product;
   customer?: Customer;
-  product?: Product
+  totalMoney?: number;
 }

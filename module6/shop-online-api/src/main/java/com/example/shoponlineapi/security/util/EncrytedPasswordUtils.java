@@ -1,4 +1,4 @@
-package com.example.shoponlineapi.util;
+package com.example.shoponlineapi.security.util;
 
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Component;
@@ -9,8 +9,6 @@ public class EncrytedPasswordUtils {
     /**
      * @param password
      * @return
-     * @creator: PhuongTD
-     * @date-create 9/8/2022
      */
     // Encryte Password with BCryptPasswordEncoder
     public String encrytePassword(String password) {
@@ -18,11 +16,10 @@ public class EncrytedPasswordUtils {
         return encoder.encode(password);
     }
 
-    //thay đổi mật khẩu
     public static void main(String[] args) {
-        String password = "123456a@";
-        String encrytedPassword = new EncrytedPasswordUtils().encrytePassword(password);
-        System.out.println(encrytedPassword);
+//        String password = "123456a@";
+//        String encrytedPassword = new EncrytedPasswordUtils().encrytePassword(password);
+//        System.out.println(encrytedPassword);
 //        System.out.println("Encryted Password: " + encrytedPassword);
     }
 

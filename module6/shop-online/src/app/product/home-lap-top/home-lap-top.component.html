@@ -66,7 +66,12 @@
           <div class="product-img position-relative overflow-hidden">
             <img class="img-fluid w-100" [src]="p.image" alt="">
             <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" [routerLink]="['']" (click)="addToCart(p)"><i class="fa fa-shopping-cart"></i></a>
+              <a *ngIf="role == 'ROLE_USER' && infoStatus == false" class="btn btn-outline-dark btn-square" [routerLink]="['']" (click)="addToCart(p)">
+                <i class="fa fa-shopping-cart"></i></a>
+              <a *ngIf="role == 'ROLE_USER'  && infoStatus == true" class="btn btn-outline-dark btn-square" [routerLink]="['']" (click)="updateInfoMessage()">
+                <i class="fa fa-shopping-cart"></i></a>
+              <a *ngIf="role != 'ROLE_USER'" class="btn btn-outline-dark btn-square" [routerLink]="['']" (click)="addToCartMessage()">
+                <i class="fa fa-shopping-cart"></i></a>
               <a class="btn btn-outline-dark btn-square" [routerLink]="['/detail',p.id]"><i
                 class="fa fa-search"></i></a>
               <a class="btn btn-outline-dark btn-square" *ngIf=" role === 'ROLE_ADMIN'" [routerLink]="'/'"><i
@@ -77,11 +82,12 @@
             </div>
           </div>
           <div class="text-center py-4">
-            <p class="h6 text-decoration-none text-truncate" [routerLink]="['/detail',p.id]"><a>{{p.nameProduct}}</a></p>
+            <p class="h6 text-decoration-none text-truncate" href="">{{p.name}} </p>
             <div class="d-flex align-items-center justify-content-center mt-2">
-              <h5 class="text-danger">{{(p.price | currency: 'VND':'').replace(',', '.').replace(',', '.')}}đ
-                <h6>Số lượng ({{p.quantity}})</h6>
-              </h5>
+              <b class="text-danger">{{(p.price - (p.price * p.discount / 100) | currency: 'VND' : '').replace(',', '.').replace(',', '.').replace(',', '.')}}đ</b>
+              <b class="text-muted ml-2">
+                <b class="text-success">(-{{p.discount}}%) <small class="text-danger" >({{p.quantity}})</small></b>
+              </b>
             </div>
           </div>
         </div>
@@ -138,13 +144,13 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" style="color: red" id="exampleModalLabel">Warning!</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          <h5 class="modal-title" style="color: red" id="exampleModalLabel">Warning!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"
                 aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        Bạn có muốn xoá sản phầm: <span style="color: #d21111">{{product.nameProduct}}</span> ?<br>
-        Sản xuất:<span style="color: #d21111">{{product.dateOfManufacture |date: 'dd-MM-yyyy'}}</span> ? <br>
+        Bạn có muốn xoá sản phầm: <span style="color: #d21111">{{product.name}}</span> ?<br>
+        Sản xuất:<span style="color: #d21111">{{product.dateIn |date: 'dd-MM-yyyy'}}</span> ? <br>
         Giá: <span style="color: #d21111">{{(product.price |currency: 'VND': '')}}đ</span> ? <br>
       </div>
       <div class="modal-footer">

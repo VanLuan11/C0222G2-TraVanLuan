@@ -3,7 +3,7 @@ import {AppRole} from './app-role';
 
 export interface UserRole {
   id?: number;
-  isDelete?: boolean;
+  isDeleted?: boolean;
   appUser?: AppUser;
   appRole?: AppRole;
 }

@@ -1,6 +1,6 @@
 package com.example.shoponlineapi.model;
 
-import lombok.*;
+import lombok.Data;
 import org.hibernate.Hibernate;
 
 import javax.persistence.*;
