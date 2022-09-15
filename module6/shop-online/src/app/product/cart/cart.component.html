@@ -15,7 +15,7 @@
         <tbody class="align-middle">
         <tr *ngFor="let po of productOrders; index as i">
           <td class="align-middle"><img src="{{po.product.image}}"  alt="" style="width: 70px;">  {{po.product.name}}</td>
-          <td class="align-middle">{{po.product.price - (po.product.price * po.product.discount / 100) | currency: 'VND': ''}}</td>
+          <td class="align-middle">{{(po.product.price - (po.product.price * po.product.discount / 100) | currency: 'VND': '').replace(',', '.').replace(',', '.').replace(',', '.')}}</td>
           <td class="align-middle">
             <div class="input-group quantity mx-auto" style="width: 100px;">
               <div class="input-group-btn">
@@ -92,12 +92,10 @@
             </div>
           </td>
         </tr>
-        <tr>
           <th colspan="5" class="text-center m-auto" *ngIf="productOrders.length <= 0">
             Không có sản phẩm trong giỏ hàng
             <a [routerLink]="['/home']" >xem tất cả sản phẩm tại đây.</a>
           </th>
-        </tr>
         </tbody>
       </table>
     </div>

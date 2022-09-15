@@ -29,7 +29,7 @@ public class OrderRestController {
     @Autowired
     public JavaMailSender emailSender;
 
-    @Value("${FE_URL}")
+    @Value("${API_URL}")
     private String apiUrl;
 
     //    @PreAuthorize("isAuthenticated()")
@@ -93,6 +93,16 @@ public class OrderRestController {
     }
 
     //    @PreAuthorize("isAuthenticated()")
+    @PostMapping("/cart/history")
+    public ResponseEntity<?> getHistoryCustomerOrderProduct(@RequestBody Customer customer) {
+        List<OrderService> customerOrderProduct = this.productOrderService.getHistoryCustomerOrderProduct(customer);
+        if (customerOrderProduct.isEmpty()) {
+;            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        }
+        return new ResponseEntity<>(customerOrderProduct, HttpStatus.OK);
+    }
+
+    //    @PreAuthorize("isAuthenticated()")
     @PostMapping("/cart/payment")
     public ResponseEntity<?> goPayment(@RequestBody Customer customer) throws MessagingException {
 
@@ -107,7 +117,7 @@ public class OrderRestController {
 
         helper.setTo(paymentDto.getCustomer().getEmail());
 
-        helper.setSubject("[Fate Shop] Hóa đơn thanh toán");
+        helper.setSubject("[Tech Store] Hóa đơn thanh toán");
 
         this.emailSender.send(message);
 
@@ -264,7 +274,7 @@ public class OrderRestController {
                 "                                        <tbody>\n" +
                 "                                        <tr>\n" +
                 "                                            <td align=\"left\"><span style=\"font-size: 26px\"><strong\n" +
-                "                                                    style=\"text-transform: uppercase; color: #D19C97\">Fate</strong> Shop</span>\n" +
+                "                                                    style=\"text-transform: uppercase; color: #D19C97\">Teach</strong> Store</span>\n" +
                 "                                            </td>\n" +
                 "                                        </tr>\n" +
                 "                                        <tr class=\"hiddenMobile\">\n" +
@@ -366,9 +376,9 @@ public class OrderRestController {
         for (int i = 0; i < paymentDto.getProductOrderList().size(); i++) {
             Double productPrice = paymentDto.getProductOrderList().get(i).getProduct().getPrice();
 //            Double discountCategory = paymentDto.getProductOrderList().get(i).getProduct().getCategory().getDiscountPercent();
-            int discountProduct = paymentDto.getProductOrderList().get(i).getProduct().getQuantity();
+            Double discountProduct = paymentDto.getProductOrderList().get(i).getProduct().getDiscount();
 //            Double priceDiscountCategory = productPrice - (productPrice * discountCategory / 100);
-            Double priceDiscountProduct = productPrice - (productPrice * discountProduct / 100);
+            Double priceDiscountProduct = productPrice - (productPrice * discountProduct / 100 );
             totalMoney += priceDiscountProduct;
             template += "                            <tr>\n" +
                     "                                <td style=\"font-size: 12px; font-family: 'Open Sans', sans-serif; color: #ff0000;  line-height: 18px;  vertical-align: top; padding:10px 0;\"\n" +
@@ -470,7 +480,7 @@ public class OrderRestController {
                 "                            </tr>\n" +
                 "                            <tr>\n" +
                 "                                <td style=\"font-size: 12px; color: #5b5b5b; font-family: 'Open Sans', sans-serif; line-height: 18px; vertical-align: top; text-align: left;\">\n" +
-                "                                    Xem thêm các sản phẩm khác <a style=\"font-weight: bold\" target=\"_blank\" href=\"" + apiUrl + "/product/list\">tại đây</a>.\n" +
+                "                                    Xem thêm các sản phẩm khác <a style=\"font-weight: bold\" target=\"_blank\" href=\"" + apiUrl + "/home\">tại đây</a>.\n" +
                 "                                </td>\n" +
                 "                            </tr>\n" +
                 "                            </tbody>\n" +

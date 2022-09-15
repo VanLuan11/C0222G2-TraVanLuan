@@ -35,6 +35,7 @@ public class Product {
     @Column(columnDefinition = "text")
     private String description;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "product")
     private List<ProductCoupon> productCouponList;
 

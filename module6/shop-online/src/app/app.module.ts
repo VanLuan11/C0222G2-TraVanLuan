@@ -19,6 +19,7 @@ import { TransportComponent } from './common/transport/transport.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { CreateComponent } from './product/create/create.component';
 import { EditComponent } from './product/edit/edit.component';
+import { HistoryOrderProductComponent } from './product/history-order-product/history-order-product.component';
 
 
 @NgModule({
@@ -35,6 +36,7 @@ import { EditComponent } from './product/edit/edit.component';
     TransportComponent,
     CreateComponent,
     EditComponent,
+    HistoryOrderProductComponent,
   ],
   imports: [
     BrowserModule,

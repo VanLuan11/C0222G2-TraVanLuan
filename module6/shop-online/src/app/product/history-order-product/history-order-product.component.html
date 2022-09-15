@@ -1,0 +1,35 @@
+<div class="container mt-3">
+  <div style="text-align: center">
+    <h1> Lịch sử thanh toán</h1>
+  </div>
+  <div>
+    <table class="table table-hover table-bordered ">
+      <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Tên</th>
+        <th scope="col">Mã thanh toán</th>
+        <th scope="col">Ngày thanh toán</th>
+        <th scope="col">Tên sảm phầm</th>
+        <th scope="col">Bảo hành</th>
+        <th scope="col">Giá</th>
+        <th scope="col">Số lượng</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let po of productOrders, index as i">
+        <td>{{i + 1}}</td>
+        <td>{{po.customer.name}}</td>
+        <td>{{po.bill.code}}</td>
+        <td>{{po.bill.creationDate}}</td>
+        <td>{{po.product.name}}</td>
+        <td>{{po.product.guaranteeTime}}</td>
+        <td>{{po.product.price - (po.product.price * po.product.discount / 100)}}</td>
+        <td>{{po.quantity}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <h5 style="text-align: center" *ngIf="productOrders.length === 0 ">Bạn chưa có đơn thanh toán nào <a [routerLink]="['/home']">mua
+    sản phẩm tại đây.</a></h5>
+</div>

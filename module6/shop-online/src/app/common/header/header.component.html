@@ -1,81 +1,5 @@
-<!--&lt;!&ndash; Topbar Start &ndash;&gt;-->
-<!--<div class="container-fluid bg-primary">-->
-<!--  <div class="row align-items-center py-3 px-xl-5">-->
-<!--    <div class="col-lg-3 d-none d-lg-block">-->
-<!--      <a routerLink="/home" class="text-decoration-none">-->
-<!--        <h1 class="m-0 display-5 font-weight-semi-bold"><span-->
-<!--          class="text-primary font-weight-bold  px-3 mr-1">Tech Store</span></h1>-->
-<!--      </a>-->
-<!--    </div>-->
-<!--    <div class="col-lg-6 col-6 text-left">-->
-<!--&lt;!&ndash;      &lt;!&ndash;      <form action="">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;      <div class="input-group">&ndash;&gt;-->
-<!--&lt;!&ndash;        <input type="text" class="form-control" placeholder="Bạn tìm gì ...">&ndash;&gt;-->
-<!--&lt;!&ndash;        <div class="input-group-append">&ndash;&gt;-->
-<!--&lt;!&ndash;            <span class="input-group-text bg-transparent text-primary">&ndash;&gt;-->
-<!--&lt;!&ndash;              <i class="fa fa-search"></i>&ndash;&gt;-->
-<!--&lt;!&ndash;            </span>&ndash;&gt;-->
-<!--&lt;!&ndash;        </div>&ndash;&gt;-->
-<!--&lt;!&ndash;      </div>&ndash;&gt;-->
-<!--&lt;!&ndash;      &lt;!&ndash;      </form>&ndash;&gt;&ndash;&gt;-->
-<!--      <a [routerLink]="['/baoHanh']" class="text-white m-1">Đăng nhập</a>-->
-<!--    </div>-->
-<!--    <div class="col-lg-3 col-6 text-right">-->
-<!--      <a routerLink="/login" class="btn bg-primary text-white m-1" *ngIf="token == ''">Đăng nhập</a>-->
-<!--      <a routerLink="" class="btn bg-primary text-white m-1" *ngIf="token != ''">Hello {{username}}</a>-->
-<!--      <a routerLink="" (click)="onLogout()" class="btn bg-primary text-white m-1" *ngIf="token != ''">Đăng xuất</a>-->
-<!--      <a routerLink="" class="btn bg-primary text-white m-1" *ngIf="token == ''">Đăng ký</a>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--&lt;!&ndash; Topbar End &ndash;&gt;-->
-
-<!--&lt;!&ndash; Navbar Start &ndash;&gt;-->
-<!--<div class="container-fluid ">-->
-<!--  <div class="row  bg-secondary">-->
-<!--    <div class="col-lg-1 "></div>-->
-<!--    <div class="col-lg-10 ">-->
-<!--      <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-0">-->
-<!--        <a routerLink="/home" class="text-decoration-none d-block d-lg-none">-->
-<!--          <h1 class="m-0 display-5 font-weight-semi-bold"><span-->
-<!--            class="text-primary font-weight-bold border px-3 mr-1">Tech Store</span></h1>-->
-<!--        </a>-->
-<!--        <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">-->
-<!--          <span class="navbar-toggler-icon"></span>-->
-<!--        </button>-->
-<!--        <div class="collapse navbar-collapse justify-content-between bg-secondary" id="navbarCollapse">-->
-<!--          <div class="navbar-nav mr-auto py-0">-->
-<!--            <a routerLink="/home" class="nav-item nav-link active" style="font-size: 20px">Trang chủ</a>-->
-<!--            <a [routerLink]="['/lapTopGaming']" class="nav-item nav-link" style="font-size: 20px">Lap Gaming</a>-->
-<!--            <a [routerLink]="['/lapTopVP']" class="nav-item nav-link" style="font-size: 20px">Lap Văn Phòng</a>-->
-<!--            <a [routerLink]="['/baoHanh']" class="nav-item nav-link" style="font-size: 20px">Chính sách bảo hành</a>-->
-<!--            <a [routerLink]="['/vanChuyen']" class="nav-item nav-link" style="font-size: 20px">Chính sách vận chuyển</a>-->
-<!--            <div class="nav-item dropdown" style="font-size: 20px">-->
-<!--              <a class="nav-link dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">-->
-<!--                Phụ kiện-->
-<!--              </a>-->
-<!--              <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">-->
-<!--                <li><a class="dropdown-item" href="#">Đồng hồ</a></li>-->
-<!--                <li><a class="dropdown-item" href="#">Tai nghe</a></li>-->
-<!--              </ul>-->
-<!--            </div>-->
-<!--            <a style="font-size: 20px" routerLink="" class="nav-item nav-link" *ngIf="role == 'ROLE_ADMIN'">Quản lý sản phẩm</a>-->
-<!--          </div>-->
-<!--          <div class="col-lg-1 text-right">-->
-<!--            <a [routerLink]="['/cart']" class="btn ">-->
-<!--              <i class="fas fa-shopping-cart text-primary"></i>-->
-<!--              <span class="badge">0</span>-->
-<!--            </a>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </nav>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</div>-->
-<!--&lt;!&ndash; Navbar End &ndash;&gt;-->
-
 <!-- Navbar Start -->
-<div class="container-fluid bg-primary mb-30">
+<div class="container-fluid bg-primary">
   <div class="row px-xl-5">
     <div class="col-lg-3 d-none d-lg-block">
       <a routerLink="/home" class="text-decoration-none">
@@ -91,20 +15,20 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav mr-auto py-0">
             <a [routerLink]="['/home']" class="nav-item nav-link active">Tranh chủ</a>
-            <a [routerLink]="['/baoHanh']" class="nav-item nav-link">Chính sách Bảo hành</a>
+            <a [routerLink]="['/historyOrder']" class="nav-item nav-link">Chính sách Bảo hành</a>
             <a [routerLink]="['/vanChuyen']" class="nav-item nav-link">Chính sách Vận chuyển</a>
             <div class="nav-item dropdown">
               <a *ngIf="role === 'ROLE_ADMIN'"  class="nav-link dropdown-toggle" data-toggle="dropdown">Danh mục quản lý  <i class="fa fa-angle-down mt-1"></i></a>
-              <div class="dropdown-menu bg-primary  rounded-0 border-0 m-0">
+              <div class="dropdown-menu rounded-0 border-0 m-0">
                 <a [routerLink]="['/#']" class="dropdown-item text-white">Thêm sản phầm</a>
                 <a [routerLink]="['/#']" class="dropdown-item text-white">Phản hồi</a>
               </div>
             </div>
             <div class="nav-item dropdown">
-              <a *ngIf="role === 'ROLE_USER'" class="nav-link dropdown-toggle" data-toggle="dropdown">Danh mục sản phẩm  <i class="fa fa-angle-down mt-1"></i></a>
-              <div class="dropdown-menu bg-primary  rounded-0 border-0 m-0">
-                <a [routerLink]="['/lapTopGaming']" class="dropdown-item text-white">LapTop Gaming</a>
-                <a [routerLink]="['/lapTopVP']" class="dropdown-item text-white">LapTop Văn Phòng</a>
+              <a *ngIf="role === '' || role === 'ROLE_USER'" class="nav-link dropdown-toggle" data-toggle="dropdown">Danh mục sản phẩm  <i class="fa fa-angle-down mt-1"></i></a>
+              <div class="dropdown-menu rounded-0 border-0 m-0">
+                <a [routerLink]="['/lapTopGaming']" class="dropdown-item ">LapTop Gaming</a>
+                <a [routerLink]="['/lapTopVP']" class="dropdown-item ">LapTop Văn Phòng</a>
               </div>
             </div>
             <a [routerLink]="['/cart']" class="btn px-0 ml-3" style="margin-top: 15px">
@@ -117,8 +41,16 @@
       </nav>
     </div>
     <div class="col-lg-3 d-none d-lg-block text-right " style="margin-top: 10px">
-      <a routerLink="/login" class="btn bg-primary text-white m-1" *ngIf="token == ''">Đăng nhập</a>
-      <a routerLink="" class="btn bg-primary text-white m-1" *ngIf="token != ''">Hello {{username}}</a>
+      <div class="btn-group" *ngIf="token != ''">
+        <button type="button" class="btn btn-sm bg-primary dropdown-toggle text-white m-1" data-bs-toggle="dropdown">
+          Hello {{username}}
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <a class="dropdown-item" >Thông tin tài khoản</a>
+          <a class="dropdown-item" [routerLink]="['/historyOrder']" >Lịch sử thanh toán</a>
+        </div>
+      </div>
+      <a [routerLink]="['/login']" class="btn bg-primary text-white m-1" *ngIf="token == ''">Đăng nhập</a>
       <a routerLink="" (click)="onLogout()" class="btn bg-primary text-white m-1" *ngIf="token != ''">Đăng xuất</a>
       <a routerLink="" class="btn bg-primary text-white m-1" *ngIf="token == ''">Đăng ký</a>
     </div>

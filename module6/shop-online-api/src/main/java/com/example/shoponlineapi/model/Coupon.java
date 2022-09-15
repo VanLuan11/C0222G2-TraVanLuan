@@ -1,6 +1,7 @@
 package com.example.shoponlineapi.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
@@ -28,6 +29,7 @@ public class Coupon {
     @Column(columnDefinition = "bit(1) default 0")
     private Boolean isDeleted;
 
+    @JsonIgnore
     @OneToMany(mappedBy = "coupon")
     private List<ProductCoupon> productCouponList;
 

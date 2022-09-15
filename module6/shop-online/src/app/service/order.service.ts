@@ -4,8 +4,8 @@ import {HttpClient} from "@angular/common/http";
 import {Customer} from "../model/customer";
 import {Observable} from "rxjs";
 import {Order} from "../model/order";
-const APL_URL = `${environment.apiUrl}`
 
+const APL_URL = `${environment.apiUrl}`
 
 @Injectable({
   providedIn: 'root'
@@ -37,5 +37,9 @@ export class OrderService {
 
   goPayment(customer: Customer): Observable<any> {
     return this.httpClient.post(this.URL_CONNECT + "/cart/payment", customer);
+  }
+
+  getHistoryCustomerOrderProduct(customer: Customer): Observable<Order[]> {
+    return this.httpClient.post<Order[]>(this.URL_CONNECT+ "/cart/history", customer);
   }
 }

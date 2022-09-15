@@ -21,4 +21,6 @@ public interface IOrderService {
     Boolean findProductOrder(OrderService orderService);
 
     PaymentDto goPayment(Customer customer);
+
+    List<OrderService> getHistoryCustomerOrderProduct(Customer customer);
 }

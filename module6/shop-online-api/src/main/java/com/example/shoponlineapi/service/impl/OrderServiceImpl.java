@@ -118,6 +118,11 @@ public class OrderServiceImpl implements IOrderService {
         return paymentDto;
     }
 
+    @Override
+    public List<OrderService> getHistoryCustomerOrderProduct(Customer customer) {
+        return productOrderRepository.getHistoryCustomerOrderProduct(customer);
+    }
+
     private int getRandomNumber(List<Bill> billList) {
         int randomNumber = 10000;
         while (checkExists(billList, randomNumber)) {
