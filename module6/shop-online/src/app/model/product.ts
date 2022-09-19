@@ -9,7 +9,7 @@ export interface Product {
   price?: number;
   quantity?: number;
   guaranteeTime?: string;
-  discount?: string;
+  discount?: number;
   specification?: string;
   description?: string;
   image?: string;

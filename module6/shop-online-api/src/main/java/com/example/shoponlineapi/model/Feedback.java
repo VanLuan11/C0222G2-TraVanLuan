@@ -20,6 +20,7 @@ public class Feedback {
 
     private String content;
 
+    @Column(columnDefinition = "DATE")
     private Date feedbackDate;
 
     @Column(columnDefinition = "text")

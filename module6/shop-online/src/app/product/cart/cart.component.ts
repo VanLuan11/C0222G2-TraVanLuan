@@ -26,7 +26,7 @@ export class CartComponent implements OnInit {
   customer: Customer;
   productOrders: Order[] = [];
   totalMoney: number = 0;
-
+  infoStatus: boolean = false;
   constructor(private cookieService: CookieService,
               private customerService: CustomerService,
               private cartService: OrderService,
@@ -65,6 +65,7 @@ export class CartComponent implements OnInit {
   }
 
   private caculateTotalMoney(pos: Order[]) {
+
     this.totalMoney = 0;
     for (let i = 0; i < pos.length; i++) {
       // @ts-ignore

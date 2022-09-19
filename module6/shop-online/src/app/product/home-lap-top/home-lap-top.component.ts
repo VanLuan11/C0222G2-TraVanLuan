@@ -137,7 +137,7 @@ export class HomeLapTopComponent implements OnInit {
   }
 
   addToCartMessage() {
-    this.toast.warning('Vui lòng đăng nhập thành viên để thực hiện chức năng này!');
+    this.toast.warning('Vui lòng đăng nhập tài khoản khách hàng để thực hiện chức năng này!');
   }
 
   updateInfoMessage() {

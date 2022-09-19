@@ -20,6 +20,7 @@ import {ReactiveFormsModule} from '@angular/forms';
 import { CreateComponent } from './product/create/create.component';
 import { EditComponent } from './product/edit/edit.component';
 import { HistoryOrderProductComponent } from './product/history-order-product/history-order-product.component';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 @NgModule({
@@ -39,6 +40,7 @@ import { HistoryOrderProductComponent } from './product/history-order-product/hi
     HistoryOrderProductComponent,
   ],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule,
     AppRoutingModule,
     ChartsModule,

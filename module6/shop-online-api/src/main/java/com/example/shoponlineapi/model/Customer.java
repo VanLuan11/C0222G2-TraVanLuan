@@ -25,7 +25,7 @@ public class Customer {
     @Column(columnDefinition = "text")
     private String image;
     private String email;
-    @Column(columnDefinition = "date")
+    @Column(columnDefinition = "DATE")
     private Date birthday;
     private String phone;
     private String hobbies;

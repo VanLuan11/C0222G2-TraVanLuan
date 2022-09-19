@@ -9,31 +9,12 @@ import {LoginGuard} from "./authguard/login.guard";
 import {Error401PageComponent} from "./error401-page/error401-page.component";
 
 const routes: Routes = [
-  {
-    path: 'login',
-    component: HomeLoginComponent,
-    canActivate: [LoginGuard]
-  },
-  {
-    path: 'forgot/:token',
-    component: ForgotPasswordLoginComponent
-  },
-  {
-    path: 'change',
-    component: ChangePasswordLoginComponent
-  },
-  {
-    path: 'error403',
-    component: Error403PageComponent
-  },
-  {
-    path: 'loading',
-    component: LoadingComponent
-  },
-  {
-    path: 'error401',
-    component: Error401PageComponent
-  }
+  {path: 'login', component: HomeLoginComponent, canActivate: [LoginGuard]},
+  {path: 'forgot/:token', component: ForgotPasswordLoginComponent},
+  {path: 'change', component: ChangePasswordLoginComponent},
+  {path: 'error403', component: Error403PageComponent},
+  {path: 'loading', component: LoadingComponent},
+  {path: 'error401', component: Error401PageComponent}
 ];
 
 @NgModule({

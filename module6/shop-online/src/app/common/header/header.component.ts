@@ -5,6 +5,10 @@ import {ToastrService} from 'ngx-toastr';
 import {LogoutService} from '../../login/service/logout.service';
 import {Router} from '@angular/router';
 import {CommonService} from '../../login/service/common.service';
+import {OrderService} from "../../service/order.service";
+import {Customer} from "../../model/customer";
+import {Order} from "../../model/order";
+import {CustomerService} from "../../service/customer.service";
 
 @Component({
   selector: 'app-header',
@@ -18,12 +22,17 @@ export class HeaderComponent implements OnInit, OnDestroy {
   token: string = '';
   messageReceived: any;
   private subscriptionName: Subscription;
+  productOrders: Order[] = [];
+  customer: Customer;
+  count: number = 0;
 
   constructor(private cookieService: CookieService,
               private toastrService: ToastrService,
               private logoutService: LogoutService,
               private router: Router,
-              private commonService: CommonService) {
+              private commonService: CommonService,
+              private orderService: OrderService,
+              private customerService: CustomerService) {
     this.role = this.readCookieService('role');
     this.username = this.readCookieService('username');
     this.token = this.readCookieService('jwToken');
@@ -33,10 +42,13 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.role = this.readCookieService('role');
       this.username = this.readCookieService('username');
       this.token = this.readCookieService('jwToken');
+      this.getCustomerByUsername(this.username)
     });
   }
 
   ngOnInit(): void {
+    this.getCustomerByUsername(this.username)
+
   }
 
   /**
@@ -98,4 +110,25 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.commonService.sendUpdate('Đăng Xuất thành công!');
   }
 
+  getCustomerByUsername(username: string) {
+    this.customerService.getCustomerByUserName(username).subscribe(value => {
+      this.customer = value;
+      this.getProductInCardByCustomer(value);
+    });
+
+  }
+
+  getProductInCardByCustomer(customer: Customer) {
+    this.count = 0;
+    this.orderService.getProductInCardByCustomer(customer).subscribe((pos: Order[]) => {
+      if (pos != null) {
+        this.productOrders = pos;
+        for (let i = 0; i < pos.length; i++) {
+          this.count += pos[i].quantity;
+        }
+      } else {
+        this.productOrders = [];
+      }
+    });
+  }
 }

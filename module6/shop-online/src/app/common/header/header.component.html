@@ -15,13 +15,13 @@
         <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
           <div class="navbar-nav mr-auto py-0">
             <a [routerLink]="['/home']" class="nav-item nav-link active">Tranh chủ</a>
-            <a [routerLink]="['/historyOrder']" class="nav-item nav-link">Chính sách Bảo hành</a>
+            <a [routerLink]="['/baoHanh']" class="nav-item nav-link">Chính sách Bảo hành</a>
             <a [routerLink]="['/vanChuyen']" class="nav-item nav-link">Chính sách Vận chuyển</a>
             <div class="nav-item dropdown">
               <a *ngIf="role === 'ROLE_ADMIN'"  class="nav-link dropdown-toggle" data-toggle="dropdown">Danh mục quản lý  <i class="fa fa-angle-down mt-1"></i></a>
               <div class="dropdown-menu rounded-0 border-0 m-0">
-                <a [routerLink]="['/#']" class="dropdown-item text-white">Thêm sản phầm</a>
-                <a [routerLink]="['/#']" class="dropdown-item text-white">Phản hồi</a>
+                <a [routerLink]="['/#']" class="dropdown-item ">Thêm sản phầm</a>
+                <a [routerLink]="['/#']" class="dropdown-item ">Phản hồi</a>
               </div>
             </div>
             <div class="nav-item dropdown">
@@ -33,7 +33,7 @@
             </div>
             <a [routerLink]="['/cart']" class="btn px-0 ml-3" style="margin-top: 15px">
               <i class="fas fa-shopping-cart text-primary"></i>
-              <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">0</span>
+              <span class="badge text-secondary border border-secondary rounded-circle" style="padding-bottom: 2px;">{{count}}</span>
             </a>
           </div>
 
@@ -47,7 +47,7 @@
         </button>
         <div class="dropdown-menu dropdown-menu-right">
           <a class="dropdown-item" >Thông tin tài khoản</a>
-          <a class="dropdown-item" [routerLink]="['/historyOrder']" >Lịch sử thanh toán</a>
+          <a *ngIf="role === 'ROLE_USER'" class="dropdown-item" [routerLink]="['/historyOrder']" >Lịch sử thanh toán</a>
         </div>
       </div>
       <a [routerLink]="['/login']" class="btn bg-primary text-white m-1" *ngIf="token == ''">Đăng nhập</a>
