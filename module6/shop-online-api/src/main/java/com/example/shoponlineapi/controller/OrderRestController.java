@@ -274,7 +274,7 @@ public class OrderRestController {
                 "                                        <tbody>\n" +
                 "                                        <tr>\n" +
                 "                                            <td align=\"left\"><span style=\"font-size: 26px\"><strong\n" +
-                "                                                    style=\"text-transform: uppercase; color: #D19C97\">Teach</strong> Store</span>\n" +
+                "                                                    style=\"text-transform: uppercase; color: #D19C97\">Tech</strong> Store</span>\n" +
                 "                                            </td>\n" +
                 "                                        </tr>\n" +
                 "                                        <tr class=\"hiddenMobile\">\n" +
@@ -375,9 +375,7 @@ public class OrderRestController {
         Double shipMoney = 50000d;
         for (int i = 0; i < paymentDto.getProductOrderList().size(); i++) {
             Double productPrice = paymentDto.getProductOrderList().get(i).getProduct().getPrice();
-//            Double discountCategory = paymentDto.getProductOrderList().get(i).getProduct().getCategory().getDiscountPercent();
             Double discountProduct = paymentDto.getProductOrderList().get(i).getProduct().getDiscount();
-//            Double priceDiscountCategory = productPrice - (productPrice * discountCategory / 100);
             Double priceDiscountProduct = productPrice - (productPrice * discountProduct / 100 );
             totalMoney += priceDiscountProduct;
             template += "                            <tr>\n" +

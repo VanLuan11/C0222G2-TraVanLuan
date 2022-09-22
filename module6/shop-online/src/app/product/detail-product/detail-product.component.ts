@@ -24,7 +24,6 @@ export class DetailProductComponent implements OnInit {
   token: string = '';
   messageReceived: any;
   private subscriptionName: Subscription;
-
   product: Product;
   // product: Product = {};
   number: number;

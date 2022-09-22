@@ -4,6 +4,7 @@ import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {CookieService} from '../login/service/cookie.service';
 import {Product} from '../model/product';
 import {Observable} from 'rxjs';
+import {Category} from "../model/category";
 
 const API_URL = `${environment.apiUrl}`;
 
@@ -72,5 +73,16 @@ export class ProductService {
 
   deleteProductById(id): Observable<Product> {
     return this.httpClient.delete<Product>(this.URL_PRODUCT + '/delete/' + id, {headers: new HttpHeaders({'authorization': this.header})}).pipe();
+  }
+
+  createProduct(product: Product): Observable<Product> {
+    return this.httpClient.post<Product>(this.URL_PRODUCT + '/create', product)
+  }
+
+  getAllCategory() {
+    return this.httpClient.get<Category[]>(this.URL_PRODUCT + '/category');
+  }
+  updateProduct(product: Product): Observable<Product>{
+    return this.httpClient.patch<Product>(this.URL_PRODUCT+ '/update', product)
   }
 }

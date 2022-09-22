@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="container pb-1 pt-4 col-8" >
+    <div class="row px-xl-5" *ngIf="customer">
+      <div class="col-lg-5 mb-30 h-auto" style="">
+        <div class="product-item bg-light h-100 p-30">
+          <div class="product-img position-relative overflow-hidden" style="border-radius: 10%">
+            <img class="img-fluid w-100" [src]="customer.image" alt="">
+          </div>
+          <div style="margin-top: 10px">
+            <h5 style="text-align: center">Sở thích</h5>
+            <p class="mb-4" style="text-align: center">{{customer.hobbies}} </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-7 h-auto mb-30">
+        <div class="h-100 bg-light p-30">
+          <h3 style="text-align: center">Thông tin tài khoản </h3>
+          <p class="mb-4"><b style="color: black">Tên: </b> {{customer.name}} </p>
+          <p class="mb-4"><b style="color: black">Email: </b>{{customer.email}}</p>
+          <p class="mb-4"><b style="color: black">Ngày sinh: </b>{{customer.birthday | date: 'dd/MM/yyyy'}}</p>
+          <p class="mb-4"><b style="color: black">SĐT: </b>{{customer.phone}}</p>
+          <p class="mb-4"><b style="color: black">Tên tài khoản: </b>{{customer.appUser.userName}}</p>
+          <div class="d-flex align-items-center mb-4 pt-2">
+            <button [routerLink]="['/home']" class="btn btn-primary" style="margin-left: 5px"><i
+              class="fa fa-undo mr-1"></i> Quay lại
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

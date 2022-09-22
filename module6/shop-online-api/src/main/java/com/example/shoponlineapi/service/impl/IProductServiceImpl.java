@@ -26,6 +26,11 @@ public class IProductServiceImpl implements IProductService {
     }
 
     @Override
+    public void save(Product product) {
+        productRepository.save(product);
+    }
+
+    @Override
     public Page<Product> findAllLapTopGaming(Pageable pageable, String nameProduct, String start, String end) {
         return productRepository.findAllLapTopGaming(pageable, "%" + nameProduct + "%", start, end);
     }

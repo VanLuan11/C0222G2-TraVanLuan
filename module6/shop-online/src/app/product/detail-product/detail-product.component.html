@@ -1,79 +1,87 @@
 <!-- Shop Detail Start -->
-<div class="row">
-  <div class="container pb-1 pt-4 col-8">
-    <div class="row px-xl-5" *ngIf="product">
-      <div class="col-lg-5 mb-30 h-auto">
-        <div class="product-item bg-light h-100 p-30">
-          <div class="product-img position-relative overflow-hidden">
-            <img class="img-fluid w-100" [src]="product.image" alt="">
+<div class="container-fluid">
+  <div class="row">
+    <div class="pb-1 pt-4 col-8">
+      <div class="row px-xl-5" *ngIf="product">
+        <div class="col-lg-5 mb-30 h-auto">
+          <div class="product-item bg-light h-100 p-30">
+            <div class="product-img position-relative overflow-hidden">
+              <img class="img-fluid w-100" [src]="product.image" alt="">
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-7 h-auto mb-30">
-        <div class="h-100 bg-light p-30">
-          <h3>{{product.name}}</h3>
-          <p class="mb-4"><b style="color: black">Ngày sản xuất: </b> {{product.dateIn | date: 'dd/MM/yyyy'}}</p>
-          <p class="mb-4"><b style="color: black">Xuất xứ: </b> {{product.manufacturer}}</p>
-          <p class="mb-4"><b style="color: black">Thời gian bảo hành: </b> {{product.guaranteeTime}}</p>
-          <p class="mb-4"><b style="color: black">Khuyến mãi: </b> {{product.discount}}%</p>
-          <p class="mb-4"><b style="color: black">Còn: </b> {{product.quantity}} sản phẩm</p>
-          <div class="price-item regular-price">
-            <span style="font-size: 20px; color: red"><b style="color: black">Giá thị khuyến mãi:</b> {{(product.price - (product.price * product.discount / 100) | currency: 'VND':'').replace(',', '.').replace(',', '.').replace(',', '.')}}đ
-              <sup style="text-decoration: line-through;">{{(product.price | currency: 'VND':'').replace(',', '.').replace(',', '.').replace(',', '.')}}đ</sup>
+        <div class="col-lg-7 h-auto mb-30">
+          <div class="h-100 bg-light p-30">
+            <h3>{{product.name}}</h3>
+            <p class="mb-4"><b style="color: black">Ngày sản xuất: </b> {{product.dateIn | date: 'dd/MM/yyyy'}}</p>
+            <p class="mb-4"><b style="color: black">Xuất xứ: </b> {{product.manufacturer}}</p>
+            <p class="mb-4"><b style="color: black">Thời gian bảo hành: </b> {{product.guaranteeTime}}</p>
+            <p class="mb-4"><b style="color: black">Khuyến mãi: </b> {{product.discount}}%</p>
+            <p class="mb-4"><b style="color: black">Còn: </b> {{product.quantity}} sản phẩm</p>
+            <div class="price-item regular-price">
+            <span style="font-size: 20px; color: red"><b
+              style="color: black">Giá thị khuyến mãi:</b> {{(product.price - (product.price * product.discount / 100) | currency: 'VND':'').replace(',', '.').replace(',', '.').replace(',', '.')}}
+              đ
+              <sup
+                style="text-decoration: line-through;">{{(product.price | currency: 'VND':'').replace(',', '.').replace(',', '.').replace(',', '.')}}
+                đ</sup>
             </span>
-          </div>
-
-          <div class="d-flex align-items-center mb-4 pt-2">
-<!--            <div class="input-group quantity mr-3" style="width: 130px;">-->
-<!--              <div class="input-group-btn">-->
-<!--                <button class="btn btn-primary btn-minus">-->
-<!--                  <i class="fa fa-minus"></i>-->
-<!--                </button>-->
-<!--              </div>-->
-<!--              <input type="text" class="form-control bg-secondary border-0 text-center" value="1">-->
-<!--              <div class="input-group-btn">-->
-<!--                <button class="btn btn-primary btn-plus">-->
-<!--                  <i class="fa fa-plus"></i>-->
-<!--                </button>-->
-<!--              </div>-->
-<!--            </div>-->
-            <button *ngIf="role == 'ROLE_USER' && infoStatus == false" class="btn btn-primary px-3" (click)="addToCart(product)"><i class="fa fa-shopping-cart mr-1"></i> Thêm vào giỏ hàng
-            </button>
-            <button [routerLink]="['/home']" class="btn btn-primary" style="margin-left: 5px"><i
-              class="fa fa-undo mr-1"></i> Quay lại
-            </button>
+            </div>
+            <div class="d-flex align-items-center mb-4 pt-2">
+              <button *ngIf="role == 'ROLE_USER' && infoStatus == false" class="btn btn-primary px-3"
+                      (click)="addToCart(product)"><i class="fa fa-shopping-cart mr-1"></i> Thêm vào giỏ hàng
+              </button>
+              <button [routerLink]="['/home']" class="btn btn-primary" style="margin-left: 5px"><i
+                class="fa fa-undo mr-1"></i> Quay lại
+              </button>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-  <div class="col-4 pb-1 pt-4 small ">
-    <div class="oneshop-single-product-right d-none d-lg-block">
-      <!-- Gift -->
-      <div class="oneshop-ctkm mb-3">
-        <div class="heading">Chương trình khuyến mãi</div>
-        <div class="ctn"><p><strong>Thời gian áp dụng</strong>: Từ ngày&nbsp;<strong>16/08/2022</strong>&nbsp;đến ngày&nbsp;<strong>30/09/2022</strong><br>
-          Áp dụng:với tất cả quý khách hàng mua&nbsp;<strong>laptop Lenovo</strong>&nbsp;tại&nbsp;<strong>SP
-            ONE</strong></p>
-          <p>TẶNG NGAY&nbsp;<strong>01 Áo khoác Legion</strong>&nbsp;cùng combo&nbsp;<strong>ba lô IdeaPad
-            Modern</strong>&nbsp;trị giá<br>
-            <strong>799.000VNĐ</strong>&nbsp;&amp; chuột&nbsp;<strong>Lenovo Legion M300s</strong>&nbsp;trị
-            giá&nbsp;<strong>899.000VNĐ</strong></p>
-          <p><u><strong>Khuyến mãi:</strong></u></p>
-          <p>Khi mua với giá<strong> 16,450,000 </strong>tặng quà cực shock</p>
-          <p><strong>🎁</strong>Tặng <strong>Balo Lenovo </strong>trị giá<strong> 600,000</strong></p>
-          <p><strong>🎁Tặng Chuột Gaming </strong>trị giá<strong> 300,000</strong></p>
-          <p><strong>🎁</strong>Tặng voucher vệ sinh, cân màu máy trị giá <strong>1,990,000</strong></p>
-          <p>Giá cực Shock chỉ <strong>17,450,000</strong> tặng ngay</p>
-          <p><strong>🎁 RAM Laptop 8GB Bus 3200Mhz trị giá 1.390,000</strong></p>
-          <p><strong>🎁 Balo Lenovo</strong>&nbsp;trị giá <strong>600,000</strong></p>
-          <p><strong>🎁 Voucher vệ sinh, cân màu 2 năm </strong>trị giá<strong>&nbsp;1,990,000</strong></p>
+    <div class="col-4 pb-1 pt-4 small ">
+      <div class="oneshop-single-product-right d-none d-lg-block">
+        <!-- Gift -->
+        <div class="oneshop-ctkm mb-3">
+          <div class="heading">Chương trình khuyến mãi</div>
+          <div class="ctn"><p><strong>Thời gian áp dụng</strong>: Từ ngày&nbsp;<strong>16/08/2022</strong>&nbsp;đến ngày&nbsp;<strong>30/09/2022</strong><br>
+            Áp dụng:với tất cả quý khách hàng mua&nbsp;<strong>laptop Lenovo</strong>&nbsp;tại&nbsp;<strong>SP
+              ONE</strong></p>
+            <p>TẶNG NGAY&nbsp;<strong>01 Áo khoác Legion</strong>&nbsp;cùng combo&nbsp;<strong>ba lô IdeaPad
+              Modern</strong>&nbsp;trị giá<br>
+              <strong>799.000VNĐ</strong>&nbsp;&amp; chuột&nbsp;<strong>Lenovo Legion M300s</strong>&nbsp;trị
+              giá&nbsp;<strong>899.000VNĐ</strong></p>
+            <p><u><strong>Khuyến mãi:</strong></u></p>
+            <p>Khi mua với giá<strong> 16,450,000 </strong>tặng quà cực shock</p>
+            <p><strong>🎁</strong>Tặng <strong>Balo Lenovo </strong>trị giá<strong> 600,000</strong></p>
+            <p><strong>🎁Tặng Chuột Gaming </strong>trị giá<strong> 300,000</strong></p>
+            <p><strong>🎁</strong>Tặng voucher vệ sinh, cân màu máy trị giá <strong>1,990,000</strong></p>
+            <p>Giá cực Shock chỉ <strong>17,450,000</strong> tặng ngay</p>
+            <p><strong>🎁 RAM Laptop 8GB Bus 3200Mhz trị giá 1.390,000</strong></p>
+            <p><strong>🎁 Balo Lenovo</strong>&nbsp;trị giá <strong>600,000</strong></p>
+            <p><strong>🎁 Voucher vệ sinh, cân màu 2 năm </strong>trị giá<strong>&nbsp;1,990,000</strong></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
 </div>
 <!-- Shop Detail End -->
+<div class="container-fluid pb-4">
+  <div class="row">
+    <div class="col-4 pb-1 pt-8">
+      <h3>Thông số kỹ thuật</h3>
+      <div [innerHTML]="product.description" ></div>
+    </div>
+    <div class="col-4 pb-1 pt-8">
+      <h3>Mô tả sản phầm</h3>
+      <div [innerHTML]="product.specification"></div>
+    </div>
+  </div>
+</div>
+
+
+
 
 

@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {Routes, RouterModule} from '@angular/router';
 import {CartComponent} from './product/cart/cart.component';
 import {DetailProductComponent} from './product/detail-product/detail-product.component';
 import {HomeLoginComponent} from './login/home-login/home-login.component';
@@ -9,7 +9,10 @@ import {GuaranteeComponent} from './common/guarantee/guarantee.component';
 import {TransportComponent} from './common/transport/transport.component';
 import {HomeLapTopComponent} from './product/home-lap-top/home-lap-top.component';
 import {HistoryOrderProductComponent} from "./product/history-order-product/history-order-product.component";
-
+import {InfoCustomerComponent} from "./product/info-customer/info-customer.component";
+import {CreateComponent} from "./product/create/create.component";
+import {EditComponent} from "./product/edit/edit.component";
+import {StatisticsComponent} from "./product/statistics/statistics.component";
 
 
 const routes: Routes = [
@@ -23,10 +26,15 @@ const routes: Routes = [
   {path: 'baoHanh', component: GuaranteeComponent},
   {path: 'vanChuyen', component: TransportComponent},
   {path: 'historyOrder', component: HistoryOrderProductComponent},
+  {path: 'infoCustomer', component: InfoCustomerComponent},
+  {path: 'create', component: CreateComponent},
+  {path: 'update/:id', component: EditComponent},
+  {path: 'statistics', component: StatisticsComponent}
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+}

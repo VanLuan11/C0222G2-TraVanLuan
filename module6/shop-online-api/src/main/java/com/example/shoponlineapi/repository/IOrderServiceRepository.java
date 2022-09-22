@@ -34,6 +34,7 @@ public interface IOrderServiceRepository extends JpaRepository<OrderService, Int
             " join customer c on po.customer_id = c.id " +
             " join product p on po.product_id = p.id " +
             " join bill b on po.bill_id = b.id " +
-            " where po.customer_id = :#{#customer.id} and po.is_deleted = 0 ", nativeQuery = true)
+            " where po.customer_id = :#{#customer.id} and po.is_deleted = 0 " +
+            " order by b.creation_date desc ", nativeQuery = true)
     List<OrderService> getHistoryCustomerOrderProduct(Customer customer);
 }

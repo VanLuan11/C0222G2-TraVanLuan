@@ -115,7 +115,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
       this.customer = value;
       this.getProductInCardByCustomer(value);
     });
-
   }
 
   getProductInCardByCustomer(customer: Customer) {

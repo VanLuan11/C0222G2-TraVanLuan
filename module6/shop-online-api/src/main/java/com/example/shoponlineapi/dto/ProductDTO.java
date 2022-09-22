@@ -14,11 +14,10 @@ public class ProductDTO {
     private double price;
     private String manufacturer;
     private String guaranteeTime;
-    private String discount;
+    private double discount;
     private Integer quantity;
     private String specification;
     private String description;
-
     private Category category;
     private Boolean isDeleted;
 }

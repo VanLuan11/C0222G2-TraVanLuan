@@ -21,6 +21,12 @@ import { CreateComponent } from './product/create/create.component';
 import { EditComponent } from './product/edit/edit.component';
 import { HistoryOrderProductComponent } from './product/history-order-product/history-order-product.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import { InfoCustomerComponent } from './product/info-customer/info-customer.component';
+import {AngularFireModule} from "@angular/fire";
+import {environment} from "../environments/environment";
+import {AngularFireStorageModule} from "@angular/fire/storage";
+import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
+import { StatisticsComponent } from './product/statistics/statistics.component';
 
 
 @NgModule({
@@ -38,25 +44,30 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
     CreateComponent,
     EditComponent,
     HistoryOrderProductComponent,
+    InfoCustomerComponent,
+    StatisticsComponent,
   ],
-  imports: [
-    BrowserAnimationsModule,
-    BrowserModule,
-    AppRoutingModule,
-    ChartsModule,
-    HttpClientModule,
-    LoginModule,
-    ToastrModule.forRoot(
-      {
-        timeOut: 2000,
-        closeButton: true,
-        progressBar: true,
-        positionClass: 'toast-top-right',
-        preventDuplicates: true,
-      }
-    ),
-    ReactiveFormsModule,
-  ],
+    imports: [
+        BrowserAnimationsModule,
+        BrowserModule,
+        AppRoutingModule,
+        ChartsModule,
+        HttpClientModule,
+        LoginModule,
+        AngularFireModule.initializeApp(environment.firebaseConfig),
+        AngularFireStorageModule,
+        ToastrModule.forRoot(
+            {
+                timeOut: 2000,
+                closeButton: true,
+                progressBar: true,
+                positionClass: 'toast-top-right',
+                preventDuplicates: true,
+            }
+        ),
+        ReactiveFormsModule,
+        CKEditorModule,
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

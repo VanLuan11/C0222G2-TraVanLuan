@@ -21,7 +21,7 @@
         <td>{{i + 1}}</td>
         <td>{{po.customer.name}}</td>
         <td>{{po.bill.code}}</td>
-        <td>{{po.bill.creationDate}}</td>
+        <td>{{po.bill.creationDate |date: 'dd-MM-yyyy hh:mm:ssa '}}</td>
         <td>{{po.product.name}}</td>
         <td>{{po.product.guaranteeTime}}</td>
         <td>{{po.product.price - (po.product.price * po.product.discount / 100)}}</td>

@@ -1,7 +1,11 @@
 package com.example.shoponlineapi.controller;
 
+import com.example.shoponlineapi.dto.ProductDTO;
+import com.example.shoponlineapi.model.Category;
 import com.example.shoponlineapi.model.Product;
+import com.example.shoponlineapi.service.ICategoryService;
 import com.example.shoponlineapi.service.IProductService;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,8 +13,11 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -19,6 +26,9 @@ import java.util.Optional;
 public class ProductRestController {
     @Autowired
     private IProductService productService;
+
+    @Autowired
+    private ICategoryService categoryService;
 
     @GetMapping("/page")
     public ResponseEntity<Page<Product>> getAllProduct(@PageableDefault(12) Pageable pageable) {
@@ -79,7 +89,7 @@ public class ProductRestController {
     @PreAuthorize("hasAuthority('ROLE_ADMIN')")
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> deleteProductById(@PathVariable Integer id) {
-       Product product = this.productService.findProductById(id);
+        Product product = this.productService.findProductById(id);
         if (product == null) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
@@ -87,4 +97,37 @@ public class ProductRestController {
         return new ResponseEntity<>(HttpStatus.OK);
     }
 
+    @PostMapping("/create")
+    public ResponseEntity<?> createProduct(@Valid @RequestBody ProductDTO productDTO, BindingResult bindingResult) {
+        if (bindingResult.hasErrors()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        Product product = new Product();
+        BeanUtils.copyProperties(productDTO, product);
+        productService.save(product);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
+    @GetMapping("/category")
+    public ResponseEntity<List<Category>> getAllCategory() {
+
+        List<Category> categoryList = categoryService.getAllCategory();
+        if (categoryList.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+        } else {
+            return new ResponseEntity<>(categoryList, HttpStatus.OK);
+        }
+    }
+
+    @PatchMapping("/update")
+    public ResponseEntity<Product> updateProduct(@Valid @RequestBody ProductDTO productDTO, BindingResult bindingResult) {
+        Product product = productService.findProductById(productDTO.getId());
+        if (bindingResult.hasErrors()) {
+            return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        }
+        BeanUtils.copyProperties(productDTO, product);
+        productService.save(product);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 }

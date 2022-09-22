@@ -66,15 +66,18 @@
           <div class="product-img position-relative overflow-hidden">
             <img class="img-fluid w-100" [src]="p.image" alt="">
             <div class="product-action">
-              <a *ngIf="role == 'ROLE_USER' && infoStatus == false" class="btn btn-outline-dark btn-square" [routerLink]="['']" (click)="addToCart(p)">
+              <a *ngIf="role == 'ROLE_USER' && infoStatus == false" class="btn btn-outline-dark btn-square"
+                 [routerLink]="['']" (click)="addToCart(p)">
                 <i class="fa fa-shopping-cart"></i></a>
-              <a *ngIf="role == 'ROLE_USER'  && infoStatus == true" class="btn btn-outline-dark btn-square" [routerLink]="['']" (click)="updateInfoMessage()">
+              <a *ngIf="role == 'ROLE_USER'  && infoStatus == true" class="btn btn-outline-dark btn-square"
+                 [routerLink]="['']" (click)="updateInfoMessage()">
                 <i class="fa fa-shopping-cart"></i></a>
-              <a *ngIf="role != 'ROLE_USER'" class="btn btn-outline-dark btn-square" [routerLink]="['']" (click)="addToCartMessage()">
+              <a *ngIf="role != 'ROLE_USER'" class="btn btn-outline-dark btn-square" [routerLink]="['']"
+                 (click)="addToCartMessage()">
                 <i class="fa fa-shopping-cart"></i></a>
               <a class="btn btn-outline-dark btn-square" [routerLink]="['/detail',p.id]"><i
                 class="fa fa-search"></i></a>
-              <a class="btn btn-outline-dark btn-square" *ngIf=" role === 'ROLE_ADMIN'" [routerLink]="'/'"><i
+              <a class="btn btn-outline-dark btn-square" *ngIf=" role === 'ROLE_ADMIN'" [routerLink]="['/update', p.id] "><i
                 class="fa fa-edit"></i></a>
               <a class="btn btn-outline-dark btn-square" data-bs-toggle="modal" data-bs-target="#exampleModal"
                  (click)="showDelete(p)"
@@ -84,9 +87,11 @@
           <div class="text-center py-4">
             <p class="h6 text-decoration-none text-truncate" href="">{{p.name}} </p>
             <div class="d-flex align-items-center justify-content-center mt-2">
-              <b class="text-danger">{{(p.price - (p.price * p.discount / 100) | currency: 'VND' : '').replace(',', '.').replace(',', '.').replace(',', '.')}}đ</b>
+              <b
+                class="text-danger">{{(p.price - (p.price * p.discount / 100) | currency: 'VND' : '').replace(',', '.').replace(',', '.').replace(',', '.')}}
+                đ</b>
               <b class="text-muted ml-2">
-                <b class="text-success">(-{{p.discount}}%) <small class="text-danger" >({{p.quantity}})</small></b>
+                <b class="text-success">(-{{p.discount}}%) <small class="text-danger">({{p.quantity}})</small></b>
               </b>
             </div>
           </div>
@@ -96,11 +101,10 @@
       <a href=""><i class="fa-solid fa-trash-can-check"></i></a>
     </div>
   </div>
-  <!-- Products End -->
-  <div class="col-lg-12">
+  <div class="col-lg-12" *ngIf="listProduct.length > 0">
     <nav>
       <ul class="pagination justify-content-center">
-        <div *ngIf="number == 0">
+        <div *ngIf="number == 0" >
           <li class="page-item disabled">
             <button class="page-link" (click)="goPrevious()" hidden>Quay Lại</button>
           </li>
@@ -110,7 +114,7 @@
             <button class="page-link" (click)="goPrevious()">Quay Lại</button>
           </li>
         </div>
-        <div *ngFor="let count of countTotalPages; index as i">
+        <div *ngFor="let count of countTotalPages; index as i" >
           <div *ngIf="i == number">
             <li class="page-item active">
               <button class="page-link" (click)="goItem(i)">{{i + 1}}</button>
@@ -124,7 +128,7 @@
         </div>
         <div *ngIf="number == totalPages - 1">
           <li class="page-item disabled">
-            <button class="page-link" (click)="goNext()">Tiếp</button>
+            <button class="page-link" (click)="goNext()" hidden>Tiếp</button>
           </li>
         </div>
         <div *ngIf="number != totalPages - 1">
@@ -144,8 +148,8 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-          <h5 class="modal-title" style="color: red" id="exampleModalLabel">Warning!</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal"
+        <h5 class="modal-title" style="color: red" id="exampleModalLabel">Warning!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
                 aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -164,6 +168,7 @@
   </div>
 </div>
 <!--end modal-->
+
 
 
 

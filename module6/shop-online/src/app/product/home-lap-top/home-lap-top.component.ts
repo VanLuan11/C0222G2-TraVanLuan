@@ -145,6 +145,7 @@ export class HomeLapTopComponent implements OnInit {
       this.toast.warning('Vui lòng cập nhật thông tin để mua hàng!');
     });
   }
+
   sendMessage(): void {
     this.commonService.sendUpdate('Success!');
   }

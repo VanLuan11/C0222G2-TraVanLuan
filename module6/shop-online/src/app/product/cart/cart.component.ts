@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { render} from "creditcardpayments/creditCardPayments";
+import {render} from "creditcardpayments/creditCardPayments";
 import {Order} from "../../model/order";
 import {Customer} from "../../model/customer";
 import {CustomerService} from "../../service/customer.service";
@@ -27,12 +27,14 @@ export class CartComponent implements OnInit {
   productOrders: Order[] = [];
   totalMoney: number = 0;
   infoStatus: boolean = false;
+
   constructor(private cookieService: CookieService,
               private customerService: CustomerService,
               private cartService: OrderService,
               private toastrService: ToastrService,
               private commonService: CommonService,
-              private router: Router) {
+              private router: Router,
+              private toast: ToastrService) {
     this.role = this.readCookieService('role');
     this.username = this.readCookieService('username');
     this.token = this.readCookieService('jwToken');
@@ -45,11 +47,13 @@ export class CartComponent implements OnInit {
       this.getCustomerByUsername(this.username)
     });
   }
+
   readCookieService(key: string): string {
     return this.cookieService.getCookie(key);
   }
+
   ngOnInit(): void {
-    this.sendMessage();
+    // this.sendMessage();
     this.getCustomerByUsername(this.username);
   }
 
@@ -57,34 +61,39 @@ export class CartComponent implements OnInit {
     this.cartService.getProductInCardByCustomer(customer).subscribe((pos: Order[]) => {
       if (pos != null) {
         this.productOrders = pos;
-        this.caculateTotalMoney(pos);
+        this.calculateTotalMoney(pos);
       } else {
         this.productOrders = [];
       }
     });
   }
 
-  private caculateTotalMoney(pos: Order[]) {
-
+  private calculateTotalMoney(pos: Order[]) {
     this.totalMoney = 0;
     for (let i = 0; i < pos.length; i++) {
       // @ts-ignore
       this.totalMoney += ((pos[i].product.price - (pos[i].product.price * (pos[i].product.discount / 100))) * pos[i].quantity);
-    }
-    if (this.totalMoney >= 0) {
-      render(
-        {
-          id: '#payments',
-          currency: 'USD',
-          value: String(((this.totalMoney + 50000) / 23000).toFixed(2)),
-          onApprove: (details) => {
-            console.log(details);
-            if (details.status == 'COMPLETED') {
-              this.onPaymentSuccess();
+      const asd = $('#paymentsBtn');
+      asd.remove('#payments');
+      asd.html('<div id="payments" *ngIf="productOrders.length !=0">');
+      if (this.totalMoney >= 0) {
+        render(
+          {
+            id: '#payments',
+            currency: 'USD',
+            value: String(((this.totalMoney + 50000) / 23000).toFixed(2)),
+            onApprove: (details) => {
+              console.log(details);
+              if (details.status == 'COMPLETED') {
+                this.onPaymentSuccess();
+              } else {
+                this.toastrService.error('Thanh toán thất bại')
+                this.router.navigateByUrl('/cart')
+              }
             }
           }
-        }
-      );
+        );
+      }
     }
   }
 
@@ -95,10 +104,11 @@ export class CartComponent implements OnInit {
         setTimeout(() => {
           this.router.navigateByUrl("/home").then(() => {
             this.toastrService.success('Thanh toán thành công!');
+            this.sendMessage();
           })
         }, 500);
       });
-      this.sendMessage();
+
     });
   }
 
@@ -112,7 +122,7 @@ export class CartComponent implements OnInit {
   minusQuantity(productOrder: Order) {
     this.cartService.minusQuantity(productOrder).subscribe(value => {
       this.productOrders = value;
-      this.caculateTotalMoney(value);
+      this.calculateTotalMoney(value);
       this.sendMessage();
     }, error => {
       if (error.error.message == 'minimum') {
@@ -125,7 +135,7 @@ export class CartComponent implements OnInit {
   plusQuantity(productOrder: Order) {
     this.cartService.plusQuantity(productOrder).subscribe(value => {
       this.productOrders = value;
-      this.caculateTotalMoney(value);
+      this.calculateTotalMoney(value);
       this.sendMessage();
     }, error => {
       if (error.error.message == 'maximum') {
@@ -138,6 +148,7 @@ export class CartComponent implements OnInit {
     this.toastrService.warning('Số lượng sản phẩm đã tối đa.');
   }
 
+  // reload header
   sendMessage(): void {
     this.commonService.sendUpdate('Success!');
   }
@@ -145,7 +156,7 @@ export class CartComponent implements OnInit {
   deleteProductInCart(po: Order) {
     this.cartService.deleteProductInCard(po).subscribe((value: Order[]) => {
       this.productOrders = value;
-      this.caculateTotalMoney(value);
+      this.calculateTotalMoney(value);
       this.toastrService.success('Xóa thành công sản phẩm ' + po.product.name + ' khỏi giỏ hàng.');
       $('#deleteMinusModal' + po.product.id).modal('hide');
       $('#exampleModalDeleteButton' + po.product.id).modal('hide');
@@ -156,4 +167,5 @@ export class CartComponent implements OnInit {
       }
     });
   }
+
 }
