@@ -1,0 +1,23 @@
+<div class="container-fluid mt-3">
+  <h4 style="text-align: center">Top Khách Hàng Mua Hàng Nhiều Nhất</h4>
+  <table class="table table-hover table-bordered">
+    <thead>
+    <tr style="background-color: #297b9a; color: white">
+      <th>Tên khách hàng</th>
+      <th>Số lượng mua</th>
+      <th>Ngày sinh</th>
+      <th>Email</th>
+      <th>SĐT</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of statisticsCustomer">
+      <td>{{ item.name }}</td>
+      <td>{{ item.quantity }}</td>
+      <td>{{ item.birthday}}</td>
+      <td>{{ item.email}}</td>
+      <td>{{ item.phone}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

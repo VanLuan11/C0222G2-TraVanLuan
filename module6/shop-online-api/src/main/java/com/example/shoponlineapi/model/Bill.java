@@ -18,6 +18,7 @@ public class Bill {
 
     private String code;
 
+    @Column(columnDefinition = "DATE")
     private Date creationDate;
 
     @Column(columnDefinition = "bit(1) default 0")

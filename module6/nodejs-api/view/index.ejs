@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Home</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container mt-3">
+      <a href="/add" class="btn btn-info">Thêm mới học sinh</a>
+      <table class="table">
+        <thead>
+          <th>Tên</th>
+          <th>Lớp</th>
+          <th>Tuổi</th>
+          <th>Quản trị</th>
+        </thead>
+        <tbody>
+        <%
+        for(var i =0; i< data.length; i++){%>
+          <tr>
+            <td><%=data[i].name%></td>
+            <td><%=data[i].age%></td>
+            <td><%=data[i].class%></td>
+            <td>
+              <a href="/edit/<%=data[i].id%>" class="btn btn-primary">Sửa</a>
+              <a href="/delete/<%=data[i].id%>" class="btn btn-danger">Xóa</a>
+            </td>
+          </tr>
+          <%
+        }
+        %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>

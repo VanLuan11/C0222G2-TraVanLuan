@@ -1,27 +1,80 @@
 <div class="container-fluid pt-4">
   <div class="row">
-    <h2 style="text-align: center">Top 5 sản phẩm bán chạy nhất</h2>
+    <h2 style="text-align: center">Top 10 sản phẩm bán chạy nhất</h2>
   </div>
-  <div class="row">
+    <div class="col-xl-3 col-md-12 col-sm-12 mt-3 ">
+      <select (input)="selectType($event.target.value)">
+        <option [value]="'week'">Tuần</option>
+        <option [value]="'month'">Tháng</option>
+        <option [value]="'year'">Năm</option>
+      </select>
+    </div>
+  <div class="row" id="week" >
     <div class="col-4">
-      <h5 style="background: black">Top 5 sản phẩm</h5>
-      <table class="table table-hover table-bordered ">
+      <h4>Top Tuần</h4>
+      <table class="table table-hover table-bordered">
         <thead>
-        <tr>
-          <th>Tên sản phẩm</th>
-          <th>Số lượng bán ra</th>
+        <tr style="background-color: #297b9a; color: white">
+          <th>Tên Sản Phẩm</th>
+          <th style="width: 150px">Số Lượng Bán</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-          <td></td>
-          <td></td>
+        <tr *ngFor="let item of statisticWeek">
+          <td>{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
         </tr>
         </tbody>
       </table>
     </div>
     <div class="col-8">
-      <canvas id="myChart" width="800" height="300"></canvas>
+      <canvas id="myChartW" width="800" height="300"></canvas>
     </div>
+  </div>
+  <div class="row" id="month" style="display: none">
+    <div class="col-4">
+      <h4>Top Tháng</h4>
+      <table class="table table-hover table-bordered">
+        <thead>
+        <tr style="background-color: #3aa885; color: white">
+          <th>Tên Sản Phẩm</th>
+          <th style="width: 150px">Số Lượng Bán</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of statisticMonth">
+          <td>{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="col-8">
+      <canvas id="myChartM" width="800" height="300"></canvas>
+    </div>
+  </div>
+  <div class="row" id="year" style="display: none">
+    <div class="col-4">
+      <h4>Top Năm</h4>
+      <table class="table table-hover table-bordered">
+        <thead>
+        <tr style="background-color: #4a9217; color: white">
+          <th>Tên Sản Phẩm</th>
+          <th style="width: 150px">Số Lượng Bán</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let item of statisticYear">
+          <td>{{ item.name }}</td>
+          <td>{{ item.quantity }}</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="col-8">
+      <canvas id="myChartY" width="800" height="300"></canvas>
+    </div>
+
   </div>
 </div>

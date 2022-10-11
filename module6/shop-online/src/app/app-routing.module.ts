@@ -13,6 +13,7 @@ import {InfoCustomerComponent} from "./product/info-customer/info-customer.compo
 import {CreateComponent} from "./product/create/create.component";
 import {EditComponent} from "./product/edit/edit.component";
 import {StatisticsComponent} from "./product/statistics/statistics.component";
+import {StatisticsCustomerComponent} from "./product/statistics-customer/statistics-customer.component";
 
 
 const routes: Routes = [
@@ -29,7 +30,8 @@ const routes: Routes = [
   {path: 'infoCustomer', component: InfoCustomerComponent},
   {path: 'create', component: CreateComponent},
   {path: 'update/:id', component: EditComponent},
-  {path: 'statistics', component: StatisticsComponent}
+  {path: 'statistics', component: StatisticsComponent},
+  {path: 'statistics/customer', component: StatisticsCustomerComponent}
 ];
 
 @NgModule({

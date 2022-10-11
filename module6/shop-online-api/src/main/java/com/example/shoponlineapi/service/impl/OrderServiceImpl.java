@@ -123,6 +123,7 @@ public class OrderServiceImpl implements IOrderService {
         return productOrderRepository.getHistoryCustomerOrderProduct(customer);
     }
 
+
     private int getRandomNumber(List<Bill> billList) {
         int randomNumber = 10000;
         while (checkExists(billList, randomNumber)) {

@@ -23,6 +23,7 @@
               <div class="dropdown-menu rounded-0 border-0 m-0">
                 <a [routerLink]="['/create']" class="dropdown-item ">Thêm sản phẩm</a>
                 <a [routerLink]="['/statistics']" class="dropdown-item ">Thông kê sản phẩm bán chạy</a>
+                <a [routerLink]="['/statistics/customer']" class="dropdown-item ">Thông kê khách hàng mua hàng</a>
               </div>
             </div>
             <div class="nav-item dropdown">
@@ -49,7 +50,7 @@
           Hello {{username}}
         </button>
         <div class="dropdown-menu dropdown-menu-right">
-          <a *ngIf="role === 'ROLE_USER'" class="dropdown-item" [routerLink]="['/infoCustomer']">Thông tin tài khoản</a>
+          <a class="dropdown-item" [routerLink]="['/infoCustomer']">Thông tin tài khoản</a>
           <a *ngIf="role === 'ROLE_USER'" class="dropdown-item" [routerLink]="['/historyOrder']">Lịch sử thanh toán</a>
         </div>
       </div>

@@ -31,7 +31,7 @@
             <label for="image" class="form-label title-input">Ảnh sản phẩm <span class="text-white">(*)</span>:
             </label>
             <div class="input-group has-validation text-white">
-              <input  #fileUploader (change)="showPreview($event)" type="file" class="form-control text-dark"
+              <input  (change)="showPreview($event)" type="file" class="form-control text-dark"
                      id="image" name="filename">
             </div>
           </div>

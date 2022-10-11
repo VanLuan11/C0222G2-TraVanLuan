@@ -4,6 +4,7 @@ import {HttpClient} from "@angular/common/http";
 import {Customer} from "../model/customer";
 import {Observable} from "rxjs";
 import {Order} from "../model/order";
+import {Statistics} from "../model/statistics";
 
 const APL_URL = `${environment.apiUrl}`
 
@@ -41,5 +42,17 @@ export class OrderService {
 
   getHistoryCustomerOrderProduct(customer: Customer): Observable<Order[]> {
     return this.httpClient.post<Order[]>(this.URL_CONNECT+ "/cart/history", customer);
+  }
+  getStatisticsWeek(): Observable<Statistics[]> {
+    return this.httpClient.get<Statistics[]>(this.URL_CONNECT+ "/statistics/week")
+  }
+  getStatisticsMonth(): Observable<Statistics[]> {
+    return this.httpClient.get<Statistics[]>(this.URL_CONNECT+ "/statistics/month")
+  }
+  getStatisticsYear(): Observable<Statistics[]> {
+    return this.httpClient.get<Statistics[]>(this.URL_CONNECT+ "/statistics/year")
+  }
+  getStatisticsCustomer(): Observable<Statistics[]> {
+    return this.httpClient.get<Statistics[]>(this.URL_CONNECT+ "/statistics/customer")
   }
 }

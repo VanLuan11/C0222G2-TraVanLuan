@@ -2,8 +2,11 @@ package com.example.shoponlineapi.controller;
 
 import com.example.shoponlineapi.dto.ErrorDTO;
 import com.example.shoponlineapi.dto.PaymentDto;
+import com.example.shoponlineapi.dto.StatisticsCustomerDTO;
+import com.example.shoponlineapi.dto.StatisticsDTO;
 import com.example.shoponlineapi.model.Customer;
 import com.example.shoponlineapi.model.OrderService;
+import com.example.shoponlineapi.repository.IOrderServiceRepository;
 import com.example.shoponlineapi.service.IOrderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -25,6 +28,9 @@ import java.util.List;
 public class OrderRestController {
     @Autowired
     private IOrderService productOrderService;
+
+    @Autowired
+    private IOrderServiceRepository orderServiceRepository;
 
     @Autowired
     public JavaMailSender emailSender;
@@ -100,6 +106,47 @@ public class OrderRestController {
 ;            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         }
         return new ResponseEntity<>(customerOrderProduct, HttpStatus.OK);
+    }
+
+    @GetMapping("/statistics/week")
+    public ResponseEntity<List<StatisticsDTO>> getAllStatisticsWeek() {
+        List<StatisticsDTO> statisticsDTOS = orderServiceRepository.findAllStatisticsWeek();
+        if (statisticsDTOS.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+        } else {
+            return new ResponseEntity<>(statisticsDTOS, HttpStatus.OK);
+        }
+    }
+    @GetMapping("/statistics/month")
+    public ResponseEntity<List<StatisticsDTO>> getAllStatisticsMonth() {
+        List<StatisticsDTO> statisticsDTOS = orderServiceRepository.findAllStatisticsMonth();
+        if (statisticsDTOS.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+        } else {
+            return new ResponseEntity<>(statisticsDTOS, HttpStatus.OK);
+        }
+    }
+    @GetMapping("/statistics/year")
+    public ResponseEntity<List<StatisticsDTO>> getAllStatisticsYear() {
+        List<StatisticsDTO> statisticsDTOS = orderServiceRepository.findAllStatisticsYear();
+        if (statisticsDTOS.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+        } else {
+            return new ResponseEntity<>(statisticsDTOS, HttpStatus.OK);
+        }
+    }
+
+    @GetMapping("/statistics/customer")
+    public ResponseEntity<List<StatisticsCustomerDTO>> getAllStatisticsCustomer() {
+        List<StatisticsCustomerDTO> statisticsCustomerDTOS = orderServiceRepository.findAllStatisticsCustomer();
+        if (statisticsCustomerDTOS.isEmpty()) {
+            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+
+        } else {
+            return new ResponseEntity<>(statisticsCustomerDTOS, HttpStatus.OK);
+        }
     }
 
     //    @PreAuthorize("isAuthenticated()")

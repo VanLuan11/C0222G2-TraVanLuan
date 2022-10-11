@@ -1,3 +1,4 @@
+
 <!-- Page Header Start -->
 <div class="container-fluid bg-white">
   <div class="d-flex flex-column align-items-center justify-content-center" style="min-height: 150px">
@@ -13,20 +14,19 @@
         <li class=" d-flex justify-content-between">
           <img [src]="imgSrc" id="img" class="image-css" style=";width: 450px; height: 450px" (click)="fileUploader.click()">
         </li>
-
       </ul>
     </div>
 
-    <div class="col-xl-8 m-0 ">
 
+
+    <div class="col-xl-8 m-0 ">
       <form class="needs-validation  pt-4 pb-4 " [formGroup]="productForm" (ngSubmit)="editSave()" *ngIf="productForm">
         <div class="row g-3">
           <div class="col-xl-4 mt-3" data-bs-toggle="name" data-bs-content="" data-bs-trigger="manual" data-bs-placement="bottom">
             <label for="name" class="form-label title-input">Tên sản phẩm<span class="text-white">(*)</span>: </label>
             <input  type="text" class="form-control border-warning" id="name" value="" placeholder="VD: IPhone 13 Pro Max"
-                   formControlName="name">
+                    formControlName="name">
           </div>
-
           <div class="col-xl-4 mt-3" data-bs-toggle="price" data-bs-content="" data-bs-trigger="manual" data-bs-placement="bottom">
             <label for="price" class="form-label title-input">Giá (VND) <span class="text-white">(*)</span>: </label>
             <input  type="text" class="form-control border-primary" id="price" value=""
@@ -38,7 +38,7 @@
             </label>
             <div class="input-group has-validation text-white">
               <input  #fileUploader (change)="showPreview($event)" type="file" class="form-control text-dark"
-                     id="images" name="filename">
+                     id="images" name="filename" formControlName="image">
             </div>
           </div>
 

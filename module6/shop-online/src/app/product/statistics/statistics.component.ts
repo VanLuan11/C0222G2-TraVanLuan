@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import * as Chart from 'chart.js'
+import {OrderService} from "../../service/order.service";
+import {Statistics} from "../../model/statistics";
 
 @Component({
   selector: 'app-statistics',
@@ -8,54 +10,77 @@ import * as Chart from 'chart.js'
 })
 export class StatisticsComponent implements OnInit {
   public canvas: any;
-  a: number = 222222;
   public ctx: any;
-  public labels: any = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
-  public dataCases: any = {
-    chart1: [2000, 10000, 12000, 14000, 6000, 0, 0, 0, this.a, 0, 345340, 345340],
-    chart2: [200, 1000, 1200, 1400, 600, 8640, 730, 0, 3450, 4560, 8220, 345340],
-    chart3: [200, 1000, 1200, 1400, 600, 8640, 730, 0, 3450, 4560, 8220, 345340]
-  };
+  public labelsW: string[] = [];
+  public dataCasesW: number[] = [];
+  public labelsM: string[] = [];
+  public dataCasesM: number[] = [];
+  public labelsY: string[] = [];
+  public dataCasesY: number[] = [];
+  statisticWeek: Statistics[] = [];
+  statisticMonth: Statistics[] = [];
+  statisticYear: Statistics[] = [];
+  status: boolean = false;
 
-  constructor() {
+  constructor(private orderService: OrderService) {
+
   }
 
   ngOnInit(): void {
-    this.createLineChart(this.labels, this.dataCases, 'myChart');
+    this.getStatisticsWeek()
+    this.getStatisticsMonth()
+    this.getStatisticsYear()
+    this.createLineChartWeek()
+    this.createLineChartMonth()
+    this.createLineChartYear()
   }
 
-  private createLineChart(labels, dataCases, chartId) {
-    this.canvas = document.getElementById(chartId);
+  getStatisticsWeek() {
+    this.orderService.getStatisticsWeek().subscribe((data: Statistics[]) => {
+      this.statisticWeek = data;
+      for (let i = 0; i < data.length; i++) {
+        this.labelsW.push(data[i].name)
+        this.dataCasesW.push(data[i].quantity)
+      }
+    })
+  }
+
+  getStatisticsMonth() {
+    this.orderService.getStatisticsMonth().subscribe((data: Statistics[]) => {
+      this.statisticMonth = data;
+      for (let i = 0; i < data.length; i++) {
+        this.labelsM.push(data[i].name)
+        this.dataCasesM.push(data[i].quantity)
+      }
+    })
+  }
+
+  getStatisticsYear() {
+    this.orderService.getStatisticsYear().subscribe((data: Statistics[]) => {
+      this.statisticYear = data;
+      for (let i = 0; i < data.length; i++) {
+        this.labelsY.push(data[i].name)
+        this.dataCasesY.push(data[i].quantity)
+      }
+    })
+  }
+
+  private createLineChartWeek() {
+    this.canvas = document.getElementById('myChartW');
     this.ctx = this.canvas.getContext('2d');
 
     let chart = new Chart(this.ctx, {
       type: 'bar',
       data: {
-        labels: labels,
+        labels: this.labelsW,
         datasets: [{
-          label: "Chart 1",
-          data: dataCases.chart1,
-          backgroundColor: '#ffbb33',
-          borderColor: '#ffbb33',
+          label: "Tuần",
+          data: this.dataCasesW,
+          backgroundColor: '#297b9a',
+          borderColor: '#297b9a',
           fill: false,
           borderWidth: 2
-        },
-          {
-            label: "Chart 2",
-            data: dataCases.chart2,
-            backgroundColor: '#ff4444',
-            borderColor: '#ff4444',
-            fill: false,
-            borderWidth: 2
-          },
-          {
-            label: "Chart 3",
-            data: dataCases.chart3,
-            backgroundColor: '#1bff00',
-            borderColor: '#1bff00',
-            fill: false,
-            borderWidth: 2
-          }]
+        }]
       },
       options: {
         title: {
@@ -75,4 +100,130 @@ export class StatisticsComponent implements OnInit {
     });
   }
 
+  private createLineChartMonth() {
+    this.canvas = document.getElementById('myChartM');
+    this.ctx = this.canvas.getContext('2d');
+
+    let chart = new Chart(this.ctx, {
+      type: 'bar',
+      data: {
+        labels: this.labelsM,
+        datasets: [{
+          label: "Tháng",
+          data: this.dataCasesM,
+          backgroundColor: '#3aa885',
+          borderColor: '#3aa885',
+          fill: false,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: ""
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: true
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+      }
+    });
+  }
+
+  private createLineChartYear() {
+    this.canvas = document.getElementById('myChartY');
+    this.ctx = this.canvas.getContext('2d');
+
+    let chart = new Chart(this.ctx, {
+      type: 'bar',
+      data: {
+        labels: this.labelsY,
+        datasets: [{
+          label: "Năm",
+          data: this.dataCasesY,
+          backgroundColor: '#4a9217',
+          borderColor: '#4a9217',
+          fill: false,
+          borderWidth: 2
+        }]
+      },
+      options: {
+        title: {
+          display: true,
+          text: ""
+        },
+        tooltips: {
+          mode: 'index',
+          intersect: true
+        },
+        hover: {
+          mode: 'nearest',
+          intersect: true
+        },
+
+      }
+    });
+  }
+
+  // selectType(type) {
+  //   switch (type) {
+  //     case 'week':
+  //       // @ts-ignore
+  //       $('#week').show();
+  //       // @ts-ignore
+  //       $('#month').hide();
+  //       // @ts-ignore
+  //       $('#year').hide();
+  //       break;
+  //     case 'month':
+  //       // @ts-ignore
+  //       $('#week').hide();
+  //       // @ts-ignore
+  //       $('#month').show();
+  //       // @ts-ignore
+  //       $('#year').hide();
+  //       break;
+  //     case 'year':
+  //       // @ts-ignore
+  //       $('#week').hide();
+  //       // @ts-ignore
+  //       $('#month').hide();
+  //       // @ts-ignore
+  //       $('#year').show();
+  //       break;
+  //   }
+  // }
+  selectType(value: any) {
+    switch (value) {
+      case 'week':
+        // @ts-ignore
+        $('#week').show();
+        // @ts-ignore
+        $('#month').hide();
+        // @ts-ignore
+        $('#year').hide();
+        break;
+      case 'month':
+        // @ts-ignore
+        $('#week').hide();
+        // @ts-ignore
+        $('#month').show();
+        // @ts-ignore
+        $('#year').hide();
+        break;
+      case 'year':
+        // @ts-ignore
+        $('#week').hide();
+        // @ts-ignore
+        $('#month').hide();
+        // @ts-ignore
+        $('#year').show();
+        break;
+    }
+  }
 }

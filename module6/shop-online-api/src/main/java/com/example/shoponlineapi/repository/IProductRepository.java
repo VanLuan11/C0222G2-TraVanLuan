@@ -1,5 +1,6 @@
 package com.example.shoponlineapi.repository;
 
+import com.example.shoponlineapi.model.OrderService;
 import com.example.shoponlineapi.model.Product;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -9,6 +10,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;
+
+import java.util.List;
 
 @Repository
 public interface IProductRepository extends JpaRepository<Product, Integer> {
@@ -42,4 +45,5 @@ public interface IProductRepository extends JpaRepository<Product, Integer> {
     @Transactional
     @Query(value = " UPDATE `product` SET `is_deleted` = 1 WHERE (`id` = :id) ", nativeQuery = true)
     void updateIsDeleted(@Param("id") Integer id);
+
 }

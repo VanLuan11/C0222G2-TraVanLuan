@@ -16,7 +16,7 @@ import { LapTopVanPhongComponent } from './product/lap-top-van-phong/lap-top-van
 import { HomeLapTopComponent } from './product/home-lap-top/home-lap-top.component';
 import { GuaranteeComponent } from './common/guarantee/guarantee.component';
 import { TransportComponent } from './common/transport/transport.component';
-import {ReactiveFormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { CreateComponent } from './product/create/create.component';
 import { EditComponent } from './product/edit/edit.component';
 import { HistoryOrderProductComponent } from './product/history-order-product/history-order-product.component';
@@ -27,6 +27,7 @@ import {environment} from "../environments/environment";
 import {AngularFireStorageModule} from "@angular/fire/storage";
 import {CKEditorModule} from "@ckeditor/ckeditor5-angular";
 import { StatisticsComponent } from './product/statistics/statistics.component';
+import { StatisticsCustomerComponent } from './product/statistics-customer/statistics-customer.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { StatisticsComponent } from './product/statistics/statistics.component';
     HistoryOrderProductComponent,
     InfoCustomerComponent,
     StatisticsComponent,
+    StatisticsCustomerComponent,
   ],
     imports: [
         BrowserAnimationsModule,
@@ -67,6 +69,7 @@ import { StatisticsComponent } from './product/statistics/statistics.component';
         ),
         ReactiveFormsModule,
         CKEditorModule,
+        FormsModule,
     ],
   providers: [],
   bootstrap: [AppComponent]
