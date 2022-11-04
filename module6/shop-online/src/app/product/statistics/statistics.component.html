@@ -1,7 +1,5 @@
 <div class="container-fluid pt-4">
   <div class="row">
-    <h2 style="text-align: center">Top 10 sản phẩm bán chạy nhất</h2>
-  </div>
     <div class="col-xl-3 col-md-12 col-sm-12 mt-3 ">
       <select (input)="selectType($event.target.value)">
         <option [value]="'week'">Tuần</option>
@@ -9,6 +7,9 @@
         <option [value]="'year'">Năm</option>
       </select>
     </div>
+    <h2 style="text-align: center">Top 10 sản phẩm bán chạy nhất</h2>
+  </div>
+
   <div class="row" id="week" >
     <div class="col-4">
       <h4>Top Tuần</h4>

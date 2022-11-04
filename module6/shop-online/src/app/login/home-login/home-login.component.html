@@ -1,10 +1,14 @@
 <div class="login">
   <div class="form container">
     <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
-    <h3>Đăng nhập</h3>
-    <input type="text" placeholder="Username" formControlName="username">
-    <input type="password" placeholder="Password" formControlName="password">
-    <input type="submit" value="Sign In" class="submit">
+      <h3>Đăng nhập</h3>
+      <input type="text" placeholder="Username" formControlName="username">
+      <input type="password" placeholder="Password" formControlName="password">
+      <input type="submit" value="Sign In" class="submit">
     </form>
+    <div>
+      <button class="btn btn-danger btn-lg btn-block" (click)="signInWithGoogle()">Đăng nhập google
+      </button>
+    </div>
   </div>
 </div>

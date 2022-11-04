@@ -42,6 +42,7 @@ export class StatisticsComponent implements OnInit {
         this.labelsW.push(data[i].name)
         this.dataCasesW.push(data[i].quantity)
       }
+      this.dataCasesW.push(0)
     })
   }
 
@@ -52,6 +53,8 @@ export class StatisticsComponent implements OnInit {
         this.labelsM.push(data[i].name)
         this.dataCasesM.push(data[i].quantity)
       }
+      this.dataCasesM.push(0)
+
     })
   }
 
@@ -62,6 +65,8 @@ export class StatisticsComponent implements OnInit {
         this.labelsY.push(data[i].name)
         this.dataCasesY.push(data[i].quantity)
       }
+      this.dataCasesY.push(0)
+
     })
   }
 
@@ -170,34 +175,6 @@ export class StatisticsComponent implements OnInit {
     });
   }
 
-  // selectType(type) {
-  //   switch (type) {
-  //     case 'week':
-  //       // @ts-ignore
-  //       $('#week').show();
-  //       // @ts-ignore
-  //       $('#month').hide();
-  //       // @ts-ignore
-  //       $('#year').hide();
-  //       break;
-  //     case 'month':
-  //       // @ts-ignore
-  //       $('#week').hide();
-  //       // @ts-ignore
-  //       $('#month').show();
-  //       // @ts-ignore
-  //       $('#year').hide();
-  //       break;
-  //     case 'year':
-  //       // @ts-ignore
-  //       $('#week').hide();
-  //       // @ts-ignore
-  //       $('#month').hide();
-  //       // @ts-ignore
-  //       $('#year').show();
-  //       break;
-  //   }
-  // }
   selectType(value: any) {
     switch (value) {
       case 'week':
